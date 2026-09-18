@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "services": "Serviços",
+    "plans": "Planos",
+    "portfolio": "Portfólio",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "cta": "Falar com a equipa"
+  },
+  "hero": {
+    "badge": "Infraestrutura de Alto Desempenho",
+    "title": "Hospedagem, Servidores e Domínios com Velocidade Extrema",
+    "description": "Soluções corporativas de hosting web, servidores VPS dedicados e registo de domínios projetados para garantir 99.9% de uptime, segurança máxima e suporte técnico de excelência.",
+    "cta_plans": "Ver Planos Oficiais",
+    "cta_contact": "Consultoria Gratuita",
+    "metric_uptime": "99.9% Uptime",
+    "metric_uptime_desc": "SLA Garantido",
+    "metric_nvme": "100% NVMe",
+    "metric_nvme_desc": "Velocidade Máxima",
+    "metric_ssl": "SSL Grátis",
+    "metric_ssl_desc": "Proteção Completa",
+    "metric_support": "WhatsApp 24/7",
+    "metric_support_desc": "Suporte Técnico"
+  },
+  "services": {
+    "tag": "Nossas Soluções",
+    "title": "Tudo o que o seu negócio precisa para crescer na Web",
+    "description": "Infraestrutura robusta pensada para desenvolvedores, agências e empresas que não abrem mão de velocidade e estabilidade.",
+    "web_hosting_title": "Hospedagem Web",
+    "web_hosting_desc": "Servidores otimizados com armazenamento NVMe ultra-rápido, cPanel intuitivo e e-mails profissionais.",
+    "domains_title": "Registo & Gestão de Domínios",
+    "domains_desc": "Registe o seu domínio .com, .org, .co.mz ou transfira a sua infraestrutura com total assistência e DNS gerenciado.",
+    "vps_title": "Servidores VPS & Dedicados",
+    "vps_desc": "Poder computacional dedicado com processadores Ryzen 3950x e Intel Core i9 para aplicações críticas.",
+    "reseller_title": "Revenda de Hospedagem",
+    "reseller_desc": "Inicie o seu próprio negócio de hosting com contas cPanel independentes, marca própria e gestão simplificada.",
+    "wordpress_title": "Hospedagem WordPress",
+    "wordpress_desc": "Ambiente afinado para WordPress com cache de alta performance, atualizações automáticas e isolamento seguro.",
+    "support_title": "Suporte Técnico Especializado",
+    "support_desc": "Atendimento direto via WhatsApp com engenheiros que compreendem o seu negócio e a sua infraestrutura."
+  },
+  "plans": {
+    "tag": "Tabelas Oficiais",
+    "title": "Planos Transparentes e Escaláveis em Meticais (MZN)",
+    "description": "Escolha a categoria ideal para o seu projeto. Sem taxas ocultas, com ativação ágil e recursos garantidos.",
+    "tab_shared": "Compartilhada",
+    "tab_wordpress": "WordPress",
+    "tab_vps_proc": "VPS Processador Dedicado",
+    "tab_vps_cpanel": "VPS cPanel Dedicado",
+    "tab_reseller": "Revenda",
+    "per_month": "/mês",
+    "btn_order": "Contratar",
+    "btn_inquire": "Consulte-nos",
+    "btn_view_more": "Ver mais",
+    "badge_tbd": "A confirmar pela direção",
+    "badge_confirmed": "Preço Confirmado",
+    "badge_popular": "Mais Popular"
+  },
+  "portfolio": {
+    "tag": "Portfólio & Prova Social",
+    "title": "Empresas e Projetos que Confiam na Nossa Infraestrutura",
+    "description": "Marcas que operam na nossa rede de alto desempenho."
+  },
+  "faq": {
+    "tag": "Dúvidas Frequentes",
+    "title": "Perguntas Frequentes",
+    "description": "Respostas claras sobre os nossos serviços de hospedagem e suporte."
+  },
+  "contact": {
+    "tag": "Atendimento",
+    "title": "Fale com um Especialista da Zedeck's IT",
+    "description": "Tire as suas dúvidas ou solicite uma proposta personalizada para a infraestrutura da sua empresa.",
+    "form_name": "Nome Completo",
+    "form_name_placeholder": "Ex: João Silva",
+    "form_email": "E-mail Corporativo",
+    "form_email_placeholder": "joao@empresa.com",
+    "form_phone": "Telefone / WhatsApp",
+    "form_phone_placeholder": "+258 84 000 0000",
+    "form_plan": "Plano ou Serviço de Interesse",
+    "form_plan_select": "Selecione uma opção...",
+    "form_message": "Mensagem ou Requisitos Técnicos",
+    "form_message_placeholder": "Descreva detalhes do seu site ou projeto...",
+    "btn_submit": "Enviar via WhatsApp Oficial",
+    "direct_support": "Ou contacte diretamente:",
+    "whatsapp_help": "O envio redireciona diretamente para o WhatsApp oficial da equipa de suporte da Zedeck's IT."
+  },
+  "footer": {
+    "desc": "Soluções de hospedagem corporativa, servidores dedicados e registo de domínios pela Zedeck's IT em Nampula, Moçambique.",
+    "col_services": "Serviços",
+    "col_ecosystem": "Ecossistema Zedecks",
+    "col_contact": "Contacto & Suporte",
+    "rights": "Todos os direitos reservados.",
+    "signature": "Made by Zedeck's IT."
+  }
+}

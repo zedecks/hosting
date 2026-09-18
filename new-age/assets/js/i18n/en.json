@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "services": "Services",
+    "plans": "Plans",
+    "portfolio": "Portfolio",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Talk to Team"
+  },
+  "hero": {
+    "badge": "High-Performance Infrastructure",
+    "title": "Hosting, Servers & Domains with Extreme Speed",
+    "description": "Enterprise web hosting, dedicated VPS servers, and domain registrations engineered for 99.9% uptime, maximum security, and dedicated technical support.",
+    "cta_plans": "View Official Plans",
+    "cta_contact": "Free Consultation",
+    "metric_uptime": "99.9% Uptime",
+    "metric_uptime_desc": "Guaranteed SLA",
+    "metric_nvme": "100% NVMe",
+    "metric_nvme_desc": "Maximum Speed",
+    "metric_ssl": "Free SSL",
+    "metric_ssl_desc": "Complete Protection",
+    "metric_support": "WhatsApp 24/7",
+    "metric_support_desc": "Tech Support"
+  },
+  "services": {
+    "tag": "Our Solutions",
+    "title": "Everything your business needs to grow on the Web",
+    "description": "Robust infrastructure built for developers, agencies, and businesses that demand speed and stability.",
+    "web_hosting_title": "Web Hosting",
+    "web_hosting_desc": "Optimized servers with ultra-fast NVMe storage, intuitive cPanel, and professional email accounts.",
+    "domains_title": "Domain Registration & Management",
+    "domains_desc": "Register your .com, .org, .co.mz domain or transfer your infrastructure with full assistance and managed DNS.",
+    "vps_title": "VPS & Dedicated Servers",
+    "vps_desc": "Dedicated compute power powered by Ryzen 3950x and Intel Core i9 processors for mission-critical applications.",
+    "reseller_title": "Reseller Hosting",
+    "reseller_desc": "Launch your own hosting business with isolated cPanel accounts, custom branding, and simplified management.",
+    "wordpress_title": "WordPress Hosting",
+    "wordpress_desc": "Fine-tuned environment for WordPress with high-performance caching, automatic updates, and secure isolation.",
+    "support_title": "Specialized Tech Support",
+    "support_desc": "Direct assistance via WhatsApp with engineers who understand your business and infrastructure."
+  },
+  "plans": {
+    "tag": "Official Tiers",
+    "title": "Transparent & Scalable Plans in Mozambican Meticais (MZN)",
+    "description": "Select the perfect tier for your project. No hidden fees, instant activation, and guaranteed resources.",
+    "tab_shared": "Shared",
+    "tab_wordpress": "WordPress",
+    "tab_vps_proc": "VPS Dedicated CPU",
+    "tab_vps_cpanel": "VPS Dedicated cPanel",
+    "tab_reseller": "Reseller",
+    "per_month": "/mo",
+    "btn_order": "Order Now",
+    "btn_inquire": "Contact Us",
+    "btn_view_more": "Learn More",
+    "badge_tbd": "To be confirmed by board",
+    "badge_confirmed": "Confirmed Price",
+    "badge_popular": "Most Popular"
+  },
+  "portfolio": {
+    "tag": "Portfolio & Social Proof",
+    "title": "Enterprises & Projects Powered by Our Infrastructure",
+    "description": "Official brands operating on our high-performance network."
+  },
+  "faq": {
+    "tag": "Frequently Asked Questions",
+    "title": "Frequently Asked Questions",
+    "description": "Clear answers regarding our hosting services and technical support."
+  },
+  "contact": {
+    "tag": "Get in Touch",
+    "title": "Speak with a Zedeck's IT Specialist",
+    "description": "Ask questions or request a custom infrastructure quote for your organization.",
+    "form_name": "Full Name",
+    "form_name_placeholder": "E.g.: John Doe",
+    "form_email": "Business Email",
+    "form_email_placeholder": "john@company.com",
+    "form_phone": "Phone / WhatsApp",
+    "form_phone_placeholder": "+258 84 000 0000",
+    "form_plan": "Interested Plan / Service",
+    "form_plan_select": "Select an option...",
+    "form_message": "Message or Technical Requirements",
+    "form_message_placeholder": "Describe your website or project requirements...",
+    "btn_submit": "Send via Official WhatsApp",
+    "direct_support": "Or reach out directly:",
+    "whatsapp_help": "Submitting will redirect you directly to the official WhatsApp support channel of Zedeck's IT."
+  },
+  "footer": {
+    "desc": "Enterprise web hosting solutions, dedicated servers, and domain registrations by Zedeck's IT in Nampula, Mozambique.",
+    "col_services": "Services",
+    "col_ecosystem": "Zedecks Ecosystem",
+    "col_contact": "Contact & Support",
+    "rights": "All rights reserved.",
+    "signature": "Made by Zedeck's IT."
+  }
+}
