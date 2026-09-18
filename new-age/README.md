@@ -102,10 +102,10 @@ Aceder em: `http://localhost:1807`
 ## 10. 🗺️ Roadmap
 
 - [x] **Fase 0:** Scaffold, Design Tokens e Fundação.
-- [ ] **Fase 1:** Conteúdo Semântico, Estrutura e Tabelas de Planos em MZN.
-- [ ] **Fase 2:** Componentes Visuais, Design Responsivo e CSS Modular.
-- [ ] **Fase 3:** Sistema de Internacionalização (i18n PT/EN) e Interações JS.
-- [ ] **Fase 4:** Fluxo de Lead e Integração com Suporte WhatsApp.
+- [x] **Fase 1:** Conteúdo Semântico, Estrutura e Tabelas de Planos em MZN.
+- [x] **Fase 2:** Componentes Visuais, Design Responsivo e CSS Modular.
+- [x] **Fase 3:** Sistema de Internacionalização (i18n PT/EN) e Interações JS.
+- [x] **Fase 4:** Fluxo de Lead e Integração com Suporte WhatsApp.
 - [ ] **Fase 5:** Cloudflare DNS, CDN e Headers de Segurança.
 - [ ] **Fase 6:** Otimização Lighthouse e SEO Estruturado.
 - [ ] **Fase 7:** CI/CD com GitHub Actions.
