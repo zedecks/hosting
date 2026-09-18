@@ -14,10 +14,10 @@
   <meta property="og:title" content="ZEDECK Hosting — Infraestrutura Web de Alto Desempenho">
   <meta property="og:description" content="Hospedagem, VPS e Domínios com 99.9% Uptime e suporte especializado.">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Space Grotesk & Inter (Dogma v0.3.0) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./assets/css/tokens.css">
@@ -27,30 +27,99 @@
 </head>
 <body>
 
-  <!-- ==================== HEADER / NAV ==================== -->
+  <!-- ==================== FLOATING PILL HEADER / NAV (Dogma v0.3.0) ==================== -->
   <header class="site-header">
-    <div class="container nav-container">
-      <a href="#hero" class="brand-logo" aria-label="Zedeck's IT Hosting Home">
-        ZEDECK<span>'S</span> HOSTING
-        <span class="brand-tagline">Cloud & Server</span>
+    <div class="nav-container">
+      <a href="/" class="brand-logo-wrap" aria-label="Zedecks IT Hosting Home">
+        <img src="./assets/img/logotipo.png" alt="Zedecks IT" class="brand-logo-img">
       </a>
 
+      <!-- Navigation Links with Clean Dropdowns (Sem setas) -->
       <nav class="nav-links" id="navLinks" aria-label="Navegação Principal">
-        <a href="#services" class="nav-link" data-i18n="nav.services">Serviços</a>
-        <a href="#plans" class="nav-link" data-i18n="nav.plans">Planos</a>
-        <a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfólio</a>
-        <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
-        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a>
-      </nav>
-
-      <div class="nav-actions">
-        <!-- i18n Language Toggle -->
-        <div class="lang-toggle" role="group" aria-label="Seleção de Idioma">
-          <button type="button" class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
-          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <!-- 1. Home -->
+        <div class="nav-item">
+          <a href="/" class="nav-link">Home</a>
         </div>
 
-        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">Falar com a equipa</a>
+        <!-- 2. Domínios -->
+        <div class="nav-item">
+          <button type="button" class="nav-link" aria-expanded="false">
+            <span>Domínios</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#services" class="dropdown-item">Pesquisar Domínios</a>
+            <a href="#contact" class="dropdown-item">Registrar Domínio</a>
+            <a href="#contact" class="dropdown-item">Transferir Domínio</a>
+            <a href="#plans" class="dropdown-item">Preços de Domínios</a>
+          </div>
+        </div>
+
+        <!-- 3. Produtos -->
+        <div class="nav-item">
+          <button type="button" class="nav-link" aria-expanded="false">
+            <span>Produtos</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#plans" class="dropdown-item">Hospedagem de Sites</a>
+            <a href="#plans" class="dropdown-item">Hospedagem WordPress</a>
+            <a href="#plans" class="dropdown-item">Revenda cPanel</a>
+            <a href="#plans" class="dropdown-item">Servidores VPS</a>
+          </div>
+        </div>
+
+        <!-- 4. Tools -->
+        <div class="nav-item">
+          <button type="button" class="nav-link" aria-expanded="false">
+            <span>Tools</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#contact" class="dropdown-item">Whois</a>
+            <a href="#contact" class="dropdown-item">Abuse / IP Checker</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Right Actions: SVG Flags Toggle + Vamos Conversar + Obfuscated Client Portal -->
+      <div class="nav-actions">
+        <!-- Flag Language Toggle (Mozambique & England/UK) -->
+        <div class="lang-toggle" role="group" aria-label="Seleção de Idioma">
+          <!-- Moçambique (PT) -->
+          <button type="button" class="lang-btn active" data-lang="pt" title="Português (Moçambique)" aria-pressed="true" aria-label="Português">
+            <svg class="lang-flag-svg" viewBox="0 0 640 480">
+              <path fill="#006600" d="M0 0h640v160H0z"/>
+              <path fill="#ffffff" d="M0 135h640v210H0z"/>
+              <path fill="#000000" d="M0 160h640v160H0z"/>
+              <path fill="#ffcc00" d="M0 320h640v160H0z"/>
+              <path fill="#d00" d="M0 0l320 240L0 480z"/>
+              <polygon fill="#ffcc00" points="110,190 122,228 162,228 130,251 142,290 110,266 78,290 90,251 58,228 98,228"/>
+            </svg>
+          </button>
+          <!-- UK / England (EN) -->
+          <button type="button" class="lang-btn" data-lang="en" title="English" aria-pressed="false" aria-label="English">
+            <svg class="lang-flag-svg" viewBox="0 0 60 30">
+              <clipPath id="flag_uk"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+              <g clip-path="url(#flag_uk)">
+                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="3"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+              </g>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Vamos Conversar -->
+        <a href="#contact" class="btn-nav-cta" data-i18n="nav.cta">
+          <span>Vamos Conversar</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <!-- Área do Cliente (Ofuscado) -->
+        <button type="button" class="btn-client-portal" title="Área do Cliente" disabled>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Área do Cliente</span>
+        </button>
 
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu Mobile" aria-expanded="false">
           <span></span>

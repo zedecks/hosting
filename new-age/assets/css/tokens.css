@@ -1,31 +1,31 @@
 /* ==========================================================================
    ZEDECK'S IT — DESIGN TOKENS (tokens.css)
-   Landing Page: host.zedecks.com
-   TODO: alinhar com @zedecks/design-tokens quando disponível
+   Landing Page: host.zedecks.com (Dogma v0.3.0 Design Standard)
    ========================================================================== */
 
 :root {
-  /* --- Brand & Neutral Colors --- */
-  --color-primary: #0066FF;
-  --color-primary-hover: #0052CC;
-  --color-primary-glow: rgba(0, 102, 255, 0.25);
+  /* --- Dogma v0.3.0 Brand Colors --- */
+  --color-primary: #00c2ff;               /* Tech Blue Neon */
+  --color-primary-hover: #00a8e0;
+  --color-primary-glow: rgba(0, 194, 255, 0.35);
+  --color-primary-subtle: rgba(0, 194, 255, 0.12);
   
-  --color-accent: #00D2FF;
-  --color-accent-glow: rgba(0, 210, 255, 0.2);
+  --color-accent: #00c2ff;
+  --color-accent-glow: rgba(0, 194, 255, 0.25);
 
-  --color-bg-main: #0B0F19;
-  --color-bg-surface: #111827;
-  --color-bg-surface-elevated: #1F2937;
-  --color-bg-surface-card: rgba(17, 24, 39, 0.85);
+  --color-bg-main: #0a0f1c;               /* Dark Abissal */
+  --color-bg-surface: #141824;            /* Zedecks Card */
+  --color-bg-surface-elevated: #1a2030;
+  --color-bg-surface-card: rgba(20, 24, 36, 0.85);
 
-  --color-border: #2D3748;
-  --color-border-subtle: rgba(255, 255, 255, 0.08);
-  --color-border-glow: rgba(0, 102, 255, 0.4);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-glow: rgba(0, 194, 255, 0.4);
 
   --color-text-primary: #FFFFFF;
-  --color-text-secondary: #9CA3AF;
-  --color-text-muted: #6B7280;
-  --color-text-inverse: #0B0F19;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
+  --color-text-inverse: #0a0f1c;
 
   /* Status / Feedback */
   --color-success: #10B981;
@@ -34,8 +34,8 @@
   --color-badge-text: #FBBF24;
 
   /* --- Typography --- */
-  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --font-family-heading: 'Outfit', 'Inter', -apple-system, sans-serif;
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
   --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   --font-size-xs: 0.75rem;    /* 12px */
@@ -81,21 +81,14 @@
   --radius-xl: 24px;
   --radius-full: 9999px;
 
-  /* --- Shadows & Glassmorphism --- */
+  /* --- Shadows & Glows --- */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-  --shadow-glow: 0 0 25px var(--color-primary-glow);
-  --shadow-card: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 20px var(--color-primary-glow);
+  --shadow-card: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
 
-  --backdrop-blur: blur(16px);
-
-  /* --- Breakpoints (for reference in media queries) ---
-     mobile: 360px
-     tablet: 768px
-     desktop: 1024px
-     wide: 1440px
-  */
+  --backdrop-blur: blur(20px);
 
   /* --- Transitions --- */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);

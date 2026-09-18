@@ -28,6 +28,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Navigation Dropdowns Click/Touch Handler
+  document.querySelectorAll('.nav-item').forEach(item => {
+    const btn = item.querySelector('button.nav-link');
+    const dropdown = item.querySelector('.dropdown-menu');
+    if (btn && dropdown) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = dropdown.style.visibility === 'visible';
+        
+        // Close other dropdowns
+        document.querySelectorAll('.dropdown-menu').forEach(d => {
+          d.style.opacity = '';
+          d.style.visibility = '';
+          d.style.pointerEvents = '';
+        });
+
+        if (!isOpen) {
+          dropdown.style.opacity = '1';
+          dropdown.style.visibility = 'visible';
+          dropdown.style.pointerEvents = 'auto';
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  });
+
+  // Close dropdowns on outside click
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.dropdown-menu').forEach(d => {
+      d.style.opacity = '';
+      d.style.visibility = '';
+      d.style.pointerEvents = '';
+    });
+    document.querySelectorAll('.nav-item button.nav-link').forEach(btn => {
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
   // Scroll Reveal Observer
   const revealElements = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
