@@ -1,5 +1,6 @@
 /**
  * i18n Translation Engine
+ * Single Circular Flag Toggle (shows Mozambique when in English, UK when in Portuguese)
  */
 export class I18nManager {
   constructor() {
@@ -26,8 +27,12 @@ export class I18nManager {
     }
   }
 
+  toggleLanguage() {
+    const nextLang = this.currentLang === 'pt' ? 'en' : 'pt';
+    this.setLanguage(nextLang);
+  }
+
   setLanguage(lang) {
-    if (lang === this.currentLang) return;
     this.currentLang = lang;
     localStorage.setItem('zedecks_lang', lang);
     this.applyLanguage(lang);
@@ -36,16 +41,26 @@ export class I18nManager {
   applyLanguage(lang) {
     document.documentElement.lang = lang;
     
-    // Update toggle buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      if (btn.dataset.lang === lang) {
-        btn.classList.add('active');
-        btn.setAttribute('aria-pressed', 'true');
+    // Update single circular flag toggle button with Flaticon SVGs
+    const toggleBtn = document.getElementById('langToggleBtn');
+    if (toggleBtn) {
+      const flagMoz = toggleBtn.querySelector('.flag-moz');
+      const flagUk = toggleBtn.querySelector('.flag-uk');
+      
+      // If language is PT, show UK flag to switch to EN.
+      // If language is EN, show Mozambique flag to switch to PT.
+      if (lang === 'pt') {
+        if (flagUk) flagUk.style.display = 'block';
+        if (flagMoz) flagMoz.style.display = 'none';
+        toggleBtn.setAttribute('title', 'Switch to English');
+        toggleBtn.setAttribute('aria-label', 'Switch to English');
       } else {
-        btn.classList.remove('active');
-        btn.setAttribute('aria-pressed', 'false');
+        if (flagUk) flagUk.style.display = 'none';
+        if (flagMoz) flagMoz.style.display = 'block';
+        toggleBtn.setAttribute('title', 'Mudar para Português');
+        toggleBtn.setAttribute('aria-label', 'Mudar para Português');
       }
-    });
+    }
 
     const dict = this.translations[lang];
     if (!dict) return;
@@ -74,10 +89,11 @@ export class I18nManager {
   }
 
   bindEvents() {
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        this.setLanguage(btn.dataset.lang);
+    const toggleBtn = document.getElementById('langToggleBtn');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        this.toggleLanguage();
       });
-    });
+    }
   }
 }

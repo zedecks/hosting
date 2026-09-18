@@ -8,6 +8,10 @@
   <meta name="keywords" content="hospedagem moçambique, hosting nampula, vps ryzen, cpanel moçambique, registo de domínio mzn, zedecks it">
   <meta name="author" content="Zedeck's IT">
   
+  <!-- Favicon Oficial com Alta Visibilidade em Dark & Light -->
+  <link rel="icon" type="image/png" href="./assets/img/icone.png">
+  <link rel="apple-touch-icon" href="./assets/img/icone.png">
+  
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://host.zedecks.com/">
@@ -18,6 +22,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Flag Icons Standard CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./assets/css/tokens.css">
@@ -31,7 +38,12 @@
   <header class="site-header">
     <div class="nav-container">
       <a href="/" class="brand-logo-wrap" aria-label="Zedecks IT Hosting Home">
-        <img src="./assets/img/logotipo.png" alt="Zedecks IT" class="brand-logo-img">
+        <!-- Ícone Oficial Zedecks -->
+        <img src="./assets/img/icone.png" alt="Zedeck's IT Icon" class="brand-emblem-img">
+        <div class="brand-text-group">
+          <span class="brand-name">ZEDECK<span>'S</span> HOSTING</span>
+          <span class="brand-subline">Cloud & Servers</span>
+        </div>
       </a>
 
       <!-- Navigation Links with Clean Dropdowns (Sem setas) -->
@@ -79,35 +91,15 @@
         </div>
       </nav>
 
-      <!-- Right Actions: SVG Flags Toggle + Vamos Conversar + Obfuscated Client Portal -->
+      <!-- Right Actions: Single Circular Flag Toggle + Vamos Conversar + Obfuscated Client Portal -->
       <div class="nav-actions">
-        <!-- Flag Language Toggle (Mozambique & England/UK) -->
-        <div class="lang-toggle" role="group" aria-label="Seleção de Idioma">
-          <!-- Moçambique (PT) -->
-          <button type="button" class="lang-btn active" data-lang="pt" title="Português (Moçambique)" aria-pressed="true" aria-label="Português">
-            <svg class="lang-flag-svg" viewBox="0 0 640 480">
-              <path fill="#006600" d="M0 0h640v160H0z"/>
-              <path fill="#ffffff" d="M0 135h640v210H0z"/>
-              <path fill="#000000" d="M0 160h640v160H0z"/>
-              <path fill="#ffcc00" d="M0 320h640v160H0z"/>
-              <path fill="#d00" d="M0 0l320 240L0 480z"/>
-              <polygon fill="#ffcc00" points="110,190 122,228 162,228 130,251 142,290 110,266 78,290 90,251 58,228 98,228"/>
-            </svg>
-          </button>
-          <!-- UK / England (EN) -->
-          <button type="button" class="lang-btn" data-lang="en" title="English" aria-pressed="false" aria-label="English">
-            <svg class="lang-flag-svg" viewBox="0 0 60 30">
-              <clipPath id="flag_uk"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
-              <g clip-path="url(#flag_uk)">
-                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
-                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="3"/>
-                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
-              </g>
-            </svg>
-          </button>
-        </div>
+        <!-- Single Circular Flag Toggle Button (Flaticon Style SVGs) -->
+        <button type="button" class="lang-circle-btn" id="langToggleBtn" title="Switch to English" aria-label="Switch to English">
+          <!-- UK Flag (Visível em Português) -->
+          <img src="./assets/img/flags/united-kingdom.svg" alt="English" class="lang-flag-img flag-uk">
+          <!-- Moçambique Flag (Visível em Inglês) -->
+          <img src="./assets/img/flags/mozambique.svg" alt="Português" class="lang-flag-img flag-moz" style="display: none;">
+        </button>
 
         <!-- Vamos Conversar -->
         <a href="#contact" class="btn-nav-cta" data-i18n="nav.cta">
@@ -125,7 +117,6 @@
           <span></span>
           <span></span>
           <span></span>
-        </button>
       </div>
     </div>
   </header>
@@ -783,9 +774,13 @@
       <div class="footer-grid">
         <!-- Brand Info -->
         <div class="footer-brand">
-          <div class="brand-logo">
-            ZEDECK<span>'S</span> HOSTING
-          </div>
+          <a href="/" class="brand-logo-wrap" style="margin-bottom: var(--space-3);" aria-label="Zedecks IT Hosting Home">
+            <img src="./assets/img/icone.png" alt="Zedeck's IT Icon" class="brand-emblem-img">
+            <div class="brand-text-group">
+              <span class="brand-name">ZEDECK<span>'S</span> HOSTING</span>
+              <span class="brand-subline">Cloud & Servers</span>
+            </div>
+          </a>
           <p data-i18n="footer.desc">
             Soluções de hospedagem corporativa, servidores dedicados e registo de domínios pela Zedeck's IT em Nampula, Moçambique.
           </p>

@@ -4,6 +4,15 @@ Todas as alterações notáveis da versão `new-age` de `host.zedecks.com` são 
 
 ---
 
+## 🚀 [v0.2.1] - 2026-09-18
+
+### ✨ Aprimorado & Refinado
+- **Ícone e Favicon Oficial:** Adoção do ícone oficial da Zedeck's IT (`assets/img/icone.png`) com contraste e nitidez para temas claros e escuros.
+- **Alternador de Idioma Circular Único:** Botão individual com alternância inteligente das bandeiras circulares no estilo Flaticon (exibe Reino Unido em modo PT e Moçambique em modo EN).
+- **Design System de Bandeiras Locais:** Criação da pasta `assets/img/flags/` contendo SVGs circulares de Moçambique, Reino Unido, Portugal e Estados Unidos.
+
+---
+
 ## 🚀 [v0.2.0] - 2026-09-18
 
 ### ✨ Adicionado & Aprimorado

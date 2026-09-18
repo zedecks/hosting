@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="256" cy="256" r="256"/>
+    </clipPath>
+    <linearGradient id="glossGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#circleClip)">
+    <!-- Green Top Band -->
+    <rect width="512" height="170.67" y="0" fill="#007934"/>
+    
+    <!-- White Stripe 1 -->
+    <rect width="512" height="25.6" y="145.07" fill="#FFFFFF"/>
+    
+    <!-- Black Middle Band -->
+    <rect width="512" height="170.67" y="170.67" fill="#000000"/>
+    
+    <!-- White Stripe 2 -->
+    <rect width="512" height="25.6" y="341.33" fill="#FFFFFF"/>
+    
+    <!-- Yellow Bottom Band -->
+    <rect width="512" height="170.67" y="341.33" fill="#FCE100"/>
+    
+    <!-- Red Chevron Triangle -->
+    <polygon points="0,0 256,256 0,512" fill="#D21034"/>
+    
+    <!-- Yellow Star -->
+    <polygon points="90,180 102,218 142,218 110,242 122,280 90,256 58,280 70,242 38,218 78,218" fill="#FCE100"/>
+    
+    <!-- Book symbol in white -->
+    <path d="M72,250 C80,245 90,245 98,250 C106,245 116,245 124,250 L124,272 C116,267 106,267 98,272 C90,267 80,267 72,272 Z" fill="#FFFFFF"/>
+
+    <!-- Subtle Gloss Overlay for Flaticon badge feel -->
+    <ellipse cx="256" cy="128" rx="230" ry="110" fill="url(#glossGrad)"/>
+  </g>
+</svg>
