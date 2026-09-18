@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs & Temporary Files
+*.log
+.system_generated/
+.gemini/
+.agent/
+.agents/
+
+# Build & Cache
+dist/
+build/
+.cache/
