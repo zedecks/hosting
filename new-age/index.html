@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZEDECK Hosting — Domínios, Servidores & Soluções Web de Alto Desempenho</title>
+  <meta name="description" content="Infraestrutura corporativa de hospedagem web, servidores VPS dedicados e registo de domínios pela Zedeck's IT em Nampula, Moçambique. 99.9% Uptime garantido.">
+  <meta name="keywords" content="hospedagem moçambique, hosting nampula, vps ryzen, cpanel moçambique, registo de domínio mzn, zedecks it">
+  <meta name="author" content="Zedeck's IT">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://host.zedecks.com/">
+  <meta property="og:title" content="ZEDECK Hosting — Infraestrutura Web de Alto Desempenho">
+  <meta property="og:description" content="Hospedagem, VPS e Domínios com 99.9% Uptime e suporte especializado.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./assets/css/tokens.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAV ==================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Zedeck's IT Hosting Home">
+        ZEDECK<span>'S</span> HOSTING
+        <span class="brand-tagline">Cloud & Server</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegação Principal">
+        <a href="#services" class="nav-link" data-i18n="nav.services">Serviços</a>
+        <a href="#plans" class="nav-link" data-i18n="nav.plans">Planos</a>
+        <a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfólio</a>
+        <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- i18n Language Toggle -->
+        <div class="lang-toggle" role="group" aria-label="Seleção de Idioma">
+          <button type="button" class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">Falar com a equipa</a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu Mobile" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-badge reveal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          <span data-i18n="hero.badge">Infraestrutura de Alto Desempenho</span>
+        </div>
+
+        <h1 class="reveal reveal-delay-1">
+          <span data-i18n="hero.title">Hospedagem, Servidores e Domínios com Velocidade Extrema</span>
+        </h1>
+
+        <p class="reveal reveal-delay-2" data-i18n="hero.description">
+          Soluções corporativas de hosting web, servidores VPS dedicados e registo de domínios projetados para garantir 99.9% de uptime, segurança máxima e suporte técnico de excelência.
+        </p>
+
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#plans" class="btn btn-primary btn-lg" data-i18n="hero.cta_plans">Ver Planos Oficiais</a>
+          <a href="#contact" class="btn btn-secondary btn-lg" data-i18n="hero.cta_contact">Consultoria Gratuita</a>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="hero-metrics reveal reveal-delay-4">
+          <div class="metric-item">
+            <div class="metric-value">99.9%</div>
+            <div class="metric-label" data-i18n="hero.metric_uptime_desc">SLA Garantido</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">NVMe</div>
+            <div class="metric-label" data-i18n="hero.metric_nvme_desc">Velocidade Máxima</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">SSL</div>
+            <div class="metric-label" data-i18n="hero.metric_ssl_desc">Proteção Completa</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">24/7</div>
+            <div class="metric-label" data-i18n="hero.metric_support_desc">Suporte WhatsApp</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVIÇOS SECTION ==================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="services.tag">Nossas Soluções</span>
+          <h2 data-i18n="services.title">Tudo o que o seu negócio precisa para crescer na Web</h2>
+          <p data-i18n="services.description">Infraestrutura robusta pensada para desenvolvedores, agências e empresas que não abrem mão de velocidade e estabilidade.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Web Hosting -->
+          <div class="card service-card reveal reveal-delay-1">
+            <div>
+              <div class="service-icon">🌐</div>
+              <h3 data-i18n="services.web_hosting_title">Hospedagem Web</h3>
+              <p data-i18n="services.web_hosting_desc">Servidores otimizados com armazenamento NVMe ultra-rápido, cPanel intuitivo e e-mails profissionais.</p>
+            </div>
+            <a href="#plans" class="btn btn-secondary btn-sm" data-i18n="plans.btn_view_more">Ver mais</a>
+          </div>
+
+          <!-- Service 2: Domains -->
+          <div class="card service-card reveal reveal-delay-2">
+            <div>
+              <div class="service-icon">🔍</div>
+              <h3 data-i18n="services.domains_title">Registo & Gestão de Domínios</h3>
+              <p data-i18n="services.domains_desc">Registe o seu domínio .com, .org, .co.mz ou transfira a sua infraestrutura com total assistência e DNS gerenciado.</p>
+            </div>
+            <a href="#contact" class="btn btn-secondary btn-sm" data-i18n="contact.btn_submit">Consultar Domínio</a>
+          </div>
+
+          <!-- Service 3: VPS -->
+          <div class="card service-card reveal reveal-delay-3">
+            <div>
+              <div class="service-icon">⚡</div>
+              <h3 data-i18n="services.vps_title">Servidores VPS & Dedicados</h3>
+              <p data-i18n="services.vps_desc">Poder computacional dedicado com processadores Ryzen 3950x e Intel Core i9 para aplicações críticas.</p>
+            </div>
+            <a href="#plans" class="btn btn-secondary btn-sm" data-i18n="plans.btn_view_more">Ver mais</a>
+          </div>
+
+          <!-- Service 4: Reseller -->
+          <div class="card service-card reveal reveal-delay-1">
+            <div>
+              <div class="service-icon">🏢</div>
+              <h3 data-i18n="services.reseller_title">Revenda de Hospedagem</h3>
+              <p data-i18n="services.reseller_desc">Inicie o seu próprio negócio de hosting com contas cPanel independentes, marca própria e gestão simplificada.</p>
+            </div>
+            <a href="#plans" class="btn btn-secondary btn-sm" data-i18n="plans.btn_view_more">Ver mais</a>
+          </div>
+
+          <!-- Service 5: WordPress -->
+          <div class="card service-card reveal reveal-delay-2">
+            <div>
+              <div class="service-icon">🚀</div>
+              <h3 data-i18n="services.wordpress_title">Hospedagem WordPress</h3>
+              <p data-i18n="services.wordpress_desc">Ambiente afinado para WordPress com cache de alta performance, atualizações automáticas e isolamento seguro.</p>
+            </div>
+            <a href="#plans" class="btn btn-secondary btn-sm" data-i18n="plans.btn_view_more">Ver mais</a>
+          </div>
+
+          <!-- Service 6: Support -->
+          <div class="card service-card reveal reveal-delay-3">
+            <div>
+              <div class="service-icon">💬</div>
+              <h3 data-i18n="services.support_title">Suporte Técnico Especializado</h3>
+              <p data-i18n="services.support_desc">Atendimento direto via WhatsApp com engenheiros que compreendem o seu negócio e a sua infraestrutura.</p>
+            </div>
+            <a href="#contact" class="btn btn-secondary btn-sm" data-i18n="nav.cta">Falar com Suporte</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PLANOS OFICIAIS ==================== -->
+    <section class="section" id="plans">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="plans.tag">Tabelas Oficiais</span>
+          <h2 data-i18n="plans.title">Planos Transparentes e Escaláveis em Meticais (MZN)</h2>
+          <p data-i18n="plans.description">Escolha a categoria ideal para o seu projeto. Sem taxas ocultas, com ativação ágil e recursos garantidos.</p>
+        </div>
+
+        <!-- Pricing Categories Tabs -->
+        <div class="pricing-tabs reveal" role="tablist">
+          <button type="button" class="pricing-tab-btn active" data-tab="tab-shared" role="tab" aria-selected="true" data-i18n="plans.tab_shared">Compartilhada</button>
+          <button type="button" class="pricing-tab-btn" data-tab="tab-wordpress" role="tab" aria-selected="false" data-i18n="plans.tab_wordpress">WordPress</button>
+          <button type="button" class="pricing-tab-btn" data-tab="tab-vps-proc" role="tab" aria-selected="false" data-i18n="plans.tab_vps_proc">VPS Processador Dedicado</button>
+          <button type="button" class="pricing-tab-btn" data-tab="tab-vps-cpanel" role="tab" aria-selected="false" data-i18n="plans.tab_vps_cpanel">VPS cPanel Dedicado</button>
+          <button type="button" class="pricing-tab-btn" data-tab="tab-reseller" role="tab" aria-selected="false" data-i18n="plans.tab_reseller">Revenda</button>
+        </div>
+
+        <!-- TAB 1: COMPARTILHADA (Preços confirmados em MZN) -->
+        <div class="pricing-pane active" id="tab-shared">
+          <!-- PREMIUM -->
+          <div class="pricing-card card reveal reveal-delay-1">
+            <div class="pricing-card-header">
+              <div class="badge badge-success" data-i18n="plans.badge_confirmed">Preço Confirmado</div>
+              <h3 class="plan-name">PREMIUM</h3>
+              <p>Ideal para projetos pessoais e pequenos sites corporativos.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-currency">MZN</span>
+                <span class="price-amount">350</span>
+                <span class="price-period" data-i18n="plans.per_month">/mês</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 1 Site Hospedado</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 5 Contas de E-mail</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 10GB Armazenamento SSD</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Ilimitadas</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Certificado SSL Grátis</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" data-select-plan="Hospedagem Compartilhada - PREMIUM (350 MZN)" data-i18n="plans.btn_order">Contratar</a>
+          </div>
+
+          <!-- BUSINESS -->
+          <div class="pricing-card card featured reveal reveal-delay-2">
+            <div class="pricing-card-header">
+              <div class="badge badge-primary" data-i18n="plans.badge_popular">Mais Popular</div>
+              <h3 class="plan-name">BUSINESS</h3>
+              <p>Perfeito para empresas em crescimento com múltiplos e-mails.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-currency">MZN</span>
+                <span class="price-amount">550</span>
+                <span class="price-period" data-i18n="plans.per_month">/mês</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 1 Site Hospedado</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 10 Contas de E-mail</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 20GB Armazenamento SSD</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Ilimitadas</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Certificado SSL Grátis</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" data-select-plan="Hospedagem Compartilhada - BUSINESS (550 MZN)" data-i18n="plans.btn_order">Contratar</a>
+          </div>
+
+          <!-- ENTERPRISE -->
+          <div class="pricing-card card reveal reveal-delay-3">
+            <div class="pricing-card-header">
+              <div class="badge badge-success" data-i18n="plans.badge_confirmed">Preço Confirmado</div>
+              <h3 class="plan-name">ENTERPRISE</h3>
+              <p>Capacidade expandida para múltiplos domínios e alta demanda.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-currency">MZN</span>
+                <span class="price-amount">850</span>
+                <span class="price-period" data-i18n="plans.per_month">/mês</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 2 Sites Hospedados</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 5 Contas de E-mail</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 50GB Armazenamento SSD</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Ilimitadas</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Certificado SSL Grátis</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" data-select-plan="Hospedagem Compartilhada - ENTERPRISE (850 MZN)" data-i18n="plans.btn_order">Contratar</a>
+          </div>
+        </div>
+
+        <!-- TAB 2: WORDPRESS (Preços confirmados em MZN) -->
+        <div class="pricing-pane" id="tab-wordpress">
+          <!-- STARTER -->
+          <div class="pricing-card card">
+            <div class="pricing-card-header">
+              <div class="badge badge-success" data-i18n="plans.badge_confirmed">Preço Confirmado</div>
+              <h3 class="plan-name">STARTER</h3>
+              <p>Otimizado para blogs e sites institucionais WordPress.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-currency">MZN</span>
+                <span class="price-amount">200</span>
+                <span class="price-period" data-i18n="plans.per_month">/mês</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 1 Site WordPress</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 3 Contas de E-mail</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 5GB Armazenamento SSD</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Limitadas</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Painel cPanel + WP Toolkit</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" data-select-plan="WordPress - STARTER (200 MZN)" data-i18n="plans.btn_order">Contratar</a>
+          </div>
+
+          <!-- STANDARD -->
+          <div class="pricing-card card featured">
+            <div class="pricing-card-header">
+              <div class="badge badge-primary" data-i18n="plans.badge_popular">Mais Popular</div>
+              <h3 class="plan-name">STANDARD</h3>
+              <p>Ideal para portais de conteúdo e landing pages ativas.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-currency">MZN</span>
+                <span class="price-amount">450</span>
+                <span class="price-period" data-i18n="plans.per_month">/mês</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 1 Site WordPress</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 5 Contas de E-mail</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 10GB Armazenamento SSD</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Limitadas</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Painel cPanel + WP Toolkit</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" data-select-plan="WordPress - STANDARD (450 MZN)" data-i18n="plans.btn_order">Contratar</a>
+          </div>
+
+          <!-- WORD PLUS -->
+          <div class="pricing-card card">
+            <div class="pricing-card-header">
+              <div class="badge badge-success" data-i18n="plans.badge_confirmed">Preço Confirmado</div>
+              <h3 class="plan-name">WORD PLUS</h3>
+              <p>Desempenho total para e-commerce WooCommerce e lojas online.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-currency">MZN</span>
+                <span class="price-amount">650</span>
+                <span class="price-period" data-i18n="plans.per_month">/mês</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 1 Site WordPress</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 5 Contas de E-mail</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 15GB Armazenamento SSD</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Ilimitadas</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Painel cPanel + WP Toolkit</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" data-select-plan="WordPress - WORD PLUS (650 MZN)" data-i18n="plans.btn_order">Contratar</a>
+          </div>
+        </div>
+
+        <!-- TAB 3: VPS PROCESSADOR DEDICADO (A confirmar pela direção) -->
+        <div class="pricing-pane" id="tab-vps-proc">
+          <!-- Pro Ryzen 3950x -->
+          <div class="pricing-card card">
+            <div class="pricing-card-header">
+              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
+              <h3 class="plan-name">Pro Ryzen 3950x</h3>
+              <p>Processamento de alta velocidade para aplicações exigentes.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Passmark: 39.172</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 50GB NVMe (RAM DDR4)</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Domínios & Tráfego Ilimitados</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Datacenter Premium & WhatsApp</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-select-plan="VPS Pro Ryzen 3950x" data-i18n="plans.btn_inquire">Consulte-nos</a>
+          </div>
+
+          <!-- Max Ryzen 3950x -->
+          <div class="pricing-card card featured">
+            <div class="pricing-card-header">
+              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
+              <h3 class="plan-name">Max Ryzen 3950x</h3>
+              <p>Dobro de capacidade NVMe para cargas de trabalho contínuas.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Passmark: 39.172</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 100GB NVMe (RAM DDR4)</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Domínios & Tráfego Ilimitados</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Datacenter Premium & WhatsApp</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-select-plan="VPS Max Ryzen 3950x" data-i18n="plans.btn_inquire">Consulte-nos</a>
+          </div>
+
+          <!-- Ultra Intel Core i9 -->
+          <div class="pricing-card card">
+            <div class="pricing-card-header">
+              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
+              <h3 class="plan-name">Ultra Intel Core i9</h3>
+              <p>Poder extremo com tecnologia DDR5 para servidores corporativos.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Passmark: 61.192</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 150GB NVMe (RAM DDR5)</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Domínios & Tráfego Ilimitados</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Datacenter Premium & WhatsApp</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-select-plan="VPS Ultra Intel Core i9" data-i18n="plans.btn_inquire">Consulte-nos</a>
+          </div>
+        </div>
+
+        <!-- TAB 4: VPS CPANEL DEDICADO (A confirmar pela direção) -->
+        <div class="pricing-pane" id="tab-vps-cpanel">
+          <!-- cPanel A -->
+          <div class="pricing-card card">
+            <div class="pricing-card-header">
+              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
+              <h3 class="plan-name">cPanel A</h3>
+              <p>4x Núcleos · 4GB RAM · Localização EUA</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 100GB SSD/NVMe + 100GB FTP Backup</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Tráfego Ilimitado</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Gerenciamento Grátis e Opcional*</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 99.9% Uptime · Link 1GB</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-select-plan="cPanel Dedicado A" data-i18n="plans.btn_view_more">Ver mais</a>
+          </div>
+
+          <!-- cPanel B -->
+          <div class="pricing-card card">
+            <div class="pricing-card-header">
+              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
+              <h3 class="plan-name">cPanel B</h3>
+              <p>8x Núcleos · 8GB RAM · Localização EUA</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 150GB SSD/NVMe + 150GB FTP Backup</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Tráfego Ilimitado</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Gerenciamento Grátis e Opcional*</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 99.9% Uptime · Link 1GB</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-select-plan="cPanel Dedicado B" data-i18n="plans.btn_view_more">Ver mais</a>
+          </div>
+
+          <!-- cPanel C -->
+          <div class="pricing-card card">
+            <div class="pricing-card-header">
+              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
+              <h3 class="plan-name">cPanel C</h3>
+              <p>12x Núcleos · 12GB RAM · Localização EUA</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 200GB SSD/NVMe + 250GB FTP Backup</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Tráfego Ilimitado</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Gerenciamento Grátis e Opcional*</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 99.9% Uptime · Link 1GB</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-select-plan="cPanel Dedicado C" data-i18n="plans.btn_view_more">Ver mais</a>
+          </div>
+
+          <!-- cPanel D -->
+          <div class="pricing-card card">
+            <div class="pricing-card-header">
+              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
+              <h3 class="plan-name">cPanel D</h3>
+              <p>16x Núcleos · 16GB RAM · Localização EUA</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 250GB SSD/NVMe + 500GB FTP Backup</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Tráfego Ilimitado</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Gerenciamento Grátis e Opcional*</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 99.9% Uptime · Link 1GB</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-select-plan="cPanel Dedicado D" data-i18n="plans.btn_view_more">Ver mais</a>
+          </div>
+        </div>
+
+        <!-- TAB 5: REVENDA (A confirmar pela direção) -->
+        <div class="pricing-pane" id="tab-reseller">
+          <!-- Pro Ryzen 3950x -->
+          <div class="pricing-card card">
+            <div class="pricing-card-header">
+              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
+              <h3 class="plan-name">Revenda Pro</h3>
+              <p>Ideal para freelancers e pequenas agências web.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 15 Contas cPanel</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 40GB NVMe (RAM DDR4)</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site · Passmark 39.172</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> SSL Grátis & Tráfego Ilimitado</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-select-plan="Revenda Pro Ryzen 3950x" data-i18n="plans.btn_inquire">Consulte-nos</a>
+          </div>
+
+          <!-- Max Ryzen 3950x -->
+          <div class="pricing-card card featured">
+            <div class="pricing-card-header">
+              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
+              <h3 class="plan-name">Revenda Max</h3>
+              <p>Mais contas e dobro do armazenamento para escala contínua.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 30 Contas cPanel</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 80GB NVMe (RAM DDR4)</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site · Passmark 39.172</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> SSL Grátis & Tráfego Ilimitado</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-select-plan="Revenda Max Ryzen 3950x" data-i18n="plans.btn_inquire">Consulte-nos</a>
+          </div>
+
+          <!-- Ultra Intel Core i9 -->
+          <div class="pricing-card card">
+            <div class="pricing-card-header">
+              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
+              <h3 class="plan-name">Revenda Ultra</h3>
+              <p>Capacidade corporativa com memória ultra-rápida DDR5.</p>
+              <div class="pricing-price-wrapper">
+                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 60 Contas cPanel</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 100GB NVMe (RAM DDR5)</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site · Passmark 61.192</li>
+              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> SSL Grátis & Tráfego Ilimitado</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-select-plan="Revenda Ultra Intel Core i9" data-i18n="plans.btn_inquire">Consulte-nos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PORTFÓLIO & PROVA SOCIAL (SÓ OS 4 OFICIAIS) ==================== -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="portfolio.tag">Portfólio & Prova Social</span>
+          <h2 data-i18n="portfolio.title">Empresas e Projetos que Confiam na Nossa Infraestrutura</h2>
+          <p data-i18n="portfolio.description">Marcas que operam na nossa rede de alto desempenho.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- 1. Sabores da Terra -->
+          <div class="card portfolio-card reveal reveal-delay-1">
+            <div class="portfolio-logo-placeholder">🌿 Sabores da Terra</div>
+            <p>Gastronomia & Restaurante</p>
+          </div>
+
+          <!-- 2. Spicy House (spicehouses.com) -->
+          <div class="card portfolio-card reveal reveal-delay-2">
+            <div class="portfolio-logo-placeholder">🌶️ Spicy House</div>
+            <p>Delivery & Gastronomia (spicehouses.com)</p>
+          </div>
+
+          <!-- 3. Zaizah Fragrance -->
+          <div class="card portfolio-card reveal reveal-delay-3">
+            <div class="portfolio-logo-placeholder">💎 Zaizah Fragrance</div>
+            <p>Perfumaria & Produtos de Luxo</p>
+          </div>
+
+          <!-- 4. Nicol Store -->
+          <div class="card portfolio-card reveal reveal-delay-4">
+            <div class="portfolio-logo-placeholder">🛍️ Nicol Store</div>
+            <p>E-commerce & Varejo Moderno</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="faq.tag">Dúvidas Frequentes</span>
+          <h2 data-i18n="faq.title">Perguntas Frequentes</h2>
+          <p data-i18n="faq.description">Respostas claras sobre os nossos serviços de hospedagem e suporte.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Atendem clientes fora de Moçambique?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim. A Zedeck's IT atende clientes globalmente. A nossa infraestrutura em nuvem e servidores de alta capacidade estão preparados para atender qualquer país com suporte dedicado em português e inglês.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quanto tempo demora a ativação do meu plano ou domínio?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>A ativação de planos de Hospedagem Compartilhada e WordPress é realizada no mesmo dia após a confirmação do pedido. O registo de domínios internacionais (.com, .org) ocorre em minutos, e domínios nacionais (.co.mz) seguem os prazos normais de propagação do registrador oficial.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Como funciona o suporte técnico?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Disponibilizamos suporte direto e humanizado via WhatsApp oficial (+258 87 770 3308) e por e-mail corporativo. A nossa equipa de engenharia presta assistência em configurações de DNS, migrações de sites e resolução de incidentes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Posso fazer upgrade do meu plano quando o meu tráfego crescer?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Com certeza. A nossa infraestrutura é 100% escalável. Pode iniciar num plano básico e migrar para planos avançados ou servidores VPS dedicados a qualquer momento, sem perda de dados ou indisponibilidade prolongada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FORMULÁRIO DE LEAD ==================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="contact.tag">Atendimento</span>
+          <h2 data-i18n="contact.title">Fale com um Especialista da Zedeck's IT</h2>
+          <p data-i18n="contact.description">Tire as suas dúvidas ou solicite uma proposta personalizada para a infraestrutura da sua empresa.</p>
+        </div>
+
+        <div class="lead-form-container reveal">
+          <form id="leadForm">
+            <div class="form-group">
+              <label for="leadName" class="form-label" data-i18n="contact.form_name">Nome Completo *</label>
+              <input type="text" id="leadName" class="form-control" placeholder="Ex: João Silva" data-i18n-placeholder="contact.form_name_placeholder" required>
+            </div>
+
+            <div class="form-group">
+              <label for="leadEmail" class="form-label" data-i18n="contact.form_email">E-mail Corporativo *</label>
+              <input type="email" id="leadEmail" class="form-control" placeholder="joao@empresa.com" data-i18n-placeholder="contact.form_email_placeholder" required>
+            </div>
+
+            <div class="form-group">
+              <label for="leadPhone" class="form-label" data-i18n="contact.form_phone">Telefone / WhatsApp *</label>
+              <input type="tel" id="leadPhone" class="form-control" placeholder="+258 84 000 0000" data-i18n-placeholder="contact.form_phone_placeholder" required>
+            </div>
+
+            <div class="form-group">
+              <label for="leadPlan" class="form-label" data-i18n="contact.form_plan">Plano ou Serviço de Interesse</label>
+              <select id="leadPlan" class="form-control">
+                <option value="">Selecione uma opção...</option>
+                <optgroup label="Hospedagem Compartilhada (Preço Confirmado)">
+                  <option value="Hospedagem Compartilhada - PREMIUM (350 MZN)">PREMIUM — 350 MZN/mês</option>
+                  <option value="Hospedagem Compartilhada - BUSINESS (550 MZN)">BUSINESS — 550 MZN/mês</option>
+                  <option value="Hospedagem Compartilhada - ENTERPRISE (850 MZN)">ENTERPRISE — 850 MZN/mês</option>
+                </optgroup>
+                <optgroup label="Hospedagem WordPress (Preço Confirmado)">
+                  <option value="WordPress - STARTER (200 MZN)">STARTER — 200 MZN/mês</option>
+                  <option value="WordPress - STANDARD (450 MZN)">STANDARD — 450 MZN/mês</option>
+                  <option value="WordPress - WORD PLUS (650 MZN)">WORD PLUS — 650 MZN/mês</option>
+                </optgroup>
+                <optgroup label="VPS & Servidores Dedicados">
+                  <option value="VPS Pro Ryzen 3950x">VPS Pro Ryzen 3950x</option>
+                  <option value="VPS Max Ryzen 3950x">VPS Max Ryzen 3950x</option>
+                  <option value="VPS Ultra Intel Core i9">VPS Ultra Intel Core i9</option>
+                  <option value="cPanel Dedicado A">cPanel Dedicado A</option>
+                  <option value="cPanel Dedicado B">cPanel Dedicado B</option>
+                  <option value="cPanel Dedicado C">cPanel Dedicado C</option>
+                  <option value="cPanel Dedicado D">cPanel Dedicado D</option>
+                </optgroup>
+                <optgroup label="Revenda cPanel">
+                  <option value="Revenda Pro Ryzen 3950x">Revenda Pro Ryzen 3950x</option>
+                  <option value="Revenda Max Ryzen 3950x">Revenda Max Ryzen 3950x</option>
+                  <option value="Revenda Ultra Intel Core i9">Revenda Ultra Intel Core i9</option>
+                </optgroup>
+                <optgroup label="Outros Serviços">
+                  <option value="Registo de Domínio">Registo de Domínio</option>
+                  <option value="Transferência de Domínio / Migração">Transferência / Migração</option>
+                  <option value="Consultoria Personalizada">Consultoria Personalizada</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="leadMessage" class="form-label" data-i18n="contact.form_message">Mensagem ou Requisitos Técnicos</label>
+              <textarea id="leadMessage" class="form-control" placeholder="Descreva detalhes do seu site ou projeto..." data-i18n-placeholder="contact.form_message_placeholder"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="contact.btn_submit">
+              Enviar via WhatsApp Oficial
+            </button>
+
+            <p style="font-size: var(--font-size-xs); color: var(--color-text-muted); text-align: center; margin-top: var(--space-4);" data-i18n="contact.whatsapp_help">
+              O envio redireciona diretamente para o WhatsApp oficial da equipa de suporte da Zedeck's IT.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <div class="brand-logo">
+            ZEDECK<span>'S</span> HOSTING
+          </div>
+          <p data-i18n="footer.desc">
+            Soluções de hospedagem corporativa, servidores dedicados e registo de domínios pela Zedeck's IT em Nampula, Moçambique.
+          </p>
+        </div>
+
+        <!-- Ecosystem Links -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.col_ecosystem">Ecossistema Zedecks</h4>
+          <div class="footer-links">
+            <a href="https://zedecks.com" target="_blank" rel="noopener">zedecks.com</a>
+            <a href="https://training.zedecks.com" target="_blank" rel="noopener">training.zedecks.com</a>
+            <a href="https://zncreative.zedecks.com" target="_blank" rel="noopener">zncreative.zedecks.com</a>
+            <a href="https://zstocky.com" target="_blank" rel="noopener">zstocky.com</a>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.col_contact">Contacto & Suporte</h4>
+          <div class="footer-links">
+            <a href="tel:+258877703308">📞 +258 87 770 3308</a>
+            <a href="mailto:info@zedecks.com">✉️ info@zedecks.com</a>
+            <span>📍 Nampula, Moçambique</span>
+            <span>🌐 Redes: @zedecksit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Zedeck's IT. <span data-i18n="footer.rights">Todos os direitos reservados.</span>
+        </div>
+        <div class="footer-signature" data-i18n="footer.signature">
+          Made by Zedeck's IT.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (ES6 Modules) -->
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>
