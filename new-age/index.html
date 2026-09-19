@@ -23,9 +23,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Flag Icons Standard CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
-
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./assets/css/tokens.css">
   <link rel="stylesheet" href="./assets/css/base.css">
@@ -227,8 +224,79 @@
     </div>
   </div>
 
-  <main style="min-height: calc(100vh - 200px); display: flex; align-items: center; justify-content: center; padding: 120px 20px;">
-    <!-- Container Vazio Pronto para Novos Elementos -->
+  <main>
+    <!-- ==================== HERO SECTION (FASE 1) ==================== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        
+        <!-- Hero Badge -->
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          <span data-i18n="hero.badge">Excelência em Hosting & Domínios</span>
+        </div>
+
+        <!-- Hero Title -->
+        <h1>
+          <span data-i18n="hero.title">Dê vida às suas ideias com a hospedagem mais rápida e segura</span>
+        </h1>
+
+        <!-- Clean Animated Domain Search Bar (Opposite Blue Beams) -->
+        <div class="hero-domain-wrapper">
+          <div class="domain-search-box-animated">
+            <!-- Top Light Beam (Left to Right) -->
+            <div class="domain-beam-top"></div>
+            <!-- Bottom Light Beam (Right to Left) -->
+            <div class="domain-beam-bottom"></div>
+
+            <form id="domainSearchForm" class="domain-search-form" onsubmit="return false;">
+              <div class="domain-search-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <input type="text" id="domainQueryInput" class="domain-search-input" placeholder="Digite o seu domínio (ex: meunegocio.com)..." data-i18n-placeholder="hero.domain_placeholder" autocomplete="off" spellcheck="false" required>
+              <button type="submit" id="domainSubmitBtn" class="btn-domain-submit" data-i18n="hero.domain_btn_verify">
+                Verificar Disponibilidade
+              </button>
+            </form>
+          </div>
+
+          <!-- Popular Domain Extensions Row (Sem preços, clicáveis) -->
+          <div class="domain-popular-extensions">
+            <span class="ext-badge" data-tld=".co.mz">.co.mz</span>
+            <span class="ext-badge" data-tld=".com">.com</span>
+            <span class="ext-badge" data-tld=".mz">.mz</span>
+            <span class="ext-badge" data-tld=".net">.net</span>
+            <span class="ext-badge" data-tld=".org">.org</span>
+            <span class="ext-badge" data-tld=".tech">.tech</span>
+            <span class="ext-badge" data-tld=".io">.io</span>
+            <span class="ext-badge" data-tld=".online">.online</span>
+          </div>
+
+          <!-- Interactive Inline Verification Result Box (Dynamic) -->
+          <div id="domainSearchResult" class="domain-search-result" aria-live="polite" style="display: none;"></div>
+        </div>
+
+        <!-- Metrics Grid (Responsive Cards) -->
+        <div class="hero-metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">99.99%</div>
+            <div class="metric-label" data-i18n="hero.metric_uptime_desc">Uptime Garantido</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">PCIe Gen4</div>
+            <div class="metric-label" data-i18n="hero.metric_nvme_desc">NVMe Ultra-Rápido</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">Anti-DDoS</div>
+            <div class="metric-label" data-i18n="hero.metric_ssl_desc">Proteção Avançada</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">24/7/365</div>
+            <div class="metric-label" data-i18n="hero.metric_support_desc">Suporte Técnico</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <!-- ==================== FOOTER ==================== -->
@@ -245,7 +313,7 @@
             </div>
           </a>
           <p data-i18n="footer.desc">
-            Infraestrutura corporativa de alojamento web, servidores dedicados e gestão de domínios em Moçambique. Sede em Nampula, Av. do Trabalho.
+            Infraestrutura global de alojamento web, servidores dedicados e gestão de domínios com presença e conectividade mundial.
           </p>
         </div>
 

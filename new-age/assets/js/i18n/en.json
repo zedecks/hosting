@@ -7,8 +7,22 @@
     "cta": "Let's Talk!",
     "client_portal": "Client Portal"
   },
+  "hero": {
+    "badge": "Excellence in Hosting & Domains",
+    "title": "Bring your ideas to life with the fastest and most secure hosting",
+    "domain_placeholder": "Type your domain (e.g. mybusiness.com)...",
+    "domain_btn_verify": "Check Availability",
+    "metric_uptime": "99.99%",
+    "metric_uptime_desc": "Guaranteed Uptime",
+    "metric_nvme": "PCIe Gen4",
+    "metric_nvme_desc": "Ultra-Fast NVMe",
+    "metric_ssl": "Anti-DDoS",
+    "metric_ssl_desc": "Advanced Protection",
+    "metric_support": "24/7/365",
+    "metric_support_desc": "Technical Support"
+  },
   "footer": {
-    "desc": "Enterprise web hosting, dedicated servers, and domain management in Mozambique. Headquarters in Nampula, Av. do Trabalho.",
+    "desc": "Global web hosting infrastructure, dedicated servers, and domain management with worldwide reach and connectivity.",
     "col_ecosystem": "Zedecks Ecosystem",
     "col_contact": "Contact & Location",
     "rights": "All rights reserved.",

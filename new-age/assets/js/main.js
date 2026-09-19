@@ -4,10 +4,14 @@
  * Clean Code Standard: Header, Mobile Modal Drawer, i18n
  */
 import { I18nManager } from './components/i18n.js';
+import { initDomainSearch } from './components/domain.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize i18n
   const i18n = new I18nManager();
+
+  // 2. Initialize Domain Search
+  initDomainSearch();
 
   // 2. Mobile Modal Drawer System
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');

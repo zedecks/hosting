@@ -1,10 +1,9 @@
 /* ==========================================================================
    RESPONSIVE DESIGN SYSTEM (responsive.css)
    Mobile-First Architecture:
-     - Mobile Default (0px - 767px)
+     - Mobile (0px - 767px)
      - Tablet (768px - 1079px)
      - Desktop (1080px+)
-     - Large Desktop (1440px+)
    ========================================================================== */
 
 /* ==========================================================================
@@ -115,7 +114,7 @@
 }
 
 /* ==========================================================================
-   MOBILE NAVIGATION MODAL DRAWER (Floating Reference Design)
+   MOBILE NAVIGATION MODAL DRAWER
    ========================================================================== */
 .mobile-modal-overlay {
   position: fixed;
@@ -160,7 +159,6 @@
   transform: translateY(0) scale(1);
 }
 
-/* Modal Sections */
 .mobile-modal-section {
   display: flex;
   flex-direction: column;
@@ -177,7 +175,6 @@
   padding-left: 4px;
 }
 
-/* Nav List */
 .mobile-nav-list {
   display: flex;
   flex-direction: column;
@@ -244,7 +241,6 @@
   color: var(--color-primary);
 }
 
-/* Accordion Content */
 .mobile-accordion-content {
   max-height: 0;
   overflow: hidden;
@@ -276,7 +272,6 @@
   padding-left: 16px;
 }
 
-/* ACESSO Section Buttons (Side-by-side) */
 .mobile-access-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -320,7 +315,6 @@
   opacity: 0.7;
 }
 
-/* Modal Footer */
 .mobile-modal-footer {
   display: flex;
   align-items: center;
@@ -377,7 +371,6 @@
   letter-spacing: 0.04em;
 }
 
-/* Close Button (X) */
 .btn-modal-close {
   width: 38px;
   height: 38px;
@@ -401,14 +394,8 @@
   box-shadow: 0 0 20px rgba(0, 194, 255, 0.6);
 }
 
-/* Hide desktop navbar on mobile */
 .nav-links {
   display: none;
-}
-
-.nav-links .dropdown-item {
-  padding: 0.65rem 1rem;
-  font-size: 0.875rem;
 }
 
 /* --- Hero Section Mobile --- */
@@ -429,82 +416,40 @@
   padding: 0 var(--space-2);
 }
 
-.hero-actions {
+.domain-search-form {
+  padding: 4px 6px 4px 14px;
+}
+
+.btn-domain-submit {
+  padding: 0.65rem 1.15rem;
+  font-size: 0.8125rem;
+}
+
+.domain-search-result {
   flex-direction: column;
-  width: 100%;
-  gap: var(--space-3);
-  margin-bottom: var(--space-8);
-}
-
-.hero-actions .btn {
-  width: 100%;
-  max-width: 320px;
-}
-
-.hero-metrics {
-  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
   padding: var(--space-4);
+}
+
+.domain-result-actions {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.hero-metrics-grid {
   gap: var(--space-3);
+}
+
+.metric-card {
+  padding: var(--space-4) var(--space-3);
 }
 
 .metric-value {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
 }
 
 .metric-label {
-  font-size: 0.6875rem;
-}
-
-/* --- Trust Section Mobile --- */
-.trust-section {
-  padding: var(--space-6) var(--space-4);
-  margin-top: var(--space-8);
-  gap: var(--space-6);
-}
-
-.tech-badge-item, .payment-badge-item {
-  font-size: 0.75rem;
-  padding: 6px 11px;
-}
-
-/* --- Pricing Mobile --- */
-.pricing-tabs {
-  gap: var(--space-1);
-  margin-bottom: var(--space-6);
-}
-
-.pricing-tab-btn {
-  padding: 0.5rem 0.9rem;
-  font-size: var(--font-size-xs);
-}
-
-.pricing-card {
-  padding: var(--space-6);
-}
-
-.price-amount {
-  font-size: 2.25rem;
-}
-
-/* --- Social Proof & Testimonials Mobile --- */
-.portfolio-grid {
-  grid-template-columns: 1fr;
-  gap: var(--space-4);
-}
-
-/* --- FAQ Mobile --- */
-.faq-question {
-  padding: var(--space-4) var(--space-5);
-  font-size: 0.9375rem;
-}
-
-.faq-answer {
-  padding: 0 var(--space-5) var(--space-4) var(--space-5);
-}
-
-/* --- Lead Form Mobile --- */
-.lead-form-container {
-  padding: var(--space-5);
+  font-size: 0.65rem;
 }
 
 /* --- Footer Mobile --- */
@@ -528,12 +473,10 @@
   justify-content: center;
 }
 
-
 /* ==========================================================================
    2. TABLET (768px - 1079px)
    ========================================================================== */
 @media (min-width: 768px) {
-  /* Header */
   .site-header {
     top: 16px;
     padding: 0 var(--space-4);
@@ -585,7 +528,6 @@
     display: none;
   }
 
-  /* Hero */
   .hero {
     padding-top: calc(80px + var(--space-12));
     padding-bottom: var(--space-16);
@@ -599,53 +541,27 @@
     font-size: var(--font-size-base);
   }
 
-  .hero-actions {
-    flex-direction: row;
+  .hero-metrics-grid {
     gap: var(--space-4);
   }
 
-  .hero-actions .btn {
-    width: auto;
-  }
-
-  .hero-metrics {
-    grid-template-columns: repeat(4, 1fr);
-    padding: var(--space-6);
-    gap: var(--space-4);
+  .metric-card {
+    padding: var(--space-5) var(--space-4);
   }
 
   .metric-value {
-    font-size: var(--font-size-2xl);
+    font-size: 1.55rem;
   }
 
   .metric-label {
-    font-size: var(--font-size-xs);
+    font-size: 0.75rem;
   }
 
-  /* Services Grid */
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
+  .domain-search-result {
+    flex-direction: row;
+    align-items: center;
   }
 
-  /* Pricing Grid */
-  .pricing-pane.active {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
-  }
-
-  /* Portfolio Grid */
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
-  }
-
-  /* Lead Form */
-  .lead-form-container {
-    padding: var(--space-8);
-  }
-
-  /* Footer */
   .footer-grid {
     grid-template-columns: 2fr 1fr 1fr;
     gap: var(--space-8);
@@ -657,12 +573,10 @@
   }
 }
 
-
 /* ==========================================================================
    3. DESKTOP (1080px+)
    ========================================================================== */
 @media (min-width: 1080px) {
-  /* Header & Desktop Nav */
   .site-header {
     top: 18px;
   }
@@ -682,73 +596,8 @@
 
   .nav-links {
     display: flex !important;
-    position: static;
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
-    flex-direction: row;
-    align-items: center;
-    gap: 2px;
-    max-height: none;
-    overflow: visible;
   }
 
-  .nav-links .nav-item {
-    width: auto;
-    position: relative;
-  }
-
-  .nav-links .nav-link {
-    width: auto;
-    font-size: 0.875rem;
-    padding: 0.5rem 0.85rem;
-    border-radius: var(--radius-full);
-  }
-
-  .nav-links .dropdown-menu {
-    position: absolute;
-    top: calc(100% + 14px);
-    left: 50%;
-    transform: translateX(-50%) translateY(8px);
-    min-width: 220px;
-    width: auto;
-    background: rgba(20, 24, 36, 0.95);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-xl);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 194, 255, 0.15);
-    padding: 0.5rem;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    max-height: none;
-    overflow: visible;
-    margin: 0;
-  }
-
-  .nav-links .dropdown-menu::before {
-    display: block;
-    content: '';
-    position: absolute;
-    top: -14px;
-    left: 0;
-    width: 100%;
-    height: 14px;
-  }
-
-  .nav-item:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateX(-50%) translateY(0);
-  }
-
-  /* Header Actions on Desktop */
   .btn-nav-cta {
     width: auto;
     height: auto;
@@ -772,7 +621,6 @@
     display: inline;
   }
 
-  /* Hero */
   .hero {
     padding-top: calc(84px + var(--space-16));
     padding-bottom: var(--space-20);
@@ -784,34 +632,5 @@
 
   .hero p {
     font-size: var(--font-size-lg);
-  }
-
-  /* Services Grid */
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Pricing Grid */
-  .pricing-pane.active {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Portfolio Grid */
-  .portfolio-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-
-/* ==========================================================================
-   4. LARGE DESKTOP (1440px+)
-   ========================================================================== */
-@media (min-width: 1440px) {
-  .hero h1 {
-    font-size: var(--font-size-6xl);
-  }
-
-  .container {
-    max-width: 1320px;
   }
 }

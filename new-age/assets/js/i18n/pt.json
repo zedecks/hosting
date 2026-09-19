@@ -7,8 +7,22 @@
     "cta": "Vamos Conversar!",
     "client_portal": "Área do Cliente"
   },
+  "hero": {
+    "badge": "Excelência em Hosting & Domínios",
+    "title": "Dê vida às suas ideias com a hospedagem mais rápida e segura",
+    "domain_placeholder": "Digite o seu domínio (ex: meunegocio.com)...",
+    "domain_btn_verify": "Verificar Disponibilidade",
+    "metric_uptime": "99.99%",
+    "metric_uptime_desc": "Uptime Garantido",
+    "metric_nvme": "PCIe Gen4",
+    "metric_nvme_desc": "NVMe Ultra-Rápido",
+    "metric_ssl": "Anti-DDoS",
+    "metric_ssl_desc": "Proteção Avançada",
+    "metric_support": "24/7/365",
+    "metric_support_desc": "Suporte Técnico"
+  },
   "footer": {
-    "desc": "Infraestrutura corporativa de alojamento web, servidores dedicados e gestão de domínios em Moçambique. Sede em Nampula, Av. do Trabalho.",
+    "desc": "Infraestrutura global de alojamento web, servidores dedicados e gestão de domínios com presença e conectividade mundial.",
     "col_ecosystem": "Ecossistema Zedecks",
     "col_contact": "Contacto & Localização",
     "rights": "Todos os direitos reservados.",

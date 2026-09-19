@@ -4,6 +4,43 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
 ---
 
+## 🚀 [v0.2.5] - 2026-09-19 — Construção Modular Home (Fase 1: Hero & Domínios)
+
+### ✨ Adicionado
+- **Barra de Domínio com Feixes de Luz Laser Animados**:
+  - Efeito de iluminação neon azul/ciano com dois feixes em sentidos opostos (topo: esquerda para a direita; base: direita para a esquerda).
+  - Caixa com borda arredondada e foco com brilho dinâmico.
+- **Pills de Extensões Populares Clicáveis (Sem Preços)**:
+  - Atalhos rápidos para `.co.mz`, `.com`, `.mz`, `.net`, `.org`, `.tech`, `.io` e `.online`.
+  - Clique direto no pill preenche ou substitui a extensão no campo de pesquisa automaticamente.
+- **Verificação Interativa de Domínios Inline**:
+  - Simulação local instantânea com estado de carregamento (*A verificar...*).
+  - Feedback visual dinâmico com opções de *Registar Agora* (domínio livre) ou *Transferir Domínio* (domínio já registado) e botão de fechar.
+  - Suporte completo a domínios de Moçambique (`.co.mz`, `.mz`) e internacionais.
+- **Cards Glassmorphic para Métricas do Hero**:
+  - 4 cartões com vidro escuro translúcido, gradiente de topo em azul neon e efeito hover (*99.99% Uptime*, *PCIe Gen4 NVMe*, *Anti-DDoS Proteção*, *24/7/365 Suporte*).
+
+### 🔄 Alterado
+- **Badge do Hero**: Atualizado para *"Excelência em Hosting & Domínios"*.
+- **Título do Hero**: Simplificado e tornado persuasivo (*"Dê vida às suas ideias com a hospedagem mais rápida e segura"*).
+- **Placeholder do Input**: Alterado para formato curto e direto (*"Digite o seu domínio (ex: meunegocio.com)..."*).
+- **Traduções i18n (`pt.json` / `en.json`)**: Sincronizadas integralmente com o posicionamento global e as novas chaves do Hero.
+
+### 🗑️ Removido
+- **Descrição Prolixa do Hero**: Removido o parágrafo de texto descritivo longo para manter o foco total na barra de busca e nas métricas.
+- **Redirecionamento para WhatsApp na Busca**: Eliminado o envio forçado para o WhatsApp na verificação de domínios.
+- **Folha de Estilos Externa Não Utilizada**: Removido link do CDN `flag-icons.min.css` em favor dos assets SVG locais.
+- **Classes e Estilos Órfãos**: Limpeza rigorosa em `components.css`, `base.css`, `animations.css` e `responsive.css`.
+
+### ⚡ Melhorado
+- **Responsividade Mobile-First do Hero**:
+  - Grelha das métricas adaptada perfeitamente: 2 colunas em mobile e 4 colunas em tablet/desktop.
+  - Ajuste dinâmico de preenchimento, tipografia e espaçamento em todas as resoluções.
+- **Legibilidade e Clean Code no Módulo `domain.js`**:
+  - Função auxiliar `removeDomainExtension()` dedicada e limpa para troca inteligente de extensões.
+
+---
+
 ## 🚀 [v0.2.4] - 2026-09-19 — Refatoração Clean Code & Preservação de Header e Footer
 
 ### 🧹 Limpeza & Reestruturação
