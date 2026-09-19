@@ -455,6 +455,18 @@
   font-size: 0.6875rem;
 }
 
+/* --- Trust Section Mobile --- */
+.trust-section {
+  padding: var(--space-6) var(--space-4);
+  margin-top: var(--space-8);
+  gap: var(--space-6);
+}
+
+.tech-badge-item, .payment-badge-item {
+  font-size: 0.75rem;
+  padding: 6px 11px;
+}
+
 /* --- Pricing Mobile --- */
 .pricing-tabs {
   gap: var(--space-1);

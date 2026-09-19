@@ -4,6 +4,21 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
 ---
 
+## 🚀 [v0.2.3] - 2026-09-19 — Humanização Corporativa & Padrões Oficiais de Infraestrutura
+
+### ✨ Adicionado
+- Faixa de tecnologias oficiais da infraestrutura (WHMCS, cPanel®, CloudLinux OS, LiteSpeed Enterprise, Let's Encrypt, Imunify360, JetBackup, Cloudflare, Gemini AI).
+- Faixa de métodos de pagamento nacionais e internacionais aceites em Meticais (M-Pesa, E-Mola, Millennium BIM, BCI, Standard Bank, Access Bank Moz, PayPal, Binance Pay, Visa/Mastercard).
+- Endereço institucional físico da sede em Nampula (Av. do Trabalho) e e-mail institucional oficial (`info@zedecks.com`).
+
+### 🔄 Alterado
+- Substituição integral de copywriting genérico de IA por métricas e especificações técnicas reais de servidores (armazenamento PCIe Gen4 NVMe, CloudLinux CageFS, LiteSpeed e suporte humano).
+
+### ⚡ Melhorado
+- Estilização visual corporativa sóbria com redução de halos artificiais, alinhada aos padrões de alta densidade técnica de datacenters modernos.
+
+---
+
 ## 🚀 [v0.2.2] - 2026-09-19 — Responsividade Mobile-First & Ações Rápidas
 
 ### ✨ Adicionado
