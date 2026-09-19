@@ -9,40 +9,36 @@
     "client_portal": "Área do Cliente"
   },
   "hero": {
-    "badge": "Datacenter & Cloud Hosting em Moçambique",
-    "title": "Hospedagem Web, Servidores VPS e Domínios com Baixa Latência",
-    "description": "Infraestrutura corporativa em Moçambique com armazenamento 100% NVMe PCIe Gen4, cPanel® oficial, LiteSpeed Enterprise e suporte técnico humano direto de Nampula. Pagamentos facilitados em Meticais (MZN).",
+    "badge": "Infraestrutura Cloud & Servidores de Alta Performance",
+    "title": "Hospedagem Web, Servidores VPS e Domínios com Performance Global",
+    "description": "Infraestrutura corporativa de alta velocidade com armazenamento 100% NVMe PCIe Gen4, cPanel® oficial, LiteSpeed Enterprise e suporte técnico especializado 24/7. Conectividade global com ativação instantânea.",
     "cta_plans": "Ver Planos Oficiais",
     "cta_contact": "Consultoria Gratuita",
-    "metric_uptime": "99.9% Uptime",
+    "metric_uptime": "99.99%",
     "metric_uptime_desc": "SLA em Contrato",
     "metric_nvme": "PCIe Gen4",
-    "metric_nvme_desc": "NVMe de Alta Velocidade",
-    "metric_ssl": "SSL & Imunify360",
-    "metric_ssl_desc": "Proteção e Isolamento",
-    "metric_support": "Suporte Humano",
-    "metric_support_desc": "Nampula & Maputo"
-  },
-  "trust": {
-    "tech_title": "Tecnologias & Padrões Oficiais de Infraestrutura",
-    "payments_title": "Meios de Pagamento Nacionais e Internacionais Aceites em Meticais (MZN)"
+    "metric_nvme_desc": "NVMe Ultra-Rápido",
+    "metric_ssl": "Anti-DDoS",
+    "metric_ssl_desc": "Proteção & Isolamento",
+    "metric_support": "24/7/365",
+    "metric_support_desc": "Suporte Especializado"
   },
   "services": {
     "tag": "Soluções Corporativas",
     "title": "Infraestrutura de Alto Desempenho para Empresas e Desenvolvedores",
-    "description": "Recursos computacionais dedicados, isolamento seguro por conta (CageFS) e conexões otimizadas para Moçambique e a região da África Austral.",
+    "description": "Recursos computacionais dedicados, isolamento seguro por conta (CageFS) e conexões otimizadas para operações locais e internacionais.",
     "web_hosting_title": "Hospedagem Web cPanel",
     "web_hosting_desc": "Contas isoladas com CloudLinux OS, LiteSpeed Web Server, armazenamento NVMe ultra-rápido, e-mails corporativos e SSL automático.",
     "domains_title": "Registo & Gestão de Domínios",
-    "domains_desc": "Registo de domínios nacionais .co.mz, .mz e internacionais (.com, .org, .net) com DNS Anycast gerenciado e assistência de transferência.",
+    "domains_desc": "Registo de domínios internacionais (.com, .org, .net, .io) e nacionais (.co.mz, .mz) com DNS Anycast gerenciado e assistência de transferência.",
     "vps_title": "Servidores VPS & Dedicados",
-    "vps_desc": "Poder computacional isolado com processadores AMD EPYC / Ryzen 3950x e Intel Core i9, acesso root e tráfego de alta velocidade.",
+    "vps_desc": "Poder computacional dedicado com processadores AMD EPYC / Ryzen 3950x e Intel Core i9, acesso root e tráfego de alta velocidade.",
     "reseller_title": "Revenda de Hospedagem WHMCS",
     "reseller_desc": "Infraestrutura completa para agências e revendedores criarem seus próprios planos com WHMCS, cPanel/WHM e DNS próprio.",
     "wordpress_title": "Hospedagem Otimizada WordPress",
     "wordpress_desc": "Ambiente afinado com LiteSpeed Cache (LSCache), PHP 8.1 - 8.4, Redis Object Cache e segurança avançada contra ataques de força bruta.",
     "support_title": "Engenharia & Suporte Dedicado",
-    "support_desc": "Atendimento técnico direto com especialistas de infraestrutura em Nampula e Maputo, via WhatsApp oficial e sistema de tickets."
+    "support_desc": "Atendimento técnico direto com especialistas de infraestrutura via WhatsApp oficial e sistema de tickets 24/7."
   },
   "plans": {
     "tag": "Tabelas Oficiais",
@@ -74,11 +70,11 @@
   "contact": {
     "tag": "Atendimento Direto",
     "title": "Fale com a Equipa de Engenharia da Zedeck's IT",
-    "description": "Estamos localizados na Av. do Trabalho, Cidade de Nampula. Solicite propostas, migrações gratuitas ou consultoria para a sua empresa.",
+    "description": "Solicite propostas, migrações gratuitas ou arquitetura de servidores personalizada para a sua empresa.",
     "form_name": "Nome Completo",
     "form_name_placeholder": "Ex: João Silva",
     "form_email": "E-mail Corporativo",
-    "form_email_placeholder": "joao@empresa.co.mz",
+    "form_email_placeholder": "joao@empresa.com",
     "form_phone": "Telefone / WhatsApp",
     "form_phone_placeholder": "+258 84 000 0000",
     "form_plan": "Plano ou Serviço de Interesse",
@@ -90,7 +86,7 @@
     "whatsapp_help": "O envio encaminha diretamente para o canal oficial de atendimento da Zedeck's IT."
   },
   "footer": {
-    "desc": "Infraestrutura corporativa de alojamento web, servidores dedicados e gestão de domínios em Moçambique. Sede em Nampula, Av. do Trabalho.",
+    "desc": "Infraestrutura corporativa de alojamento web, servidores dedicados e gestão de domínios com alcance global. Zedeck's IT.",
     "col_services": "Serviços",
     "col_ecosystem": "Ecossistema Zedecks",
     "col_contact": "Contacto & Localização",

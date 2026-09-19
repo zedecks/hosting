@@ -9,32 +9,28 @@
     "client_portal": "Client Portal"
   },
   "hero": {
-    "badge": "Datacenter & Cloud Hosting in Mozambique",
-    "title": "Web Hosting, VPS Servers & Domains with Low Latency",
-    "description": "Enterprise cloud infrastructure in Mozambique with 100% NVMe PCIe Gen4 storage, official cPanel®, LiteSpeed Enterprise, and human technical support directly from Nampula. Local payments in Meticais (MZN).",
+    "badge": "High-Performance Cloud Infrastructure & Dedicated Servers",
+    "title": "Web Hosting, VPS Servers & Domains with Global Performance",
+    "description": "High-speed enterprise infrastructure powered by 100% NVMe PCIe Gen4 storage, official cPanel®, LiteSpeed Enterprise, and 24/7 specialized technical support. Global connectivity with instant provisioning.",
     "cta_plans": "View Official Plans",
     "cta_contact": "Free Consultation",
-    "metric_uptime": "99.9% Uptime",
+    "metric_uptime": "99.99%",
     "metric_uptime_desc": "Contract SLA",
     "metric_nvme": "PCIe Gen4",
-    "metric_nvme_desc": "High-Speed NVMe",
-    "metric_ssl": "SSL & Imunify360",
+    "metric_nvme_desc": "Ultra-Fast NVMe",
+    "metric_ssl": "Anti-DDoS",
     "metric_ssl_desc": "Protection & Isolation",
-    "metric_support": "Human Support",
-    "metric_support_desc": "Nampula & Maputo"
-  },
-  "trust": {
-    "tech_title": "Official Infrastructure Technologies & Standards",
-    "payments_title": "National and International Payment Methods Accepted in Meticais (MZN)"
+    "metric_support": "24/7/365",
+    "metric_support_desc": "Expert Support"
   },
   "services": {
     "tag": "Enterprise Solutions",
     "title": "High-Performance Infrastructure for Businesses & Developers",
-    "description": "Dedicated compute resources, secure account isolation (CageFS), and low-latency peering across Mozambique and Southern Africa.",
+    "description": "Dedicated compute resources, secure account isolation (CageFS), and high-speed network routes engineered for global scale.",
     "web_hosting_title": "cPanel Web Hosting",
     "web_hosting_desc": "Isolated accounts with CloudLinux OS, LiteSpeed Web Server, ultra-fast NVMe storage, corporate emails, and automated SSL.",
     "domains_title": "Domain Registration & DNS",
-    "domains_desc": "National .co.mz, .mz and international (.com, .org, .net) domain registrations with Anycast DNS management and full transfer support.",
+    "domains_desc": "International (.com, .org, .net, .io) and ccTLD (.co.mz, .mz) registrations with managed Anycast DNS and seamless transfer assistance.",
     "vps_title": "VPS & Dedicated Servers",
     "vps_desc": "Dedicated computing power powered by AMD EPYC / Ryzen 3950x and Intel Core i9 processors, full root access, and unmetered traffic.",
     "reseller_title": "WHMCS Reseller Hosting",
@@ -42,7 +38,7 @@
     "wordpress_title": "Optimized WordPress Hosting",
     "wordpress_desc": "Pre-tuned stack featuring LiteSpeed Cache (LSCache), PHP 8.1 - 8.4, Redis Object Cache, and real-time brute-force defense.",
     "support_title": "Dedicated Technical Engineering",
-    "support_desc": "Direct assistance from systems engineers based in Nampula and Maputo via official WhatsApp and ticket management."
+    "support_desc": "Direct assistance from infrastructure systems engineers via official WhatsApp and 24/7 ticket management."
   },
   "plans": {
     "tag": "Official Plans",
@@ -74,11 +70,11 @@
   "contact": {
     "tag": "Direct Assistance",
     "title": "Speak with Zedeck's IT Systems Engineers",
-    "description": "Headquartered at Av. do Trabalho, Nampula City, Mozambique. Request customized enterprise setups, free migrations, or server audits.",
+    "description": "Request customized enterprise server configurations, free site migrations, or infrastructure architecture advisory.",
     "form_name": "Full Name",
     "form_name_placeholder": "e.g., John Smith",
     "form_email": "Business Email",
-    "form_email_placeholder": "john@company.co.mz",
+    "form_email_placeholder": "john@company.com",
     "form_phone": "Phone / WhatsApp",
     "form_phone_placeholder": "+258 84 000 0000",
     "form_plan": "Interested Plan or Service",
@@ -90,7 +86,7 @@
     "whatsapp_help": "Submitting will redirect you directly to Zedeck's IT official support channel."
   },
   "footer": {
-    "desc": "Enterprise web hosting, dedicated VPS servers, and domain management in Mozambique. Headquartered at Av. do Trabalho, Nampula.",
+    "desc": "Enterprise web hosting, dedicated VPS servers, and domain management with global reach. Zedeck's IT.",
     "col_services": "Services",
     "col_ecosystem": "Zedecks Ecosystem",
     "col_contact": "Contact & Location",

@@ -556,75 +556,64 @@
   letter-spacing: 0.05em;
 }
 
-/* --- Enterprise Trust & Technology Ribbon --- */
-.trust-section {
-  margin-top: var(--space-12);
-  padding: var(--space-8) var(--space-6);
-  background: rgba(14, 20, 36, 0.65);
+/* --- Official Technologies Grid Section (Before Portfolio/FAQ) --- */
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 640px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tech-card {
+  background: rgba(14, 20, 36, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-2xl);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: all var(--transition-fast);
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
-  max-width: 1120px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: var(--space-3);
 }
 
-.trust-block-title {
-  font-family: var(--font-family-heading);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #7d8ba1;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: var(--space-4);
-  text-align: center;
-}
-
-.trust-badges-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.tech-badge-item, .payment-badge-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: var(--radius-full);
-  font-family: var(--font-family-heading);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: #CBD5E1;
-  transition: all var(--transition-fast);
-  white-space: nowrap;
-}
-
-.tech-badge-item:hover, .payment-badge-item:hover {
-  background: rgba(0, 194, 255, 0.08);
+.tech-card:hover {
+  background: rgba(18, 26, 48, 0.85);
   border-color: rgba(0, 194, 255, 0.35);
-  color: #ffffff;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 194, 255, 0.1);
 }
 
-.badge-icon-svg {
-  width: 16px;
-  height: 16px;
+.tech-card-icon {
+  width: 32px;
+  height: 32px;
   color: var(--color-primary);
   flex-shrink: 0;
 }
 
-.payment-badge-item {
-  background: rgba(10, 16, 30, 0.8);
-  border-color: rgba(255, 255, 255, 0.07);
+.tech-card h4 {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.tech-card p {
+  font-size: 0.84rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* --- Services Grid --- */
@@ -980,6 +969,64 @@ textarea.form-control {
 }
 
 .footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Footer Payments Strip */
+.footer-payments-strip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-payments-strip {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer-payments-label {
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748B;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.footer-payment-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-pay-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94A3B8;
+  transition: all var(--transition-fast);
+}
+
+.footer-pay-pill:hover {
+  background: rgba(0, 194, 255, 0.08);
+  border-color: rgba(0, 194, 255, 0.3);
   color: #ffffff;
 }
 
