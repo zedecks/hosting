@@ -4,7 +4,23 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
 ---
 
-## 🚀 [v0.2.5] - 2026-09-19 — Construção Modular Home (Fase 1: Hero & Fase 2: Nossas Soluções)
+## 🚀 [v0.2.5] - 2026-09-19 — Construção Modular Home (Fase 1: Hero, Fase 2: Soluções & Fase 3: Infraestrutura)
+
+### ✨ Adicionado
+- **Seção de Infraestrutura & Diferenciais de Engenharia (`#infrastructure`)**:
+  - Cards reestruturados com empilhamento vertical limpo: **Ícone no topo**, **Título no centro** e **Descrição na base**.
+  - **Armazenamento 100% NVMe PCIe Gen4**: Taxas de transferência ultrarrápidas de até 7.000 MB/s para carregamento instantâneo.
+  - **Servidores LiteSpeed & LSCache Nativo**: Arquitetura assíncrona com processamento até 300% mais veloz para WordPress e PHP.
+  - **Anycast DNS & Baixa Latência**: Roteamento geo-distribuído para o nó de presença mais próximo.
+  - **Segurança CageFS & Imunify360**: Isolamento rigoroso de contas com firewall ativo e proteção Anti-DDoS 100Gbps+.
+  - **Backups Automáticos & Restore em 1 Clique**: Cópias de segurança diárias com retenção off-site e restauração granular.
+  - **SLA 99.99% & Monitoramento 24/7/365**: Infraestrutura redundante em datacenters Tier-III+ monitorada por engenheiros.
+- **Banner de Métricas de Datacenter**:
+  - Indicadores globais em tempo real: `99.99% Uptime Garantido`, `100Gbps+ Mitigação Anti-DDoS`, `Ativação Instantânea` e `Datacenters Tier-III+`.
+- **Design Matte Premium & Zero Tons Roxos/Violetas**:
+  - Cards com cantos generosamente arredondados (`24px`), acabamento fosco e gradientes sutis em ciano elétrico, esmeralda, céu e cobalto.
+- **100% de Cobertura i18n em Português e Inglês**:
+  - Mapeamento completo e bilíngue em `pt.json` e `en.json`.
 
 ### ✨ Adicionado
 - **Separador em Ondulação de Nuvem (Cloud Wave Divider)**:

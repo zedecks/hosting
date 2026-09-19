@@ -638,5 +638,29 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-6);
   }
+
+  .infra-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+/* --- Mobile specific adjustments for Infra Section (<768px) --- */
+@media (max-width: 767px) {
+  .infra-card {
+    padding: var(--space-6) var(--space-5);
+    border-radius: 20px;
+  }
+
+  .infra-metrics-banner {
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--space-5) var(--space-4);
+    gap: var(--space-4);
+    border-radius: 20px;
+  }
+
+  .infra-metric-val {
+    font-size: 1.25rem;
+  }
 }
 

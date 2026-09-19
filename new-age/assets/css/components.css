@@ -936,6 +936,224 @@
 }
 
 /* ==========================================================================
+   INFRAESTRUTURA & DIFERENCIAIS (Dogma v0.3.0 Standard)
+   ========================================================================== */
+.infra-section {
+  position: relative;
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-16);
+}
+
+.infra-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+@media (min-width: 640px) {
+  .infra-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .infra-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.infra-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(13, 18, 32, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: var(--space-8) var(--space-6);
+  backdrop-filter: var(--backdrop-blur);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.infra-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 194, 255, 0.2), transparent);
+  opacity: 0.3;
+  transition: opacity var(--transition-fast);
+}
+
+.infra-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 194, 255, 0.25);
+  background: rgba(16, 22, 40, 0.85);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5);
+}
+
+.infra-card:hover::before {
+  opacity: 0.8;
+}
+
+.infra-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  transition: all var(--transition-fast);
+}
+
+.infra-card:hover .infra-icon {
+  transform: translateY(-1px);
+}
+
+.infra-icon.nvme {
+  background: rgba(0, 194, 255, 0.08);
+  border-color: rgba(0, 194, 255, 0.25);
+  color: #00C2FF;
+}
+
+.infra-card:hover .infra-icon.nvme {
+  background: rgba(0, 194, 255, 0.18);
+  border-color: rgba(0, 194, 255, 0.45);
+  color: #38bdf8;
+}
+
+.infra-icon.litespeed {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.25);
+  color: #34D399;
+}
+
+.infra-card:hover .infra-icon.litespeed {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.45);
+  color: #6ee7b7;
+}
+
+.infra-icon.anycast {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.25);
+  color: #38BDF8;
+}
+
+.infra-card:hover .infra-icon.anycast {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: #7DD3FC;
+}
+
+.infra-icon.security {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.25);
+  color: #FBBF24;
+}
+
+.infra-card:hover .infra-icon.security {
+  background: rgba(245, 158, 11, 0.18);
+  border-color: rgba(245, 158, 11, 0.45);
+  color: #FCD34D;
+}
+
+.infra-icon.backup {
+  background: rgba(45, 212, 191, 0.08);
+  border-color: rgba(45, 212, 191, 0.25);
+  color: #2DD4BF;
+}
+
+.infra-card:hover .infra-icon.backup {
+  background: rgba(45, 212, 191, 0.18);
+  border-color: rgba(45, 212, 191, 0.45);
+  color: #5EEAD4;
+}
+
+.infra-icon.sla {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.25);
+  color: #60A5FA;
+}
+
+.infra-card:hover .infra-icon.sla {
+  background: rgba(59, 130, 246, 0.18);
+  border-color: rgba(59, 130, 246, 0.45);
+  color: #93C5FD;
+}
+
+.infra-title {
+  font-family: var(--font-family-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-bottom: var(--space-2);
+}
+
+.infra-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Banner de Métricas da Infraestrutura */
+.infra-metrics-banner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  background: rgba(10, 15, 28, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: var(--space-6) var(--space-8);
+  backdrop-filter: var(--backdrop-blur);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 860px) {
+  .infra-metrics-banner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.infra-metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.infra-metric-val {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 40%, var(--color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.infra-metric-lbl {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
    FOOTER (Dogma v0.3.0 Standard)
    ========================================================================== */
 .site-footer {
