@@ -21,10 +21,8 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
   - Cards com cantos generosamente arredondados (`24px`), acabamento fosco e gradientes sutis em ciano elétrico, esmeralda, céu e cobalto.
 - **100% de Cobertura i18n em Português e Inglês**:
   - Mapeamento completo e bilíngue em `pt.json` e `en.json`.
-
-### ✨ Adicionado
-- **Separador em Ondulação de Nuvem (Cloud Wave Divider)**:
-  - Divisor vetorial orgânico SVG posicionado na base do Hero com espaçamento vertical encurtado e harmonioso.
+- **Separadores em Ondulação de Nuvem (Cloud Wave Dividers)**:
+  - Divisores vetoriais orgânicos SVG posicionados nas transições estratégicas: base do Hero (Fase 1 ➔ Fase 2) e base de Soluções (Fase 2 ➔ Fase 3: Infraestrutura).
 - **Seção "Nossas Soluções" (6 Pilares Sem Preços)**:
   - **Hospedagem Web cPanel®**: LiteSpeed, NVMe Gen4, SSL grátis, emails corporativos (`/hospedagem-web` — *Ver Planos*).
   - **Hospedagem WordPress Turbo**: LSCache otimizado, isolamento de segurança e staging em 1 clique (`/wordpress` — *Ver Planos*).

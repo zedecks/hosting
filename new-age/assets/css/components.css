@@ -266,6 +266,35 @@
   }
 }
 
+/* Generic Cloud Wave Divider for Section Transitions */
+.section-cloud-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: var(--space-8);
+  margin-bottom: -1px;
+}
+
+.section-cloud-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 48px;
+}
+
+@media (min-width: 768px) {
+  .section-cloud-divider svg {
+    height: 64px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .section-cloud-divider svg {
+    height: 80px;
+  }
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
