@@ -1,44 +1,42 @@
-# Changelog
+# 📜 Changelog — ZEDECK Hosting (New Age)
 
-Todas as alterações notáveis deste projeto serão documentadas neste ficheiro.
-
-O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
+Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
 ---
 
-## [0.2.2] - 2026-09-19
+## 🚀 [v0.2.2] - 2026-09-19 — Responsividade Mobile-First & Ações Rápidas
 
-### Adicionado
-- Arquitetura de estilos dedicada para responsividade móvel (`responsive.css`).
-- Menu drawer suspenso com suporte a acordeão para navegação em dispositivos móveis.
-- Ícones dedicados nos botões de ação para ecrãs menores.
+### ✨ Adicionado
+- Arquitetura de estilos dedicada para responsividade em dispositivos móveis e tablets (`responsive.css`).
+- Menu de navegação drawer flutuante com suporte a acordeão para submenus em ecrãs táteis.
+- Botões de ação em formato circular com ícones dedicados para Mobile e Tablet.
 
-### Alterado
-- Seletor de idioma movido do cabeçalho para a secção inferior do rodapé.
-- Botões de ação no cabeçalho ("Área do Cliente" e "Falar com a Equipe") adaptados para formato compacto de ícone em Mobile e Tablet, mantendo texto no Desktop.
+### 🔄 Alterado
+- Seletor de idioma relocalizado do cabeçalho para a área inferior do rodapé.
+- Botões de ação do cabeçalho ("Área do Cliente" e "Vamos Conversar!") compactados em formato de ícone em resoluções móveis e tablets, mantendo o texto completo em Desktop.
 
-### Melhorado
-- Adaptação fluida de tipografia e grelhas de planos, métricas e serviços em múltiplos ecrãs.
-- Acessibilidade e estados de foco nos controlos de navegação.
-
----
-
-## [0.2.1] - 2026-09-18
-
-### Adicionado
-- Favicon e ícones de marca nos temas claro e escuro.
-- Pacote de ícones vetoriais de bandeiras para suporte multilíngue.
-
-### Melhorado
-- Botão de alternância de idioma otimizado em formato circular único.
+### ⚡ Melhorado
+- Adaptação fluida das grelhas de métricas, catálogo de planos e formulário de contacto para todos os formatos de ecrã.
+- Animação do botão de menu hambúrguer e experiência de toque em dispositivos móveis.
 
 ---
 
-## [0.2.0] - 2026-09-18
+## 🚀 [v0.2.1] - 2026-09-18 — Identidade Visual & Alternador de Idioma Circular
 
-### Adicionado
-- Estrutura base da interface da nova geração da plataforma.
-- Cabeçalho flutuante translúcido com menus de navegação.
-- Catálogo de planos de alojamento web e servidores.
-- Secção de formulário de contacto e integração de suporte.
-- Design system com tokens de cor, tipografia e espaçamentos.
+### ✨ Adicionado
+- Favicon e ícone oficial da Zedeck's IT com suporte a temas claro e escuro.
+- Conjunto de ícones vetoriais em formato circular para bandeiras de idiomas.
+
+### ⚡ Melhorado
+- Alternador de idioma otimizado em botão circular único com transição dinâmica de bandeiras.
+
+---
+
+## 🚀 [v0.2.0] - 2026-09-18 — Lançamento da Nova Geração Web (New Age)
+
+### ✨ Adicionado
+- Estrutura base da plataforma New Age com HTML5, CSS3 e JavaScript Vanilla modular.
+- Barra de navegação em formato de cápsula flutuante translúcida com efeitos de desfoque.
+- Catálogo de planos de alojamento web e servidores com preços em meticais (MZN).
+- Formulário de captação de leads e integração com suporte técnico oficial.
+- Design system completo com tokens de cor *Tech Blue Neon*, tipografia *Space Grotesk* e *Inter*.
