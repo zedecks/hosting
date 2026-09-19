@@ -7,8 +7,9 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 ## 🚀 [v0.2.2] - 2026-09-19 — Responsividade Mobile-First & Ações Rápidas
 
 ### ✨ Adicionado
+- Modal Drawer Flutuante de navegação para dispositivos móveis com estrutura dividida em `MENU`, `ACESSO` (botões duplos lado a lado) e rodapé com identidade visual e botão circular de fecho `(X)`.
+- Suporte a acordeão inteligente com rotação suave de chevrons para submenus (Domínios, Produtos e Tools).
 - Arquitetura de estilos dedicada para responsividade em dispositivos móveis e tablets (`responsive.css`).
-- Menu de navegação drawer flutuante com suporte a acordeão para submenus em ecrãs táteis.
 - Botões de ação em formato circular com ícones dedicados para Mobile e Tablet.
 
 ### 🔄 Alterado

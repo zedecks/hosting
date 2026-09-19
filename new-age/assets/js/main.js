@@ -16,9 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initLeadForm();
 
-  // ========== MOBILE MENU SYSTEM ==========
+  // ========== MOBILE MODAL DRAWER SYSTEM ==========
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const navLinks = document.getElementById('navLinks');
+  const mobileNavModal = document.getElementById('mobileNavModal');
+  const mobileModalCloseBtn = document.getElementById('mobileModalCloseBtn');
   const DESKTOP_BREAKPOINT = 1080;
 
   function isMobile() {
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function toggleMobileMenu() {
-    const isOpen = navLinks.classList.contains('open');
+    const isOpen = mobileNavModal?.classList.contains('open');
     if (isOpen) {
       closeMobileMenu();
     } else {
@@ -35,40 +36,108 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function openMobileMenu() {
-    navLinks.classList.add('open');
+    if (!mobileNavModal) return;
+    mobileNavModal.inert = false;
+    mobileNavModal.removeAttribute('aria-hidden');
+    mobileNavModal.classList.add('open');
     mobileMenuBtn?.classList.add('active');
     mobileMenuBtn?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden'; // Lock background scroll
   }
 
   function closeMobileMenu() {
-    navLinks.classList.remove('open');
+    if (!mobileNavModal) return;
+    
+    // Release focus from inside the modal before setting inert
+    if (mobileNavModal.contains(document.activeElement)) {
+      if (mobileMenuBtn) {
+        mobileMenuBtn.focus();
+      } else if (document.activeElement && typeof document.activeElement.blur === 'function') {
+        document.activeElement.blur();
+      }
+    }
+
+    mobileNavModal.classList.remove('open');
+    mobileNavModal.inert = true;
     mobileMenuBtn?.classList.remove('active');
     mobileMenuBtn?.setAttribute('aria-expanded', 'false');
-    // Close mobile dropdowns
-    document.querySelectorAll('.nav-item.dropdown-open').forEach(item => {
-      item.classList.remove('dropdown-open');
+    document.body.style.overflow = ''; // Unlock background scroll
+    
+    // Close any open accordion inside mobile modal
+    mobileNavModal.querySelectorAll('.mobile-nav-accordion.open').forEach(acc => {
+      acc.classList.remove('open');
+      const trigger = acc.querySelector('.mobile-accordion-trigger');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
     });
   }
 
-  if (mobileMenuBtn && navLinks) {
+  // Hamburger button click
+  if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       toggleMobileMenu();
     });
   }
 
-  // Close menu when clicking on navigation links on mobile
-  navLinks?.querySelectorAll('a.nav-link, a.dropdown-item').forEach(link => {
-    link.addEventListener('click', () => {
-      if (isMobile()) {
+  // Modal close button (X)
+  if (mobileModalCloseBtn) {
+    mobileModalCloseBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeMobileMenu();
+    });
+  }
+
+  // Close when clicking on the backdrop overlay
+  if (mobileNavModal) {
+    mobileNavModal.addEventListener('click', (e) => {
+      if (e.target === mobileNavModal) {
         closeMobileMenu();
       }
     });
+
+    // Mobile Accordion Items Logic (Domínios, Produtos, Tools)
+    const accordions = mobileNavModal.querySelectorAll('.mobile-nav-accordion');
+    accordions.forEach(accordion => {
+      const trigger = accordion.querySelector('.mobile-accordion-trigger');
+      if (trigger) {
+        trigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = accordion.classList.contains('open');
+
+          // Close other accordions (single-open pattern)
+          accordions.forEach(otherAcc => {
+            if (otherAcc !== accordion) {
+              otherAcc.classList.remove('open');
+              const otherTrigger = otherAcc.querySelector('.mobile-accordion-trigger');
+              if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          // Toggle current accordion
+          accordion.classList.toggle('open', !isOpen);
+          trigger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+        });
+      }
+    });
+
+    // Close modal when clicking on any navigation link inside
+    mobileNavModal.querySelectorAll('a.mobile-nav-link, a.mobile-submenu-link, a.btn-mobile-access').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
+  }
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNavModal?.classList.contains('open')) {
+      closeMobileMenu();
+    }
   });
 
   // Handle window resize
   window.addEventListener('resize', () => {
-    if (!isMobile()) {
+    if (!isMobile() && mobileNavModal?.classList.contains('open')) {
       closeMobileMenu();
     }
   });
