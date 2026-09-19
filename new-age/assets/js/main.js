@@ -1,24 +1,15 @@
 /**
  * Main Application Entry Point
  * Zedeck's IT — host.zedecks.com
+ * Clean Code Standard: Header, Mobile Modal Drawer, i18n
  */
 import { I18nManager } from './components/i18n.js';
-import { initPricingTabs } from './components/tabs.js';
-import { initFaqAccordion } from './components/faq.js';
-import { initLeadForm } from './components/form.js';
-import { initDomainSearch } from './components/domain.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize i18n
+  // 1. Initialize i18n
   const i18n = new I18nManager();
 
-  // Initialize UI Components
-  initDomainSearch();
-  initPricingTabs();
-  initFaqAccordion();
-  initLeadForm();
-
-  // ========== MOBILE MODAL DRAWER SYSTEM ==========
+  // 2. Mobile Modal Drawer System
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileNavModal = document.getElementById('mobileNavModal');
   const mobileModalCloseBtn = document.getElementById('mobileModalCloseBtn');
@@ -44,13 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileNavModal.classList.add('open');
     mobileMenuBtn?.classList.add('active');
     mobileMenuBtn?.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden'; // Lock background scroll
+    document.body.style.overflow = 'hidden';
   }
 
   function closeMobileMenu() {
     if (!mobileNavModal) return;
     
-    // Release focus from inside the modal before setting inert
+    // Release focus from inside modal before setting inert
     if (mobileNavModal.contains(document.activeElement)) {
       if (mobileMenuBtn) {
         mobileMenuBtn.focus();
@@ -63,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileNavModal.inert = true;
     mobileMenuBtn?.classList.remove('active');
     mobileMenuBtn?.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = ''; // Unlock background scroll
+    document.body.style.overflow = '';
     
-    // Close any open accordion inside mobile modal
+    // Close accordions
     mobileNavModal.querySelectorAll('.mobile-nav-accordion.open').forEach(acc => {
       acc.classList.remove('open');
       const trigger = acc.querySelector('.mobile-accordion-trigger');
@@ -89,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Close when clicking on the backdrop overlay
+  // Backdrop overlay click
   if (mobileNavModal) {
     mobileNavModal.addEventListener('click', (e) => {
       if (e.target === mobileNavModal) {
@@ -97,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Mobile Accordion Items Logic (Domínios, Produtos, Tools)
+    // Mobile Accordion Items Logic
     const accordions = mobileNavModal.querySelectorAll('.mobile-nav-accordion');
     accordions.forEach(accordion => {
       const trigger = accordion.querySelector('.mobile-accordion-trigger');
@@ -106,23 +97,21 @@ document.addEventListener('DOMContentLoaded', () => {
           e.stopPropagation();
           const isOpen = accordion.classList.contains('open');
 
-          // Close other accordions (single-open pattern)
-          accordions.forEach(otherAcc => {
-            if (otherAcc !== accordion) {
-              otherAcc.classList.remove('open');
-              const otherTrigger = otherAcc.querySelector('.mobile-accordion-trigger');
+          accordions.forEach(other => {
+            if (other !== accordion) {
+              other.classList.remove('open');
+              const otherTrigger = other.querySelector('.mobile-accordion-trigger');
               if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
             }
           });
 
-          // Toggle current accordion
           accordion.classList.toggle('open', !isOpen);
-          trigger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+          trigger.setAttribute('aria-expanded', !isOpen);
         });
       }
     });
 
-    // Close modal when clicking on any navigation link inside
+    // Close modal when mobile nav link clicked
     mobileNavModal.querySelectorAll('a.mobile-nav-link, a.mobile-submenu-link, a.btn-mobile-access').forEach(link => {
       link.addEventListener('click', () => {
         closeMobileMenu();
@@ -130,40 +119,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Close modal on Escape key
+  // Close on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileNavModal?.classList.contains('open')) {
       closeMobileMenu();
     }
   });
 
-  // Handle window resize
-  window.addEventListener('resize', () => {
-    if (!isMobile() && mobileNavModal?.classList.contains('open')) {
-      closeMobileMenu();
-    }
-  });
-
-  // ========== NAVIGATION DROPDOWNS ==========
-  document.querySelectorAll('.nav-item').forEach(item => {
+  // Desktop Dropdowns interaction
+  const navItems = document.querySelectorAll('.nav-item');
+  navItems.forEach(item => {
     const btn = item.querySelector('button.nav-link');
     const dropdown = item.querySelector('.dropdown-menu');
     if (btn && dropdown) {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
-
-        if (isMobile()) {
-          // Mobile: Accordion toggle
-          const isOpen = item.classList.contains('dropdown-open');
-          document.querySelectorAll('.nav-item.dropdown-open').forEach(sibling => {
-            if (sibling !== item) sibling.classList.remove('dropdown-open');
-          });
-          item.classList.toggle('dropdown-open', !isOpen);
-          btn.setAttribute('aria-expanded', !isOpen);
-        } else {
-          // Desktop: Inline styles toggle
+        if (!isMobile()) {
           const isVisible = dropdown.style.visibility === 'visible';
-          
           document.querySelectorAll('.dropdown-menu').forEach(d => {
             d.style.opacity = '';
             d.style.visibility = '';
@@ -186,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Close desktop dropdowns on outside click
+  // Close dropdowns on outside click
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.nav-item')) {
       document.querySelectorAll('.dropdown-menu').forEach(d => {
@@ -203,24 +175,4 @@ document.addEventListener('DOMContentLoaded', () => {
       closeMobileMenu();
     }
   });
-
-  // ========== SCROLL REVEAL ANIMATIONS ==========
-  const revealElements = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
-    });
-
-    revealElements.forEach(el => observer.observe(el));
-  } else {
-    revealElements.forEach(el => el.classList.add('revealed'));
-  }
 });

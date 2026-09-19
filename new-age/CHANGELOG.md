@@ -4,6 +4,18 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
 ---
 
+## 🚀 [v0.2.4] - 2026-09-19 — Refatoração Clean Code & Preservação de Header e Footer
+
+### 🧹 Limpeza & Reestruturação
+- **Sanitização do Main (`index.html`)**: Esvaziamento do conteúdo do `<main>` para reconstrução modular sob os dogmas de design `@zedecks-design` (v0.3.0).
+- **Preservação dos Componentes Base**:
+  - **Header Flutuante em Cápsula**: Navegação limpa, logotipo oficial Zedeck's IT, menu dropdown e drawer modal mobile totalmente funcionais.
+  - **Footer Corporativo**: Ecossistema Zedecks, contactos, morada oficial e seletor circular de idioma.
+- **Remoção de Módulos Não Utilizados**: Eliminação de scripts e estilos temporários (`domain.js`, `faq.js`, `form.js`, `tabs.js`).
+- **Sincronização Estrita do i18n (`pt.json` / `en.json`)**: Chaves de tradução filtradas estritamente para os elementos em uso ativo.
+
+---
+
 ## 🚀 [v0.2.3] - 2026-09-19 — Posicionamento Internacional, Otimização Estrutural & Catálogo Unificado
 
 ### ✨ Adicionado
