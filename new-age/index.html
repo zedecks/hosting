@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/components.css">
   <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
 
@@ -91,25 +92,17 @@
         </div>
       </nav>
 
-      <!-- Right Actions: Single Circular Flag Toggle + Vamos Conversar + Obfuscated Client Portal -->
+      <!-- Right Actions: Vamos Conversar + Obfuscated Client Portal + Mobile Menu Button -->
       <div class="nav-actions">
-        <!-- Single Circular Flag Toggle Button (Flaticon Style SVGs) -->
-        <button type="button" class="lang-circle-btn" id="langToggleBtn" title="Switch to English" aria-label="Switch to English">
-          <!-- UK Flag (Visível em Português) -->
-          <img src="./assets/img/flags/united-kingdom.svg" alt="English" class="lang-flag-img flag-uk">
-          <!-- Moçambique Flag (Visível em Inglês) -->
-          <img src="./assets/img/flags/mozambique.svg" alt="Português" class="lang-flag-img flag-moz" style="display: none;">
-        </button>
-
-        <!-- Vamos Conversar -->
-        <a href="#contact" class="btn-nav-cta" data-i18n="nav.cta">
-          <span>Vamos Conversar</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        <!-- Vamos Conversar / Falar com a Equipe -->
+        <a href="#contact" class="btn-nav-cta" title="Falar com a Equipe" data-i18n-title="nav.cta">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span data-i18n="nav.cta">Vamos Conversar</span>
         </a>
 
         <!-- Área do Cliente (Ofuscado) -->
         <button type="button" class="btn-client-portal" title="Área do Cliente" disabled>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <span>Área do Cliente</span>
         </button>
 
@@ -117,6 +110,7 @@
           <span></span>
           <span></span>
           <span></span>
+        </button>
       </div>
     </div>
   </header>
@@ -813,8 +807,17 @@
         <div>
           &copy; 2026 Zedeck's IT. <span data-i18n="footer.rights">Todos os direitos reservados.</span>
         </div>
-        <div class="footer-signature" data-i18n="footer.signature">
-          Made by Zedeck's IT.
+        <div class="footer-bottom-actions">
+          <!-- Single Circular Flag Toggle Button (Flaticon Style SVGs) -->
+          <button type="button" class="lang-circle-btn footer-lang-btn" id="langToggleBtn" title="Switch to English" aria-label="Switch to English">
+            <!-- UK Flag (Visível em Português) -->
+            <img src="./assets/img/flags/united-kingdom.svg" alt="English" class="lang-flag-img flag-uk">
+            <!-- Moçambique Flag (Visível em Inglês) -->
+            <img src="./assets/img/flags/mozambique.svg" alt="Português" class="lang-flag-img flag-moz" style="display: none;">
+          </button>
+          <div class="footer-signature" data-i18n="footer.signature">
+            Made by Zedeck's IT.
+          </div>
         </div>
       </div>
     </div>

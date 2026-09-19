@@ -1,0 +1,581 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM (responsive.css)
+   Mobile-First Architecture:
+     - Mobile Default (0px - 767px)
+     - Tablet (768px - 1079px)
+     - Desktop (1080px+)
+     - Large Desktop (1440px+)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. MOBILE (0px - 767px) — Base Mobile Styles
+   ========================================================================== */
+
+/* --- Floating Header on Mobile --- */
+.site-header {
+  top: 12px;
+  padding: 0 var(--space-3);
+}
+
+.nav-container {
+  height: 58px;
+  padding: 0 0.85rem 0 1rem;
+}
+
+.brand-name {
+  font-size: 0.9rem;
+}
+
+.brand-subline {
+  display: none;
+}
+
+.brand-emblem-img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Nav Actions Mobile */
+.nav-actions {
+  gap: var(--space-2);
+}
+
+.btn-nav-cta {
+  padding: 0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-nav-cta span {
+  display: none;
+}
+
+.btn-client-portal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.btn-client-portal span {
+  display: none;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(0, 194, 255, 0.1);
+  border-color: var(--color-primary);
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  transition: all var(--transition-normal);
+  transform-origin: center;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile Navigation Drawer / Dropdown */
+.nav-links {
+  display: none;
+  position: fixed;
+  top: 76px;
+  left: 12px;
+  right: 12px;
+  background: rgba(12, 17, 30, 0.98);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(0, 194, 255, 0.25);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 194, 255, 0.15);
+  flex-direction: column;
+  gap: var(--space-1);
+  z-index: 999;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+}
+
+.nav-links.open {
+  display: flex;
+}
+
+.nav-links .nav-item {
+  width: 100%;
+}
+
+.nav-links .nav-link {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  justify-content: space-between;
+  border-radius: var(--radius-lg);
+}
+
+.nav-links .nav-link:hover {
+  background: rgba(0, 194, 255, 0.08);
+}
+
+.nav-links .dropdown-menu {
+  position: static;
+  transform: none;
+  width: 100%;
+  min-width: 100%;
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-2);
+  padding: var(--space-2);
+  background: rgba(20, 26, 44, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.nav-links .dropdown-menu::before {
+  display: none;
+}
+
+.nav-links .nav-item.dropdown-open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  max-height: 400px;
+}
+
+.nav-links .dropdown-item {
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* --- Hero Section Mobile --- */
+.hero {
+  padding-top: calc(70px + var(--space-8));
+  padding-bottom: var(--space-12);
+}
+
+.hero h1 {
+  font-size: 1.85rem;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+.hero p {
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-6);
+  padding: 0 var(--space-2);
+}
+
+.hero-actions {
+  flex-direction: column;
+  width: 100%;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.hero-actions .btn {
+  width: 100%;
+  max-width: 320px;
+}
+
+.hero-metrics {
+  grid-template-columns: repeat(2, 1fr);
+  padding: var(--space-4);
+  gap: var(--space-3);
+}
+
+.metric-value {
+  font-size: 1.35rem;
+}
+
+.metric-label {
+  font-size: 0.6875rem;
+}
+
+/* --- Pricing Mobile --- */
+.pricing-tabs {
+  gap: var(--space-1);
+  margin-bottom: var(--space-6);
+}
+
+.pricing-tab-btn {
+  padding: 0.5rem 0.9rem;
+  font-size: var(--font-size-xs);
+}
+
+.pricing-card {
+  padding: var(--space-6);
+}
+
+.price-amount {
+  font-size: 2.25rem;
+}
+
+/* --- Social Proof & Testimonials Mobile --- */
+.portfolio-grid {
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* --- FAQ Mobile --- */
+.faq-question {
+  padding: var(--space-4) var(--space-5);
+  font-size: 0.9375rem;
+}
+
+.faq-answer {
+  padding: 0 var(--space-5) var(--space-4) var(--space-5);
+}
+
+/* --- Lead Form Mobile --- */
+.lead-form-container {
+  padding: var(--space-5);
+}
+
+/* --- Footer Mobile --- */
+.footer-grid {
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+.footer-brand p {
+  max-width: 100%;
+}
+
+.footer-bottom {
+  flex-direction: column;
+  text-align: center;
+  gap: var(--space-4);
+}
+
+.footer-bottom-actions {
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+/* ==========================================================================
+   2. TABLET (768px - 1079px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  /* Header */
+  .site-header {
+    top: 16px;
+    padding: 0 var(--space-4);
+  }
+
+  .nav-container {
+    height: 62px;
+    padding: 0 1.25rem;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-subline {
+    display: block;
+  }
+
+  .brand-emblem-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn-nav-cta {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-nav-cta span {
+    display: none;
+  }
+
+  .btn-client-portal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  .btn-client-portal span {
+    display: none;
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: calc(80px + var(--space-12));
+    padding-bottom: var(--space-16);
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero p {
+    font-size: var(--font-size-base);
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    gap: var(--space-4);
+  }
+
+  .hero-actions .btn {
+    width: auto;
+  }
+
+  .hero-metrics {
+    grid-template-columns: repeat(4, 1fr);
+    padding: var(--space-6);
+    gap: var(--space-4);
+  }
+
+  .metric-value {
+    font-size: var(--font-size-2xl);
+  }
+
+  .metric-label {
+    font-size: var(--font-size-xs);
+  }
+
+  /* Services Grid */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Pricing Grid */
+  .pricing-pane.active {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Portfolio Grid */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Lead Form */
+  .lead-form-container {
+    padding: var(--space-8);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+
+/* ==========================================================================
+   3. DESKTOP (1080px+)
+   ========================================================================== */
+@media (min-width: 1080px) {
+  /* Header & Desktop Nav */
+  .site-header {
+    top: 18px;
+  }
+
+  .nav-container {
+    height: 66px;
+    padding: 0 1.25rem 0 1.5rem;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    position: static;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .nav-links .nav-item {
+    width: auto;
+    position: relative;
+  }
+
+  .nav-links .nav-link {
+    width: auto;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: var(--radius-full);
+  }
+
+  .nav-links .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    min-width: 220px;
+    width: auto;
+    background: rgba(20, 24, 36, 0.95);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 194, 255, 0.15);
+    padding: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    max-height: none;
+    overflow: visible;
+    margin: 0;
+  }
+
+  .nav-links .dropdown-menu::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+  }
+
+  .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Header Actions on Desktop */
+  .btn-nav-cta {
+    width: auto;
+    height: auto;
+    padding: 0.55rem 1.25rem;
+    border-radius: var(--radius-full);
+  }
+
+  .btn-nav-cta span {
+    display: inline;
+  }
+
+  .btn-client-portal {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 0.95rem;
+    border-radius: var(--radius-full);
+  }
+
+  .btn-client-portal span {
+    display: inline;
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: calc(84px + var(--space-16));
+    padding-bottom: var(--space-20);
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-5xl);
+  }
+
+  .hero p {
+    font-size: var(--font-size-lg);
+  }
+
+  /* Services Grid */
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Pricing Grid */
+  .pricing-pane.active {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Portfolio Grid */
+  .portfolio-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ==========================================================================
+   4. LARGE DESKTOP (1440px+)
+   ========================================================================== */
+@media (min-width: 1440px) {
+  .hero h1 {
+    font-size: var(--font-size-6xl);
+  }
+
+  .container {
+    max-width: 1320px;
+  }
+}

@@ -1,26 +1,44 @@
-# 📜 Changelog — ZEDECK Hosting (New Age)
+# Changelog
 
-Todas as alterações notáveis da versão `new-age` de `host.zedecks.com` são documentadas neste ficheiro.
+Todas as alterações notáveis deste projeto serão documentadas neste ficheiro.
 
----
-
-## 🚀 [v0.2.1] - 2026-09-18
-
-### ✨ Aprimorado & Refinado
-- **Ícone e Favicon Oficial:** Adoção do ícone oficial da Zedeck's IT (`assets/img/icone.png`) com contraste e nitidez para temas claros e escuros.
-- **Alternador de Idioma Circular Único:** Botão individual com alternância inteligente das bandeiras circulares no estilo Flaticon (exibe Reino Unido em modo PT e Moçambique em modo EN).
-- **Design System de Bandeiras Locais:** Criação da pasta `assets/img/flags/` contendo SVGs circulares de Moçambique, Reino Unido, Portugal e Estados Unidos.
+O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
-## 🚀 [v0.2.0] - 2026-09-18
+## [0.2.2] - 2026-09-19
 
-### ✨ Adicionado & Aprimorado
-- **Scaffold & Fundação (Fases 0 a 4):** Estrutura Vanilla HTML5/CSS3/JS modular em `new-age/` servida na porta `1807`.
-- **Design Tokens Dogma v0.3.0:** Integração de *Space Grotesk* e *Inter*, cor *Tech Blue Neon* (`#00c2ff`) e *Dark Abissal* (`#0a0f1c`).
-- **Floating Pill Header:** Barra de navegação em cápsula flutuante translúcida com logotipo oficial da Zedeck's IT.
-- **Submenus & Dropdowns Limpos:** Menus para *Domínios*, *Produtos* e *Tools* sem setas indicadoras e posicionados sem sobreposição.
-- **Seletor de Idioma SVG:** Bandeiras de Moçambique (🇲🇿) e Inglaterra/Reino Unido (🇬🇧) com alternância dinâmica PT/EN.
-- **Ações Rápidas:** Botão *"Vamos Conversar"* em Tech Blue Neon e botão *"Área do Cliente"* ofuscado para a Fase 2.
-- **Catálogo de Planos em MZN:** Planos Compartilhada e WordPress com preços confirmados, e planos VPS/Revenda sob consulta oficial.
-- **Formulário de Lead:** Integração com o canal oficial de suporte WhatsApp (`+258 87 770 3308`).
+### Adicionado
+- Arquitetura de estilos dedicada para responsividade móvel (`responsive.css`).
+- Menu drawer suspenso com suporte a acordeão para navegação em dispositivos móveis.
+- Ícones dedicados nos botões de ação para ecrãs menores.
+
+### Alterado
+- Seletor de idioma movido do cabeçalho para a secção inferior do rodapé.
+- Botões de ação no cabeçalho ("Área do Cliente" e "Falar com a Equipe") adaptados para formato compacto de ícone em Mobile e Tablet, mantendo texto no Desktop.
+
+### Melhorado
+- Adaptação fluida de tipografia e grelhas de planos, métricas e serviços em múltiplos ecrãs.
+- Acessibilidade e estados de foco nos controlos de navegação.
+
+---
+
+## [0.2.1] - 2026-09-18
+
+### Adicionado
+- Favicon e ícones de marca nos temas claro e escuro.
+- Pacote de ícones vetoriais de bandeiras para suporte multilíngue.
+
+### Melhorado
+- Botão de alternância de idioma otimizado em formato circular único.
+
+---
+
+## [0.2.0] - 2026-09-18
+
+### Adicionado
+- Estrutura base da interface da nova geração da plataforma.
+- Cabeçalho flutuante translúcido com menus de navegação.
+- Catálogo de planos de alojamento web e servidores.
+- Secção de formulário de contacto e integração de suporte.
+- Design system com tokens de cor, tipografia e espaçamentos.

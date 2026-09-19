@@ -930,6 +930,24 @@ textarea.form-control {
   }
 }
 
+.footer-bottom-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.footer-lang-btn {
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid rgba(0, 194, 255, 0.3);
+  background: rgba(10, 15, 28, 0.7);
+}
+
+.footer-lang-btn:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 12px rgba(0, 194, 255, 0.4);
+}
+
 .footer-signature {
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-secondary);
