@@ -4,9 +4,33 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
 ---
 
-## 🚀 [v0.2.5] - 2026-09-19 — Construção Modular Home (Fase 1: Hero & Domínios)
+## 🚀 [v0.2.5] - 2026-09-19 — Construção Modular Home (Fase 1: Hero & Fase 2: Nossas Soluções)
 
 ### ✨ Adicionado
+- **Separador em Ondulação de Nuvem (Cloud Wave Divider)**:
+  - Divisor vetorial orgânico SVG posicionado na base do Hero com espaçamento vertical encurtado e harmonioso.
+- **Seção "Nossas Soluções" (6 Pilares Sem Preços)**:
+  - **Hospedagem Web cPanel®**: LiteSpeed, NVMe Gen4, SSL grátis, emails corporativos (`/hospedagem-web` — *Ver Planos*).
+  - **Hospedagem WordPress Turbo**: LSCache otimizado, isolamento de segurança e staging em 1 clique (`/wordpress` — *Ver Planos*).
+  - **Servidores VPS Cloud**: Armazenamento 100% NVMe, acesso Root KVM e Anti-DDoS dedicado (`/vps` — *Ver Planos*).
+  - **Revenda de Hospedagem WHM**: Painel WHM líder, contas cPanel independentes e 100% white-label (`/revenda` — *Ver Planos*).
+  - **E-mail Corporativo Profissional**: Caixas de correio com domínio próprio, antispam inteligente e sincronização universal (`/email-corporativo` — *Ver Planos*).
+  - **Criação de Sites, Apps & Sistemas**: Desenvolvimento sob medida de websites, e-commerces, apps mobile, ferramentas e plataformas web (`/desenvolvimento` — *Solicitar Proposta*).
+- **Ícones Oficiais e Badges em Todos os Cards**:
+  - **cPanel® Web Hosting**: Logótipo vetorial autêntico cPanel® com marca angular em traçado oficial (`allsvgicons.com`) e acento laranja da marca (`#FF6C2C`) + Badge *"Mais Popular"* / *"Most Popular"*.
+  - **WordPress Turbo**: Logótipo vetorial oficial do WordPress com W serifado e anel exterior perfeito (`allsvgicons.com`) e acento azul da marca (`#38a5e8`) + Badge *"Turbo Speed"*.
+  - **VPS Cloud**: Ícone de rack de servidor e nós computacionais dedicados + Badge *"Dedicado"* / *"Dedicated"* (sem tons violetas/roxos, respeitando o padrão Dark Cyan/Cobalt).
+  - **Revenda WHM**: Ícone de infraestrutura multi-tenant e gestão de contas WHM + Badge *"Marca Própria"* / *"White-Label"*.
+  - **E-mail Corporativo**: Ícone de correio profissional + Badge *"Profissional"* / *"Professional"*.
+  - **Criação de Sites, Apps & Sistemas**: Ícone de motor de código/desenvolvimento sob medida (`</>`) + Badge *"Sob Medida"* / *"Custom Built"*.
+- **Padrão de Repositório de Ícones (@zedecks-design)**:
+  - Adotado o repositório `https://allsvgicons.com/` como fonte de referência canônica para SVGs vetoriais puros, leves e inline em todo o design system.
+- **Internacionalização Integral (100% de Cobertura i18n PT / EN)**:
+  - Todas as tags de navegação desktop, submenus dropdown, modal drawer mobile, badges dos cards, listas de recursos técnicos e mensagens dinâmicas de disponibilidade de domínio foram totalmente mapeadas e sincronizadas em `pt.json` e `en.json`.
+- **Aparência Matte Elegante & Bordas Arredondadas**:
+  - Remoção de brilhos e sombras neon agressivas aos olhos em favor de acabamento fosco (matte) refinado com bordas subtis (`border: 1px solid rgba(255, 255, 255, 0.08)`).
+  - Cards com cantos generosamente arredondados (`border-radius: 24px`) e ícones em recipientes suaves (`border-radius: 16px`).
+  - Botões de ação orientados a rotas internas dedicadas em vez de links para o WhatsApp.
 - **Barra de Domínio com Feixes de Luz Laser Animados**:
   - Efeito de iluminação neon azul/ciano com dois feixes em sentidos opostos (topo: esquerda para a direita; base: direita para a esquerda).
   - Caixa com borda arredondada e foco com brilho dinâmico.
@@ -14,8 +38,8 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
   - Atalhos rápidos para `.co.mz`, `.com`, `.mz`, `.net`, `.org`, `.tech`, `.io` e `.online`.
   - Clique direto no pill preenche ou substitui a extensão no campo de pesquisa automaticamente.
 - **Verificação Interativa de Domínios Inline**:
-  - Simulação local instantânea com estado de carregamento (*A verificar...*).
-  - Feedback visual dinâmico com opções de *Registar Agora* (domínio livre) ou *Transferir Domínio* (domínio já registado) e botão de fechar.
+  - Simulação local instantânea com estado de carregamento (*A verificar...* / *Checking...*).
+  - Feedback visual dinâmico com opções de *Registar Agora* / *Register Now* (domínio livre) ou *Transferir Domínio* / *Transfer Domain* (domínio já registado) e botão de fechar.
   - Suporte completo a domínios de Moçambique (`.co.mz`, `.mz`) e internacionais.
 - **Cards Glassmorphic para Métricas do Hero**:
   - 4 cartões com vidro escuro translúcido, gradiente de topo em azul neon e efeito hover (*99.99% Uptime*, *PCIe Gen4 NVMe*, *Anti-DDoS Proteção*, *24/7/365 Suporte*).
@@ -24,7 +48,8 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 - **Badge do Hero**: Atualizado para *"Excelência em Hosting & Domínios"*.
 - **Título do Hero**: Simplificado e tornado persuasivo (*"Dê vida às suas ideias com a hospedagem mais rápida e segura"*).
 - **Placeholder do Input**: Alterado para formato curto e direto (*"Digite o seu domínio (ex: meunegocio.com)..."*).
-- **Traduções i18n (`pt.json` / `en.json`)**: Sincronizadas integralmente com o posicionamento global e as novas chaves do Hero.
+- **Botões dos Cards de Produtos**: Atualizados de *"Saber Mais"* para *"Ver Planos"* (para produtos com catálogo/planos) e *"Solicitar Proposta"* (para serviços sob medida).
+- **Traduções i18n (`pt.json` / `en.json`)**: Sincronizadas integralmente com 100% de cobertura entre Português e Inglês em todos os elementos visíveis e dinâmicos do site.
 
 ### 🗑️ Removido
 - **Descrição Prolixa do Hero**: Removido o parágrafo de texto descritivo longo para manter o foco total na barra de busca e nas métricas.

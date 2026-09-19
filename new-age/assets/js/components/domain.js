@@ -53,21 +53,21 @@ export function initDomainSearch() {
     if (!resultContainer) return;
 
     // Show loading state on button
+    const isEn = document.documentElement.lang === 'en';
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.innerHTML = `
         <svg class="spin-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-        <span>A verificar...</span>
+        <span>${isEn ? 'Checking...' : 'A verificar...'}</span>
       `;
     }
 
     // Simulated lookup delay (will be connected to real WHOIS/backend API later)
     setTimeout(() => {
+      const currentIsEn = document.documentElement.lang === 'en';
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = submitBtn.getAttribute('data-i18n') === 'hero.domain_btn_verify' 
-          ? (document.documentElement.lang === 'en' ? 'Check Availability' : 'Verificar Disponibilidade')
-          : 'Verificar Disponibilidade';
+        submitBtn.innerHTML = currentIsEn ? 'Check Availability' : 'Verificar Disponibilidade';
       }
 
       // Simulated availability: if domain contains "zedeck" or "google", it's taken; otherwise available
@@ -83,15 +83,15 @@ export function initDomainSearch() {
             </div>
             <div>
               <div class="domain-result-name">${escapeHtml(domain)}</div>
-              <div class="domain-result-status" style="color: #34D399;">✓ Domínio disponível para registo imediato!</div>
+              <div class="domain-result-status" style="color: #34D399;" data-i18n="hero.domain_available">${currentIsEn ? '✓ Domain available for immediate registration!' : '✓ Domínio disponível para registo imediato!'}</div>
             </div>
           </div>
           <div class="domain-result-actions">
-            <button type="button" class="btn-result-action primary" onclick="alert('Excelente! Em breve o fluxo de checkout e registo do domínio ${escapeHtml(domain)} estará disponível.')">
-              Registar Agora
+            <button type="button" class="btn-result-action primary" data-i18n="hero.register_now" onclick="alert('${currentIsEn ? 'Registration flow for domain ' + escapeHtml(domain) + ' coming soon.' : 'Excelente! Em breve o fluxo de checkout e registo do domínio ' + escapeHtml(domain) + ' estará disponível.'}')">
+              ${currentIsEn ? 'Register Now' : 'Registar Agora'}
             </button>
-            <button type="button" class="btn-result-action secondary" onclick="document.getElementById('domainSearchResult').style.display='none';">
-              Fechar
+            <button type="button" class="btn-result-action secondary" data-i18n="hero.close" onclick="document.getElementById('domainSearchResult').style.display='none';">
+              ${currentIsEn ? 'Close' : 'Fechar'}
             </button>
           </div>
         `;
@@ -105,15 +105,15 @@ export function initDomainSearch() {
             </div>
             <div>
               <div class="domain-result-name">${escapeHtml(domain)}</div>
-              <div class="domain-result-status" style="color: #FBBF24;">Domínio já registado. É o titular? Pode transferi-lo.</div>
+              <div class="domain-result-status" style="color: #FBBF24;" data-i18n="hero.domain_taken">${currentIsEn ? 'Domain already registered. Are you the owner? You can transfer it.' : 'Domínio já registado. É o titular? Pode transferi-lo.'}</div>
             </div>
           </div>
           <div class="domain-result-actions">
-            <button type="button" class="btn-result-action primary" style="background: #D97706;" onclick="alert('Excelente! Em breve a transferência guiada do domínio ${escapeHtml(domain)} estará disponível.')">
-              Transferir Domínio
+            <button type="button" class="btn-result-action primary" style="background: #D97706;" data-i18n="hero.transfer_domain" onclick="alert('${currentIsEn ? 'Domain transfer flow for ' + escapeHtml(domain) + ' coming soon.' : 'Excelente! Em breve a transferência guiada do domínio ' + escapeHtml(domain) + ' estará disponível.'}')">
+              ${currentIsEn ? 'Transfer Domain' : 'Transferir Domínio'}
             </button>
-            <button type="button" class="btn-result-action secondary" onclick="document.getElementById('domainSearchResult').style.display='none';">
-              Fechar
+            <button type="button" class="btn-result-action secondary" data-i18n="hero.close" onclick="document.getElementById('domainSearchResult').style.display='none';">
+              ${currentIsEn ? 'Close' : 'Fechar'}
             </button>
           </div>
         `;

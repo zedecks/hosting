@@ -48,43 +48,43 @@
       <nav class="nav-links" id="navLinks" aria-label="Navegação Principal">
         <!-- 1. Home -->
         <div class="nav-item">
-          <a href="/" class="nav-link">Home</a>
+          <a href="/" class="nav-link" data-i18n="nav.home">Home</a>
         </div>
 
         <!-- 2. Domínios -->
         <div class="nav-item">
           <button type="button" class="nav-link" aria-expanded="false">
-            <span>Domínios</span>
+            <span data-i18n="nav.domains">Domínios</span>
           </button>
           <div class="dropdown-menu">
-            <a href="#" class="dropdown-item">Pesquisar Domínios</a>
-            <a href="#" class="dropdown-item">Registrar Domínio</a>
-            <a href="#" class="dropdown-item">Transferir Domínio</a>
-            <a href="#" class="dropdown-item">Preços de Domínios</a>
+            <a href="#" class="dropdown-item" data-i18n="nav.domains_search">Pesquisar Domínios</a>
+            <a href="#" class="dropdown-item" data-i18n="nav.domains_register">Registrar Domínio</a>
+            <a href="#" class="dropdown-item" data-i18n="nav.domains_transfer">Transferir Domínio</a>
+            <a href="#" class="dropdown-item" data-i18n="nav.domains_pricing">Preços de Domínios</a>
           </div>
         </div>
 
         <!-- 3. Produtos -->
         <div class="nav-item">
           <button type="button" class="nav-link" aria-expanded="false">
-            <span>Produtos</span>
+            <span data-i18n="nav.products">Produtos</span>
           </button>
           <div class="dropdown-menu">
-            <a href="#" class="dropdown-item">Hospedagem de Sites</a>
-            <a href="#" class="dropdown-item">Hospedagem WordPress</a>
-            <a href="#" class="dropdown-item">Revenda cPanel</a>
-            <a href="#" class="dropdown-item">Servidores VPS</a>
+            <a href="#" class="dropdown-item" data-i18n="nav.products_web">Hospedagem de Sites</a>
+            <a href="#" class="dropdown-item" data-i18n="nav.products_wp">Hospedagem WordPress</a>
+            <a href="#" class="dropdown-item" data-i18n="nav.products_reseller">Revenda cPanel</a>
+            <a href="#" class="dropdown-item" data-i18n="nav.products_vps">Servidores VPS</a>
           </div>
         </div>
 
         <!-- 4. Tools -->
         <div class="nav-item">
           <button type="button" class="nav-link" aria-expanded="false">
-            <span>Tools</span>
+            <span data-i18n="nav.tools">Tools</span>
           </button>
           <div class="dropdown-menu">
-            <a href="#" class="dropdown-item">Whois</a>
-            <a href="#" class="dropdown-item">Abuse / IP Checker</a>
+            <a href="#" class="dropdown-item" data-i18n="nav.tools_whois">Whois</a>
+            <a href="#" class="dropdown-item" data-i18n="nav.tools_abuse">Abuse / IP Checker</a>
           </div>
         </div>
       </nav>
@@ -98,9 +98,9 @@
         </a>
 
         <!-- Área do Cliente (Ofuscado) -->
-        <button type="button" class="btn-client-portal" title="Área do Cliente" disabled>
+        <button type="button" class="btn-client-portal" title="Área do Cliente" data-i18n-title="nav.client_portal" disabled>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          <span>Área do Cliente</span>
+          <span data-i18n="nav.client_portal">Área do Cliente</span>
         </button>
 
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu Mobile" aria-expanded="false">
@@ -118,7 +118,7 @@
       
       <!-- Seção MENU -->
       <div class="mobile-modal-section">
-        <span class="mobile-section-title">MENU</span>
+        <span class="mobile-section-title" data-i18n="nav.menu_section">MENU</span>
         <div class="mobile-nav-list">
           
           <!-- 1. Home -->
@@ -126,7 +126,7 @@
             <span class="mobile-nav-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </span>
-            <span class="mobile-nav-text">Home</span>
+            <span class="mobile-nav-text" data-i18n="nav.home">Home</span>
           </a>
 
           <!-- 2. Domínios (Accordion) -->
@@ -135,16 +135,16 @@
               <span class="mobile-nav-icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               </span>
-              <span class="mobile-nav-text">Domínios</span>
+              <span class="mobile-nav-text" data-i18n="nav.domains">Domínios</span>
               <span class="mobile-accordion-chevron">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
               </span>
             </button>
             <div class="mobile-accordion-content">
-              <a href="#" class="mobile-submenu-link">Pesquisar Domínios</a>
-              <a href="#" class="mobile-submenu-link">Registrar Domínio</a>
-              <a href="#" class="mobile-submenu-link">Transferir Domínio</a>
-              <a href="#" class="mobile-submenu-link">Preços de Domínios</a>
+              <a href="#" class="mobile-submenu-link" data-i18n="nav.domains_search">Pesquisar Domínios</a>
+              <a href="#" class="mobile-submenu-link" data-i18n="nav.domains_register">Registrar Domínio</a>
+              <a href="#" class="mobile-submenu-link" data-i18n="nav.domains_transfer">Transferir Domínio</a>
+              <a href="#" class="mobile-submenu-link" data-i18n="nav.domains_pricing">Preços de Domínios</a>
             </div>
           </div>
 
@@ -154,16 +154,16 @@
               <span class="mobile-nav-icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
               </span>
-              <span class="mobile-nav-text">Produtos</span>
+              <span class="mobile-nav-text" data-i18n="nav.products">Produtos</span>
               <span class="mobile-accordion-chevron">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
               </span>
             </button>
             <div class="mobile-accordion-content">
-              <a href="#" class="mobile-submenu-link">Hospedagem de Sites</a>
-              <a href="#" class="mobile-submenu-link">Hospedagem WordPress</a>
-              <a href="#" class="mobile-submenu-link">Revenda cPanel</a>
-              <a href="#" class="mobile-submenu-link">Servidores VPS</a>
+              <a href="#" class="mobile-submenu-link" data-i18n="nav.products_web">Hospedagem de Sites</a>
+              <a href="#" class="mobile-submenu-link" data-i18n="nav.products_wp">Hospedagem WordPress</a>
+              <a href="#" class="mobile-submenu-link" data-i18n="nav.products_reseller">Revenda cPanel</a>
+              <a href="#" class="mobile-submenu-link" data-i18n="nav.products_vps">Servidores VPS</a>
             </div>
           </div>
 
@@ -173,14 +173,14 @@
               <span class="mobile-nav-icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
               </span>
-              <span class="mobile-nav-text">Tools</span>
+              <span class="mobile-nav-text" data-i18n="nav.tools">Tools</span>
               <span class="mobile-accordion-chevron">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
               </span>
             </button>
             <div class="mobile-accordion-content">
-              <a href="#" class="mobile-submenu-link">Whois Lookup</a>
-              <a href="#" class="mobile-submenu-link">Abuse / IP Checker</a>
+              <a href="#" class="mobile-submenu-link" data-i18n="nav.tools_whois">Whois</a>
+              <a href="#" class="mobile-submenu-link" data-i18n="nav.tools_abuse">Abuse / IP Checker</a>
             </div>
           </div>
 
@@ -189,18 +189,18 @@
 
       <!-- Seção ACESSO -->
       <div class="mobile-modal-section">
-        <span class="mobile-section-title">ACESSO</span>
+        <span class="mobile-section-title" data-i18n="nav.access_section">ACESSO</span>
         <div class="mobile-access-buttons">
           <!-- Vamos Conversar! -->
-          <a href="https://wa.me/258877703308" target="_blank" rel="noopener" class="btn-mobile-access btn-access-cta">
+          <a href="https://wa.me/258877703308" target="_blank" rel="noopener" class="btn-mobile-access btn-access-cta" data-i18n-title="nav.cta">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <span>Vamos Conversar!</span>
+            <span data-i18n="nav.cta">Vamos Conversar!</span>
           </a>
 
           <!-- Área do Cliente -->
-          <button type="button" class="btn-mobile-access btn-access-portal" disabled title="Área do Cliente">
+          <button type="button" class="btn-mobile-access btn-access-portal" disabled title="Área do Cliente" data-i18n-title="nav.client_portal">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span>Área do Cliente</span>
+            <span data-i18n="nav.client_portal">Área do Cliente</span>
           </button>
         </div>
       </div>
@@ -293,6 +293,198 @@
             <div class="metric-value">24/7/365</div>
             <div class="metric-label" data-i18n="hero.metric_support_desc">Suporte Técnico</div>
           </div>
+        </div>
+
+      </div>
+
+      <!-- Cloud Wave Divider (Hero -> Soluções) -->
+      <div class="hero-cloud-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
+          <path d="M0,32 C280,96 460,0 720,48 C980,96 1160,16 1440,56 L1440,120 L0,120 Z" fill="rgba(14, 20, 36, 0.5)"></path>
+          <path d="M0,64 C320,110 520,24 800,72 C1080,120 1260,40 1440,80 L1440,120 L0,120 Z" fill="#0a0f1c"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==================== NOSSAS SOLUÇÕES (FASE 2) ==================== -->
+    <section class="section solutions-section" id="solutions">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-tag" data-i18n="solutions.tag">Infraestrutura & Serviços</div>
+          <h2 data-i18n="solutions.title">Soluções completas para a sua presença digital</h2>
+          <p data-i18n="solutions.subtitle">
+            Da hospedagem ultra-rápida ao desenvolvimento sob medida, temos a tecnologia certa para elevar o seu negócio ao próximo nível.
+          </p>
+        </div>
+
+        <!-- Solutions Grid (6 Pilares Sem Preços) -->
+        <div class="solutions-grid">
+          
+          <!-- 1. Hospedagem Web cPanel -->
+          <div class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon cpanel-icon" title="cPanel® Hosting">
+                <!-- Official cPanel Vector Mark (allsvgicons.com / Fontisto) -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="m1.985 10.902h1.5l-.233.885c-.065.237-.278.409-.532.409-.001 0-.003 0-.004 0h-.697c-.377.013-.678.322-.678.701s.301.688.677.701h.001.424.002c.136 0 .246.11.246.246 0 .023-.003.045-.009.067v-.002l-.268.98h-.463c-.001 0-.001 0-.002 0-1.076 0-1.949-.873-1.949-1.949 0-.177.024-.348.068-.51l-.003.014c.2-.888.982-1.542 1.916-1.542zm.757 3.987 1.309-4.88c.063-.237.275-.409.528-.409h.009 1.388.001c.935 0 1.716.656 1.909 1.533l.002.013c.029.129.046.277.046.428 0 1.104-.884 2.001-1.983 2.021h-.002-1.2l.24-.893c.067-.235.28-.405.533-.405h.003.386.024c.387 0 .702-.314.702-.702s-.314-.702-.702-.702c-.008 0-.017 0-.025 0h.001-.742l-.967 3.585c-.071.232-.282.398-.533.4h-.927zm8.275-2.612c.011-.038.071-.198-.08-.198h-2.16c-.001 0-.002 0-.003 0-.303 0-.549-.246-.549-.549 0-.052.007-.101.02-.149l-.001.004.131-.502h2.919c.61 0 1.104.494 1.104 1.104 0 .098-.013.193-.037.284l.002-.008-.525 1.943c-.104.387-.452.668-.865.668-.005 0-.01 0-.015 0h.001l-2.16-.007c-1.609 0-1.444-2.393.026-2.393h1.83l-.131.495c-.069.234-.281.402-.533.405h-.812c-.082 0-.148.066-.148.148s.066.148.148.148h1.309c.173 0 .191-.146.206-.198l.32-1.193zm3.864-1.383h.011c1.073 0 1.943.87 1.943 1.943 0 .181-.025.357-.071.523l.003-.014-.33 1.242c-.045.17-.198.293-.379.293-.003 0-.005 0-.008 0h-.72c-.003 0-.007 0-.011 0-.133 0-.24-.107-.24-.24 0-.025.004-.05.011-.073v.002l.4-1.5c.016-.055.025-.119.025-.184 0-.384-.312-.696-.696-.696-.003 0-.006 0-.008 0h-.742l-.645 2.4c-.046.17-.199.293-.381.293-.003 0-.007 0-.01 0h-.708c-.001 0-.001 0-.002 0-.136 0-.246-.11-.246-.246 0-.023.003-.045.009-.067v.002l.982-3.68h1.812zm3.794 1.416-.3 1.126c-.005.016-.007.034-.007.053 0 .11.089.198.198.198h2.75l-.214.788c-.071.232-.282.398-.533.4h-2.498c-.002 0-.005 0-.007 0-.603 0-1.092-.489-1.092-1.092 0-.101.014-.199.04-.293l-.002.008.405-1.498c.178-.644.759-1.109 1.448-1.11h1.775.003c.605 0 1.096.491 1.096 1.096 0 .101-.014.199-.039.292l.002-.008-.12.45c-.104.383-.448.66-.858.66-.004 0-.009 0-.013 0h-1.999l.131-.487c.063-.235.274-.405.525-.405h.009.81.008c.068 0 .125-.048.139-.112v-.001l.026-.098c.003-.012.005-.026.005-.04 0-.084-.068-.151-.151-.151 0 0 0 0-.001 0h-1.235c-.007-.001-.014-.001-.022-.001-.134 0-.246.096-.27.224v.002zm2.633 2.565 1.335-4.992c.047-.172.202-.296.386-.296h.004.709.004c.135 0 .245.11.245.245 0 .024-.003.047-.01.068v-.002l-.994 3.68c-.2.75-.873 1.294-1.673 1.294-.002 0-.005 0-.007 0z"/>
+                </svg>
+              </div>
+              <span class="solution-badge" data-i18n="solutions.badge_popular">Mais Popular</span>
+            </div>
+            <h3 class="solution-title" data-i18n="solutions.web_hosting_title">Hospedagem Web cPanel®</h3>
+            <p class="solution-desc" data-i18n="solutions.web_hosting_desc">
+              Desempenho máximo com servidores LiteSpeed, discos 100% NVMe Gen4, contas de e-mail e painel cPanel® oficial.
+            </p>
+            <ul class="solution-features">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_cpanel_panel">Painel cPanel® Oficial</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_litespeed">LiteSpeed Web Server</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_ssl_free">SSL Grátis Ilimitado</span></li>
+            </ul>
+            <a href="/hospedagem-web" class="btn-solution-action" data-i18n="solutions.btn_view_plans">
+              Ver Planos
+            </a>
+          </div>
+
+          <!-- 2. Hospedagem WordPress Turbo -->
+          <div class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon wp-icon" title="WordPress Turbo">
+                <!-- Official WordPress Vector Mark (allsvgicons.com / Fontisto) -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="m0 12c0-.005 0-.011 0-.017 0-1.763.385-3.437 1.076-4.94l-.03.074 5.727 15.68c-2.045-.998-3.713-2.495-4.887-4.338l-.029-.048c-1.165-1.784-1.857-3.967-1.857-6.313 0-.034 0-.069 0-.103v.005zm20.099-.609c0 .212-.015.421-.042.625l.003-.024c-.046.305-.101.566-.171.822l.011-.049q-.117.468-.179.686t-.27.921q-.21.702-.273.905l-1.186 3.994-4.338-12.889q.72-.047 1.374-.125c.184-.009.339-.124.404-.286l.001-.003c.029-.06.046-.131.046-.206 0-.103-.032-.198-.086-.276l.001.002c-.084-.129-.227-.214-.391-.214-.019 0-.038.001-.056.003h.002l-3.2.16q-1.17-.016-3.152-.16c-.016-.002-.035-.003-.053-.003-.1 0-.192.031-.268.084l.002-.001c-.083.056-.145.137-.178.231l-.001.003c-.02.057-.031.123-.031.191 0 .034.003.068.008.101v-.004c.017.103.068.192.14.257.081.073.186.119.303.125h.001l1.248.125 1.873 5.12-2.622 7.865-4.369-12.991q.72-.047 1.374-.125c.184-.009.339-.124.404-.286l.001-.003c.029-.06.046-.131.046-.206 0-.103-.032-.198-.086-.276l.001.002c-.084-.129-.227-.214-.391-.214-.019 0-.038.001-.056.003h.002l-3.2.16q-.11 0-.359-.008t-.406-.008c1.09-1.652 2.53-2.988 4.222-3.925l.061-.031c1.657-.918 3.632-1.459 5.735-1.459 1.575 0 3.08.304 4.458.855l-.081-.029c1.437.575 2.671 1.36 3.73 2.333l-.009-.008h-.16c-.011 0-.023 0-.036 0-.557 0-1.056.244-1.398.63l-.002.002c-.354.38-.571.892-.571 1.454v.03-.002c0 .132.011.262.033.388l-.002-.014q.031.187.062.335c.033.137.076.257.13.37l-.005-.011q.094.21.141.328c.061.137.124.252.194.362l-.007-.011q.141.234.195.328t.226.374l.218.359c.595.94.958 2.079.982 3.301v.007zm-7.896 1.655 3.698 10.096c.012.066.04.125.08.173v-.001c-1.185.433-2.552.684-3.978.686h-.001c-.008 0-.018 0-.027 0-1.198 0-2.354-.182-3.441-.521l.082.022zm10.315-6.8c.933 1.654 1.482 3.631 1.482 5.736v.025-.001.087c0 2.187-.603 4.233-1.653 5.981l.029-.053c-1.067 1.812-2.539 3.282-4.297 4.315l-.056.031 3.667-10.586c.51-1.269.841-2.738.919-4.274l.001-.033c0-.01 0-.023 0-.035 0-.423-.034-.838-.1-1.242l.006.044z"/>
+                </svg>
+              </div>
+              <span class="solution-badge turbo" data-i18n="solutions.badge_turbo">Turbo Speed</span>
+            </div>
+            <h3 class="solution-title" data-i18n="solutions.wp_hosting_title">Hospedagem WordPress Turbo</h3>
+            <p class="solution-desc" data-i18n="solutions.wp_hosting_desc">
+              Ambiente afinado para WordPress e WooCommerce com cache LSCache acelerado, segurança reforçada e staging em 1 clique.
+            </p>
+            <ul class="solution-features">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_lscache_wp">LSCache WordPress</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_staging">Staging & Clones em 1 Clique</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_backups">Backups Automáticos</span></li>
+            </ul>
+            <a href="/wordpress" class="btn-solution-action" data-i18n="solutions.btn_view_plans">
+              Ver Planos
+            </a>
+          </div>
+
+          <!-- 3. Servidores VPS Cloud NVMe -->
+          <div class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon vps-icon" title="VPS Cloud">
+                <!-- High Performance Cloud Server Vector (allsvgicons.com) -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/>
+                  <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/>
+                  <line x1="6" x2="6.01" y1="6" y2="6"/>
+                  <line x1="6" x2="6.01" y1="18" y2="18"/>
+                  <path d="M13 6h5"/>
+                  <path d="M13 18h5"/>
+                </svg>
+              </div>
+              <span class="solution-badge enterprise" data-i18n="solutions.badge_vps">Dedicado</span>
+            </div>
+            <h3 class="solution-title" data-i18n="solutions.vps_title">Servidores VPS Cloud</h3>
+            <p class="solution-desc" data-i18n="solutions.vps_desc">
+              Poder computacional dedicado, armazenamento NVMe PCIe Gen4, acesso Root total e tráfego ilimitado para aplicações exigentes.
+            </p>
+            <ul class="solution-features">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_nvme_gen4">100% NVMe PCIe Gen4</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_root_access">Acesso Root & KVM</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_anti_ddos">Anti-DDoS 100Gbps+</span></li>
+            </ul>
+            <a href="/vps" class="btn-solution-action" data-i18n="solutions.btn_view_plans">
+              Ver Planos
+            </a>
+          </div>
+
+          <!-- 4. Revenda de Hospedagem WHM -->
+          <div class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon whm-icon" title="WHM Reseller">
+                <!-- WHM Multi-tenant Infrastructure Mark (allsvgicons.com) -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="7" rx="2"/>
+                  <rect x="3" y="14" width="18" height="7" rx="2"/>
+                  <line x1="7" y1="6.5" x2="7.01" y2="6.5"/>
+                  <line x1="7" y1="17.5" x2="7.01" y2="17.5"/>
+                  <path d="M12 10v4"/>
+                  <path d="M17 10v4"/>
+                </svg>
+              </div>
+              <span class="solution-badge reseller" data-i18n="solutions.badge_reseller">Marca Própria</span>
+            </div>
+            <h3 class="solution-title" data-i18n="solutions.reseller_title">Revenda de Hospedagem WHM</h3>
+            <p class="solution-desc" data-i18n="solutions.reseller_desc">
+              Inicie o seu próprio negócio de hospedagem com painel WHM líder de mercado, contas cPanel independentes e marca própria.
+            </p>
+            <ul class="solution-features">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_whm_panel">Painel WHM Completo</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_whitelabel">100% White-label (Sua Marca)</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_custom_dns">DNS Próprio Personalizado</span></li>
+            </ul>
+            <a href="/revenda" class="btn-solution-action" data-i18n="solutions.btn_view_plans">
+              Ver Planos
+            </a>
+          </div>
+
+          <!-- 5. E-mail Corporativo Profissional -->
+          <div class="solution-card">
+            <div class="solution-card-header">
+              <div class="solution-icon mail-icon" title="Email Corporativo">
+                <!-- Professional Business Mail Envelope (allsvgicons.com) -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <span class="solution-badge email" data-i18n="solutions.badge_email">Profissional</span>
+            </div>
+            <h3 class="solution-title" data-i18n="solutions.email_title">E-mail Corporativo Profissional</h3>
+            <p class="solution-desc" data-i18n="solutions.email_desc">
+              Caixas de correio com o seu domínio próprio, antispam inteligente, webmail moderno e sincronização em todos os seus dispositivos.
+            </p>
+            <ul class="solution-features">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_custom_email">Endereço @seudominio.com</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_antispam">Filtro Anti-Spam Avançado</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_email_sync">Sincronização IMAP/POP3/SMTP</span></li>
+            </ul>
+            <a href="/email-corporativo" class="btn-solution-action" data-i18n="solutions.btn_view_plans">
+              Ver Planos
+            </a>
+          </div>
+
+          <!-- 6. Criação de Sites, Apps & Sistemas -->
+          <div class="solution-card highlighted">
+            <div class="solution-card-header">
+              <div class="solution-icon special dev-icon" title="Criação Sob Medida">
+                <!-- Custom Software, Apps & Code Engine (allsvgicons.com) -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                  <line x1="14" y1="4" x2="10" y2="20"/>
+                </svg>
+              </div>
+              <span class="solution-badge custom" data-i18n="solutions.badge_custom">Sob Medida</span>
+            </div>
+            <h3 class="solution-title" data-i18n="solutions.web_dev_title">Criação de Sites, Apps & Sistemas</h3>
+            <p class="solution-desc" data-i18n="solutions.web_dev_desc">
+              Desenvolvimento de websites modernos, lojas virtuais, aplicativos mobile, ferramentas e plataformas web sob medida com alta performance.
+            </p>
+            <ul class="solution-features">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_dev_responsive">Design Exclusivo & Responsivo</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_dev_seo">Otimização SEO & Performance</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_dev_hosting_sync">Integração com Hospedagem ZEDECK</span></li>
+            </ul>
+            <a href="/desenvolvimento" class="btn-solution-action primary" data-i18n="solutions.btn_contact">
+              Solicitar Proposta
+            </a>
+          </div>
+
         </div>
 
       </div>

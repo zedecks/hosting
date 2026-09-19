@@ -13,6 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Initialize Domain Search
   initDomainSearch();
 
+  // 3. Smooth scroll for internal anchor links (ex: #solutions)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const targetId = anchor.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
   // 2. Mobile Modal Drawer System
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileNavModal = document.getElementById('mobileNavModal');
