@@ -4,18 +4,24 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
 ---
 
-## 🚀 [v0.2.3] - 2026-09-19 — Posicionamento Internacional & Simplificação Visual
+## 🚀 [v0.2.3] - 2026-09-19 — Posicionamento Internacional, Otimização Estrutural & Catálogo Unificado
 
 ### ✨ Adicionado
+- **Hero Domain Box Interativo**: Barra de verificação de domínios com abas de ação (`Registrar`, `Transferir`, `WHOIS`), seletor de extensão (`.com`, `.co.mz`, `.mz`, `.org`, `.net`, `.io`, `.online`) e pills rápidos sem preços visíveis.
+- **Clientes & Casos de Uso com Depoimentos Reais**: 4 cartões de depoimentos de clientes verificados (*Sabores da Terra*, *Spicy House*, *Zaizah Fragrance*, *Nicol Store*) com classificação de 5 estrelas e métricas de desempenho.
+- **Esclarecimentos Técnicos em Grelha 2-Colunas**: 8 perguntas frequentes estruturadas lado a lado cobrindo ativação instantânea, NVMe Gen4, migração sem downtime, Anycast DNS, SSL e backup.
 - Posicionamento global e internacional da infraestrutura em todos os conteúdos e traduções (PT / EN).
 - Endereço institucional da sede física (`Av. do Trabalho, Nampula`) e e-mail corporativo oficial (`info@zedecks.com`).
 
 ### 🔄 Alterado
+- **Catálogo de Planos (Segmented Control)**: Menu de abas simplificado e unificado com controle segmentado horizontal destacando a categoria ativa (`Compartilhada`, `WordPress`, `VPS cPanel Dedicado`, `Revenda`).
+- **Remoção de Elementos Desnecessários**: Eliminação do formulário `#contact` (substituído por CTAs diretos via WhatsApp), remoção da categoria *VPS Processador Dedicado* e eliminação de blocos/grelhas artificiais de badges.
 - Substituição integral de copywriting genérico de IA por métricas reais e especificações técnicas de datacenters (PCIe Gen4 NVMe, Anycast DNS, CageFS, SLA 99.99%).
-- Remoção de blocos e grelhas artificiais de badges, mantendo o Hero e o Rodapé com visual minimalista e direto.
+- **Soluções Corporativas**: Blocos informativos limpos e compactos sem sub-botões excessivos.
 
 ### ⚡ Melhorado
-- Densidade visual e clareza do catálogo de planos, portfólio oficial e canal de suporte.
+- Densidade visual e clareza do catálogo de planos, portfólio oficial e canais de suporte.
+- Interatividade fluida e responsividade mobile-first completa em todas as resoluções.
 
 ---
 

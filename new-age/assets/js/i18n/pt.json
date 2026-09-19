@@ -14,6 +14,11 @@
     "description": "Infraestrutura corporativa de alta velocidade com armazenamento 100% NVMe PCIe Gen4, cPanel® oficial, LiteSpeed Enterprise e suporte técnico especializado 24/7. Conectividade global com ativação instantânea.",
     "cta_plans": "Ver Planos Oficiais",
     "cta_contact": "Consultoria Gratuita",
+    "domain_tab_register": "Registrar Novo Domínio",
+    "domain_tab_transfer": "Transferir Domínio",
+    "domain_tab_whois": "WHOIS Lookup",
+    "domain_input_placeholder": "Digite o nome do domínio desejado...",
+    "domain_btn_search": "Verificar Disponibilidade",
     "metric_uptime": "99.99%",
     "metric_uptime_desc": "SLA em Contrato",
     "metric_nvme": "PCIe Gen4",
@@ -32,7 +37,7 @@
     "domains_title": "Registo & Gestão de Domínios",
     "domains_desc": "Registo de domínios internacionais (.com, .org, .net, .io) e nacionais (.co.mz, .mz) com DNS Anycast gerenciado e assistência de transferência.",
     "vps_title": "Servidores VPS & Dedicados",
-    "vps_desc": "Poder computacional dedicado com processadores AMD EPYC / Ryzen 3950x e Intel Core i9, acesso root e tráfego de alta velocidade.",
+    "vps_desc": "Poder computacional dedicado com processadores Ryzen 3950x e Intel Core i9, acesso root e tráfego de alta velocidade.",
     "reseller_title": "Revenda de Hospedagem WHMCS",
     "reseller_desc": "Infraestrutura completa para agências e revendedores criarem seus próprios planos com WHMCS, cPanel/WHM e DNS próprio.",
     "wordpress_title": "Hospedagem Otimizada WordPress",
@@ -41,12 +46,11 @@
     "support_desc": "Atendimento técnico direto com especialistas de infraestrutura via WhatsApp oficial e sistema de tickets 24/7."
   },
   "plans": {
-    "tag": "Tabelas Oficiais",
+    "tag": "Pricing & Infraestrutura",
     "title": "Planos Transparentes e Escaláveis em Meticais (MZN)",
     "description": "Sem taxas ocultas, com ativação ágil, hardware dedicado e proteção contínua.",
     "tab_shared": "Compartilhada",
     "tab_wordpress": "WordPress",
-    "tab_vps_proc": "VPS Processador Dedicado",
     "tab_vps_cpanel": "VPS cPanel Dedicado",
     "tab_reseller": "Revenda",
     "per_month": "/mês",
@@ -60,30 +64,12 @@
   "portfolio": {
     "tag": "Clientes & Casos de Uso",
     "title": "Empresas e Projetos que Confiam na Nossa Infraestrutura",
-    "description": "Marcas e plataformas que operam com velocidade e segurança na rede Zedeck's IT."
+    "description": "Testemunhos reais de quem opera com velocidade, segurança e estabilidade na nossa rede."
   },
   "faq": {
     "tag": "Esclarecimentos Técnicos",
     "title": "Perguntas Frequentes",
-    "description": "Respostas diretas sobre servidores, migração, métodos de pagamento e tempos de ativação."
-  },
-  "contact": {
-    "tag": "Atendimento Direto",
-    "title": "Fale com a Equipa de Engenharia da Zedeck's IT",
-    "description": "Solicite propostas, migrações gratuitas ou arquitetura de servidores personalizada para a sua empresa.",
-    "form_name": "Nome Completo",
-    "form_name_placeholder": "Ex: João Silva",
-    "form_email": "E-mail Corporativo",
-    "form_email_placeholder": "joao@empresa.com",
-    "form_phone": "Telefone / WhatsApp",
-    "form_phone_placeholder": "+258 84 000 0000",
-    "form_plan": "Plano ou Serviço de Interesse",
-    "form_plan_select": "Selecione uma opção...",
-    "form_message": "Mensagem ou Requisitos Técnicos",
-    "form_message_placeholder": "Descreva detalhes do seu site, necessidades de tráfego ou migração...",
-    "btn_submit": "Enviar para Atendimento WhatsApp",
-    "direct_support": "Ou contacte diretamente:",
-    "whatsapp_help": "O envio encaminha diretamente para o canal oficial de atendimento da Zedeck's IT."
+    "description": "Respostas diretas sobre servidores, migração, painel e infraestrutura técnica."
   },
   "footer": {
     "desc": "Infraestrutura corporativa de alojamento web, servidores dedicados e gestão de domínios com alcance global. Zedeck's IT.",

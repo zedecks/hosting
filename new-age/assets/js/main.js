@@ -6,12 +6,14 @@ import { I18nManager } from './components/i18n.js';
 import { initPricingTabs } from './components/tabs.js';
 import { initFaqAccordion } from './components/faq.js';
 import { initLeadForm } from './components/form.js';
+import { initDomainSearch } from './components/domain.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize i18n
   const i18n = new I18nManager();
 
   // Initialize UI Components
+  initDomainSearch();
   initPricingTabs();
   initFaqAccordion();
   initLeadForm();

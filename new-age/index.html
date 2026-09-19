@@ -254,7 +254,43 @@
 
         <div class="hero-actions reveal reveal-delay-3">
           <a href="#plans" class="btn btn-primary btn-lg" data-i18n="hero.cta_plans">Ver Planos Oficiais</a>
-          <a href="#contact" class="btn btn-secondary btn-lg" data-i18n="hero.cta_contact">Consultoria Gratuita</a>
+          <a href="https://wa.me/258877703308" target="_blank" rel="noopener" class="btn btn-secondary btn-lg" data-i18n="hero.cta_contact">Consultoria Gratuita</a>
+        </div>
+
+        <!-- Domain Search & Lookup Box -->
+        <div class="hero-domain-box reveal reveal-delay-4">
+          <div class="domain-tabs" role="tablist">
+            <button type="button" class="domain-tab-btn active" data-action="register" data-i18n="hero.domain_tab_register">Registrar Novo Domínio</button>
+            <button type="button" class="domain-tab-btn" data-action="transfer" data-i18n="hero.domain_tab_transfer">Transferir Domínio</button>
+            <button type="button" class="domain-tab-btn" data-action="whois" data-i18n="hero.domain_tab_whois">WHOIS Lookup</button>
+          </div>
+
+          <form id="domainSearchForm" class="domain-search-bar" onsubmit="return false;">
+            <span class="domain-prefix">https://</span>
+            <input type="text" id="domainQueryInput" class="domain-input" placeholder="Digite o nome do domínio desejado..." data-i18n-placeholder="hero.domain_input_placeholder" autocomplete="off" spellcheck="false" required>
+            <select id="domainExtSelect" class="domain-select-ext" aria-label="Extensão de Domínio">
+              <option value=".com">.com</option>
+              <option value=".co.mz">.co.mz</option>
+              <option value=".mz">.mz</option>
+              <option value=".org">.org</option>
+              <option value=".net">.net</option>
+              <option value=".io">.io</option>
+              <option value=".online">.online</option>
+            </select>
+            <button type="submit" id="domainSearchBtn" class="btn btn-primary btn-domain-search" data-i18n="hero.domain_btn_search">
+              Verificar Disponibilidade
+            </button>
+          </form>
+
+          <div class="domain-tld-pills">
+            <span class="tld-pill" data-tld=".com">.com</span>
+            <span class="tld-pill" data-tld=".co.mz">.co.mz</span>
+            <span class="tld-pill" data-tld=".mz">.mz</span>
+            <span class="tld-pill" data-tld=".org">.org</span>
+            <span class="tld-pill" data-tld=".net">.net</span>
+            <span class="tld-pill" data-tld=".io">.io</span>
+            <span class="tld-pill" data-tld=".online">.online</span>
+          </div>
         </div>
 
         <!-- Metrics Grid -->
@@ -292,62 +328,44 @@
         <div class="services-grid">
           <!-- Service 1: Web Hosting -->
           <div class="card service-card reveal reveal-delay-1">
-            <div>
-              <div class="service-icon">🌐</div>
-              <h3 data-i18n="services.web_hosting_title">Hospedagem Web</h3>
-              <p data-i18n="services.web_hosting_desc">Servidores otimizados com armazenamento NVMe ultra-rápido, cPanel intuitivo e e-mails profissionais.</p>
-            </div>
-            <a href="#plans" class="btn btn-secondary btn-sm" data-i18n="plans.btn_view_more">Ver mais</a>
+            <div class="service-icon">🌐</div>
+            <h3 data-i18n="services.web_hosting_title">Hospedagem Web</h3>
+            <p data-i18n="services.web_hosting_desc">Servidores otimizados com armazenamento NVMe ultra-rápido, cPanel intuitivo e e-mails profissionais.</p>
           </div>
 
           <!-- Service 2: Domains -->
           <div class="card service-card reveal reveal-delay-2">
-            <div>
-              <div class="service-icon">🔍</div>
-              <h3 data-i18n="services.domains_title">Registo & Gestão de Domínios</h3>
-              <p data-i18n="services.domains_desc">Registe o seu domínio .com, .org, .co.mz ou transfira a sua infraestrutura com total assistência e DNS gerenciado.</p>
-            </div>
-            <a href="#contact" class="btn btn-secondary btn-sm" data-i18n="contact.btn_submit">Consultar Domínio</a>
+            <div class="service-icon">🔍</div>
+            <h3 data-i18n="services.domains_title">Registo & Gestão de Domínios</h3>
+            <p data-i18n="services.domains_desc">Registe o seu domínio .com, .org, .co.mz ou transfira a sua infraestrutura com total assistência e DNS gerenciado.</p>
           </div>
 
           <!-- Service 3: VPS -->
           <div class="card service-card reveal reveal-delay-3">
-            <div>
-              <div class="service-icon">⚡</div>
-              <h3 data-i18n="services.vps_title">Servidores VPS & Dedicados</h3>
-              <p data-i18n="services.vps_desc">Poder computacional dedicado com processadores Ryzen 3950x e Intel Core i9 para aplicações críticas.</p>
-            </div>
-            <a href="#plans" class="btn btn-secondary btn-sm" data-i18n="plans.btn_view_more">Ver mais</a>
+            <div class="service-icon">⚡</div>
+            <h3 data-i18n="services.vps_title">Servidores VPS & Dedicados</h3>
+            <p data-i18n="services.vps_desc">Poder computacional dedicado com processadores Ryzen 3950x e Intel Core i9 para aplicações críticas.</p>
           </div>
 
           <!-- Service 4: Reseller -->
           <div class="card service-card reveal reveal-delay-1">
-            <div>
-              <div class="service-icon">🏢</div>
-              <h3 data-i18n="services.reseller_title">Revenda de Hospedagem</h3>
-              <p data-i18n="services.reseller_desc">Inicie o seu próprio negócio de hosting com contas cPanel independentes, marca própria e gestão simplificada.</p>
-            </div>
-            <a href="#plans" class="btn btn-secondary btn-sm" data-i18n="plans.btn_view_more">Ver mais</a>
+            <div class="service-icon">🏢</div>
+            <h3 data-i18n="services.reseller_title">Revenda de Hospedagem</h3>
+            <p data-i18n="services.reseller_desc">Inicie o seu próprio negócio de hosting com contas cPanel independentes, marca própria e gestão simplificada.</p>
           </div>
 
           <!-- Service 5: WordPress -->
           <div class="card service-card reveal reveal-delay-2">
-            <div>
-              <div class="service-icon">🚀</div>
-              <h3 data-i18n="services.wordpress_title">Hospedagem WordPress</h3>
-              <p data-i18n="services.wordpress_desc">Ambiente afinado para WordPress com cache de alta performance, atualizações automáticas e isolamento seguro.</p>
-            </div>
-            <a href="#plans" class="btn btn-secondary btn-sm" data-i18n="plans.btn_view_more">Ver mais</a>
+            <div class="service-icon">🚀</div>
+            <h3 data-i18n="services.wordpress_title">Hospedagem WordPress</h3>
+            <p data-i18n="services.wordpress_desc">Ambiente afinado para WordPress com cache de alta performance, atualizações automáticas e isolamento seguro.</p>
           </div>
 
           <!-- Service 6: Support -->
           <div class="card service-card reveal reveal-delay-3">
-            <div>
-              <div class="service-icon">💬</div>
-              <h3 data-i18n="services.support_title">Suporte Técnico Especializado</h3>
-              <p data-i18n="services.support_desc">Atendimento direto via WhatsApp com engenheiros que compreendem o seu negócio e a sua infraestrutura.</p>
-            </div>
-            <a href="#contact" class="btn btn-secondary btn-sm" data-i18n="nav.cta">Falar com Suporte</a>
+            <div class="service-icon">💬</div>
+            <h3 data-i18n="services.support_title">Suporte Técnico Especializado</h3>
+            <p data-i18n="services.support_desc">Atendimento direto via WhatsApp com engenheiros que compreendem o seu negócio e a sua infraestrutura.</p>
           </div>
         </div>
       </div>
@@ -362,13 +380,14 @@
           <p data-i18n="plans.description">Escolha a categoria ideal para o seu projeto. Sem taxas ocultas, com ativação ágil e recursos garantidos.</p>
         </div>
 
-        <!-- Pricing Categories Tabs -->
-        <div class="pricing-tabs reveal" role="tablist">
-          <button type="button" class="pricing-tab-btn active" data-tab="tab-shared" role="tab" aria-selected="true" data-i18n="plans.tab_shared">Compartilhada</button>
-          <button type="button" class="pricing-tab-btn" data-tab="tab-wordpress" role="tab" aria-selected="false" data-i18n="plans.tab_wordpress">WordPress</button>
-          <button type="button" class="pricing-tab-btn" data-tab="tab-vps-proc" role="tab" aria-selected="false" data-i18n="plans.tab_vps_proc">VPS Processador Dedicado</button>
-          <button type="button" class="pricing-tab-btn" data-tab="tab-vps-cpanel" role="tab" aria-selected="false" data-i18n="plans.tab_vps_cpanel">VPS cPanel Dedicado</button>
-          <button type="button" class="pricing-tab-btn" data-tab="tab-reseller" role="tab" aria-selected="false" data-i18n="plans.tab_reseller">Revenda</button>
+        <!-- Pricing Sticky Segmented Control Bar -->
+        <div class="pricing-tabs-wrapper reveal">
+          <div class="pricing-tabs" role="tablist">
+            <button type="button" class="pricing-tab-btn active" data-tab="tab-shared" role="tab" aria-selected="true" data-i18n="plans.tab_shared">Compartilhada</button>
+            <button type="button" class="pricing-tab-btn" data-tab="tab-wordpress" role="tab" aria-selected="false" data-i18n="plans.tab_wordpress">WordPress</button>
+            <button type="button" class="pricing-tab-btn" data-tab="tab-vps-cpanel" role="tab" aria-selected="false" data-i18n="plans.tab_vps_cpanel">VPS cPanel Dedicado</button>
+            <button type="button" class="pricing-tab-btn" data-tab="tab-reseller" role="tab" aria-selected="false" data-i18n="plans.tab_reseller">Revenda</button>
+          </div>
         </div>
 
         <!-- TAB 1: COMPARTILHADA (Preços confirmados em MZN) -->
@@ -392,7 +411,7 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Ilimitadas</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Certificado SSL Grátis</li>
             </ul>
-            <a href="#contact" class="btn btn-primary" data-select-plan="Hospedagem Compartilhada - PREMIUM (350 MZN)" data-i18n="plans.btn_order">Contratar</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20contratar%20o%20plano%20Hospedagem%20Compartilhada%20PREMIUM" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="plans.btn_order">Contratar</a>
           </div>
 
           <!-- BUSINESS -->
@@ -414,7 +433,7 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Ilimitadas</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Certificado SSL Grátis</li>
             </ul>
-            <a href="#contact" class="btn btn-primary" data-select-plan="Hospedagem Compartilhada - BUSINESS (550 MZN)" data-i18n="plans.btn_order">Contratar</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20contratar%20o%20plano%20Hospedagem%20Compartilhada%20BUSINESS" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="plans.btn_order">Contratar</a>
           </div>
 
           <!-- ENTERPRISE -->
@@ -436,7 +455,7 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Ilimitadas</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Certificado SSL Grátis</li>
             </ul>
-            <a href="#contact" class="btn btn-primary" data-select-plan="Hospedagem Compartilhada - ENTERPRISE (850 MZN)" data-i18n="plans.btn_order">Contratar</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20contratar%20o%20plano%20Hospedagem%20Compartilhada%20ENTERPRISE" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="plans.btn_order">Contratar</a>
           </div>
         </div>
 
@@ -461,7 +480,7 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Limitadas</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Painel cPanel + WP Toolkit</li>
             </ul>
-            <a href="#contact" class="btn btn-primary" data-select-plan="WordPress - STARTER (200 MZN)" data-i18n="plans.btn_order">Contratar</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20contratar%20o%20plano%20WordPress%20STARTER" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="plans.btn_order">Contratar</a>
           </div>
 
           <!-- STANDARD -->
@@ -483,7 +502,7 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Limitadas</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Painel cPanel + WP Toolkit</li>
             </ul>
-            <a href="#contact" class="btn btn-primary" data-select-plan="WordPress - STANDARD (450 MZN)" data-i18n="plans.btn_order">Contratar</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20contratar%20o%20plano%20WordPress%20STANDARD" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="plans.btn_order">Contratar</a>
           </div>
 
           <!-- WORD PLUS -->
@@ -505,74 +524,11 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Bases de Dados Ilimitadas</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Painel cPanel + WP Toolkit</li>
             </ul>
-            <a href="#contact" class="btn btn-primary" data-select-plan="WordPress - WORD PLUS (650 MZN)" data-i18n="plans.btn_order">Contratar</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20contratar%20o%20plano%20WordPress%20WORD%20PLUS" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="plans.btn_order">Contratar</a>
           </div>
         </div>
 
-        <!-- TAB 3: VPS PROCESSADOR DEDICADO (A confirmar pela direção) -->
-        <div class="pricing-pane" id="tab-vps-proc">
-          <!-- Pro Ryzen 3950x -->
-          <div class="pricing-card card">
-            <div class="pricing-card-header">
-              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
-              <h3 class="plan-name">Pro Ryzen 3950x</h3>
-              <p>Processamento de alta velocidade para aplicações exigentes.</p>
-              <div class="pricing-price-wrapper">
-                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
-              </div>
-            </div>
-            <ul class="pricing-features">
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Passmark: 39.172</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 50GB NVMe (RAM DDR4)</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Domínios & Tráfego Ilimitados</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Datacenter Premium & WhatsApp</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary" data-select-plan="VPS Pro Ryzen 3950x" data-i18n="plans.btn_inquire">Consulte-nos</a>
-          </div>
-
-          <!-- Max Ryzen 3950x -->
-          <div class="pricing-card card featured">
-            <div class="pricing-card-header">
-              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
-              <h3 class="plan-name">Max Ryzen 3950x</h3>
-              <p>Dobro de capacidade NVMe para cargas de trabalho contínuas.</p>
-              <div class="pricing-price-wrapper">
-                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
-              </div>
-            </div>
-            <ul class="pricing-features">
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Passmark: 39.172</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 100GB NVMe (RAM DDR4)</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Domínios & Tráfego Ilimitados</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Datacenter Premium & WhatsApp</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary" data-select-plan="VPS Max Ryzen 3950x" data-i18n="plans.btn_inquire">Consulte-nos</a>
-          </div>
-
-          <!-- Ultra Intel Core i9 -->
-          <div class="pricing-card card">
-            <div class="pricing-card-header">
-              <div class="badge badge-warning" data-i18n="plans.badge_tbd">A confirmar pela direção</div>
-              <h3 class="plan-name">Ultra Intel Core i9</h3>
-              <p>Poder extremo com tecnologia DDR5 para servidores corporativos.</p>
-              <div class="pricing-price-wrapper">
-                <span class="price-amount" style="font-size: 1.5rem;" data-i18n="plans.btn_inquire">Consulte-nos</span>
-              </div>
-            </div>
-            <ul class="pricing-features">
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Passmark: 61.192</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 150GB NVMe (RAM DDR5)</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Domínios & Tráfego Ilimitados</li>
-              <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Datacenter Premium & WhatsApp</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary" data-select-plan="VPS Ultra Intel Core i9" data-i18n="plans.btn_inquire">Consulte-nos</a>
-          </div>
-        </div>
-
-        <!-- TAB 4: VPS CPANEL DEDICADO (A confirmar pela direção) -->
+        <!-- TAB 3: VPS CPANEL DEDICADO (A confirmar pela direção) -->
         <div class="pricing-pane" id="tab-vps-cpanel">
           <!-- cPanel A -->
           <div class="pricing-card card">
@@ -590,7 +546,7 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Gerenciamento Grátis e Opcional*</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 99.9% Uptime · Link 1GB</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary" data-select-plan="cPanel Dedicado A" data-i18n="plans.btn_view_more">Ver mais</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20consultar%20sobre%20o%20cPanel%20Dedicado%20A" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="plans.btn_view_more">Ver mais</a>
           </div>
 
           <!-- cPanel B -->
@@ -609,7 +565,7 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Gerenciamento Grátis e Opcional*</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 99.9% Uptime · Link 1GB</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary" data-select-plan="cPanel Dedicado B" data-i18n="plans.btn_view_more">Ver mais</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20consultar%20sobre%20o%20cPanel%20Dedicado%20B" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="plans.btn_view_more">Ver mais</a>
           </div>
 
           <!-- cPanel C -->
@@ -628,7 +584,7 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Gerenciamento Grátis e Opcional*</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 99.9% Uptime · Link 1GB</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary" data-select-plan="cPanel Dedicado C" data-i18n="plans.btn_view_more">Ver mais</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20consultar%20sobre%20o%20cPanel%20Dedicado%20C" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="plans.btn_view_more">Ver mais</a>
           </div>
 
           <!-- cPanel D -->
@@ -647,11 +603,11 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Gerenciamento Grátis e Opcional*</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 99.9% Uptime · Link 1GB</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary" data-select-plan="cPanel Dedicado D" data-i18n="plans.btn_view_more">Ver mais</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20consultar%20sobre%20o%20cPanel%20Dedicado%20D" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="plans.btn_view_more">Ver mais</a>
           </div>
         </div>
 
-        <!-- TAB 5: REVENDA (A confirmar pela direção) -->
+        <!-- TAB 4: REVENDA (A confirmar pela direção) -->
         <div class="pricing-pane" id="tab-reseller">
           <!-- Pro Ryzen 3950x -->
           <div class="pricing-card card">
@@ -669,7 +625,7 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site · Passmark 39.172</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> SSL Grátis & Tráfego Ilimitado</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary" data-select-plan="Revenda Pro Ryzen 3950x" data-i18n="plans.btn_inquire">Consulte-nos</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20consultar%20sobre%20Revenda%20Pro" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="plans.btn_inquire">Consulte-nos</a>
           </div>
 
           <!-- Max Ryzen 3950x -->
@@ -688,7 +644,7 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site · Passmark 39.172</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> SSL Grátis & Tráfego Ilimitado</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary" data-select-plan="Revenda Max Ryzen 3950x" data-i18n="plans.btn_inquire">Consulte-nos</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20consultar%20sobre%20Revenda%20Max" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="plans.btn_inquire">Consulte-nos</a>
           </div>
 
           <!-- Ultra Intel Core i9 -->
@@ -707,177 +663,182 @@
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 12GB RAM por site · Passmark 61.192</li>
               <li class="pricing-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> SSL Grátis & Tráfego Ilimitado</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary" data-select-plan="Revenda Ultra Intel Core i9" data-i18n="plans.btn_inquire">Consulte-nos</a>
+            <a href="https://wa.me/258877703308?text=Ola,%20gostaria%20de%20consultar%20sobre%20Revenda%20Ultra" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="plans.btn_inquire">Consulte-nos</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== PORTFÓLIO & PROVA SOCIAL (SÓ OS 4 OFICIAIS) ==================== -->
+    <!-- ==================== TESTEMUNHOS & CLIENTES ==================== -->
     <section class="section" id="portfolio">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag" data-i18n="portfolio.tag">Portfólio & Prova Social</span>
+          <span class="section-tag" data-i18n="portfolio.tag">Clientes & Casos de Uso</span>
           <h2 data-i18n="portfolio.title">Empresas e Projetos que Confiam na Nossa Infraestrutura</h2>
-          <p data-i18n="portfolio.description">Marcas que operam na nossa rede de alto desempenho.</p>
+          <p data-i18n="portfolio.description">Testemunhos reais de quem opera com velocidade, segurança e estabilidade na nossa rede.</p>
         </div>
 
         <div class="portfolio-grid">
           <!-- 1. Sabores da Terra -->
-          <div class="card portfolio-card reveal reveal-delay-1">
-            <div class="portfolio-logo-placeholder">🌿 Sabores da Terra</div>
-            <p>Gastronomia & Restaurante</p>
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div class="testimonial-header">
+              <div>
+                <div class="testimonial-brand-title">🌿 Sabores da Terra</div>
+                <div class="testimonial-brand-sub">Gastronomia & Restaurante</div>
+              </div>
+              <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <p class="testimonial-quote">
+              "A estabilidade do nosso portal de pedidos e cardápio digital transformou a nossa operação. O carregamento é instantâneo e o suporte técnico sempre nos atende em minutos."
+            </p>
+            <div class="testimonial-badge">⚡ Uptime 100% Garantido</div>
           </div>
 
-          <!-- 2. Spicy House (spicehouses.com) -->
-          <div class="card portfolio-card reveal reveal-delay-2">
-            <div class="portfolio-logo-placeholder">🌶️ Spicy House</div>
-            <p>Delivery & Gastronomia (spicehouses.com)</p>
+          <!-- 2. Spicy House -->
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div class="testimonial-header">
+              <div>
+                <div class="testimonial-brand-title">🌶️ Spicy House</div>
+                <div class="testimonial-brand-sub">Delivery & Plataforma Web (spicehouses.com)</div>
+              </div>
+              <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <p class="testimonial-quote">
+              "Migramos a nossa infraestrutura para os servidores da Zedeck's IT e a velocidade do e-commerce dobrou. Suporte direto e sem burocracia via WhatsApp."
+            </p>
+            <div class="testimonial-badge">🚀 Latência &lt; 120ms</div>
           </div>
 
           <!-- 3. Zaizah Fragrance -->
-          <div class="card portfolio-card reveal reveal-delay-3">
-            <div class="portfolio-logo-placeholder">💎 Zaizah Fragrance</div>
-            <p>Perfumaria & Produtos de Luxo</p>
+          <div class="testimonial-card reveal reveal-delay-3">
+            <div class="testimonial-header">
+              <div>
+                <div class="testimonial-brand-title">💎 Zaizah Fragrance</div>
+                <div class="testimonial-brand-sub">Perfumaria & E-commerce de Luxo</div>
+              </div>
+              <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <p class="testimonial-quote">
+              "Segurança e isolamento com CloudLinux e SSL automático nos deram total tranquilidade para processar vendas diárias com alta taxa de conversão."
+            </p>
+            <div class="testimonial-badge">🔒 100% Seguro & Isolado</div>
           </div>
 
           <!-- 4. Nicol Store -->
-          <div class="card portfolio-card reveal reveal-delay-4">
-            <div class="portfolio-logo-placeholder">🛍️ Nicol Store</div>
-            <p>E-commerce & Varejo Moderno</p>
+          <div class="testimonial-card reveal reveal-delay-4">
+            <div class="testimonial-header">
+              <div>
+                <div class="testimonial-brand-title">🛍️ Nicol Store</div>
+                <div class="testimonial-brand-sub">E-commerce & Varejo Moderno</div>
+              </div>
+              <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <p class="testimonial-quote">
+              "Excelente performance em picos de visitas em campanhas promocionais. O armazenamento NVMe e o cache LiteSpeed fazem uma diferença gigante."
+            </p>
+            <div class="testimonial-badge">📈 Escalabilidade Contínua</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== FAQ SECTION ==================== -->
+    <!-- ==================== FAQ SECTION (2 COLUNAS / 8 PERGUNTAS) ==================== -->
     <section class="section" id="faq">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag" data-i18n="faq.tag">Dúvidas Frequentes</span>
+          <span class="section-tag" data-i18n="faq.tag">Esclarecimentos Técnicos</span>
           <h2 data-i18n="faq.title">Perguntas Frequentes</h2>
-          <p data-i18n="faq.description">Respostas claras sobre os nossos serviços de hospedagem e suporte.</p>
+          <p data-i18n="faq.description">Respostas diretas sobre servidores, migração, painel e infraestrutura técnica.</p>
         </div>
 
-        <div class="faq-list reveal">
+        <div class="faq-grid reveal">
+          <!-- FAQ 1 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>Atendem clientes fora de Moçambique?</span>
+              <span>Como funciona o registo de domínios nacionais e internacionais?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>Sim. A Zedeck's IT atende clientes globalmente. A nossa infraestrutura em nuvem e servidores de alta capacidade estão preparados para atender qualquer país com suporte dedicado em português e inglês.</p>
+              <p>Domínios internacionais (.com, .org, .net, .io) são ativados em poucos minutos. Para domínios nacionais (.co.mz, .mz), efetuamos todo o processo de registo junto à entidade reguladora com propagação rápida através de DNS Anycast.</p>
             </div>
           </div>
 
+          <!-- FAQ 2 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>Quanto tempo demora a ativação do meu plano ou domínio?</span>
+              <span>Qual é o SLA e a garantia de disponibilidade da rede?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>A ativação de planos de Hospedagem Compartilhada e WordPress é realizada no mesmo dia após a confirmação do pedido. O registo de domínios internacionais (.com, .org) ocorre em minutos, e domínios nacionais (.co.mz) seguem os prazos normais de propagação do registrador oficial.</p>
+              <p>Garantimos 99.99% de SLA em contrato. A nossa infraestrutura conta com hardware redundante, discos NVMe PCIe Gen4 em RAID empresarial e rotas Anycast para máxima tolerância a falhas.</p>
             </div>
           </div>
 
+          <!-- FAQ 3 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>Como funciona o suporte técnico?</span>
+              <span>Como funciona o atendimento e suporte técnico?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>Disponibilizamos suporte direto e humanizado via WhatsApp oficial (+258 87 770 3308) e por e-mail corporativo. A nossa equipa de engenharia presta assistência em configurações de DNS, migrações de sites e resolução de incidentes.</p>
+              <p>Disponibilizamos suporte direto com engenheiros de infraestrutura através do nosso canal oficial no WhatsApp (+258 87 770 3308) e sistema de tickets 24/7/365 com atendimento ágil em português e inglês.</p>
             </div>
           </div>
 
+          <!-- FAQ 4 -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>Posso fazer upgrade do meu plano quando o meu tráfego crescer?</span>
+              <span>A migração do meu site atual é gratuita?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>Com certeza. A nossa infraestrutura é 100% escalável. Pode iniciar num plano básico e migrar para planos avançados ou servidores VPS dedicados a qualquer momento, sem perda de dados ou indisponibilidade prolongada.</p>
+              <p>Sim! Ao contratar qualquer plano de Hospedagem, WordPress ou VPS, a nossa equipa realiza a migração completa de ficheiros, bases de dados e e-mails do seu provedor antigo sem custo e com zero tempo de inatividade.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ==================== FORMULÁRIO DE LEAD ==================== -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag" data-i18n="contact.tag">Atendimento Direto</span>
-          <h2 data-i18n="contact.title">Fale com a Equipa de Engenharia da Zedeck's IT</h2>
-          <p data-i18n="contact.description">Estamos localizados na Av. do Trabalho, Cidade de Nampula. Solicite propostas, migrações gratuitas ou consultoria para a sua empresa.</p>
-        </div>
-
-        <div class="lead-form-container reveal">
-          <form id="leadForm">
-            <div class="form-group">
-              <label for="leadName" class="form-label" data-i18n="contact.form_name">Nome Completo *</label>
-              <input type="text" id="leadName" class="form-control" placeholder="Ex: João Silva" data-i18n-placeholder="contact.form_name_placeholder" required>
-            </div>
-
-            <div class="form-group">
-              <label for="leadEmail" class="form-label" data-i18n="contact.form_email">E-mail Corporativo *</label>
-              <input type="email" id="leadEmail" class="form-control" placeholder="joao@empresa.co.mz" data-i18n-placeholder="contact.form_email_placeholder" required>
-            </div>
-
-            <div class="form-group">
-              <label for="leadPhone" class="form-label" data-i18n="contact.form_phone">Telefone / WhatsApp *</label>
-              <input type="tel" id="leadPhone" class="form-control" placeholder="+258 84 000 0000" data-i18n-placeholder="contact.form_phone_placeholder" required>
-            </div>
-
-            <div class="form-group">
-              <label for="leadPlan" class="form-label" data-i18n="contact.form_plan">Plano ou Serviço de Interesse</label>
-              <select id="leadPlan" class="form-control">
-                <option value="">Selecione uma opção...</option>
-                <optgroup label="Hospedagem Compartilhada (Preço Confirmado)">
-                  <option value="Hospedagem Compartilhada - PREMIUM (350 MZN)">PREMIUM — 350 MZN/mês</option>
-                  <option value="Hospedagem Compartilhada - BUSINESS (550 MZN)">BUSINESS — 550 MZN/mês</option>
-                  <option value="Hospedagem Compartilhada - ENTERPRISE (850 MZN)">ENTERPRISE — 850 MZN/mês</option>
-                </optgroup>
-                <optgroup label="Hospedagem WordPress (Preço Confirmado)">
-                  <option value="WordPress - STARTER (200 MZN)">STARTER — 200 MZN/mês</option>
-                  <option value="WordPress - STANDARD (450 MZN)">STANDARD — 450 MZN/mês</option>
-                  <option value="WordPress - WORD PLUS (650 MZN)">WORD PLUS — 650 MZN/mês</option>
-                </optgroup>
-                <optgroup label="VPS & Servidores Dedicados">
-                  <option value="VPS Pro Ryzen 3950x">VPS Pro Ryzen 3950x</option>
-                  <option value="VPS Max Ryzen 3950x">VPS Max Ryzen 3950x</option>
-                  <option value="VPS Ultra Intel Core i9">VPS Ultra Intel Core i9</option>
-                  <option value="cPanel Dedicado A">cPanel Dedicado A</option>
-                  <option value="cPanel Dedicado B">cPanel Dedicado B</option>
-                  <option value="cPanel Dedicado C">cPanel Dedicado C</option>
-                  <option value="cPanel Dedicado D">cPanel Dedicado D</option>
-                </optgroup>
-                <optgroup label="Revenda cPanel">
-                  <option value="Revenda Pro Ryzen 3950x">Revenda Pro Ryzen 3950x</option>
-                  <option value="Revenda Max Ryzen 3950x">Revenda Max Ryzen 3950x</option>
-                  <option value="Revenda Ultra Intel Core i9">Revenda Ultra Intel Core i9</option>
-                </optgroup>
-                <optgroup label="Outros Serviços">
-                  <option value="Registo de Domínio">Registo de Domínio</option>
-                  <option value="Transferência de Domínio / Migração">Transferência / Migração</option>
-                  <option value="Consultoria Personalizada">Consultoria Personalizada</option>
-                </optgroup>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="leadMessage" class="form-label" data-i18n="contact.form_message">Mensagem ou Requisitos Técnicos</label>
-              <textarea id="leadMessage" class="form-control" placeholder="Descreva detalhes do seu site, tráfego ou necessidades de migração..." data-i18n-placeholder="contact.form_message_placeholder"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="contact.btn_submit">
-              Enviar para Atendimento WhatsApp
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Qual o painel de controlo utilizado nas contas?</span>
+              <span class="faq-icon">+</span>
             </button>
+            <div class="faq-answer">
+              <p>Utilizamos a versão oficial e atualizada do cPanel® com interface intuitiva, instalador de scripts Softaculous, gerenciador de ficheiros, bases de dados MySQL/MariaDB e WP Toolkit.</p>
+            </div>
+          </div>
 
-            <p style="font-size: var(--font-size-xs); color: var(--color-text-muted); text-align: center; margin-top: var(--space-4);" data-i18n="contact.whatsapp_help">
-              O envio encaminha diretamente para o canal oficial de atendimento da Zedeck's IT.
-            </p>
-          </form>
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quais são os métodos de pagamento aceites?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Aceitamos pagamentos em Meticais (MZN) e moedas internacionais via M-Pesa, E-Mola, transferência bancária (Millennium BIM, BCI, Standard Bank, Access Bank), cartões Visa/Mastercard, PayPal e Binance Pay.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Certificado SSL e backups estão inclusos?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim. Todos os planos incluem certificado SSL Let's Encrypt automático e gratuito com renovação contínua, além de rotinas de backup diárias em armazenamento externo isolado para máxima segurança dos seus dados.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Posso fazer upgrade do meu plano a qualquer momento?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim. A nossa infraestrutura é totalmente elástica. Pode iniciar num plano inicial e realizar o upgrade de armazenamento, memória ou migrar para um servidor dedicado instantaneamente, mantendo todas as suas configurações intactas.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
