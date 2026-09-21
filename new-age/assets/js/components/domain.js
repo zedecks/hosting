@@ -87,14 +87,32 @@ export function initDomainSearch() {
             </div>
           </div>
           <div class="domain-result-actions">
-            <button type="button" class="btn-result-action primary" data-i18n="hero.register_now" onclick="alert('${currentIsEn ? 'Registration flow for domain ' + escapeHtml(domain) + ' coming soon.' : 'Excelente! Em breve o fluxo de checkout e registo do domínio ' + escapeHtml(domain) + ' estará disponível.'}')">
+            <button type="button" class="btn-result-action primary" id="btnDomainRegisterAction" data-i18n="hero.register_now">
               ${currentIsEn ? 'Register Now' : 'Registar Agora'}
             </button>
-            <button type="button" class="btn-result-action secondary" data-i18n="hero.close" onclick="document.getElementById('domainSearchResult').style.display='none';">
+            <button type="button" class="btn-result-action secondary" id="btnDomainCloseAction" data-i18n="hero.close">
               ${currentIsEn ? 'Close' : 'Fechar'}
             </button>
           </div>
         `;
+
+        // Bind secure event listeners
+        const registerBtn = resultContainer.querySelector('#btnDomainRegisterAction');
+        const closeBtn = resultContainer.querySelector('#btnDomainCloseAction');
+        
+        if (registerBtn) {
+          registerBtn.addEventListener('click', () => {
+            const msg = currentIsEn 
+              ? `Registration flow for domain ${domain} coming soon.`
+              : `Excelente! Em breve o fluxo de checkout e registo do domínio ${domain} estará disponível.`;
+            alert(msg);
+          });
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener('click', () => {
+            resultContainer.style.display = 'none';
+          });
+        }
       } else {
         // Taken / Transferable
         resultContainer.style.display = 'flex';
@@ -109,14 +127,32 @@ export function initDomainSearch() {
             </div>
           </div>
           <div class="domain-result-actions">
-            <button type="button" class="btn-result-action primary" style="background: #D97706;" data-i18n="hero.transfer_domain" onclick="alert('${currentIsEn ? 'Domain transfer flow for ' + escapeHtml(domain) + ' coming soon.' : 'Excelente! Em breve a transferência guiada do domínio ' + escapeHtml(domain) + ' estará disponível.'}')">
+            <button type="button" class="btn-result-action primary" id="btnDomainTransferAction" style="background: #D97706;" data-i18n="hero.transfer_domain">
               ${currentIsEn ? 'Transfer Domain' : 'Transferir Domínio'}
             </button>
-            <button type="button" class="btn-result-action secondary" data-i18n="hero.close" onclick="document.getElementById('domainSearchResult').style.display='none';">
+            <button type="button" class="btn-result-action secondary" id="btnDomainCloseAction" data-i18n="hero.close">
               ${currentIsEn ? 'Close' : 'Fechar'}
             </button>
           </div>
         `;
+
+        // Bind secure event listeners
+        const transferBtn = resultContainer.querySelector('#btnDomainTransferAction');
+        const closeBtn = resultContainer.querySelector('#btnDomainCloseAction');
+
+        if (transferBtn) {
+          transferBtn.addEventListener('click', () => {
+            const msg = currentIsEn
+              ? `Domain transfer flow for ${domain} coming soon.`
+              : `Excelente! Em breve a transferência guiada do domínio ${domain} estará disponível.`;
+            alert(msg);
+          });
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener('click', () => {
+            resultContainer.style.display = 'none';
+          });
+        }
       }
     }, 550);
   });

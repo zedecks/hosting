@@ -46,12 +46,22 @@ export function initFAQ() {
       }
     });
 
-    // Keyboard support for space and enter is native on <button>, but recalculate height on window resize
-    window.addEventListener('resize', () => {
-      if (trigger.getAttribute('aria-expanded') === 'true') {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    });
+    // Keyboard accessibility is native for <button>
+  });
+
+  // Single debounced resize listener for open accordion height adjustment
+  let resizeTimeout = null;
+  window.addEventListener('resize', () => {
+    if (resizeTimeout) clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      items.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        const content = item.querySelector('.faq-content');
+        if (trigger && content && trigger.getAttribute('aria-expanded') === 'true') {
+          content.style.maxHeight = `${content.scrollHeight}px`;
+        }
+      });
+    }, 100);
   });
 
   // 2. Category Filter Tabs Logic

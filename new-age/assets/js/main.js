@@ -10,22 +10,22 @@ import { initScrollReel } from './components/scroll-reel.js';
 import { initFAQ } from './components/faq.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize i18n
+  // 1. Initialize Internationalization (i18n)
   const i18n = new I18nManager();
 
-  // 2. Initialize Domain Search
+  // 2. Initialize Domain Search & Verification
   initDomainSearch();
 
-  // 3. Initialize Pricing Tabs
+  // 3. Initialize Official Pricing Plans & Segmented Control
   initPricingTabs();
 
-  // 4. Initialize Scroll Reel Testimonials
+  // 4. Initialize Scroll Reel Social Proof Widget
   initScrollReel();
 
-  // 5. Initialize FAQ Accordion
+  // 5. Initialize Interactive FAQ Accordion & Category Tabs
   initFAQ();
 
-  // 4. Smooth scroll & intelligent anchor routing
+  // 6. Smooth Scroll & Intelligent Anchor Routing
   function scrollToTarget(targetId) {
     if (!targetId || targetId === '#') return;
 
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 150);
   }
 
-  // 2. Mobile Modal Drawer System
+  // 7. Mobile Modal Drawer System
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileNavModal = document.getElementById('mobileNavModal');
   const mobileModalCloseBtn = document.getElementById('mobileModalCloseBtn');
