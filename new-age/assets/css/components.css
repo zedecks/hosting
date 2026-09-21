@@ -2581,11 +2581,12 @@
 }
 
 .faq-accordion {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  max-width: 860px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-6);
+  max-width: 1200px;
   margin: 0 auto var(--space-12) auto;
+  align-items: start;
 }
 
 .faq-item {
@@ -2596,6 +2597,7 @@
   transition: all var(--transition-normal);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  height: fit-content;
 }
 
 .faq-item:hover {
@@ -2676,7 +2678,7 @@
 
 /* FAQ Extra Help CTA Banner */
 .faq-support-banner {
-  max-width: 860px;
+  max-width: 1200px;
   margin: 0 auto;
   background: linear-gradient(135deg, rgba(14, 20, 36, 0.95) 0%, rgba(8, 12, 22, 0.98) 100%);
   border: 1px solid rgba(0, 194, 255, 0.2);
@@ -2744,6 +2746,13 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 22px rgba(0, 194, 255, 0.45);
   background: linear-gradient(135deg, #38d3ff 0%, #00b0ff 100%);
+}
+
+@media (max-width: 900px) {
+  .faq-accordion {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
 }
 
 @media (max-width: 768px) {

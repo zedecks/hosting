@@ -6,6 +6,9 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
 ### ✨ Adicionado
 - **Seção "FAQ Interativo & Perguntas Frequentes" (`#faq`)**:
+  - **Layout Lado a Lado (2 Colunas em Grid Responsivo)**:
+    - Exibição paralela moderna em 2 colunas no Desktop e Tablet expandido (`max-width: 1200px`), otimizando o aproveitamento vertical da página.
+    - Colapso responsivo fluído para 1 coluna em telas menores que `900px` e smartphones.
   - **Accordion Interativo Acessível com ARIA**:
     - Suporte nativo aos atributos `aria-expanded`, `aria-controls` e `aria-labelledby`.
     - Expansão suave via `max-height` com curva de aceleração `cubic-bezier(0.16, 1, 0.3, 1)` e rotação em 180° do chevron indicador.
