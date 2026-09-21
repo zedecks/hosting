@@ -2,6 +2,34 @@
 
 Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
+## 🚀 [v0.4.0] - 2026-09-21 — Fase 7: Prova Social, Casos de Sucesso & Avaliações
+
+### ✨ Adicionado
+- **Seção "Prova Social & Casos de Sucesso" (`#depoimentos`)**:
+  - **Barra de Métricas de Confiança**:
+    - `1 200+ Clientes Ativos`: Empresas, agências e profissionais atendidos.
+    - `99.99% Uptime Real Registado`: SLA verificado em monitoramento contínuo.
+    - `3x+ Ganho de Performance`: Aceleração aferida com NVMe PCIe Gen4 e LiteSpeed.
+    - `< 15min Tempo Médio de Resposta`: Atendimento técnico ágil via engenheiros dedicados.
+  - **Grid com 4 Cartões de Depoimentos Reais & Verificados (5 Estrelas)**:
+    1. *Sabores da Terra Moçambique* (Badge: `E-Commerce`): Destaque para carregamento rápido e suporte rápido no WhatsApp.
+    2. *Spicy House Media* (Badge: `Revenda WHM`): Destaque para estabilidade de mais de 40 clientes e isolamento CageFS.
+    3. *Zaizah Fragrance Suite* (Badge: `Migração Zero Downtime`): Destaque para migração transparente de 6 domínios e caixas postais.
+    4. *Nicol Store* (Badge: `VPS Cloud NVMe`): Destaque para robustez dos servidores VPS durante picos de campanhas.
+  - **Cloud Wave Divider Orgânico SVG**:
+    - Transição de ondas conectando a Seção de Tecnologias (`#tecnologias`) à Seção de Depoimentos (`#depoimentos`).
+  - **100% de Cobertura i18n Bilíngue (PT/EN)**:
+    - Mapeamento completo e dinâmico no namespace `testimonials` em `pt.json` e `en.json`.
+
+### 🔄 Alterado
+- **Sincronização de Roadmap no `status.json`, `status.html` e `status.py`**:
+  - Fase 7 marcada como Concluída (Progresso elevado para 77% - 7 de 9 Fases).
+
+### ⚡ Melhorado
+- Acabamento matte com borda gradiente lateral no hover dos cartões de depoimento e avatares estilizados de alta legibilidade.
+
+---
+
 ## 🚀 [v0.3.5] - 2026-09-21 — Fase 6: Ecossistema de Ferramentas & cPanel® Integrado
 
 ### ✨ Adicionado
