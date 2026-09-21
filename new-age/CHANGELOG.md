@@ -9,19 +9,29 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
   - **Duo de Pilares de Destaque**:
     1. *cPanel® Control Panel Líder Mundial*: Gestor de arquivos, DNS Zones, contas de e-mail ilimitadas e emissão de AutoSSL em 1 clique.
     2. *Softaculous Apps Installer (400+ Scripts)*: Instalação, clonagem, backup e restauração instantânea de WordPress, Joomla, PrestaShop, Laravel e outros CMSs.
-  - **Sub-Grid com 6 Stacks e Recursos Tecnológicos Suportados**:
-    - *PHP Multi-Versões*: Seletor dinâmico do PHP 7.4 ao 8.4 com OPcache ativo.
-    - *Node.js & NPM Nativo*: Suporte a microsserviços e aplicações JS modernas via Node.js Selector.
-    - *Python & WSGI*: Ambiente pronto para Django, Flask e scripts pip.
-    - *MySQL & MariaDB*: Bancos de dados relacionais com phpMyAdmin integrado e conexões remotas.
-    - *Versionamento Git Nativo*: Deploy contínuo direto do GitHub/GitLab via SSH ou UI.
+  - **Sub-Grid Perfeito com 9 Stacks Tecnológicas Suportadas (3x3 Grid)**:
+    - *PHP 8.1 ao 8.6+ & Multi-Versões*: Suporte afinado para PHP 8.1, 8.2, 8.3, 8.4, 8.5 e 8.6+ com OPcache.
+    - *MySQL, MariaDB & PostgreSQL*: Bancos de dados relacionais com phpMyAdmin e phpPgAdmin.
+    - *Node.js, NPM & TypeScript*: Microsserviços e aplicações modernas via Node.js Selector.
+    - *Python & WSGI (Django/Flask)*: Otimização para Django, Flask, FastAPI e scripts pip.
+    - *Redis & Memcached Nativo*: Cache em memória de alta vazão para sessões e bancos de dados.
+    - *Ruby, Perl & Go*: Suporte a Ruby on Rails, Perl e binários compilados em Go.
+    - *Versionamento Git Nativo & CI/CD*: Deploy contínuo via SSH ou interface visual cPanel.
     - *AutoSSL & Imunify360*: Proteção contra malware e certificados SSL automáticos.
+    - *IA & Machine Learning Ready*: Preparado para integração de LLMs, Gemini API, OpenAI e vector DBs.
   - **Cloud Wave Divider Orgânico SVG**:
     - Transição fluida entre a Seção de Migração (`#migracao`) e a Seção de Tecnologias (`#tecnologias`).
   - **100% de Cobertura i18n Bilíngue (PT/EN)**:
     - Mapeamento completo e dinâmico no namespace `technologies` em `pt.json` e `en.json`.
-  - **Conexão de Navegação nos Menus "Tools"**:
-    - Adicionado atalho direto para `#tecnologias` nos submenus desktop e gaveta mobile.
+
+### 🔄 Alterado
+- **Submenus "Tools" no Header & Drawer Mobile**:
+  - Adicionado atalho direto para `#tecnologias` nos submenus desktop e gaveta mobile.
+- **Sincronização de Roadmap no `status.json` & `status.html`**:
+  - Fase 6 marcada como Concluída (Progresso elevado para 66% - 6 de 9 Fases).
+
+### ⚡ Melhorado
+- Layout simétrico em grelha 3x3 no Desktop e 2 colunas no Tablet para máxima clareza e legibilidade.
 
 ---
 
@@ -51,6 +61,13 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
   - `status.json`: Base centralizada de dados com as 9 fases, entregáveis, âncoras e status do projeto.
   - `status.py`: Ferramenta CLI para terminal com barra de progresso, filtros (`--pending`, `--completed`), detalhes por fase (`-p <num>`) e acionador web (`--web`).
   - `status.html`: Dashboard web visual servido em `http://localhost:1807/status.html` com filtros interativos e links diretos para cada âncora da landing page.
+
+### 🔄 Alterado
+- IDs de seções e cards normalizados para garantir âncoras perfeitas (`#solucoes`, `#solucoes-desenvolvimento`, `#solucoes-email`, `#pricing-web`, `#pricing-wordpress`, etc.).
+- Offset de âncora ajustado via CSS (`scroll-margin-top: 90px`) para evitar sobreposição do header flutuante.
+
+### ⚡ Melhorado
+- Remodelação visual completa do `status.html` com padrão Matte Dark Theme e tabela com filtros reativos.
 
 ---
 

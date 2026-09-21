@@ -93,7 +93,7 @@
       "description": "Vitrine tecnológica destacando o poder do cPanel®, Softaculous (400+ scripts), PHP multi-versões, Node.js, Python, Git e phpMyAdmin.",
       "deliverables": [
         "Duo de pilares: cPanel® Control Panel Oficial e Softaculous (400+ Scripts)",
-        "Grid com 6 pilhas: PHP Multi-Versões (7.4 a 8.4), Node.js & NPM, Python WSGI, MySQL/MariaDB, Git Nativo e AutoSSL/Imunify360",
+        "Grid 3x3 com 9 pilhas: PHP 8.1-8.6+, MySQL/MariaDB/PostgreSQL, Node.js/TS, Python/WSGI, Redis/Memcached, Ruby/Go, Git CI/CD, AutoSSL/Imunify360 e IA/Machine Learning Ready",
         "Menu Tools / Ferramentas conectado diretamente à âncora #tecnologias no desktop e mobile",
         "Divisor Cloud Wave orgânico e 100% de cobertura i18n bilíngue (PT/EN)"
       ]
