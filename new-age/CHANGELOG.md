@@ -2,11 +2,36 @@
 
 Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
+## 🚀 [v0.5.1] - 2026-09-21 — Refinamento de Design: CTA Cardless, Avatares 1:1 nos Testemunhos & Divisores de Onda Alternados
+
+### ✨ Adicionado
+- **Fórmula de Divisores de Onda de Rádio / Sea Wave (`.section-cloud-divider`)**:
+  - Implementada a representação pura em onda vetorial suave (senoidal com cristas e vales harmoniosos) conectando com precisão todas as 9 fases da landing page.
+  - Alternância harmônica contínua (*Wave Up* / *Wave Down*) eliminando qualquer descontinuidade visual.
+
+### 🔄 Alterado
+- **Estrutura do CTA de Conversão Final (`#cta-final`)**:
+  - Layout horizontal orgânico diretamente contido no container fluído, com feixe superior de iluminação e tipografia de alto impacto.
+- **Formato dos Avatares de Testemunhos (`#depoimentos`)**:
+  - Proporção exata **1:1 (`124px × 124px`)** com monograma/iniciais centralizados em destaque translúcido e borda em ciano neon.
+
+### 🗑️ Removido
+- **Invólucro de Card Fechado no CTA Final**:
+  - Removida a caixa retangular delimitada (`.final-cta-card`), permitindo que a seção respire livremente sobre a ondulação de fundo.
+
+### ⚡ Melhorado
+- **Ajuste Fino de Transição entre Fases**:
+  - Fechamento milimétrico sem lacunas ou frestas entre seções (`margin-bottom: -2px; pointer-events: none`).
+  - Preenchimento exato da paleta Dark Matte combinando perfeitamente com os tons de cada seção subsequente.
+
+---
+
 ## 🚀 [v0.5.0] - 2026-09-21 — Fase 9: CTA de Conversão Final, Selos de Confiança & Conclusão 100% do Roadmap
 
 ### ✨ Adicionado
 - **Seção "CTA de Conversão Final & Ação Imediata" (`#cta-final`)**:
-  - **Banner de Conversão de Alto Impacto**:
+  - **Banner de Conversão Horizontal de Alto Impacto**:
+    - Layout horizontal assimétrico e moderno: **Texto persuasivo, tag e título à esquerda** e **Coluna com botões duplos de ação (WhatsApp + Ver Todos os Planos) à direita**.
     - Feixe de iluminação superior ciano/esmeralda (`.final-cta-beam`), acabamento matte refinado (`rgba(14, 20, 36, 0.75)` com `backdrop-filter: blur(16px)`), borda de 1px e cantos arredondados de `24px`.
     - Tag em badge de destaque *"PRONTO PARA ACELERAR?"*.
     - Tipografia persuasiva voltada para a alta performance e estabilidade dos servidores da ZEDECK.
