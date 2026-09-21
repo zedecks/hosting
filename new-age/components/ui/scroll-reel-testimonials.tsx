@@ -81,7 +81,7 @@ function Cell() {
 }
 
 /* Featured brand tile with large full-bleed emblem */
-function Featured({ item }: { item: ScrollReelTestimonial }) {
+function Featured({ item }: { item: ScrollReelTestimonial; key?: string }) {
   const accent = item.accentColor || "#00C2FF";
   return (
     <div
@@ -204,7 +204,7 @@ export function ScrollReelTestimonials({
 
       const next = (index + dir + count) % count;
       setIndex(next);
-      setVirtualIndex((prev) => prev + dir);
+      setVirtualIndex((prev: number) => prev + dir);
       setExiting(true);
 
       timeouts.current.push(
@@ -314,7 +314,7 @@ export function ScrollReelTestimonials({
             className="flex shrink-0 flex-col gap-2.5 will-change-transform"
             style={colStyle(middleY)}
           >
-            {middleItems.map((item, i) =>
+            {middleItems.map((item: any, i: number) =>
               item.type === "featured" ? (
                 <Featured key={item.key} item={testimonials[item.i]} />
               ) : (
