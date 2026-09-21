@@ -1,0 +1,51 @@
+# Robots.txt for ZEDECK Hosting (host.zedecks.com)
+# Security & Anti-Leak Rules Enforced
+
+User-agent: *
+Allow: /
+Disallow: /assets/private/
+Disallow: /status.html
+Disallow: /status.json
+Disallow: /status.py
+Disallow: /status*
+Disallow: /*.json$
+Disallow: /*.py$
+
+# AI Search & Retrieval Crawlers (Allowed for Public Landing Page Citations)
+User-agent: GPTBot
+Allow: /
+Disallow: /status*
+Disallow: /status.html
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /status*
+Disallow: /status.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /status*
+Disallow: /status.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /status*
+Disallow: /status.html
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /status*
+Disallow: /status.html
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /status*
+Disallow: /status.html
+
+User-agent: Bingbot
+Allow: /
+Disallow: /status*
+Disallow: /status.html
+
+# Canonical Public Sitemap
+Sitemap: https://host.zedecks.com/sitemap.xml

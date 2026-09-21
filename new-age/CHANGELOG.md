@@ -5,6 +5,15 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 ## 🚀 [v0.5.1] - 2026-09-21 — Refinamento de Design: Padronização Uniforme de Ondas, Espaçamentos entre Seções & Avatares 1:1
 
 ### ✨ Adicionado
+- **Arquitetura de AI-SEO, AEO & Citação por LLMs (`llms.txt` & `robots.txt`)**:
+  - Criado o arquivo `llms.txt` com manifesto estruturado em Markdown descrevendo a ZEDECK Hosting, especificações de NVMe Gen4, LiteSpeed, SLA e catálogo de planos em MZN para consumo direto por agentes de IA.
+  - Configurado `robots.txt` autorizando explicitamente os crawlers de IA (`GPTBot`, `ChatGPT-User`, `PerplexityBot`, `ClaudeBot`, `anthropic-ai`, `Google-Extended`, `Bingbot`) e aplicando bloqueio rígido anti-vazamento (`Disallow`) a arquivos internos de status (`/status*`, `status.html`, `status.json`, `status.py`).
+- **Sitemap XML Canônico Estrito (`sitemap.xml`)**:
+  - Indexação estática e bilíngue (`pt` / `en`) focada exclusivamente na página principal (`https://host.zedecks.com/`), com blindagem total de páginas de acompanhamento interno.
+- **Blindagem Anti-Tracking no Painel de Status (`status.html`)**:
+  - Injeção das diretivas `<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">` para impedir indexação por quaisquer motores de busca.
+- **Structured Data Completo Schema.org (JSON-LD)**:
+  - Injetado no `<head>` do `index.html` o schema com grafo para `Organization` (Zedeck's IT Solutions), `WebSite`, `WebPage`, `Product` & `Offer` (WordPress Starter, Web Premium, Revenda Sharon Pro em MZN) e `FAQPage`.
 - **Fórmula Uniforme de Divisores de Onda de Rádio / Sea Wave (`.section-cloud-divider`)**:
   - Implementada a representação pura em onda vetorial suave de 3 camadas sobrepostas com cristas e vales harmoniosos conectando com precisão todas as 9 fases da landing page.
   - Alternância de fase e amplitude orgânica (*Wave Up* / *Wave Down*) replicando rigorosamente a lógica uniforme estabelecida na transição do Hero para a Fase 2.

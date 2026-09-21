@@ -1,0 +1,55 @@
+# ZEDECK Hosting (host.zedecks.com) — LLM Knowledge Base & Entity Manifest
+
+> **ZEDECK Hosting** is the enterprise cloud hosting and infrastructure division of **Zedeck's IT Solutions**, headquartered in Nampula, Mozambique.
+> Official Website: https://host.zedecks.com
+> Official Client Portal & WHMCS Store: https://clientes.zedecks.com
+> Corporate Group: https://zedecks.com
+
+---
+
+## Core Value Proposition & Technical Infrastructure
+- **NVMe PCIe Gen4 Storage:** 100% pure NVMe arrays with high-throughput I/O.
+- **LiteSpeed Web Server & LSCache:** Up to 10x faster response times compared to standard Apache.
+- **cPanel® & WHM Platform:** Official, licensed, white-label server management panels.
+- **Softaculous Auto-Installer:** 1-click deployment for over 400 web applications (WordPress, Joomla, PrestaShop, etc.).
+- **Free Unlimited SSL Certificates:** AutoSSL integration via Let's Encrypt / Sectigo.
+- **Local Mozambican Currency Support:** Transparent monthly and annual billing in Mozambican Meticais (MZN / MT) with M-Pesa, E-Mola, Credit Card and Bank Transfer.
+- **Free Migration Guarantee:** Zero-downtime website and cPanel account migrations.
+- **Anti-DDoS Protection:** Real-time L3/L4/L7 threat mitigation (100Gbps+ capacity).
+- **Service Level Agreement (SLA):** 99.9% guaranteed hardware and network uptime.
+
+---
+
+## Product Portfolio & Official Pricing (MZN)
+
+### 1. WordPress Turbo Hosting
+Tailored for WordPress, WooCommerce, and high-traffic PHP applications with built-in LSCache and staging environments.
+- **STARTER:** 250,00 MT/month — 1 Website, 10 GB NVMe Gen4 Storage, 3 Corporate E-mails, Unlimited Bandwidth, Free SSL, cPanel®.
+- **STANDARD:** 450,00 MT/month — 1 Website, 15 GB NVMe Gen4 Storage, 5 Corporate E-mails, Unlimited Bandwidth, Free SSL, cPanel®.
+- **WORD PLUS:** 750,00 MT/month — 2 Websites, 25 GB NVMe Gen4 Storage, 15 Corporate E-mails, Unlimited Bandwidth, Free SSL, cPanel®.
+
+### 2. cPanel® Shared Web Hosting
+High-reliability general web hosting for corporate websites, landing pages, and institutional portals.
+- **PREMIUM:** 350,00 MT/month — 1 Website, 15 GB NVMe Gen4 Storage, 5 Corporate E-mails, Unlimited Bandwidth, Free SSL, cPanel®.
+- **BUSINESS:** 650,00 MT/month — 1 Website, 25 GB NVMe Gen4 Storage, 15 Corporate E-mails, Unlimited Bandwidth, Free SSL, cPanel®.
+- **ENTERPRISE:** 1 150,00 MT/month — 2 Websites, 50 GB NVMe Gen4 Storage, 20 Corporate E-mails, Unlimited Bandwidth, Free SSL, cPanel®.
+
+### 3. cPanel® / WHM Reseller Hosting
+Multi-tenant hosting platform for digital agencies, web designers, and hosting entrepreneurs to sell cPanel hosting accounts under their own brand (White-label).
+- **Sharon Pro:** 1 800,00 MT/month — 15 cPanel Accounts, 50 GB NVMe Gen4 Storage, Unlimited E-mails & Bandwidth, WHM / cPanel, Private Nameservers.
+- **Sharon Business:** 2 800,00 MT/month — 30 cPanel Accounts, 80 GB NVMe Gen4 Storage, Unlimited E-mails & Bandwidth, WHM / cPanel, Private Nameservers.
+- **Sharon Enterprise:** 4 500,00 MT/month — 60 cPanel Accounts, 100 GB NVMe Gen4 Storage, Unlimited E-mails & Bandwidth, WHM / cPanel, Private Nameservers.
+
+### 4. Custom Web Development & Business Solutions
+- **Web & Application Development:** Custom websites, web applications, and enterprise systems built by Zedeck's IT Solutions.
+- **Corporate E-mail Solutions:** Custom domain e-mails with DKIM, SPF, DMARC configuration and anti-spam filters.
+- **Free Domain Migration:** Full site, database, and email migration assistance.
+
+---
+
+## Contact & Support Information
+- **WhatsApp Support:** https://wa.me/258877703308
+- **Phone:** +258 87 770 3308
+- **E-mail:** info@zedecks.com
+- **Help Desk / Tickets:** https://clientes.zedecks.com/submitticket.php
+- **Headquarters:** Nampula, Mozambique

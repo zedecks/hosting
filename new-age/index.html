@@ -12,16 +12,141 @@
   <link rel="icon" type="image/png" href="./assets/img/icone.png">
   <link rel="apple-touch-icon" href="./assets/img/icone.png">
   
+  <link rel="canonical" href="https://host.zedecks.com/">
+  
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://host.zedecks.com/">
   <meta property="og:title" content="ZEDECK Hosting — Infraestrutura Web de Alto Desempenho">
   <meta property="og:description" content="Hospedagem, VPS e Domínios com 99.9% Uptime e suporte especializado.">
+  <meta property="og:image" content="https://host.zedecks.com/assets/img/icone.png">
+
+  <!-- Twitter Meta Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://host.zedecks.com/">
+  <meta name="twitter:title" content="ZEDECK Hosting — Infraestrutura Web de Alto Desempenho">
+  <meta name="twitter:description" content="Hospedagem, Revenda WHM e Domínios com 99.9% Uptime e pagamento em MZN.">
+  <meta name="twitter:image" content="https://host.zedecks.com/assets/img/icone.png">
 
   <!-- Google Fonts: Space Grotesk & Inter (Dogma v0.3.0) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Structured Data: Schema.org (JSON-LD) for Search & AI Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://zedecks.com/#organization",
+        "name": "Zedeck's IT Solutions",
+        "url": "https://zedecks.com",
+        "logo": "https://host.zedecks.com/assets/img/icone.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+258877703308",
+          "contactType": "customer support",
+          "availableLanguage": ["Portuguese", "English"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nampula",
+          "addressCountry": "MZ"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://host.zedecks.com/#website",
+        "url": "https://host.zedecks.com/",
+        "name": "ZEDECK Hosting",
+        "description": "Infraestrutura corporativa de hospedagem web, servidores cPanel e registo de domínios em Moçambique.",
+        "publisher": {
+          "@id": "https://zedecks.com/#organization"
+        },
+        "inLanguage": ["pt", "en"]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://host.zedecks.com/#webpage",
+        "url": "https://host.zedecks.com/",
+        "name": "ZEDECK Hosting — Domínios, Servidores & Soluções Web de Alto Desempenho",
+        "isPartOf": {
+          "@id": "https://host.zedecks.com/#website"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Hospedagem WordPress Starter",
+        "description": "1 Site, 10 GB NVMe PCIe Gen4, 3 E-mails corporativos, cPanel®, LSCache e SSL Grátis.",
+        "brand": { "@id": "https://zedecks.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "250.00",
+          "priceCurrency": "MZN",
+          "availability": "https://schema.org/InStock",
+          "url": "https://clientes.zedecks.com/index.php/store/hospedagem-wordpress/starter"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Hospedagem Web Premium",
+        "description": "1 Site, 15 GB NVMe PCIe Gen4, 5 E-mails corporativos, cPanel®, LiteSpeed e SSL Grátis.",
+        "brand": { "@id": "https://zedecks.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "350.00",
+          "priceCurrency": "MZN",
+          "availability": "https://schema.org/InStock",
+          "url": "https://clientes.zedecks.com/index.php/store/hospedagem-compartilhada/premium"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Revenda cPanel Sharon Pro",
+        "description": "15 Contas cPanel®, 50 GB NVMe PCIe Gen4, Painel WHM, E-mails ilimitados e White-label.",
+        "brand": { "@id": "https://zedecks.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "1800.00",
+          "priceCurrency": "MZN",
+          "availability": "https://schema.org/InStock",
+          "url": "https://clientes.zedecks.com/index.php/store/revenda-de-hospedagem/sharon-pro"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quanto tempo leva para ativar o meu domínio ou plano de hospedagem?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A ativação é automática e imediata após a confirmação do pagamento. Os dados de acesso ao cPanel e instruções de DNS são enviados instantaneamente para o seu e-mail."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A migração do meu site para a ZEDECK Hosting é gratuita?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim! A nossa equipa de engenharia realiza a migração completa de ficheiros, bancos de dados e contas de e-mail de forma 100% gratuita e sem interrupção do seu serviço."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais métodos de pagamento são aceites em Moçambique?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aceitamos pagamentos diretos em Meticais (MZN) através de M-Pesa, E-Mola, Transferência Bancária (BIM, BCI, Standard Bank, Moza) e cartões de crédito/débito Visa e Mastercard."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./assets/css/tokens.css">
@@ -73,7 +198,7 @@
             <a href="#pricing-web" class="dropdown-item" data-i18n="nav.products_web">Hospedagem de Sites</a>
             <a href="#pricing-wordpress" class="dropdown-item" data-i18n="nav.products_wp">Hospedagem WordPress</a>
             <a href="#pricing-reseller" class="dropdown-item" data-i18n="nav.products_reseller">Revenda cPanel</a>
-            <a href="#pricing-vps" class="dropdown-item" data-i18n="nav.products_vps">Servidores VPS</a>
+            <a href="#pricing-vps" class="dropdown-item" data-i18n="nav.products_vps" style="display: none !important;">Servidores VPS</a>
           </div>
         </div>
 
@@ -182,7 +307,7 @@
               <a href="#pricing-web" class="mobile-submenu-link" data-i18n="nav.products_web">Hospedagem de Sites</a>
               <a href="#pricing-wordpress" class="mobile-submenu-link" data-i18n="nav.products_wp">Hospedagem WordPress</a>
               <a href="#pricing-reseller" class="mobile-submenu-link" data-i18n="nav.products_reseller">Revenda cPanel</a>
-              <a href="#pricing-vps" class="mobile-submenu-link" data-i18n="nav.products_vps">Servidores VPS</a>
+              <a href="#pricing-vps" class="mobile-submenu-link" data-i18n="nav.products_vps" style="display: none !important;">Servidores VPS</a>
             </div>
           </div>
 
@@ -445,8 +570,8 @@
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_root_access">Acesso Root & KVM</span></li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="solutions.feat_anti_ddos">Anti-DDoS 100Gbps+</span></li>
             </ul>
-            <a href="#pricing-vps" class="btn-solution-action" data-i18n="solutions.btn_view_plans">
-              Ver Planos
+            <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20disponibilidade%20para%20Servidores%20VPS%20Dedicados." target="_blank" rel="noopener" class="btn-solution-action" data-i18n="solutions.btn_consult_vps">
+              Consultar Disponibilidade
             </a>
           </div>
 
@@ -689,7 +814,7 @@
           <h2 data-i18n="pricing.title">Invista na infraestrutura certa para acelerar o seu negócio</h2>
         </div>
 
-        <!-- Segmented Control Tabs (1: WordPress Turbo, 2: Hospedagem Web, 3: Revenda WHM, 4: VPS cPanel®) -->
+        <!-- Segmented Control Tabs (1: WordPress Turbo, 2: Hospedagem Web, 3: Revenda WHM, 4: VPS Dedicado - Oculto) -->
         <div class="pricing-tabs-wrapper">
           <div class="pricing-tabs" role="tablist" aria-label="Categorias de Planos">
             <button type="button" class="pricing-tab-btn active" role="tab" aria-selected="true" aria-controls="pricing-panel-wordpress" id="tab-wordpress" data-tab="wordpress" data-i18n="pricing.tab_wp">
@@ -701,7 +826,7 @@
             <button type="button" class="pricing-tab-btn" role="tab" aria-selected="false" aria-controls="pricing-panel-reseller" id="tab-reseller" data-tab="reseller" data-i18n="pricing.tab_reseller">
               Revenda WHM
             </button>
-            <button type="button" class="pricing-tab-btn" role="tab" aria-selected="false" aria-controls="pricing-panel-vps" id="tab-vps" data-tab="vps" data-i18n="pricing.tab_vps">
+            <button type="button" class="pricing-tab-btn" role="tab" aria-selected="false" aria-controls="pricing-panel-vps" id="tab-vps" data-tab="vps" data-i18n="pricing.tab_vps" style="display: none !important;">
               VPS cPanel® Dedicado
             </button>
           </div>
@@ -1084,8 +1209,8 @@
             </div>
           </div>
 
-          <!-- ==================== PANEL 4: VPS cPanel® DEDICADO (SHARON cPA/B/C/D) ==================== -->
-          <div class="pricing-panel" id="pricing-panel-vps" role="tabpanel" aria-labelledby="tab-vps" hidden>
+          <!-- ==================== PANEL 4: VPS cPanel® DEDICADO (STANDBY / OCULTO) ==================== -->
+          <div class="pricing-panel" id="pricing-panel-vps" role="tabpanel" aria-labelledby="tab-vps" hidden style="display: none !important;">
             <div class="pricing-grid vps-grid">
               
               <!-- 1. Sharon cPA -->
