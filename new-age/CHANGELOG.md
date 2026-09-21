@@ -2,6 +2,29 @@
 
 Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
+## 🚀 [v0.3.5] - 2026-09-21 — Fase 6: Ecossistema de Ferramentas & cPanel® Integrado
+
+### ✨ Adicionado
+- **Seção "Ecossistema de Tecnologias & cPanel" (`#tecnologias`)**:
+  - **Duo de Pilares de Destaque**:
+    1. *cPanel® Control Panel Líder Mundial*: Gestor de arquivos, DNS Zones, contas de e-mail ilimitadas e emissão de AutoSSL em 1 clique.
+    2. *Softaculous Apps Installer (400+ Scripts)*: Instalação, clonagem, backup e restauração instantânea de WordPress, Joomla, PrestaShop, Laravel e outros CMSs.
+  - **Sub-Grid com 6 Stacks e Recursos Tecnológicos Suportados**:
+    - *PHP Multi-Versões*: Seletor dinâmico do PHP 7.4 ao 8.4 com OPcache ativo.
+    - *Node.js & NPM Nativo*: Suporte a microsserviços e aplicações JS modernas via Node.js Selector.
+    - *Python & WSGI*: Ambiente pronto para Django, Flask e scripts pip.
+    - *MySQL & MariaDB*: Bancos de dados relacionais com phpMyAdmin integrado e conexões remotas.
+    - *Versionamento Git Nativo*: Deploy contínuo direto do GitHub/GitLab via SSH ou UI.
+    - *AutoSSL & Imunify360*: Proteção contra malware e certificados SSL automáticos.
+  - **Cloud Wave Divider Orgânico SVG**:
+    - Transição fluida entre a Seção de Migração (`#migracao`) e a Seção de Tecnologias (`#tecnologias`).
+  - **100% de Cobertura i18n Bilíngue (PT/EN)**:
+    - Mapeamento completo e dinâmico no namespace `technologies` em `pt.json` e `en.json`.
+  - **Conexão de Navegação nos Menus "Tools"**:
+    - Adicionado atalho direto para `#tecnologias` nos submenus desktop e gaveta mobile.
+
+---
+
 ## 🚀 [v0.2.6] - 2026-09-21 — Fase 5: Migração Gratuita & Zero Downtime + Hub de Status & Roadmap
 
 ### ✨ Adicionado

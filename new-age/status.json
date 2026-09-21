@@ -1,6 +1,6 @@
 {
   "project": "ZEDECK Hosting (New Age)",
-  "version": "v0.2.6",
+  "version": "v0.3.5",
   "last_updated": "2026-09-21",
   "phases": [
     {
@@ -87,15 +87,15 @@
       "id": 6,
       "phase": "Fase 6",
       "title": "Ecossistema de Ferramentas & cPanel® Integrado",
-      "status": "pending",
+      "status": "completed",
       "anchor": "#tecnologias",
       "version": "v0.3.5",
       "description": "Vitrine tecnológica destacando o poder do cPanel®, Softaculous (400+ scripts), PHP multi-versões, Node.js, Python, Git e phpMyAdmin.",
       "deliverables": [
-        "Grid de tecnologias suportadas com ícones oficiais",
-        "Destaque para Softaculous Apps Installer em 1 clique",
-        "Suporte a stacks modernas (PHP 8.x, Node.js, Python, Git)",
-        "Certificados SSL automáticos (AutoSSL) e ferramentas de segurança"
+        "Duo de pilares: cPanel® Control Panel Oficial e Softaculous (400+ Scripts)",
+        "Grid com 6 pilhas: PHP Multi-Versões (7.4 a 8.4), Node.js & NPM, Python WSGI, MySQL/MariaDB, Git Nativo e AutoSSL/Imunify360",
+        "Menu Tools / Ferramentas conectado diretamente à âncora #tecnologias no desktop e mobile",
+        "Divisor Cloud Wave orgânico e 100% de cobertura i18n bilíngue (PT/EN)"
       ]
     },
     {

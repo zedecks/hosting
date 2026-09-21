@@ -94,12 +94,14 @@
           <a href="#pricing" class="nav-link" data-i18n="nav.pricing">Preços</a>
         </div>
 
-        <!-- 6. Tools -->
+        <!-- 6. Tecnologias & Ferramentas -->
         <div class="nav-item">
           <button type="button" class="nav-link" aria-expanded="false">
             <span data-i18n="nav.tools">Tools</span>
           </button>
           <div class="dropdown-menu">
+            <a href="#tecnologias" class="dropdown-item" data-i18n="nav.tools_tech">Ecossistema & cPanel</a>
+            <a href="#tecnologias" class="dropdown-item" data-i18n="nav.tools_softaculous">Softaculous (400+ Apps)</a>
             <a href="#" class="dropdown-item" data-i18n="nav.tools_whois">Whois</a>
             <a href="#" class="dropdown-item" data-i18n="nav.tools_abuse">Abuse / IP Checker</a>
           </div>
@@ -222,6 +224,8 @@
               </span>
             </button>
             <div class="mobile-accordion-content">
+              <a href="#tecnologias" class="mobile-submenu-link" data-i18n="nav.tools_tech">Ecossistema & cPanel</a>
+              <a href="#tecnologias" class="mobile-submenu-link" data-i18n="nav.tools_softaculous">Softaculous (400+ Apps)</a>
               <a href="#" class="mobile-submenu-link" data-i18n="nav.tools_whois">Whois</a>
               <a href="#" class="mobile-submenu-link" data-i18n="nav.tools_abuse">Abuse / IP Checker</a>
             </div>
@@ -1373,6 +1377,208 @@
               <span data-i18n="migration.cta_btn">Solicitar Migração Gratuita</span>
             </a>
           </div>
+        </div>
+
+      </div>
+
+      <!-- Cloud Wave Divider (Migração -> Tecnologias) -->
+      <div class="section-cloud-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 96" fill="none" preserveAspectRatio="none">
+          <path d="M0,24 C320,72 540,0 800,40 C1060,80 1240,12 1440,48 L1440,96 L0,96 Z" fill="rgba(14, 20, 36, 0.4)"></path>
+          <path d="M0,48 C280,88 480,16 720,56 C960,96 1180,28 1440,64 L1440,96 L0,96 Z" fill="#060911"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==================== ECOSSISTEMA DE TECNOLOGIAS & CPANEL (FASE 6) ==================== -->
+    <section class="section tech-ecosystem-section" id="tecnologias">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-tag" data-i18n="technologies.tag">ECOSSISTEMA DE DESENVOLVIMENTO</div>
+          <h2 data-i18n="technologies.title">Todas as ferramentas e tecnologias que você precisa em um só lugar</h2>
+          <p data-i18n="technologies.subtitle">
+            Ambiente completo com painel oficial cPanel®, instalador automático Softaculous, banco de dados otimizado e total compatibilidade com as linguagens e frameworks mais modernos.
+          </p>
+        </div>
+
+        <!-- 2 Main Pillars: cPanel & Softaculous -->
+        <div class="tech-hero-duo-grid">
+          
+          <!-- Pillar 1: Official cPanel® Control Panel -->
+          <div class="tech-feature-card cpanel-card">
+            <div class="tech-card-header">
+              <div class="tech-brand-icon cpanel-brand-icon" title="cPanel® Oficial">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M6 10L14 4L22 10V22L14 28L6 22V10Z" stroke="#FF6C2C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14 11V21" stroke="#FF6C2C" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M10 14L14 11L18 14" stroke="#FF6C2C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="tech-badge cpanel" data-i18n="technologies.cpanel_badge">Painel Oficial</span>
+            </div>
+            <h3 class="tech-card-title" data-i18n="technologies.cpanel_title">cPanel® Control Panel Líder Mundial</h3>
+            <p class="tech-card-desc" data-i18n="technologies.cpanel_desc">
+              Gerencie e-mails, domínios, arquivos, zonas DNS, cronjobs e certificados SSL com a interface mais consagrada e intuitiva da indústria de hospedagem.
+            </p>
+            <ul class="tech-checklist">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF6C2C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="technologies.cpanel_f1">Gestor de Arquivos & FTP</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF6C2C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="technologies.cpanel_f2">Gerenciador de DNS & Zonas</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF6C2C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="technologies.cpanel_f3">Contas de E-mail Ilimitadas</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF6C2C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="technologies.cpanel_f4">Certificados AutoSSL em 1 Clique</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2: Softaculous 1-Click Apps -->
+          <div class="tech-feature-card softaculous-card">
+            <div class="tech-card-header">
+              <div class="tech-brand-icon softaculous-brand-icon" title="Softaculous Apps">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+              </div>
+              <span class="tech-badge softaculous" data-i18n="technologies.softaculous_badge">400+ Scripts</span>
+            </div>
+            <h3 class="tech-card-title" data-i18n="technologies.softaculous_title">Softaculous Apps Installer</h3>
+            <p class="tech-card-desc" data-i18n="technologies.softaculous_desc">
+              Instale WordPress, Joomla, PrestaShop, Laravel, Drupal, phpBB e centenas de outras aplicações e CMSs populares instantaneamente.
+            </p>
+            <ul class="tech-checklist">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="technologies.softaculous_f1">Instalação em 1 Clique</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="technologies.softaculous_f2">Atualizações Automáticas</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="technologies.softaculous_f3">Clonagem & Backup de Apps</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="technologies.softaculous_f4">Restauração Instantânea</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Subgrid Header -->
+        <div class="tech-subgrid-header">
+          <div class="tech-subgrid-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+            <span data-i18n="technologies.grid_tag">Pilhas Tecnológicas Suportadas</span>
+          </div>
+        </div>
+
+        <!-- 6 Tech Stack Cards Grid -->
+        <div class="tech-grid-stacks">
+          
+          <!-- 1. PHP Multi-Versões -->
+          <div class="tech-stack-card">
+            <div class="stack-card-icon" title="PHP">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h4 class="stack-card-title" data-i18n="technologies.tech_php_title">PHP Multi-Versões</h4>
+            <p class="stack-card-desc" data-i18n="technologies.tech_php_desc">
+              Alterne livremente entre PHP 7.4, 8.0, 8.1, 8.2, 8.3 e 8.4 com OPcache ativo e extensões customizáveis.
+            </p>
+          </div>
+
+          <!-- 2. Node.js & NPM -->
+          <div class="tech-stack-card">
+            <div class="stack-card-icon" title="Node.js">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 8.5 2 15.5 12 22 22 15.5 22 8.5 12 2"/>
+                <line x1="12" y1="22" x2="12" y2="12"/>
+                <polyline points="22 8.5 12 12 2 8.5"/>
+              </svg>
+            </div>
+            <h4 class="stack-card-title" data-i18n="technologies.tech_node_title">Node.js & NPM Nativo</h4>
+            <p class="stack-card-desc" data-i18n="technologies.tech_node_desc">
+              Execute microsserviços, bots e aplicações JavaScript modernas com suporte ao Node.js Selector e NPM integrado.
+            </p>
+          </div>
+
+          <!-- 3. Python & WSGI -->
+          <div class="tech-stack-card">
+            <div class="stack-card-icon" title="Python">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2H8a4 4 0 0 0-4 4v2h8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a4 4 0 0 1-4 4h-2v-2H6a4 4 0 0 0-4 4v2a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4v-2h-8v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4a4 4 0 0 1 4-4h2v2h8a4 4 0 0 0 4-4V6a4 4 0 0 0-4-4z"/>
+              </svg>
+            </div>
+            <h4 class="stack-card-title" data-i18n="technologies.tech_python_title">Python & WSGI</h4>
+            <p class="stack-card-desc" data-i18n="technologies.tech_python_desc">
+              Ambiente pronto para Django, Flask e scripts de automação Python com gestão simplificada de pacotes pip.
+            </p>
+          </div>
+
+          <!-- 4. MySQL & MariaDB -->
+          <div class="tech-stack-card">
+            <div class="stack-card-icon" title="MySQL & MariaDB">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              </svg>
+            </div>
+            <h4 class="stack-card-title" data-i18n="technologies.tech_mysql_title">MySQL & MariaDB</h4>
+            <p class="stack-card-desc" data-i18n="technologies.tech_mysql_desc">
+              Bancos de dados relacionais de alta vazão com acesso facilitado pelo phpMyAdmin e conexões remotas seguras.
+            </p>
+          </div>
+
+          <!-- 5. Git Versioning -->
+          <div class="tech-stack-card">
+            <div class="stack-card-icon" title="Git Versioning">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="18" r="3"/>
+                <circle cx="6" cy="6" r="3"/>
+                <circle cx="6" cy="18" r="3"/>
+                <line x1="6" y1="9" x2="6" y2="15"/>
+                <path d="M18 15a9 9 0 0 0-9-9H6"/>
+              </svg>
+            </div>
+            <h4 class="stack-card-title" data-i18n="technologies.tech_git_title">Versionamento Git Nativo</h4>
+            <p class="stack-card-desc" data-i18n="technologies.tech_git_desc">
+              Faça deploy contínuo direto dos seus repositórios GitHub, GitLab ou Bitbucket via terminal SSH ou interface visual.
+            </p>
+          </div>
+
+          <!-- 6. AutoSSL & Imunify360 -->
+          <div class="tech-stack-card">
+            <div class="stack-card-icon" title="AutoSSL & Imunify360">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h4 class="stack-card-title" data-i18n="technologies.tech_security_title">AutoSSL & Imunify360</h4>
+            <p class="stack-card-desc" data-i18n="technologies.tech_security_desc">
+              Certificados SSL gratuitos emitidos e renovados automaticamente, combinados com proteção ativa contra malwares.
+            </p>
+          </div>
+
         </div>
 
       </div>
