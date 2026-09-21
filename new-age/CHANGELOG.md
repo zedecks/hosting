@@ -4,9 +4,36 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
 ---
 
-## 🚀 [v0.2.5] - 2026-09-19 — Construção Modular Home (Fase 1: Hero, Fase 2: Soluções & Fase 3: Infraestrutura)
+## 🚀 [v0.2.5] - 2026-09-19 — Construção Modular Home (Fase 1: Hero, Fase 2: Soluções, Fase 3: Infraestrutura & Fase 4: Catálogo de Planos Oficiais)
 
 ### ✨ Adicionado
+- **Menu "Preços" / "Pricing" no Header (Desktop & Mobile Modal Drawer)**:
+  - Adicionado link âncora direto para a seção `#pricing` na barra de navegação flutuante para desktop e no drawer móvel com ícone temático de finanças.
+- **Seção de Catálogo de Planos Oficiais & Segmented Control (`#pricing`)**:
+  - Segmented Control responsivo com 4 abas dinâmicas: **Hospedagem Web**, **WordPress Turbo**, **Revenda WHM** e **VPS cPanel Dedicado**.
+  - Transições suaves animadas (`fadeInPricing`) e suporte total a acessibilidade ARIA (`tablist`, `tab`, `tabpanel`, `aria-selected`, `aria-controls`).
+  - **Hospedagem Web cPanel®**:
+    - `PREMIUM`: 450,00 MT/mês (1 Site, 5 E-mails, 10 GB NVMe Gen4, cPanel® Oficial, SSL Grátis).
+    - `BUSINESS` *(Mais Popular)*: 750,00 MT/mês (1 Site, 10 E-mails, 20 GB NVMe Gen4, cPanel® Oficial, SSL Grátis).
+    - `ENTERPRISE`: 1 000,00 MT/mês (2 Sites, 5 E-mails, 50 GB NVMe Gen4, cPanel® Oficial, SSL Grátis).
+  - **Hospedagem WordPress Turbo**:
+    - `STARTER`: 200,00 MT/mês (1 Site, 3 E-mails, 5 GB NVMe Gen4, Aceleração LSCache, SSL Grátis).
+    - `STANDARD` *(Mais Popular)*: 450,00 MT/mês (1 Site, 5 E-mails, 10 GB NVMe Gen4, LSCache + Staging em 1 Clique, SSL Grátis).
+    - `WORD PLUS`: 650,00 MT/mês (1 Site, 5 E-mails, 15 GB NVMe Gen4, LSCache + Staging em 1 Clique, SSL Grátis).
+  - **Revenda WHM (Sharon Pro)**:
+    - `Sharon Pro`: 500,00 MT/mês (40 GB NVMe Gen4, Contas cPanel Ilimitadas, Painel WHM White-Label, DNS Próprio, SSL Grátis).
+    - `Sharon Business` *(Mais Popular)*: 800,00 MT/mês (60 GB NVMe Gen4, Contas cPanel Ilimitadas, Painel WHM White-Label, DNS Próprio, SSL Grátis).
+    - `Sharon Enterprise`: 1 100,00 MT/mês (80 GB NVMe Gen4, Contas cPanel Ilimitadas, Painel WHM White-Label, DNS Próprio, SSL Grátis).
+  - **VPS cPanel® Dedicado (Sharon cP)**:
+    - `Sharon cPA`: 2 500,00 MT/mês (100 GB NVMe Gen4, 2 vCPU, 4 GB RAM, Acesso Root & KVM, Anti-DDoS 100Gbps+).
+    - `Sharon cPB` *(Mais Popular)*: 4 500,00 MT/mês (150 GB NVMe Gen4, 4 vCPU, 8 GB RAM, Acesso Root & KVM, Anti-DDoS 100Gbps+).
+    - `Sharon cPC`: 8 000,00 MT/mês (200 GB NVMe Gen4, 6 vCPU, 16 GB RAM, Acesso Root & KVM, Anti-DDoS 100Gbps+).
+    - `Sharon cPD`: 10 000,00 MT/mês (250 GB NVMe Gen4, 8 vCPU, 32 GB RAM, Acesso Root & KVM, Anti-DDoS 100Gbps+).
+- **Design & Cards de Alta Fidelidade (Matte & Sem Tons Roxos)**:
+  - Cards com cantos generosamente arredondados (`24px`), acabamento fosco suave, bordas de 1px e destaque sutil no card *Mais Popular*.
+  - Links de contratação com integração direta e mensagens contextualizadas para cada plano.
+- **Divisor em Nuvem SVG (Cloud Wave Divider)**:
+  - Transição orgânica suave conectando a Seção de Infraestrutura à Seção de Preços.
 - **Seção de Infraestrutura & Diferenciais de Engenharia (`#infrastructure`)**:
   - Cards reestruturados com empilhamento vertical limpo: **Ícone no topo**, **Título no centro** e **Descrição na base**.
   - **Armazenamento 100% NVMe PCIe Gen4**: Taxas de transferência ultrarrápidas de até 7.000 MB/s para carregamento instantâneo.

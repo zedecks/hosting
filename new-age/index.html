@@ -77,7 +77,12 @@
           </div>
         </div>
 
-        <!-- 4. Tools -->
+        <!-- 4. Preços -->
+        <div class="nav-item">
+          <a href="#pricing" class="nav-link" data-i18n="nav.pricing">Preços</a>
+        </div>
+
+        <!-- 5. Tools -->
         <div class="nav-item">
           <button type="button" class="nav-link" aria-expanded="false">
             <span data-i18n="nav.tools">Tools</span>
@@ -167,7 +172,15 @@
             </div>
           </div>
 
-          <!-- 4. Tools (Accordion) -->
+          <!-- 4. Preços -->
+          <a href="#pricing" class="mobile-nav-link" id="mobilePricingLink">
+            <span class="mobile-nav-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </span>
+            <span class="mobile-nav-text" data-i18n="nav.pricing">Preços</span>
+          </a>
+
+          <!-- 5. Tools (Accordion) -->
           <div class="mobile-nav-accordion">
             <button type="button" class="mobile-accordion-trigger" aria-expanded="false">
               <span class="mobile-nav-icon">
@@ -618,6 +631,584 @@
             <div class="infra-metric-val" data-i18n="infrastructure.stat_tier_val">Tier-III+</div>
             <div class="infra-metric-lbl" data-i18n="infrastructure.stat_tier">Datacenters</div>
           </div>
+        </div>
+
+      </div>
+
+      <!-- Cloud Wave Divider (Infraestrutura -> Catálogo de Preços) -->
+      <div class="section-cloud-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 96" fill="none" preserveAspectRatio="none">
+          <path d="M0,24 C320,72 540,0 800,40 C1060,80 1240,12 1440,48 L1440,96 L0,96 Z" fill="rgba(14, 20, 36, 0.4)"></path>
+          <path d="M0,48 C280,88 480,16 720,56 C960,96 1180,28 1440,64 L1440,96 L0,96 Z" fill="#080c16"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==================== 4. PRICING SECTION (Catálogo Oficial em MZN) ==================== -->
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        
+        <!-- Header da Seção (Sem subtítulo) -->
+        <div class="section-header">
+          <div class="badge-tag" data-i18n="pricing.tag">Planos Transparentes em MZN</div>
+          <h2 data-i18n="pricing.title">Invista na infraestrutura certa para acelerar o seu negócio</h2>
+        </div>
+
+        <!-- Segmented Control Tabs (1: WordPress Turbo, 2: Hospedagem Web, 3: Revenda WHM, 4: VPS cPanel®) -->
+        <div class="pricing-tabs-wrapper">
+          <div class="pricing-tabs" role="tablist" aria-label="Categorias de Planos">
+            <button type="button" class="pricing-tab-btn active" role="tab" aria-selected="true" aria-controls="pricing-panel-wordpress" id="tab-wordpress" data-tab="wordpress" data-i18n="pricing.tab_wp">
+              WordPress Turbo
+            </button>
+            <button type="button" class="pricing-tab-btn" role="tab" aria-selected="false" aria-controls="pricing-panel-web" id="tab-web" data-tab="web" data-i18n="pricing.tab_web">
+              Hospedagem Web
+            </button>
+            <button type="button" class="pricing-tab-btn" role="tab" aria-selected="false" aria-controls="pricing-panel-reseller" id="tab-reseller" data-tab="reseller" data-i18n="pricing.tab_reseller">
+              Revenda WHM
+            </button>
+            <button type="button" class="pricing-tab-btn" role="tab" aria-selected="false" aria-controls="pricing-panel-vps" id="tab-vps" data-tab="vps" data-i18n="pricing.tab_vps">
+              VPS cPanel® Dedicado
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Panels Container -->
+        <div class="pricing-panels">
+
+          <!-- ==================== PANEL 1: WORDPRESS TURBO (DEFAULT ACTIVE) ==================== -->
+          <div class="pricing-panel active" id="pricing-panel-wordpress" role="tabpanel" aria-labelledby="tab-wordpress">
+            <div class="pricing-grid">
+              
+              <!-- 1. STARTER -->
+              <div class="plan-card">
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.wp_starter_name">STARTER</span>
+                  <p class="plan-desc" data-i18n="pricing.wp_starter_desc">Ideal para blogs pessoais e pequenos sites institucionais.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">200,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_sites_single">1 Site / Domínio</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>3</strong> Contas de E-mail</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>5 GB</strong> NVMe Gen4</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_lscache">Aceleração LSCache</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ssl">Certificado SSL Grátis</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20plano%20WordPress%20STARTER%20(200,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+              <!-- 2. STANDARD (Popular) -->
+              <div class="plan-card popular">
+                <div class="plan-badge" data-i18n="pricing.badge_popular">Mais Popular</div>
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.wp_standard_name">STANDARD</span>
+                  <p class="plan-desc" data-i18n="pricing.wp_standard_desc">Perfeito para negócios locais e criadores de conteúdo.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">450,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_sites_single">1 Site / Domínio</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>5</strong> Contas de E-mail</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>10 GB</strong> NVMe Gen4</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_lscache">Aceleração LSCache</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_staging">Staging & Clones em 1 Clique</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ssl">Certificado SSL Grátis</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20plano%20WordPress%20STANDARD%20(450,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire primary" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+              <!-- 3. WORD PLUS -->
+              <div class="plan-card">
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.wp_plus_name">WORD PLUS</span>
+                  <p class="plan-desc" data-i18n="pricing.wp_plus_desc">Máxima potência para e-commerces e portais dinâmicos.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">650,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_sites_single">1 Site / Domínio</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>5</strong> Contas de E-mail</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>15 GB</strong> NVMe Gen4</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_lscache">Aceleração LSCache</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_staging">Staging & Clones em 1 Clique</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ssl">Certificado SSL Grátis</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20plano%20WordPress%20WORD%20PLUS%20(650,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ==================== PANEL 2: HOSPEDAGEM WEB (cPanel®) ==================== -->
+          <div class="pricing-panel" id="pricing-panel-web" role="tabpanel" aria-labelledby="tab-web" hidden>
+            <div class="pricing-grid">
+              
+              <!-- 1. PREMIUM -->
+              <div class="plan-card">
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.web_premium_name">PREMIUM</span>
+                  <p class="plan-desc" data-i18n="pricing.web_premium_desc">Entrada profissional com cPanel oficial e recursos dedicados.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">450,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_sites_single">1 Site / Domínio</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>5</strong> Contas de E-mail</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>10 GB</strong> NVMe Gen4</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_cpanel">Painel cPanel® Oficial</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ssl">Certificado SSL Grátis</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20plano%20Hospedagem%20PREMIUM%20(450,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+              <!-- 2. BUSINESS (Popular) -->
+              <div class="plan-card popular">
+                <div class="plan-badge" data-i18n="pricing.badge_popular">Mais Popular</div>
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.web_business_name">BUSINESS</span>
+                  <p class="plan-desc" data-i18n="pricing.web_business_desc">O plano mais equilibrado para empresas em crescimento.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">750,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_sites_single">1 Site / Domínio</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>10</strong> Contas de E-mail</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>20 GB</strong> NVMe Gen4</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_cpanel">Painel cPanel® Oficial</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ssl">Certificado SSL Grátis</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20plano%20Hospedagem%20BUSINESS%20(750,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire primary" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+              <!-- 3. ENTERPRISE -->
+              <div class="plan-card">
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.web_enterprise_name">ENTERPRISE</span>
+                  <p class="plan-desc" data-i18n="pricing.web_enterprise_desc">Poder ampliado com 50GB NVMe e múltiplos domínios.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">1&nbsp;000,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_sites_double">2 Sites / Domínios</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>5</strong> Contas de E-mail</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>50 GB</strong> NVMe Gen4</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_cpanel">Painel cPanel® Oficial</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ssl">Certificado SSL Grátis</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20plano%20Hospedagem%20ENTERPRISE%20(1000,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ==================== PANEL 3: REVENDA WHM (SHARON PRO) ==================== -->
+          <div class="pricing-panel" id="pricing-panel-reseller" role="tabpanel" aria-labelledby="tab-reseller" hidden>
+            <div class="pricing-grid">
+              
+              <!-- 1. Sharon Pro -->
+              <div class="plan-card">
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.reseller_1_name">Sharon Pro</span>
+                  <p class="plan-desc" data-i18n="pricing.reseller_1_desc">Inicie a sua agência de hospedagem com 40GB NVMe.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">500,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>40 GB</strong> Armazenamento NVMe</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Contas cPanel Ilimitadas</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_whm">Painel WHM White-Label</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_dns">DNS Próprio Personalizado</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ssl">SSL Grátis para Clientes</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20a%20Revenda%20Sharon%20Pro%20(500,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+              <!-- 2. Sharon Business (Popular) -->
+              <div class="plan-card popular">
+                <div class="plan-badge" data-i18n="pricing.badge_popular">Mais Popular</div>
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.reseller_2_name">Sharon Business</span>
+                  <p class="plan-desc" data-i18n="pricing.reseller_2_desc">Capacidade expandida com 60GB NVMe para múltiplos clientes.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">800,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>60 GB</strong> Armazenamento NVMe</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Contas cPanel Ilimitadas</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_whm">Painel WHM White-Label</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_dns">DNS Próprio Personalizado</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ssl">SSL Grátis para Clientes</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20a%20Revenda%20Sharon%20Business%20(800,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire primary" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+              <!-- 3. Sharon Enterprise -->
+              <div class="plan-card">
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.reseller_3_name">Sharon Enterprise</span>
+                  <p class="plan-desc" data-i18n="pricing.reseller_3_desc">Alto volume com 80GB NVMe e gestão white-label total.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">1&nbsp;100,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>80 GB</strong> Armazenamento NVMe</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Contas cPanel Ilimitadas</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_whm">Painel WHM White-Label</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_dns">DNS Próprio Personalizado</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ssl">SSL Grátis para Clientes</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20a%20Revenda%20Sharon%20Enterprise%20(1100,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ==================== PANEL 4: VPS cPanel® DEDICADO (SHARON cPA/B/C/D) ==================== -->
+          <div class="pricing-panel" id="pricing-panel-vps" role="tabpanel" aria-labelledby="tab-vps" hidden>
+            <div class="pricing-grid vps-grid">
+              
+              <!-- 1. Sharon cPA -->
+              <div class="plan-card">
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.vps_a_name">Sharon cPA</span>
+                  <p class="plan-desc" data-i18n="pricing.vps_a_desc">100GB NVMe Gen4, CPU dedicada e controle KVM total.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">2&nbsp;500,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>100 GB</strong> NVMe PCIe Gen4</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>2 vCPU</strong> Dedicadas</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>4 GB</strong> RAM Dedicada</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_root">Acesso Root & KVM Dedicado</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ddos">Proteção Anti-DDoS 100Gbps+</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20VPS%20Sharon%20cPA%20(2500,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+              <!-- 2. Sharon cPB (Popular) -->
+              <div class="plan-card popular">
+                <div class="plan-badge" data-i18n="pricing.badge_popular">Mais Popular</div>
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.vps_b_name">Sharon cPB</span>
+                  <p class="plan-desc" data-i18n="pricing.vps_b_desc">150GB NVMe Gen4 para aplicações de tráfego intenso.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">4&nbsp;500,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>150 GB</strong> NVMe PCIe Gen4</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>4 vCPU</strong> Dedicadas</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>8 GB</strong> RAM Dedicada</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_root">Acesso Root & KVM Dedicado</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ddos">Proteção Anti-DDoS 100Gbps+</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20VPS%20Sharon%20cPB%20(4500,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire primary" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+              <!-- 3. Sharon cPC -->
+              <div class="plan-card">
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.vps_c_name">Sharon cPC</span>
+                  <p class="plan-desc" data-i18n="pricing.vps_c_desc">200GB NVMe Gen4 para plataformas corporativas robustas.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">8&nbsp;000,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>200 GB</strong> NVMe PCIe Gen4</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>6 vCPU</strong> Dedicadas</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>16 GB</strong> RAM Dedicada</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_root">Acesso Root & KVM Dedicado</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ddos">Proteção Anti-DDoS 100Gbps+</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20VPS%20Sharon%20cPC%20(8000,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+              <!-- 4. Sharon cPD -->
+              <div class="plan-card">
+                <div class="plan-header">
+                  <span class="plan-name" data-i18n="pricing.vps_d_name">Sharon cPD</span>
+                  <p class="plan-desc" data-i18n="pricing.vps_d_desc">250GB NVMe Gen4 topo de linha com máxima vazão de I/O.</p>
+                  <div class="plan-price">
+                    <span class="price-currency" data-i18n="pricing.currency">MT</span>
+                    <span class="price-val">10&nbsp;000,00</span>
+                    <span class="price-period" data-i18n="pricing.per_month">/mês</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>250 GB</strong> NVMe PCIe Gen4</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>8 vCPU</strong> Dedicadas</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><strong>32 GB</strong> RAM Dedicada</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_root">Acesso Root & KVM Dedicado</span>
+                  </div>
+                  <div class="plan-feature-item">
+                    <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span data-i18n="pricing.feat_ddos">Proteção Anti-DDoS 100Gbps+</span>
+                  </div>
+                </div>
+                <div class="plan-footer">
+                  <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20VPS%20Sharon%20cPD%20(10000,00%20MT/m%C3%AAs)" target="_blank" rel="noopener" class="btn-plan-hire" data-i18n="pricing.btn_hire">Contratar Agora</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
       </div>

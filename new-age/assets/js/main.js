@@ -5,6 +5,7 @@
  */
 import { I18nManager } from './components/i18n.js';
 import { initDomainSearch } from './components/domain.js';
+import { initPricingTabs } from './components/pricing.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize i18n
@@ -12,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Initialize Domain Search
   initDomainSearch();
+
+  // 3. Initialize Pricing Tabs
+  initPricingTabs();
 
   // 3. Smooth scroll for internal anchor links (ex: #solutions)
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
