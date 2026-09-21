@@ -5,7 +5,7 @@
  */
 import { I18nManager } from './components/i18n.js';
 import { initDomainSearch } from './components/domain.js';
-import { initPricingTabs } from './components/pricing.js';
+import { initPricingTabs, switchPricingTab } from './components/pricing.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize i18n
@@ -17,19 +17,58 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Initialize Pricing Tabs
   initPricingTabs();
 
-  // 3. Smooth scroll for internal anchor links (ex: #solutions)
+  // 4. Smooth scroll & intelligent anchor routing
+  function scrollToTarget(targetId) {
+    if (!targetId || targetId === '#') return;
+
+    // Check if it's a specific pricing tab link (e.g., #pricing-web, #pricing-wordpress)
+    if (targetId.startsWith('#pricing-')) {
+      const tabKey = targetId.replace('#pricing-', '');
+      switchPricingTab(tabKey);
+      const pricingSection = document.getElementById('pricing');
+      if (pricingSection) {
+        pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      return;
+    }
+
+    // Direct element search
+    let targetElement = document.querySelector(targetId);
+
+    // Fallback aliases if needed
+    if (!targetElement) {
+      if (targetId === '#solucoes') targetElement = document.getElementById('solutions') || document.getElementById('solucoes');
+      if (targetId === '#solutions') targetElement = document.getElementById('solucoes') || document.getElementById('solutions');
+      if (targetId === '#infraestrutura') targetElement = document.getElementById('infrastructure');
+      if (targetId === '#precos') targetElement = document.getElementById('pricing');
+      if (targetId === '#migration') targetElement = document.getElementById('migracao');
+      if (targetId === '#dominio') targetElement = document.getElementById('domainSearchForm') || document.getElementById('hero');
+    }
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
       if (targetId && targetId !== '#') {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          e.preventDefault();
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        e.preventDefault();
+        scrollToTarget(targetId);
+        if (history.pushState) {
+          history.pushState(null, null, targetId);
         }
       }
     });
   });
+
+  // Handle direct navigation with hash on page load
+  if (window.location.hash) {
+    setTimeout(() => {
+      scrollToTarget(window.location.hash);
+    }, 150);
+  }
 
   // 2. Mobile Modal Drawer System
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
