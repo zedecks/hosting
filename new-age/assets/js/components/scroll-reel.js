@@ -10,9 +10,9 @@
  * 5. Realistic star rating variation (3.7 to 5.0) with fractional SVG star support
  */
 
-const CELL = 124;
-const GAP = 10;
-const STEP = 3 * (CELL + GAP); // 402px per step (1 tile + 2 intermediate cells)
+const CELL = 148;
+const GAP = 12;
+const STEP = 3 * (CELL + GAP); // 480px per step (1 tile + 2 intermediate cells)
 const EXIT_MS = 240;
 const SLIDE_MS = 800;
 const AUTOPLAY_INTERVAL = 4500; // 4.5 seconds
@@ -131,37 +131,18 @@ export class ScrollReelTestimonials {
 
   renderStars(rating = 5.0) {
     let starsHtml = '';
-    const uniqueId = `star-grad-${Math.random().toString(36).substring(2, 8)}`;
-    
+    const roundedRating = Math.round(rating);
     for (let i = 1; i <= 5; i++) {
-      if (rating >= i) {
-        // Full star
-        starsHtml += `<svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
-      } else if (rating > i - 1) {
-        // Fractional partial star
-        const pct = Math.round((rating - (i - 1)) * 100);
-        starsHtml += `
-          <svg width="20" height="20" viewBox="0 0 24 24" class="star-icon">
-            <defs>
-              <linearGradient id="${uniqueId}-${i}">
-                <stop offset="${pct}%" stop-color="#f59e0b"/>
-                <stop offset="${pct}%" stop-color="rgba(255, 255, 255, 0.15)"/>
-              </linearGradient>
-            </defs>
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="url(#${uniqueId}-${i})"/>
-          </svg>`;
-      } else {
-        // Empty star
-        starsHtml += `<svg width="20" height="20" viewBox="0 0 24 24" fill="rgba(255, 255, 255, 0.15)" class="star-icon star-empty"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
-      }
+      const isActive = i <= roundedRating;
+      const starClass = isActive ? 'star-active' : 'star-inactive';
+      starsHtml += `<img src="./assets/img/icone.png" alt="Zedeck Emblem" class="brand-rating-star ${starClass}" width="20" height="20">`;
     }
 
     return `
       <div class="star-rating-wrap">
-        <div class="star-rating" aria-label="Avaliação ${rating.toFixed(1)} de 5 estrelas">
+        <div class="star-rating" aria-label="Avaliação ${rating} de 5">
           ${starsHtml}
         </div>
-        <span class="star-rating-score">${rating.toFixed(1)}</span>
       </div>
     `;
   }
@@ -250,8 +231,13 @@ export class ScrollReelTestimonials {
           <div class="reel-quote-stage" id="reelQuoteStage" aria-live="polite">
             <p class="reel-quote-text" id="reelQuoteText">"${this.renderChars(quote, 0, 5)}"</p>
             <div class="reel-author-group" id="reelAuthorGroup">
-              <span class="reel-author-name" id="reelAuthorName">${this.renderChars(author, quote.length + 3, 5)}</span>
-              <span class="reel-author-role" id="reelAuthorRole">${role}</span>
+              <div class="reel-author-avatar-badge" id="reelAuthorBadge" style="background: ${current.bgGradient}; border: 1.5px solid ${current.accentColor}; color: ${current.accentColor};">
+                ${current.initials}
+              </div>
+              <div class="reel-author-info">
+                <span class="reel-author-name" id="reelAuthorName">${this.renderChars(author, quote.length + 3, 5)}</span>
+                <span class="reel-author-role" id="reelAuthorRole">${role}</span>
+              </div>
             </div>
           </div>
 
@@ -317,12 +303,19 @@ export class ScrollReelTestimonials {
         const roleEl = this.container.querySelector('#reelAuthorRole');
         const tagEl = this.container.querySelector('#reelTag');
         const starsEl = this.container.querySelector('#reelStarsContainer');
+        const badgeEl = this.container.querySelector('#reelAuthorBadge');
 
         if (quoteEl) quoteEl.innerHTML = `"${this.renderChars(quote, 0, 5)}"`;
         if (authorEl) authorEl.innerHTML = this.renderChars(author, quote.length + 3, 5);
         if (roleEl) roleEl.textContent = role;
         if (tagEl) tagEl.textContent = tag;
         if (starsEl) starsEl.innerHTML = this.renderStars(rating);
+        if (badgeEl) {
+          badgeEl.textContent = current.initials;
+          badgeEl.style.background = current.bgGradient;
+          badgeEl.style.borderColor = current.accentColor;
+          badgeEl.style.color = current.accentColor;
+        }
 
         if (stage) stage.classList.remove('scroll-reel-exit');
       }, EXIT_MS)

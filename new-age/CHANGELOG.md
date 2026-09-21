@@ -15,10 +15,30 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
   - Espaçamento superior do divisor (`margin-top: var(--space-12)` a `var(--space-20)`) e padding superior uniforme (`padding-top: var(--space-16)`), conferindo respiro equilibrado e consistente.
 - **Estrutura do CTA de Conversão Final (`#cta-final`)**:
   - Layout horizontal orgânico diretamente contido no container fluído, com feixe superior de iluminação e tipografia de alto impacto.
-- **Formato dos Avatares de Testemunhos (`#depoimentos`)**:
-  - Proporção exata **1:1 (`124px × 124px`)** com monograma/iniciais centralizados em destaque translúcido e borda em ciano neon.
+- **Especificações e Links Oficiais da Loja WHMCS nos Planos de Preços (`#pricing`)**:
+  - **WordPress Turbo**:
+    - `STARTER`: 1 site, 3 e-mails, 10 GB NVMe (`/store/hospedagem-wordpress/starter`).
+    - `STANDARD`: 1 site, 5 e-mails, 15 GB NVMe (`/store/hospedagem-wordpress/standard`).
+    - `WORD PLUS`: 2 sites, 15 e-mails, 25 GB NVMe (`/store/hospedagem-wordpress/word-plus`).
+  - **Hospedagem Web (cPanel®)**:
+    - `PREMIUM`: 1 site, 5 e-mails, 15 GB NVMe (`/store/hospedagem-compartilhada/premium`).
+    - `BUSINESS`: 1 site, 15 e-mails, 25 GB NVMe (`/store/hospedagem-compartilhada/business`).
+    - `ENTERPRISE`: 2 sites, 20 e-mails, 50 GB NVMe (`/store/hospedagem-compartilhada/enterprise`).
+  - **Revenda WHM (Sharon Pro)**:
+    - `Sharon Pro`: 15 contas cPanel, 50 GB NVMe (`/store/revenda-de-hospedagem/sharon-pro`).
+    - `Sharon Business`: 30 contas cPanel, 80 GB NVMe (`/store/revenda-de-hospedagem/sharon-business`).
+    - `Sharon Enterprise`: 60 contas cPanel, 100 GB NVMe (`/store/revenda-de-hospedagem/sharon-enterprise`).
+  - **VPS cPanel® Dedicado**:
+    - Links diretos de contratação configurados para `Sharon cPA`, `Sharon cPB`, `Sharon cPC` e `Sharon cPD` em `/store/servers/...`.
+- **Formato, Escala e Visibilidade dos Avatares de Testemunhos (`#depoimentos`)**:
+  - Proporção exata **1:1 ampliada para `148px × 148px`** no carrossel lateral com monograma de destaque de `80px` (`font-size: 3rem`), bordas iluminadas e cantos arredondados de `24px`.
+  - Adicionado badge de avatar 1:1 de destaque ampliado (`54px × 54px`, `font-size: 1.35rem`) junto ao grupo de identificação do autor.
+- **Ícones de Avaliação Exclusivos Zedeck**:
+  - Substituídas as estrelas genéricas por 5 emblemas oficiais da marca Zedecks IT, com estado ativo em **Azul Tech Neon com brilho radiante** e estado inativo em **branco suave translúcido monocromático**.
 
 ### 🗑️ Removido
+- **Pontuação Numérica das Avaliações**:
+  - Removido o rótulo numérico (`5.0`), exibindo exclusivamente os 5 emblemas da marca.
 - **Separador de Onda entre FAQ e CTA Final**:
   - Removido o divisor de onda entre as seções `#faq` e `#cta-final`, unificando as duas áreas num fluxo contínuo e integrado que culmina na chamada de conversão antes do rodapé.
 - **Invólucro de Card Fechado no CTA Final**:
