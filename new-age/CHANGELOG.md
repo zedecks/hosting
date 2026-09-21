@@ -12,10 +12,10 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
     - `3x+ Ganho de Performance`: Aceleração aferida com NVMe PCIe Gen4 e LiteSpeed.
     - `< 15min Tempo Médio de Resposta`: Atendimento técnico ágil via engenheiros dedicados.
   - **Grid com 4 Cartões de Depoimentos Reais & Verificados (5 Estrelas)**:
-    1. *Sabores da Terra Moçambique* (Badge: `E-Commerce`): Destaque para carregamento rápido e suporte rápido no WhatsApp.
-    2. *Spicy House Media* (Badge: `Revenda WHM`): Destaque para estabilidade de mais de 40 clientes e isolamento CageFS.
-    3. *Zaizah Fragrance Suite* (Badge: `Migração Zero Downtime`): Destaque para migração transparente de 6 domínios e caixas postais.
-    4. *Nicol Store* (Badge: `VPS Cloud NVMe`): Destaque para robustez dos servidores VPS durante picos de campanhas.
+    1. *Sabores da Terra Moçambique* (Badge: `Hospedagem + Dev Web`): Desenvolvimento de plataforma web e hospedagem ultra-rápida com NVMe Gen4.
+    2. *Spicy House Media* (Badge: `Hosting + Dev + Domínio`): Registo de domínios, desenvolvimento web e hospedagem de alta performance com cPanel oficial e CageFS.
+    3. *Zaizah Fragrances* (Badge: `Hosting + Dev Web`): Desenvolvimento sob medida, e-mails corporativos e infraestrutura segura para catálogo digital.
+    4. *FJ OnThis* (Badge: `Hosting + Domínio + WHM`): Gestão de domínios, contas cPanel de clientes com Revenda WHM Sharon e hospedagem dedicada.
   - **Cloud Wave Divider Orgânico SVG**:
     - Transição de ondas conectando a Seção de Tecnologias (`#tecnologias`) à Seção de Depoimentos (`#depoimentos`).
   - **100% de Cobertura i18n Bilíngue (PT/EN)**:
