@@ -21,6 +21,8 @@ export interface ScrollReelTestimonial {
   role?: string;
   /** Tag / badge name */
   tag?: string;
+  /** Rating score from 1.0 to 5.0 (e.g., 4.8, 5.0) */
+  rating?: number;
   /** Portrait image URL or avatar initials for the featured tile */
   image?: string;
   /** Initials fallback when image is not provided */
@@ -337,17 +339,59 @@ export function ScrollReelTestimonials({
       <div className="flex min-w-0 flex-1 flex-col justify-between self-stretch px-6 py-8 md:px-8 md:py-10">
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between flex-wrap gap-2">
-            {/* Real 5 Solid Golden Stars */}
-            <div className="flex gap-1 text-amber-500" aria-label="5 estrelas">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <svg
-                  key={i}
-                  className="w-5 h-5 fill-current drop-shadow-[0_0_6px_rgba(245,158,11,0.4)]"
-                  viewBox="0 0 24 24"
-                >
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              ))}
+            {/* Dynamic Star Rating with Numeric Badge */}
+            <div className="flex items-center gap-2.5">
+              <div className="flex gap-1" aria-label={`Avaliação ${(current.rating ?? 5.0).toFixed(1)} de 5 estrelas`}>
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const rating = current.rating ?? 5.0;
+                  const full = rating >= i + 1;
+                  const partial = !full && rating > i;
+                  const pct = Math.round((rating - i) * 100);
+                  const gradId = `star-grad-${current.author.replace(/\s+/g, '')}-${i}`;
+
+                  if (full) {
+                    return (
+                      <svg
+                        key={i}
+                        className="w-5 h-5 fill-amber-500 drop-shadow-[0_0_6px_rgba(245,158,11,0.4)]"
+                        viewBox="0 0 24 24"
+                      >
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                      </svg>
+                    );
+                  }
+
+                  if (partial) {
+                    return (
+                      <svg key={i} className="w-5 h-5" viewBox="0 0 24 24">
+                        <defs>
+                          <linearGradient id={gradId}>
+                            <stop offset={`${pct}%`} stopColor="#f59e0b" />
+                            <stop offset={`${pct}%`} stopColor="rgba(255, 255, 255, 0.15)" />
+                          </linearGradient>
+                        </defs>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          fill={`url(#${gradId})`}
+                        />
+                      </svg>
+                    );
+                  }
+
+                  return (
+                    <svg
+                      key={i}
+                      className="w-5 h-5 fill-white/15"
+                      viewBox="0 0 24 24"
+                    >
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                  );
+                })}
+              </div>
+              <span className="text-xs font-bold text-amber-500 bg-amber-500/10 border border-amber-500/25 px-1.5 py-0.5 rounded-md font-sans">
+                {(current.rating ?? 5.0).toFixed(1)}
+              </span>
             </div>
 
             {current.tag && (

@@ -7,6 +7,7 @@
  * 2. Full-bleed large brand avatars/emblems in featured tiles
  * 3. Infinite loop wrapping & autonomous autoplay (4.5s)
  * 4. Staggered per-character typography animation
+ * 5. Realistic star rating variation (3.7 to 5.0) with fractional SVG star support
  */
 
 const CELL = 124;
@@ -32,6 +33,7 @@ export class ScrollReelTestimonials {
     this.testimonials = [
       {
         id: 't1',
+        rating: 5.0,
         authorKey: 'testimonials.t1_author',
         roleKey: 'testimonials.t1_role',
         quoteKey: 'testimonials.t1_quote',
@@ -46,6 +48,7 @@ export class ScrollReelTestimonials {
       },
       {
         id: 't2',
+        rating: 4.8,
         authorKey: 'testimonials.t2_author',
         roleKey: 'testimonials.t2_role',
         quoteKey: 'testimonials.t2_quote',
@@ -60,6 +63,7 @@ export class ScrollReelTestimonials {
       },
       {
         id: 't3',
+        rating: 4.9,
         authorKey: 'testimonials.t3_author',
         roleKey: 'testimonials.t3_role',
         quoteKey: 'testimonials.t3_quote',
@@ -74,6 +78,7 @@ export class ScrollReelTestimonials {
       },
       {
         id: 't4',
+        rating: 4.7,
         authorKey: 'testimonials.t4_author',
         roleKey: 'testimonials.t4_role',
         quoteKey: 'testimonials.t4_quote',
@@ -119,70 +124,111 @@ export class ScrollReelTestimonials {
             return `<span class="scroll-reel-char" style="animation-delay: ${delay}ms;">${ch}</span>`;
           })
           .join('');
-
-        if (wi < words.length - 1) idx++;
-        return `<span class="scroll-reel-word">${wordChars}</span>`;
+        return `<span class="scroll-reel-word">${wordChars}</span>${wi < words.length - 1 ? ' ' : ''}`;
       })
-      .join(' ');
+      .join('');
+  }
+
+  renderStars(rating = 5.0) {
+    let starsHtml = '';
+    const uniqueId = `star-grad-${Math.random().toString(36).substring(2, 8)}`;
+    
+    for (let i = 1; i <= 5; i++) {
+      if (rating >= i) {
+        // Full star
+        starsHtml += `<svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+      } else if (rating > i - 1) {
+        // Fractional partial star
+        const pct = Math.round((rating - (i - 1)) * 100);
+        starsHtml += `
+          <svg width="20" height="20" viewBox="0 0 24 24" class="star-icon">
+            <defs>
+              <linearGradient id="${uniqueId}-${i}">
+                <stop offset="${pct}%" stop-color="#f59e0b"/>
+                <stop offset="${pct}%" stop-color="rgba(255, 255, 255, 0.15)"/>
+              </linearGradient>
+            </defs>
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="url(#${uniqueId}-${i})"/>
+          </svg>`;
+      } else {
+        // Empty star
+        starsHtml += `<svg width="20" height="20" viewBox="0 0 24 24" fill="rgba(255, 255, 255, 0.15)" class="star-icon star-empty"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+      }
+    }
+
+    return `
+      <div class="star-rating-wrap">
+        <div class="star-rating" aria-label="Avaliação ${rating.toFixed(1)} de 5 estrelas">
+          ${starsHtml}
+        </div>
+        <span class="star-rating-score">${rating.toFixed(1)}</span>
+      </div>
+    `;
+  }
+
+  renderTile(item, index) {
+    const accent = item.accentColor || '#00C2FF';
+    const author = this.getText(item.authorKey, item.defaultAuthor);
+    return `
+      <div class="reel-featured-tile" data-index="${index}" style="border-color: ${accent}66; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.7), 0 0 25px ${accent}33;">
+        <div class="reel-tile-inner" style="background: ${item.bgGradient}; border-color: ${accent}44;">
+          <div class="reel-tile-avatar" style="color: ${accent}; text-shadow: 0 0 24px ${accent}88;">
+            ${item.initials}
+          </div>
+          <div class="reel-tile-footer">
+            <span class="reel-tile-brand">${author}</span>
+          </div>
+        </div>
+        <div class="reel-sheen" aria-hidden="true"></div>
+      </div>
+    `;
+  }
+
+  renderCell() {
+    return `<div class="reel-placeholder-cell" aria-hidden="true"></div>`;
   }
 
   render() {
-    const current = this.testimonials[this.displayIndex];
+    const current = this.testimonials[this.index];
     const author = this.getText(current.authorKey, current.defaultAuthor);
     const role = this.getText(current.roleKey, current.defaultRole);
     const quote = this.getText(current.quoteKey, current.defaultQuote);
     const tag = this.getText(current.tagKey, current.defaultTag);
+    const rating = current.rating || 5.0;
 
-    // Build Reel Middle Column: 5 repeated sets of [Tile 0, Cell, Cell, Tile 1, Cell, Cell, Tile 2, Cell, Cell, Tile 3, Cell, Cell]
+    // Generate middle column: 5 cycles of (1 Tile + 2 Cells)
     let middleHtml = '';
-    for (let cycle = 0; cycle < this.bufferCycles; cycle++) {
+    for (let c = 0; c < this.bufferCycles; c++) {
       this.testimonials.forEach((t, i) => {
-        const tAuthor = this.getText(t.authorKey, t.defaultAuthor);
-        middleHtml += `
-          <div class="reel-featured-tile" data-cycle="${cycle}" data-index="${i}" title="${tAuthor}">
-            <div class="reel-tile-full-content" style="background: ${t.bgGradient}; border-color: ${t.accentColor}55;">
-              <div class="reel-large-emblem" style="color: ${t.accentColor}; text-shadow: 0 0 24px ${t.accentColor}88;">
-                ${t.initials}
-              </div>
-              <div class="reel-tile-footer">
-                <span class="reel-tile-brand">${tAuthor}</span>
-              </div>
-            </div>
-            <div class="reel-sheen" aria-hidden="true"></div>
-          </div>
-          <div class="reel-cell" aria-hidden="true"></div>
-          <div class="reel-cell" aria-hidden="true"></div>
-        `;
+        middleHtml += this.renderTile(t, i);
+        middleHtml += this.renderCell();
+        middleHtml += this.renderCell();
       });
     }
 
-    // Side Columns: continuous stream of spacer cells
-    const totalSideCells = this.bufferCycles * this.count * 3 + 12;
+    // Generate side columns (left and right)
+    const sideCellCount = this.bufferCycles * this.count * 3;
     let sideHtml = '';
-    for (let i = 0; i < totalSideCells; i++) {
-      sideHtml += `<div class="reel-cell" aria-hidden="true"></div>`;
+    for (let i = 0; i < sideCellCount; i++) {
+      sideHtml += this.renderCell();
     }
 
-    // Exact vertical translation: item 0 of cycle 2 is at offset `this.virtualIndex * STEP`
-    const middleY = -this.virtualIndex * STEP;
-    const sideY = -middleY;
+    const startY = -this.virtualIndex * STEP;
+    const startSideY = -startY;
 
     this.container.innerHTML = `
-      <div class="scroll-reel-card" role="region" aria-roledescription="carousel" aria-label="Depoimentos Verificados" tabindex="0">
+      <div class="scroll-reel-card">
         
-        <!-- Left Reel Window -->
+        <!-- Left Reel Window (3 Columns) -->
         <div class="scroll-reel-window" aria-hidden="true">
           <div class="scroll-reel-columns">
-            <!-- Left Counter-rotating Col -->
-            <div class="reel-column reel-col-side" id="reelColLeft" style="transform: translateY(${sideY}px);">
+            <div class="scroll-reel-col side-col" id="reelColLeft" style="transform: translateY(${startSideY}px);">
               ${sideHtml}
             </div>
-            <!-- Middle Featured Col -->
-            <div class="reel-column reel-col-middle" id="reelColMiddle" style="transform: translateY(${middleY}px);">
+            <div class="scroll-reel-col middle-col" id="reelColMiddle" style="transform: translateY(${startY}px);">
               ${middleHtml}
             </div>
-            <!-- Right Counter-rotating Col -->
-            <div class="reel-column reel-col-side" id="reelColRight" style="transform: translateY(${sideY}px);">
+            <div class="scroll-reel-col side-col" id="reelColRight" style="transform: translateY(${startSideY}px);">
               ${sideHtml}
             </div>
           </div>
@@ -191,13 +237,9 @@ export class ScrollReelTestimonials {
         <!-- Right Content Block -->
         <div class="scroll-reel-content">
           <div class="reel-content-header">
-            <!-- 5 Real Authentic Golden Stars -->
-            <div class="star-rating" aria-label="Avaliação 5 estrelas">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <!-- Dynamic Star Rating with Numeric Score -->
+            <div id="reelStarsContainer">
+              ${this.renderStars(rating)}
             </div>
             
             <!-- Category Tag -->
@@ -268,16 +310,19 @@ export class ScrollReelTestimonials {
         const role = this.getText(current.roleKey, current.defaultRole);
         const quote = this.getText(current.quoteKey, current.defaultQuote);
         const tag = this.getText(current.tagKey, current.defaultTag);
+        const rating = current.rating || 5.0;
 
         const quoteEl = this.container.querySelector('#reelQuoteText');
         const authorEl = this.container.querySelector('#reelAuthorName');
         const roleEl = this.container.querySelector('#reelAuthorRole');
         const tagEl = this.container.querySelector('#reelTag');
+        const starsEl = this.container.querySelector('#reelStarsContainer');
 
         if (quoteEl) quoteEl.innerHTML = `"${this.renderChars(quote, 0, 5)}"`;
         if (authorEl) authorEl.innerHTML = this.renderChars(author, quote.length + 3, 5);
         if (roleEl) roleEl.textContent = role;
         if (tagEl) tagEl.textContent = tag;
+        if (starsEl) starsEl.innerHTML = this.renderStars(rating);
 
         if (stage) stage.classList.remove('scroll-reel-exit');
       }, EXIT_MS)
@@ -319,7 +364,7 @@ export class ScrollReelTestimonials {
   startAutoplay() {
     this.stopAutoplay();
     this.autoplayTimer = setInterval(() => {
-      if (!this.isPaused && !this.animating) {
+      if (!this.isPaused) {
         this.paginate(1);
       }
     }, AUTOPLAY_INTERVAL);
@@ -332,86 +377,58 @@ export class ScrollReelTestimonials {
     }
   }
 
-  resetAutoplay() {
-    this.startAutoplay();
-  }
-
   bindEvents() {
-    // Buttons
-    this.container.addEventListener('click', (e) => {
-      const prev = e.target.closest('#reelPrevBtn');
-      const next = e.target.closest('#reelNextBtn');
-      if (prev) {
+    const prevBtn = this.container.querySelector('#reelPrevBtn');
+    const nextBtn = this.container.querySelector('#reelNextBtn');
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
         this.paginate(-1);
-        this.resetAutoplay();
-      }
-      if (next) {
-        this.paginate(1);
-        this.resetAutoplay();
-      }
-    });
-
-    const card = this.container.querySelector('.scroll-reel-card');
-    if (card) {
-      // Keyboard
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') {
-          e.preventDefault();
-          this.paginate(1);
-          this.resetAutoplay();
-        } else if (e.key === 'ArrowLeft') {
-          e.preventDefault();
-          this.paginate(-1);
-          this.resetAutoplay();
-        }
-      });
-
-      // Pause on hover
-      card.addEventListener('mouseenter', () => {
-        this.isPaused = true;
-      });
-
-      card.addEventListener('mouseleave', () => {
-        this.isPaused = false;
-      });
-
-      // Pause on focus
-      card.addEventListener('focusin', () => {
-        this.isPaused = true;
-      });
-
-      card.addEventListener('focusout', () => {
-        this.isPaused = false;
       });
     }
 
-    // Language change observer
-    window.addEventListener('languageChanged', () => {
-      this.updateLanguageTexts();
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        this.paginate(1);
+      });
+    }
+
+    // Keyboard support
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') this.paginate(-1);
+      if (e.key === 'ArrowRight') this.paginate(1);
     });
-  }
 
-  updateLanguageTexts() {
-    const current = this.testimonials[this.displayIndex];
-    const author = this.getText(current.authorKey, current.defaultAuthor);
-    const role = this.getText(current.roleKey, current.defaultRole);
-    const quote = this.getText(current.quoteKey, current.defaultQuote);
-    const tag = this.getText(current.tagKey, current.defaultTag);
+    // Pause on hover
+    this.container.addEventListener('mouseenter', () => {
+      this.isPaused = true;
+    });
 
-    const quoteEl = this.container.querySelector('#reelQuoteText');
-    const authorEl = this.container.querySelector('#reelAuthorName');
-    const roleEl = this.container.querySelector('#reelAuthorRole');
-    const tagEl = this.container.querySelector('#reelTag');
+    this.container.addEventListener('mouseleave', () => {
+      this.isPaused = false;
+    });
 
-    if (quoteEl) quoteEl.innerHTML = `"${this.renderChars(quote, 0, 5)}"`;
-    if (authorEl) authorEl.innerHTML = this.renderChars(author, quote.length + 3, 5);
-    if (roleEl) roleEl.textContent = role;
-    if (tagEl) tagEl.textContent = tag;
+    // i18n change listener
+    window.addEventListener('languageChanged', () => {
+      const current = this.testimonials[this.displayIndex];
+      const author = this.getText(current.authorKey, current.defaultAuthor);
+      const role = this.getText(current.roleKey, current.defaultRole);
+      const quote = this.getText(current.quoteKey, current.defaultQuote);
+      const tag = this.getText(current.tagKey, current.defaultTag);
+
+      const quoteEl = this.container.querySelector('#reelQuoteText');
+      const authorEl = this.container.querySelector('#reelAuthorName');
+      const roleEl = this.container.querySelector('#reelAuthorRole');
+      const tagEl = this.container.querySelector('#reelTag');
+
+      if (quoteEl) quoteEl.innerHTML = `"${this.renderChars(quote, 0, 5)}"`;
+      if (authorEl) authorEl.innerHTML = this.renderChars(author, quote.length + 3, 5);
+      if (roleEl) roleEl.textContent = role;
+      if (tagEl) tagEl.textContent = tag;
+    });
   }
 }
 
 export function initScrollReel() {
-  if (document.getElementById('scrollReelWidget')) {
-    window.scrollReelInstance = new ScrollReelTestimonials('scrollReelWidget');
-  }
+  new ScrollReelTestimonials('scrollReelWidget');
 }

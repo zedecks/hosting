@@ -5,21 +5,18 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 ## 🚀 [v0.4.5] - 2026-09-21 — Fase 8: FAQ Interativo (Perguntas Frequentes & Respostas Diretas)
 
 ### ✨ Adicionado
-- **Seção "FAQ Interativo & Perguntas Frequentes" (`#faq`)**:
+- **Seção "FAQ Interativo com Abas de Categorias & Links para Zedeck's IT" (`#faq`)**:
+  - **Sistema de Filtro por Abas (Segmented Category Tabs)**:
+    - Alternância dinâmica entre categorias: *Todas as Dúvidas*, *Hospedagem & Servidores*, *Desenvolvimento Web (Zedeck's IT)*, *Pagamentos & Ativação* e *Migração & Suporte*.
+  - **Integração & Posicionamento Estratégico do Ecossistema Zedeck's IT**:
+    - Dúvidas sobre desenvolvimento web, aplicativos e sistemas personalizados esclarecem que a infraestrutura pertence ao `host.zedecks.com`, direcionando projetos e orçamentos de software para o portal oficial `https://zedecks.com`.
   - **Layout Lado a Lado (2 Colunas em Grid Responsivo)**:
-    - Exibição paralela moderna em 2 colunas no Desktop e Tablet expandido (`max-width: 1200px`), otimizando o aproveitamento vertical da página.
-    - Colapso responsivo fluído para 1 coluna em telas menores que `900px` e smartphones.
+    - Exibição paralela em 2 colunas no Desktop e Tablet expandido (`max-width: 1200px`), com colapso responsivo fluído para 1 coluna em telas menores que `900px`.
   - **Accordion Interativo Acessível com ARIA**:
     - Suporte nativo aos atributos `aria-expanded`, `aria-controls` e `aria-labelledby`.
     - Expansão suave via `max-height` com curva de aceleração `cubic-bezier(0.16, 1, 0.3, 1)` e rotação em 180° do chevron indicador.
-    - Modo exclusivo (ao abrir uma pergunta, as demais se recolhem automaticamente para manter a leitura limpa).
-  - **6 Dúvidas Comerciais & Técnicas Essenciais**:
-    1. *Formas de Pagamento em Moçambique*: M-Pesa, E-Mola, Transferências Bancárias (BCI, BIM, Standard Bank, Moza Banco) e cartões Visa/Mastercard em Meticais (MZN).
-    2. *Prazo de Ativação*: Ativação instantânea automática para pagamentos digitais e < 15 a 30 min para transferências manuais.
-    3. *Faturas Formais com NUIT*: Emissão legalizada de faturas com NUIT oficial e proformas fiscais.
-    4. *Migração Gratuita & Zero Downtime*: Transferência assistida de ficheiros, bancos MySQL e e-mails antes da virada DNS.
-    5. *Upgrade de Planos*: Migração fluida entre planos Web, WordPress, Revenda WHM e VPS em 1 clique.
-    6. *Suporte Técnico & SLA*: Engenheiros de plantão 24/7/365 via WhatsApp (< 15min) e ticket.
+  - **Componentes Reutilizáveis React / shadcn**:
+    - Criados `components/ui/faq-tabs.tsx` e `components/ui/faq-demo.tsx` com suporte a Tailwind CSS, framer-motion e Lucide icons.
   - **Banner de Contato Extra "Ainda tem alguma dúvida?"**:
     - Destaque com gradiente de borda cyan/emerald e CTA direto para falar com um engenheiro no WhatsApp.
   - **Divisores Cloud Wave Orgânicos SVG**:
@@ -46,6 +43,7 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
     - `3x+ Ganho de Performance`: Aceleração aferida com NVMe PCIe Gen4 e LiteSpeed.
     - `< 15min Tempo Médio de Resposta`: Atendimento técnico ágil via engenheiros dedicados.
   - **Widget Interativo Scroll Reel Testimonials (`#scrollReelWidget`)**:
+    - **Variação Realista de Avaliações em Estrelas (4.7 a 5.0)**: Suporte a estrelas fracionadas com SVG dinâmico e gradiente de preenchimento, exibindo badge com nota numérica para cada cliente verificado (*Sabores da Terra: 5.0*, *Spicy House: 4.8*, *Zaizah Fragrances: 4.9*, *FJ OnThis: 4.7*).
     - **Engine de Carretel Rotativo Contra-Rotacional (3 Colunas)**: Coluna central com tiles dos clientes e colunas laterais em contra-rotação suave (`800ms` com aceleração `cubic-bezier`).
     - **Tipografia com Efeito Per-Character Rise**: Texto das citações e autores renderizado com stagger dinâmico caractere a caractere (`Chars`) e animação de saída suave (`scroll-reel-exit`).
     - **Navegação & Acessibilidade**: Botões de navegação circular anterior/próximo, contador em tempo real de clientes destacados e suporte a teclas de setas do teclado (`ArrowLeft` / `ArrowRight`).
