@@ -2,6 +2,45 @@
 
 Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
+## 🚀 [v0.5.0] - 2026-09-21 — Fase 9: CTA de Conversão Final, Selos de Confiança & Conclusão 100% do Roadmap
+
+### ✨ Adicionado
+- **Seção "CTA de Conversão Final & Ação Imediata" (`#cta-final`)**:
+  - **Banner de Conversão de Alto Impacto**:
+    - Feixe de iluminação superior ciano/esmeralda (`.final-cta-beam`), acabamento matte refinado (`rgba(14, 20, 36, 0.75)` com `backdrop-filter: blur(16px)`), borda de 1px e cantos arredondados de `24px`.
+    - Tag em badge de destaque *"PRONTO PARA ACELERAR?"*.
+    - Tipografia persuasiva voltada para a alta performance e estabilidade dos servidores da ZEDECK.
+  - **Ações de Conversão Duplas (CTA Group)**:
+    - **Botão Primário Glow WhatsApp**: Direcionamento direto para atendimento imediato com mensagem contextualizada.
+    - **Botão Secundário Catálogo de Planos**: Âncora rápida com scroll suave para a Seção de Preços (`#pricing`).
+  - **Grid de 4 Selos de Confiança e Garantia**:
+    1. *Ativação Instantânea* (Ícone de raio ciano): Provisionamento automatizado de contas.
+    2. *Migração Zero Downtime* (Ícone de transferência esmeralda): Transferência assistida sem tirar o site do ar.
+    3. *Suporte Especializado 24/7/365* (Ícone de headset céu): Engenheiros dedicados em Moçambique e suporte contínuo.
+    4. *Garantia de 30 Dias* (Ícone de escudo âmbar): Satisfação e reembolso assegurados.
+  - **Cloud Wave Divider Orgânico SVG**:
+    - Transição de ondas conectando a Seção de FAQ (`#faq`) ao CTA Final (`#cta-final`) e do CTA Final ao Rodapé do site.
+  - **100% de Cobertura i18n Bilíngue (PT/EN)**:
+    - Namespace `final_cta` totalmente mapeado e traduzido em `pt.json` e `en.json`.
+
+### 🔄 Alterado
+- **Sincronização Integral do Roadmap no `status.json`, `status.html` e `status.py`**:
+  - **100% Concluído** (9 de 9 Fases Entregues com Sucesso).
+  - Atualização da versão do projeto para **`v0.5.0`**.
+
+### ⚡ Conclusão do Roadmap de Lançamento (9/9 Fases)
+1. ✅ **Fase 1**: Hero, Navegação em Cápsula, Modal Drawer & Pesquisa de Domínios TLDs (`#hero`).
+2. ✅ **Fase 2**: Nossas Soluções — 6 Pilares de Infraestrutura & Serviços (`#solucoes`).
+3. ✅ **Fase 3**: Infraestrutura & Engenharia de Datacenter Tier-III+ (`#infrastructure`).
+4. ✅ **Fase 4**: Catálogo Oficial de Planos & Preços em Meticais MZN (`#pricing`).
+5. ✅ **Fase 5**: Migração Gratuita & Zero Downtime (`#migracao`).
+6. ✅ **Fase 6**: Ecossistema de Ferramentas, cPanel® e Stacks Tecnológicas (`#tecnologias`).
+7. ✅ **Fase 7**: Prova Social, Casos de Sucesso & Scroll Reel Testimonials (`#depoimentos`).
+8. ✅ **Fase 8**: FAQ Interativo por Categorias & Links para Zedeck's IT (`#faq`).
+9. ✅ **Fase 9**: CTA de Conversão Final, Selos de Confiança & Contato Direto (`#cta-final`).
+
+---
+
 ## 🚀 [v0.4.5] - 2026-09-21 — Fase 8: FAQ Interativo (Perguntas Frequentes & Respostas Diretas)
 
 ### ✨ Adicionado

@@ -291,6 +291,18 @@
     "need_more": "Ainda tem alguma dúvida específica?",
     "contact_support": "Falar com Engenheiro no WhatsApp"
   },
+  "final_cta": {
+    "tag": "PRONTO PARA ACELERAR?",
+    "title": "Leve o seu site para o próximo nível de velocidade e estabilidade",
+    "subtitle": "Junte-se a dezenas de empresas e desenvolvedores que confiam na infraestrutura de alta performance da ZEDECK Hosting. Ativação imediata, suporte de engenharia 24/7 e migração 100% gratuita.",
+    "btn_whatsapp": "Falar no WhatsApp",
+    "btn_plans": "Ver Todos os Planos",
+    "btn_consulting": "Consultoria Técnica Grátis",
+    "badge_activation": "Ativação Instantânea",
+    "badge_migration": "Migração Zero Downtime",
+    "badge_support": "Suporte Especializado 24/7/365",
+    "badge_moneyback": "Garantia de 30 Dias"
+  },
   "footer": {
     "desc": "Infraestrutura global de alojamento web, servidores dedicados e gestão de domínios com presença e conectividade mundial.",
     "col_ecosystem": "Ecossistema Zedecks",

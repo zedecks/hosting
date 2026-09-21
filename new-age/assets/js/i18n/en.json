@@ -291,6 +291,18 @@
     "need_more": "Still have a specific question?",
     "contact_support": "Chat with an Engineer on WhatsApp"
   },
+  "final_cta": {
+    "tag": "READY TO ACCELERATE?",
+    "title": "Elevate Your Website With Next-Gen Speed & High Reliability",
+    "subtitle": "Join dozens of growing businesses and developers who trust ZEDECK Hosting for ultra-fast performance, 24/7/365 systems engineering support, and 100% free migration.",
+    "btn_whatsapp": "Chat on WhatsApp",
+    "btn_plans": "View All Hosting Plans",
+    "btn_consulting": "Free Technical Consultation",
+    "badge_activation": "Instant Provisioning",
+    "badge_migration": "Zero-Downtime Migration",
+    "badge_support": "24/7/365 Dedicated Support",
+    "badge_moneyback": "30-Day Money-Back"
+  },
   "footer": {
     "desc": "Global web hosting infrastructure, dedicated servers, and domain management with worldwide reach and connectivity.",
     "col_ecosystem": "Zedecks Ecosystem",

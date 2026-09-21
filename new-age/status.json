@@ -1,6 +1,6 @@
 {
   "project": "ZEDECK Hosting (New Age)",
-  "version": "v0.4.5",
+  "version": "v0.5.0",
   "last_updated": "2026-09-21",
   "phases": [
     {
@@ -132,14 +132,15 @@
       "id": 9,
       "phase": "Fase 9",
       "title": "CTA de Conversão Final & Contato Direto",
-      "status": "pending",
+      "status": "completed",
       "anchor": "#cta-final",
       "version": "v0.5.0",
-      "description": "Banner final de alto impacto antes do rodapé com chamada direta para WhatsApp e e-mail corporativo.",
+      "description": "Banner final de alto impacto antes do rodapé com chamada direta para WhatsApp, visualização do catálogo e selos de garantia.",
       "deliverables": [
         "Banner premium com gradiente fosco e botão de contato imediato",
-        "Opção de consultoria técnica gratuita para novos clientes",
-        "Canais de suporte 24/7/365 e horários de atendimento"
+        "Botão secundário de visualização rápida do catálogo de planos (#pricing)",
+        "Grid de 4 selos de confiança: Ativação Instantânea, Migração Zero Downtime, Suporte 24/7/365 e Garantia de 30 Dias",
+        "Cloud Wave Divider orgânico conectando FAQ ➔ CTA Final ➔ Rodapé"
       ]
     }
   ]
