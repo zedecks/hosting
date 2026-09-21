@@ -1,6 +1,6 @@
 {
   "project": "ZEDECK Hosting (New Age)",
-  "version": "v0.2.5",
+  "version": "v0.2.6",
   "last_updated": "2026-09-21",
   "phases": [
     {
@@ -72,15 +72,15 @@
       "id": 5,
       "phase": "Fase 5",
       "title": "Migração Gratuita & Zero Downtime",
-      "status": "pending",
+      "status": "completed",
       "anchor": "#migracao",
-      "version": "v0.3.0",
+      "version": "v0.2.6",
       "description": "Seção dedicada a clientes que já possuem sites em outros provedores, destacando transferência assistida sem tirar o site do ar.",
       "deliverables": [
-        "Fluxo visual em 3 passos: Solicitação ➔ Cópia de Dados ➔ Apontamento DNS",
+        "Fluxo visual em 4 passos: Solicitação ➔ Cópia em Background ➔ Auditoria ➔ Apontamento DNS",
         "Garantia de Zero Downtime durante a migração",
-        "Compatibilidade cPanel, WordPress, bancos de dados e e-mails",
-        "Formulário/CTA rápido para solicitação de migração"
+        "Grid de diferenciais: 100% Grátis & Assistida, Compatibilidade cPanel/WP, Salto de Performance",
+        "Banner CTA direto com integração WhatsApp para agendamento"
       ]
     },
     {

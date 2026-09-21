@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZEDECK Hosting — Painel de Controle de Roadmap & Status</title>
-  <meta name="description" content="Acompanhamento em tempo real das fases de desenvolvimento, roadmap e entregáveis do ZEDECK Hosting.">
+  <title>ZEDECK Hosting — Tabela de Status & Roadmap Modular</title>
+  <meta name="description" content="Acompanhamento em lista tabela com status em Verde (Concluído), Laranja (Em Andamento) e Vermelho (Pendente).">
 
   <!-- Google Fonts: Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="./assets/css/responsive.css">
 
   <style>
-    /* Custom Status Dashboard Styles */
+    /* Table Status Dashboard Styles */
     .status-dashboard-body {
       background-color: var(--bg-primary, #080c16);
       color: var(--text-primary, #f1f5f9);
@@ -71,80 +71,88 @@
       padding: var(--space-8) 0 var(--space-12);
     }
 
-    /* Hero Summary Card */
-    .status-hero-card {
-      background: linear-gradient(135deg, rgba(14, 20, 36, 0.9) 0%, rgba(8, 12, 22, 0.95) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 24px;
+    /* Summary Bar */
+    .status-summary-bar {
+      background: rgba(14, 20, 36, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
       padding: var(--space-6) var(--space-8);
       margin-bottom: var(--space-8);
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
     }
 
-    .status-hero-card::before {
-      content: '';
-      position: absolute;
-      top: -40%;
-      right: -10%;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(0, 194, 255, 0.15) 0%, rgba(0, 194, 255, 0) 70%);
-      pointer-events: none;
+    @media (min-width: 768px) {
+      .status-summary-bar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
 
-    .status-top-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .status-indicators {
+      display: flex;
+      flex-wrap: wrap;
       gap: var(--space-4);
-      margin-top: var(--space-6);
-      padding-top: var(--space-6);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      align-items: center;
     }
 
-    .stat-box {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-      padding: var(--space-4);
+    .indicator-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-full, 9999px);
+      font-size: 0.8125rem;
+      font-weight: 700;
     }
 
-    .stat-box-val {
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: #00C2FF;
-      line-height: 1.1;
-      margin-bottom: var(--space-1);
+    .indicator-green {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #10b981;
     }
 
-    .stat-box-lbl {
-      font-size: var(--font-xs, 0.75rem);
-      color: var(--text-muted, #94a3b8);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+    .indicator-orange {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #f59e0b;
+    }
+
+    .indicator-red {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #ef4444;
+    }
+
+    .indicator-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 6px currentColor;
     }
 
     /* Progress bar */
     .progress-track {
       width: 100%;
-      height: 12px;
+      height: 8px;
       background: rgba(255, 255, 255, 0.08);
       border-radius: var(--radius-full, 9999px);
       overflow: hidden;
-      margin: var(--space-3) 0 var(--space-2);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: var(--space-2);
     }
 
     .progress-fill {
       height: 100%;
-      background: linear-gradient(90deg, #00C2FF 0%, #38bdf8 100%);
+      background: linear-gradient(90deg, #10b981 0%, #00C2FF 100%);
       border-radius: var(--radius-full, 9999px);
-      transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 0 12px rgba(0, 194, 255, 0.5);
+      transition: width 1s ease;
+      box-shadow: 0 0 10px rgba(0, 194, 255, 0.5);
     }
 
-    /* Filter Controls */
+    /* Filters */
     .status-filters {
       display: flex;
       flex-wrap: wrap;
@@ -153,7 +161,7 @@
     }
 
     .filter-btn {
-      padding: 0.5rem 1.25rem;
+      padding: 0.45rem 1rem;
       border-radius: var(--radius-full, 9999px);
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -176,151 +184,176 @@
       font-weight: 600;
     }
 
-    /* Phase Cards Grid */
-    .phases-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: var(--space-6);
-    }
-
-    .phase-card {
+    /* Roadmap Table */
+    .status-table-container {
       background: rgba(14, 20, 36, 0.7);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 20px;
-      padding: var(--space-6);
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    .status-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .status-table th {
+      background: rgba(8, 12, 22, 0.9);
+      color: var(--text-muted, #94a3b8);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .status-table td {
+      padding: 1.15rem 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      vertical-align: top;
+      font-size: var(--font-sm, 0.875rem);
+    }
+
+    .status-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .status-table tr {
+      transition: background 0.15s ease;
+    }
+
+    .status-table tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Color Coded Row Borders */
+    .row-green {
+      border-left: 4px solid #10b981;
+    }
+
+    .row-orange {
+      border-left: 4px solid #f59e0b;
+    }
+
+    .row-red {
+      border-left: 4px solid #ef4444;
+    }
+
+    .col-phase {
+      font-weight: 800;
+      white-space: nowrap;
+      font-family: var(--font-family-heading);
+    }
+
+    .col-phase.green { color: #10b981; }
+    .col-phase.orange { color: #f59e0b; }
+    .col-phase.red { color: #ef4444; }
+
+    .col-title {
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .col-desc {
+      font-size: 0.8125rem;
+      color: var(--text-secondary, #cbd5e1);
+      line-height: 1.45;
+      margin-bottom: 0.5rem;
+      max-width: 540px;
+    }
+
+    .col-deliverables {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: flex;
       flex-direction: column;
-      position: relative;
-      transition: all 0.25s ease;
+      gap: 0.25rem;
     }
 
-    .phase-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(0, 194, 255, 0.3);
-      box-shadow: 0 12px 28px -10px rgba(0, 194, 255, 0.15);
+    .col-deliverables li {
+      font-size: 0.75rem;
+      color: var(--text-muted, #94a3b8);
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
     }
 
-    .phase-card.completed {
-      border-color: rgba(16, 185, 129, 0.25);
-    }
-
-    .phase-card.completed:hover {
-      border-color: rgba(16, 185, 129, 0.5);
-      box-shadow: 0 12px 28px -10px rgba(16, 185, 129, 0.15);
-    }
-
-    .phase-badge-status {
+    .badge-status {
       display: inline-flex;
       align-items: center;
       gap: 0.375rem;
-      padding: 0.25rem 0.75rem;
+      padding: 0.3rem 0.75rem;
       border-radius: var(--radius-full, 9999px);
-      font-size: var(--font-xs, 0.75rem);
+      font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      white-space: nowrap;
     }
 
-    .badge-completed {
+    .badge-green {
       background: rgba(16, 185, 129, 0.15);
       border: 1px solid rgba(16, 185, 129, 0.4);
       color: #10b981;
     }
 
-    .badge-pending {
-      background: rgba(148, 163, 184, 0.1);
-      border: 1px solid rgba(148, 163, 184, 0.2);
-      color: #94a3b8;
+    .badge-orange {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #f59e0b;
     }
 
-    .phase-card-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: var(--space-2);
-      margin-bottom: var(--space-3);
+    .badge-red {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #ef4444;
     }
 
-    .phase-number {
-      font-size: var(--font-xs, 0.75rem);
-      font-weight: 700;
-      color: #00C2FF;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+    .version-pill {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: #38bdf8;
+      font-weight: 600;
     }
 
-    .phase-card-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
-      margin: 0.25rem 0 var(--space-2);
-      line-height: 1.3;
-    }
-
-    .phase-card-desc {
-      font-size: var(--font-sm, 0.875rem);
-      color: var(--text-secondary, #cbd5e1);
-      line-height: 1.5;
-      margin-bottom: var(--space-4);
-      flex-grow: 1;
-    }
-
-    .phase-deliverables {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 var(--space-5);
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .deliverable-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      font-size: 0.8125rem;
-      color: var(--text-muted, #94a3b8);
-      line-height: 1.4;
-    }
-
-    .deliverable-icon {
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .phase-card-footer {
-      padding-top: var(--space-4);
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .phase-target-ver {
-      font-size: var(--font-xs, 0.75rem);
-      color: var(--text-muted, #94a3b8);
-      font-weight: 500;
-    }
-
-    .btn-phase-anchor {
+    .btn-table-anchor {
       display: inline-flex;
       align-items: center;
       gap: 0.375rem;
-      font-size: var(--font-xs, 0.75rem);
+      font-size: 0.75rem;
       font-weight: 600;
       color: #00C2FF;
       text-decoration: none;
-      padding: 0.375rem 0.75rem;
+      padding: 0.35rem 0.75rem;
       border-radius: var(--radius-full, 9999px);
       background: rgba(0, 194, 255, 0.08);
       border: 1px solid rgba(0, 194, 255, 0.25);
       transition: all 0.2s ease;
+      white-space: nowrap;
     }
 
-    .btn-phase-anchor:hover {
+    .btn-table-anchor:hover {
       background: rgba(0, 194, 255, 0.2);
       border-color: #00C2FF;
       transform: translateX(2px);
+    }
+
+    /* Responsive Table Horizontal Scroll on Mobile */
+    .table-responsive-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
   </style>
 </head>
@@ -349,58 +382,63 @@
   <main class="status-main-content">
     <div class="container">
 
-      <!-- Hero Summary Card -->
-      <section class="status-hero-card">
-        <div class="badge-tag" style="margin-bottom: var(--space-2);">Painel de Controle Oficial</div>
-        <h1 style="font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; margin-bottom: var(--space-2); color: #fff;">
-          Status de Desenvolvimento Modular
-        </h1>
-        <p style="color: var(--text-secondary, #cbd5e1); max-width: 680px; font-size: var(--font-base, 1rem);">
-          Acompanhe o progresso de cada fase da landing page do ZEDECK Hosting, entregáveis técnicos, versões e âncoras ativas.
-        </p>
-
-        <!-- Progress Overview -->
-        <div style="margin-top: var(--space-6);">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: var(--font-sm, 0.875rem);">
-            <span style="font-weight: 600; color: #fff;" id="progressLabel">Progresso do Projeto: 4 de 9 Fases Concluídas</span>
-            <span style="font-weight: 800; color: #00C2FF; font-size: 1.15rem;" id="progressPercent">44%</span>
-          </div>
-          <div class="progress-track" aria-hidden="true">
-            <div class="progress-fill" id="progressBar" style="width: 44%;"></div>
+      <!-- Top Summary Bar -->
+      <section class="status-summary-bar">
+        <div>
+          <div class="badge-tag" style="margin-bottom: var(--space-2);">Tabela Oficial de Fases</div>
+          <h1 style="font-size: 1.65rem; font-weight: 800; color: #fff; margin: 0 0 0.5rem;">
+            Roadmap Modular de Desenvolvimento
+          </h1>
+          <div style="font-size: 0.875rem; color: var(--text-secondary, #cbd5e1);">
+            Progresso Geral: <strong style="color: #10b981;" id="summaryProgressText">5 de 9 Fases Concluídas (55%)</strong>
+            <div class="progress-track" style="max-width: 400px;">
+              <div class="progress-fill" id="progressBar" style="width: 55%;"></div>
+            </div>
           </div>
         </div>
 
-        <!-- Top Metrics Grid -->
-        <div class="status-top-stats">
-          <div class="stat-box">
-            <div class="stat-box-val" id="statCompleted">4</div>
-            <div class="stat-box-lbl">Fases Concluídas</div>
+        <!-- Legend / Indicators -->
+        <div class="status-indicators">
+          <div class="indicator-pill indicator-green">
+            <span class="indicator-dot"></span>
+            <span>Verde: Concluído (<strong id="countGreen">5</strong>)</span>
           </div>
-          <div class="stat-box">
-            <div class="stat-box-val" id="statPending" style="color: #94a3b8;">5</div>
-            <div class="stat-box-lbl">Próximas Fases</div>
+          <div class="indicator-pill indicator-orange">
+            <span class="indicator-dot"></span>
+            <span>Laranja: Em Andamento (<strong id="countOrange">0</strong>)</span>
           </div>
-          <div class="stat-box">
-            <div class="stat-box-val" id="statVersion" style="color: #38bdf8;">v0.2.5</div>
-            <div class="stat-box-lbl">Versão Atual</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-box-val" style="color: #10b981; font-size: 1.25rem; padding-top: 6px;">Porta 1807</div>
-            <div class="stat-box-lbl">Localhost Ativo</div>
+          <div class="indicator-pill indicator-red">
+            <span class="indicator-dot"></span>
+            <span>Vermelho: Pendente (<strong id="countRed">4</strong>)</span>
           </div>
         </div>
       </section>
 
       <!-- Filters -->
       <div class="status-filters" role="tablist">
-        <button type="button" class="filter-btn active" data-filter="all">Todas as Fases (<span id="countAll">9</span>)</button>
-        <button type="button" class="filter-btn" data-filter="completed">Concluídas (<span id="countCompleted">4</span>)</button>
-        <button type="button" class="filter-btn" data-filter="pending">Próximas / Pendentes (<span id="countPending">5</span>)</button>
+        <button type="button" class="filter-btn active" data-filter="all">Todas as Fases (<span id="filterAll">9</span>)</button>
+        <button type="button" class="filter-btn" data-filter="completed">Verde: Concluídas (<span id="filterCompleted">5</span>)</button>
+        <button type="button" class="filter-btn" data-filter="pending">Vermelho: Pendentes (<span id="filterPending">4</span>)</button>
       </div>
 
-      <!-- Phases Cards Grid -->
-      <div class="phases-grid" id="phasesContainer">
-        <!-- Rendered dynamically by JavaScript -->
+      <!-- Roadmap Table Container -->
+      <div class="status-table-container">
+        <div class="table-responsive-wrapper">
+          <table class="status-table" id="statusTable">
+            <thead>
+              <tr>
+                <th style="width: 90px;">Fase</th>
+                <th style="min-width: 260px;">Módulo & Especificações</th>
+                <th style="width: 140px;">Status</th>
+                <th style="width: 100px;">Versão</th>
+                <th style="width: 130px;">Ação / Âncora</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
       </div>
 
     </div>
@@ -409,256 +447,131 @@
   <!-- Footer Simple -->
   <footer style="padding: var(--space-6) 0; border-top: 1px solid rgba(255, 255, 255, 0.06); text-align: center; font-size: var(--font-xs, 0.75rem); color: var(--text-muted, #94a3b8);">
     <div class="container">
-      &copy; 2026 Zedeck's IT — ZEDECK Hosting. Painel atualizado via <code>status.json</code> e CLI <code>status.py</code>.
+      &copy; 2026 Zedeck's IT — ZEDECK Hosting. Painel sincronizado com <code>status.json</code> e CLI <code>status.py</code>.
     </div>
   </footer>
 
   <!-- Script logic -->
   <script>
-    const fallbackData = {
-      "project": "ZEDECK Hosting (New Age)",
-      "version": "v0.2.5",
-      "phases": [
-        {
-          "id": 1,
-          "phase": "Fase 1",
-          "title": "Hero, Navegação & Pesquisa de Domínios",
-          "status": "completed",
-          "anchor": "#hero",
-          "version": "v0.1.0",
-          "description": "Header flutuante, mobile drawer, Hero section responsivo, pesquisa de domínios TLDs (.mz, .co.mz, .com, etc.) e alternância de idioma PT/EN.",
-          "deliverables": [
-            "Header flutuante com blur e navegação desktop/mobile",
-            "Drawer modal mobile animado com trap de foco",
-            "Hero section com tipografia de impacto e badges",
-            "Motor de busca de domínios com verificação de TLDs",
-            "Alternador de idioma circular (PT/EN) com bandeiras SVG"
-          ]
-        },
-        {
-          "id": 2,
-          "phase": "Fase 2",
-          "title": "Nossas Soluções (6 Pilares)",
-          "status": "completed",
-          "anchor": "#solucoes",
-          "version": "v0.2.0",
-          "description": "Apresentação dos 6 pilares de serviços sem preços, com cards foscos, ícones dedicados e CTAs para propostas ou detalhes.",
-          "deliverables": [
-            "Hospedagem Web cPanel®",
-            "Hospedagem WordPress Turbo (LSCache)",
-            "Servidores VPS Cloud com NVMe Gen4",
-            "Revenda de Hospedagem WHM White-Label",
-            "E-mail Corporativo Profissional",
-            "Criação de Sites, Apps & Sistemas sob medida"
-          ]
-        },
-        {
-          "id": 3,
-          "phase": "Fase 3",
-          "title": "Infraestrutura & Engenharia de Datacenter",
-          "status": "completed",
-          "anchor": "#infrastructure",
-          "version": "v0.2.3",
-          "description": "Cards verticais de diferenciais de engenharia, métricas de datacenters Tier-III+ e divisor Cloud Wave orgânico.",
-          "deliverables": [
-            "Cards de engenharia: NVMe Gen4, LiteSpeed, Anycast DNS, CageFS/Imunify360, Backups Diários, SLA 99.99%",
-            "Estrutura vertical nos cards: Ícone ➔ Título ➔ Descrição",
-            "Banner de métricas globais de datacenter",
-            "Divisores orgânicos Cloud Wave SVG"
-          ]
-        },
-        {
-          "id": 4,
-          "phase": "Fase 4",
-          "title": "Catálogo Oficial de Planos & Preços (MZN)",
-          "status": "completed",
-          "anchor": "#pricing",
-          "version": "v0.2.5",
-          "description": "Segmented Control com 4 abas dinâmicas, catálogo com precificação oficial em Meticais (MT), destaque Mais Popular e integração WhatsApp.",
-          "deliverables": [
-            "WordPress Turbo (STARTER: 200 MT, STANDARD: 450 MT, WORD PLUS: 650 MT)",
-            "Hospedagem Web (PREMIUM: 450 MT, BUSINESS: 750 MT, ENTERPRISE: 1 000 MT)",
-            "Revenda WHM (Sharon Pro: 500 MT, Sharon Business: 800 MT, Sharon Enterprise: 1 100 MT)",
-            "VPS cPanel® (Sharon cPA: 2 500 MT, Sharon cPB: 4 500 MT, Sharon cPC: 8 000 MT, Sharon cPD: 10 000 MT)",
-            "Aba WordPress Turbo ativa por padrão e sem quebra em valores numéricos",
-            "Menu 'Preços' no Header desktop e gaveta mobile"
-          ]
-        },
-        {
-          "id": 5,
-          "phase": "Fase 5",
-          "title": "Migração Gratuita & Zero Downtime",
-          "status": "pending",
-          "anchor": "#migracao",
-          "version": "v0.3.0",
-          "description": "Seção dedicada a clientes que já possuem sites em outros provedores, destacando transferência assistida sem tirar o site do ar.",
-          "deliverables": [
-            "Fluxo visual em 3 passos: Solicitação ➔ Cópia de Dados ➔ Apontamento DNS",
-            "Garantia de Zero Downtime durante a migração",
-            "Compatibilidade cPanel, WordPress, bancos de dados e e-mails",
-            "Formulário/CTA rápido para solicitação de migração"
-          ]
-        },
-        {
-          "id": 6,
-          "phase": "Fase 6",
-          "title": "Ecossistema de Ferramentas & cPanel® Integrado",
-          "status": "pending",
-          "anchor": "#tecnologias",
-          "version": "v0.3.5",
-          "description": "Vitrine tecnológica destacando o poder do cPanel®, Softaculous (400+ scripts), PHP multi-versões, Node.js, Python, Git e phpMyAdmin.",
-          "deliverables": [
-            "Grid de tecnologias suportadas com ícones oficiais",
-            "Destaque para Softaculous Apps Installer em 1 clique",
-            "Suporte a stacks modernas (PHP 8.x, Node.js, Python, Git)",
-            "Certificados SSL automáticos (AutoSSL) e ferramentas de segurança"
-          ]
-        },
-        {
-          "id": 7,
-          "phase": "Fase 7",
-          "title": "Prova Social, Casos de Sucesso & Avaliações",
-          "status": "pending",
-          "anchor": "#depoimentos",
-          "version": "v0.4.0",
-          "description": "Depoimentos de agências, desenvolvedores e empresas de Moçambique/internacional, avaliações e selos de confiança.",
-          "deliverables": [
-            "Cards com depoimentos reais e fotos/avatares",
-            "Classificação média (ex: 4.9/5 estrelas)",
-            "Logos de parceiros e clientes atendidos",
-            "Métricas de retenção e satisfação de clientes"
-          ]
-        },
-        {
-          "id": 8,
-          "phase": "Fase 8",
-          "title": "FAQ Interativo (Perguntas Frequentes)",
-          "status": "pending",
-          "anchor": "#faq",
-          "version": "v0.4.5",
-          "description": "Accordion acessível com dúvidas comerciais e técnicas mais comuns para eliminar objeções de compra.",
-          "deliverables": [
-            "Accordion interativo suave com ARIA (expand/collapse)",
-            "Respostas sobre pagamentos (M-Pesa, E-Mola, Transferência)",
-            "Informações sobre prazo de ativação e emissão de faturas",
-            "Políticas de upgrade de planos e suporte técnico"
-          ]
-        },
-        {
-          "id": 9,
-          "phase": "Fase 9",
-          "title": "CTA de Conversão Final & Contato Direto",
-          "status": "pending",
-          "anchor": "#cta-final",
-          "version": "v0.5.0",
-          "description": "Banner final de alto impacto antes do rodapé com chamada direta para WhatsApp e e-mail corporativo.",
-          "deliverables": [
-            "Banner premium com gradiente fosco e botão de contato imediato",
-            "Opção de consultoria técnica gratuita para novos clientes",
-            "Canais de suporte 24/7/365 e horários de atendimento"
-          ]
-        }
-      ]
-    };
-
-    let projectData = fallbackData;
-
-    async function loadRoadmapData() {
+    async function loadTableData() {
+      let data;
       try {
         const response = await fetch('./status.json');
         if (response.ok) {
-          projectData = await response.json();
+          data = await response.json();
         }
       } catch (err) {
-        console.warn('Usando dados embutidos de fallback:', err);
+        console.warn('Erro ao carregar status.json:', err);
       }
-      renderDashboard();
-    }
 
-    function renderDashboard(filter = 'all') {
-      const phases = projectData.phases || [];
+      if (!data) return;
+
+      const phases = data.phases || [];
       const total = phases.length;
       const completed = phases.filter(p => p.status === 'completed').length;
-      const pending = total - completed;
+      const inProgress = phases.filter(p => p.status === 'in_progress').length;
+      const pending = phases.filter(p => p.status === 'pending').length;
       const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
 
-      // Update counters
-      document.getElementById('statCompleted').textContent = completed;
-      document.getElementById('statPending').textContent = pending;
-      document.getElementById('statVersion').textContent = projectData.version || 'v0.2.5';
-      document.getElementById('countAll').textContent = total;
-      document.getElementById('countCompleted').textContent = completed;
-      document.getElementById('countPending').textContent = pending;
-
-      document.getElementById('progressLabel').textContent = `Progresso do Projeto: ${completed} de ${total} Fases Concluídas`;
-      document.getElementById('progressPercent').textContent = `${percent}%`;
+      document.getElementById('summaryProgressText').textContent = `${completed} de ${total} Fases Concluídas (${percent}%)`;
       document.getElementById('progressBar').style.width = `${percent}%`;
+      document.getElementById('countGreen').textContent = completed;
+      document.getElementById('countOrange').textContent = inProgress;
+      document.getElementById('countRed').textContent = pending;
+      document.getElementById('filterAll').textContent = total;
+      document.getElementById('filterCompleted').textContent = completed;
+      document.getElementById('filterPending').textContent = pending;
 
-      const container = document.getElementById('phasesContainer');
-      container.innerHTML = '';
+      window.projectPhases = phases;
+      renderTable('all');
+    }
 
-      const filteredPhases = phases.filter(p => {
+    function renderTable(filter = 'all') {
+      const phases = window.projectPhases || [];
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = '';
+
+      const filtered = phases.filter(p => {
         if (filter === 'completed') return p.status === 'completed';
         if (filter === 'pending') return p.status === 'pending';
         return true;
       });
 
-      filteredPhases.forEach(item => {
-        const isCompleted = item.status === 'completed';
-        const card = document.createElement('div');
-        card.className = `phase-card ${isCompleted ? 'completed' : 'pending'}`;
+      filtered.forEach(p => {
+        const tr = document.createElement('tr');
+        
+        let colorClass = 'red';
+        let badgeClass = 'badge-red';
+        let badgeText = '🔴 Pendente';
+        let rowClass = 'row-red';
 
-        const deliverablesHtml = (item.deliverables || []).map(d => `
-          <li class="deliverable-item">
-            <svg class="deliverable-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="${isCompleted ? '#10b981' : '#00C2FF'}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              ${isCompleted ? '<polyline points="20 6 9 17 4 12"/>' : '<circle cx="12" cy="12" r="3"/>'}
+        if (p.status === 'completed') {
+          colorClass = 'green';
+          badgeClass = 'badge-green';
+          badgeText = '🟢 Concluído';
+          rowClass = 'row-green';
+        } else if (p.status === 'in_progress') {
+          colorClass = 'orange';
+          badgeClass = 'badge-orange';
+          badgeText = '🟡 Em Andamento';
+          rowClass = 'row-orange';
+        }
+
+        tr.className = rowClass;
+
+        const deliverablesHtml = (p.deliverables || []).map(d => `
+          <li>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="${colorClass === 'green' ? '#10b981' : (colorClass === 'orange' ? '#f59e0b' : '#ef4444')}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              ${colorClass === 'green' ? '<polyline points="20 6 9 17 4 12"/>' : '<circle cx="12" cy="12" r="3"/>'}
             </svg>
             <span>${d}</span>
           </li>
         `).join('');
 
-        const anchorBtnHtml = isCompleted ? `
-          <a href="./index.html${item.anchor}" class="btn-phase-anchor" title="Ver na Home">
-            <span>Ver ${item.anchor}</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        const anchorHtml = (p.status === 'completed' && p.anchor) ? `
+          <a href="./index.html${p.anchor}" class="btn-table-anchor" title="Ir para ${p.anchor}">
+            <span>Ver ${p.anchor}</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
         ` : `
-          <span style="font-size: 0.75rem; color: var(--text-muted, #94a3b8);">Previsto: ${item.anchor}</span>
+          <span style="font-size: 0.75rem; color: var(--text-muted, #64748b);">${p.anchor || '-'}</span>
         `;
 
-        card.innerHTML = `
-          <div class="phase-card-header">
-            <span class="phase-number">${item.phase}</span>
-            <span class="phase-badge-status ${isCompleted ? 'badge-completed' : 'badge-pending'}">
-              ${isCompleted ? '✔ Concluído' : '⏳ Pendente'}
-            </span>
-          </div>
-          <h2 class="phase-card-title">${item.title}</h2>
-          <p class="phase-card-desc">${item.description}</p>
-          <ul class="phase-deliverables">
-            ${deliverablesHtml}
-          </ul>
-          <div class="phase-card-footer">
-            <span class="phase-target-ver">Alvo: <strong>${item.version}</strong></span>
-            ${anchorBtnHtml}
-          </div>
+        tr.innerHTML = `
+          <td class="col-phase ${colorClass}">
+            ${p.phase}
+          </td>
+          <td>
+            <div class="col-title">${p.title}</div>
+            <div class="col-desc">${p.description}</div>
+            <ul class="col-deliverables">
+              ${deliverablesHtml}
+            </ul>
+          </td>
+          <td>
+            <span class="badge-status ${badgeClass}">${badgeText}</span>
+          </td>
+          <td>
+            <span class="version-pill">${p.version || '-'}</span>
+          </td>
+          <td>
+            ${anchorHtml}
+          </td>
         `;
 
-        container.appendChild(card);
+        tbody.appendChild(tr);
       });
     }
 
-    // Filter Button Clicks
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        renderDashboard(btn.dataset.filter);
+        renderTable(btn.dataset.filter);
       });
     });
 
-    // Initialize
-    loadRoadmapData();
+    loadTableData();
   </script>
 </body>
 </html>

@@ -70,19 +70,31 @@
             <span data-i18n="nav.products">Produtos</span>
           </button>
           <div class="dropdown-menu">
-            <a href="#" class="dropdown-item" data-i18n="nav.products_web">Hospedagem de Sites</a>
-            <a href="#" class="dropdown-item" data-i18n="nav.products_wp">Hospedagem WordPress</a>
-            <a href="#" class="dropdown-item" data-i18n="nav.products_reseller">Revenda cPanel</a>
-            <a href="#" class="dropdown-item" data-i18n="nav.products_vps">Servidores VPS</a>
+            <a href="#pricing" class="dropdown-item" data-i18n="nav.products_web">Hospedagem de Sites</a>
+            <a href="#pricing" class="dropdown-item" data-i18n="nav.products_wp">Hospedagem WordPress</a>
+            <a href="#pricing" class="dropdown-item" data-i18n="nav.products_reseller">Revenda cPanel</a>
+            <a href="#pricing" class="dropdown-item" data-i18n="nav.products_vps">Servidores VPS</a>
           </div>
         </div>
 
-        <!-- 4. Preços -->
+        <!-- 4. Serviços -->
+        <div class="nav-item">
+          <button type="button" class="nav-link" aria-expanded="false">
+            <span data-i18n="nav.services">Serviços</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#migracao" class="dropdown-item" data-i18n="nav.services_migration">Migração de Sites</a>
+            <a href="#solucoes" class="dropdown-item" data-i18n="nav.services_dev">Desenvolvimento Web</a>
+            <a href="#solucoes" class="dropdown-item" data-i18n="nav.services_email">E-mail Corporativo</a>
+          </div>
+        </div>
+
+        <!-- 5. Preços -->
         <div class="nav-item">
           <a href="#pricing" class="nav-link" data-i18n="nav.pricing">Preços</a>
         </div>
 
-        <!-- 5. Tools -->
+        <!-- 6. Tools -->
         <div class="nav-item">
           <button type="button" class="nav-link" aria-expanded="false">
             <span data-i18n="nav.tools">Tools</span>
@@ -165,14 +177,32 @@
               </span>
             </button>
             <div class="mobile-accordion-content">
-              <a href="#" class="mobile-submenu-link" data-i18n="nav.products_web">Hospedagem de Sites</a>
-              <a href="#" class="mobile-submenu-link" data-i18n="nav.products_wp">Hospedagem WordPress</a>
-              <a href="#" class="mobile-submenu-link" data-i18n="nav.products_reseller">Revenda cPanel</a>
-              <a href="#" class="mobile-submenu-link" data-i18n="nav.products_vps">Servidores VPS</a>
+              <a href="#pricing" class="mobile-submenu-link" data-i18n="nav.products_web">Hospedagem de Sites</a>
+              <a href="#pricing" class="mobile-submenu-link" data-i18n="nav.products_wp">Hospedagem WordPress</a>
+              <a href="#pricing" class="mobile-submenu-link" data-i18n="nav.products_reseller">Revenda cPanel</a>
+              <a href="#pricing" class="mobile-submenu-link" data-i18n="nav.products_vps">Servidores VPS</a>
             </div>
           </div>
 
-          <!-- 4. Preços -->
+          <!-- 4. Serviços (Accordion) -->
+          <div class="mobile-nav-accordion">
+            <button type="button" class="mobile-accordion-trigger" aria-expanded="false">
+              <span class="mobile-nav-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </span>
+              <span class="mobile-nav-text" data-i18n="nav.services">Serviços</span>
+              <span class="mobile-accordion-chevron">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="mobile-accordion-content">
+              <a href="#migracao" class="mobile-submenu-link" data-i18n="nav.services_migration">Migração de Sites</a>
+              <a href="#solucoes" class="mobile-submenu-link" data-i18n="nav.services_dev">Desenvolvimento Web</a>
+              <a href="#solucoes" class="mobile-submenu-link" data-i18n="nav.services_email">E-mail Corporativo</a>
+            </div>
+          </div>
+
+          <!-- 5. Preços -->
           <a href="#pricing" class="mobile-nav-link" id="mobilePricingLink">
             <span class="mobile-nav-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
@@ -180,11 +210,11 @@
             <span class="mobile-nav-text" data-i18n="nav.pricing">Preços</span>
           </a>
 
-          <!-- 5. Tools (Accordion) -->
+          <!-- 6. Tools (Accordion) -->
           <div class="mobile-nav-accordion">
             <button type="button" class="mobile-accordion-trigger" aria-expanded="false">
               <span class="mobile-nav-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
               </span>
               <span class="mobile-nav-text" data-i18n="nav.tools">Tools</span>
               <span class="mobile-accordion-chevron">
@@ -1209,6 +1239,140 @@
             </div>
           </div>
 
+        </div>
+
+      </div>
+
+      <!-- Cloud Wave Divider (Preços -> Migração) -->
+      <div class="section-cloud-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 96" fill="none" preserveAspectRatio="none">
+          <path d="M0,24 C320,72 540,0 800,40 C1060,80 1240,12 1440,48 L1440,96 L0,96 Z" fill="rgba(14, 20, 36, 0.4)"></path>
+          <path d="M0,48 C280,88 480,16 720,56 C960,96 1180,28 1440,64 L1440,96 L0,96 Z" fill="#080c16"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==================== 5. MIGRATION SECTION (Zero Downtime & Grátis) ==================== -->
+    <section class="section migration-section" id="migracao">
+      <div class="container">
+        
+        <!-- Header da Seção -->
+        <div class="section-header">
+          <div class="badge-tag" data-i18n="migration.tag">MIGRAÇÃO ZERO DOWNTIME</div>
+          <h2 data-i18n="migration.title">Mude para a ZEDECK sem perder um único segundo de tráfego</h2>
+          <p class="section-subtitle" data-i18n="migration.subtitle">Cuidamos de 100% da transferência técnica dos seus sites, e-mails, bancos de dados e domínios. Grátis, seguro e sem tirar o seu negócio do ar.</p>
+        </div>
+
+        <!-- 4 Steps Visual Flow -->
+        <div class="migration-steps-grid">
+          
+          <!-- Step 1 -->
+          <div class="migration-step-card">
+            <div class="step-card-top">
+              <span class="step-num" data-i18n="migration.step_1_num">01</span>
+              <div class="step-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+            </div>
+            <h3 class="step-title" data-i18n="migration.step_1_title">Solicitação Rápida</h3>
+            <p class="step-desc" data-i18n="migration.step_1_desc">Envie os dados de acesso ou backup do provedor atual via canal criptografado seguro.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="migration-step-card">
+            <div class="step-card-top">
+              <span class="step-num" data-i18n="migration.step_2_num">02</span>
+              <div class="step-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              </div>
+            </div>
+            <h3 class="step-title" data-i18n="migration.step_2_title">Cópia em Background</h3>
+            <p class="step-desc" data-i18n="migration.step_2_desc">Nossos engenheiros clonam arquivos, bancos MySQL e e-mails enquanto seu site continua no ar.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="migration-step-card">
+            <div class="step-card-top">
+              <span class="step-num" data-i18n="migration.step_3_num">03</span>
+              <div class="step-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+            </div>
+            <h3 class="step-title" data-i18n="migration.step_3_title">Auditoria de Integridade</h3>
+            <p class="step-desc" data-i18n="migration.step_3_desc">Validamos links, banco de dados, versões PHP e certificados SSL antes de qualquer alteração.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="migration-step-card">
+            <div class="step-card-top">
+              <span class="step-num" data-i18n="migration.step_4_num">04</span>
+              <div class="step-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+            </div>
+            <h3 class="step-title" data-i18n="migration.step_4_title">Apontamento DNS Seguro</h3>
+            <p class="step-desc" data-i18n="migration.step_4_desc">Direcionamos o tráfego para os novos servidores NVMe Gen4 com propagação assistida em tempo real.</p>
+          </div>
+
+        </div>
+
+        <!-- Migration Perks & Benefits Grid -->
+        <div class="migration-perks-grid">
+          
+          <div class="migration-perk-item">
+            <div class="perk-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="perk-text">
+              <h4 data-i18n="migration.perk_1_title">Zero Downtime Garantido</h4>
+              <p data-i18n="migration.perk_1_desc">Seus visitantes e clientes continuam comprando e navegando sem qualquer interrupção durante todo o processo.</p>
+            </div>
+          </div>
+
+          <div class="migration-perk-item">
+            <div class="perk-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="perk-text">
+              <h4 data-i18n="migration.perk_2_title">100% Assistida & Gratuita</h4>
+              <p data-i18n="migration.perk_2_desc">Nossa equipe de engenharia cuida de todos os detalhes técnicos do início ao fim sem cobrar taxas extras.</p>
+            </div>
+          </div>
+
+          <div class="migration-perk-item">
+            <div class="perk-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <div class="perk-text">
+              <h4 data-i18n="migration.perk_3_title">Compatibilidade Total</h4>
+              <p data-i18n="migration.perk_3_desc">Migração perfeita de cPanel para cPanel, WordPress, Laravel, bancos de dados MySQL e caixas postais.</p>
+            </div>
+          </div>
+
+          <div class="migration-perk-item">
+            <div class="perk-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <div class="perk-text">
+              <h4 data-i18n="migration.perk_4_title">Salto de Performance</h4>
+              <p data-i18n="migration.perk_4_desc">Ao concluir a migração, seu site passa a rodar instantaneamente em SSD NVMe PCIe Gen4 com LiteSpeed nativo.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Direct CTA Banner -->
+        <div class="migration-cta-banner">
+          <div class="cta-banner-content">
+            <h3 data-i18n="migration.cta_title">Pronto para migrar sem dores de cabeça?</h3>
+            <p data-i18n="migration.cta_desc">Fale com um dos nossos engenheiros de infraestrutura agora e agende a sua transferência gratuita.</p>
+          </div>
+          <div class="cta-banner-action">
+            <a href="https://wa.me/258877703308?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20a%20migra%C3%A7%C3%A3o%20gratuita%20do%20meu%20site%20para%20a%20ZEDECK%20Hosting" target="_blank" rel="noopener" class="btn-migration-hire" data-i18n="migration.cta_btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span data-i18n="migration.cta_btn">Solicitar Migração Gratuita</span>
+            </a>
+          </div>
         </div>
 
       </div>

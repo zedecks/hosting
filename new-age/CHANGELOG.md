@@ -2,6 +2,33 @@
 
 Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
+## 🚀 [v0.2.6] - 2026-09-21 — Fase 5: Migração Gratuita & Zero Downtime + Hub de Status & Roadmap
+
+### ✨ Adicionado
+- **Menu "Serviços" no Header & Gaveta Mobile**:
+  - Adicionado dropdown com atalhos diretos para **Migração de Sites** (`#migracao`), **Desenvolvimento Web** (`#solucoes`) e **E-mail Corporativo** (`#solucoes`) tanto na barra superior de navegação flutuante quanto no drawer modal mobile.
+- **Seção de Migração Gratuita & Zero Downtime (`#migracao`)**:
+  - Fluxo visual estruturado em 4 etapas:
+    1. `01. Solicitação Rápida`: Envio seguro de credenciais ou backups via canal protegido.
+    2. `02. Cópia em Background`: Clonagem completa de arquivos, bancos MySQL e caixas de e-mail enquanto o site permanece 100% online.
+    3. `03. Auditoria de Integridade`: Validação minuciosa de links, rotas, versões de PHP e certificados SSL antes da virada de tráfego.
+    4. `04. Apontamento DNS Seguro`: Troca assistida de nameservers com propagação rápida para os servidores NVMe Gen4.
+  - **4 Diferenciais Técnicos em Destaque**:
+    - *Zero Downtime Garantido*: Navegação e vendas ininterruptas.
+    - *100% Assistida & Gratuita*: Engenheiros dedicados sem custo adicional.
+    - *Compatibilidade Total*: cPanel para cPanel, WordPress, Laravel, bancos de dados MySQL e webmail.
+    - *Salto de Performance*: Upgrade imediato para SSD NVMe PCIe Gen4 com aceleração LiteSpeed.
+  - **Banner CTA Direto com Integração WhatsApp**:
+    - Botão de ação rápida com mensagem pré-formatada para suporte e agendamento imediato.
+  - **Divisor Cloud Wave Orgânico SVG**:
+    - Transição estética suave entre a Seção de Preços (`#pricing`) e a Seção de Migração (`#migracao`).
+  - **100% de Cobertura i18n Bilíngue (PT/EN)**:
+    - Mapeamento completo e dinâmico no namespace `migration` em `pt.json` e `en.json`.
+- **Painel de Controle de Roadmap & Status**:
+  - `status.json`: Base centralizada de dados com as 9 fases, entregáveis, âncoras e status do projeto.
+  - `status.py`: Ferramenta CLI para terminal com barra de progresso, filtros (`--pending`, `--completed`), detalhes por fase (`-p <num>`) e acionador web (`--web`).
+  - `status.html`: Dashboard web visual servido em `http://localhost:1807/status.html` com filtros interativos e links diretos para cada âncora da landing page.
+
 ---
 
 ## 🚀 [v0.2.5] - 2026-09-19 — Construção Modular Home (Fase 1: Hero, Fase 2: Soluções, Fase 3: Infraestrutura & Fase 4: Catálogo de Planos Oficiais)
