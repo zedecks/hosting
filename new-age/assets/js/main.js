@@ -7,6 +7,7 @@ import { I18nManager } from './components/i18n.js';
 import { initDomainSearch } from './components/domain.js';
 import { initPricingTabs, switchPricingTab } from './components/pricing.js';
 import { initScrollReel } from './components/scroll-reel.js';
+import { initFAQ } from './components/faq.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize i18n
@@ -20,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 4. Initialize Scroll Reel Testimonials
   initScrollReel();
+
+  // 5. Initialize FAQ Accordion
+  initFAQ();
 
   // 4. Smooth scroll & intelligent anchor routing
   function scrollToTarget(targetId) {

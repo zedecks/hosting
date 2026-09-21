@@ -2,6 +2,37 @@
 
 Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
+## 🚀 [v0.4.5] - 2026-09-21 — Fase 8: FAQ Interativo (Perguntas Frequentes & Respostas Diretas)
+
+### ✨ Adicionado
+- **Seção "FAQ Interativo & Perguntas Frequentes" (`#faq`)**:
+  - **Accordion Interativo Acessível com ARIA**:
+    - Suporte nativo aos atributos `aria-expanded`, `aria-controls` e `aria-labelledby`.
+    - Expansão suave via `max-height` com curva de aceleração `cubic-bezier(0.16, 1, 0.3, 1)` e rotação em 180° do chevron indicador.
+    - Modo exclusivo (ao abrir uma pergunta, as demais se recolhem automaticamente para manter a leitura limpa).
+  - **6 Dúvidas Comerciais & Técnicas Essenciais**:
+    1. *Formas de Pagamento em Moçambique*: M-Pesa, E-Mola, Transferências Bancárias (BCI, BIM, Standard Bank, Moza Banco) e cartões Visa/Mastercard em Meticais (MZN).
+    2. *Prazo de Ativação*: Ativação instantânea automática para pagamentos digitais e < 15 a 30 min para transferências manuais.
+    3. *Faturas Formais com NUIT*: Emissão legalizada de faturas com NUIT oficial e proformas fiscais.
+    4. *Migração Gratuita & Zero Downtime*: Transferência assistida de ficheiros, bancos MySQL e e-mails antes da virada DNS.
+    5. *Upgrade de Planos*: Migração fluida entre planos Web, WordPress, Revenda WHM e VPS em 1 clique.
+    6. *Suporte Técnico & SLA*: Engenheiros de plantão 24/7/365 via WhatsApp (< 15min) e ticket.
+  - **Banner de Contato Extra "Ainda tem alguma dúvida?"**:
+    - Destaque com gradiente de borda cyan/emerald e CTA direto para falar com um engenheiro no WhatsApp.
+  - **Divisores Cloud Wave Orgânicos SVG**:
+    - Transição fluida entre Depoimentos (`#depoimentos`) e FAQ (`#faq`), e entre FAQ e o Rodapé.
+  - **100% de Cobertura i18n Bilíngue (PT/EN)**:
+    - Mapeamento dinâmico no namespace `faq` em `pt.json` e `en.json`.
+
+### 🔄 Alterado
+- **Sincronização de Roadmap no `status.json`, `status.html` e `status.py`**:
+  - Fase 8 marcada como Concluída (Progresso elevado para **88% - 8 de 9 Fases Concluídas**).
+
+### ⚡ Melhorado
+- Performance de transição com cálculo dinâmico de `scrollHeight` e suporte a resize responsivo.
+
+---
+
 ## 🚀 [v0.4.0] - 2026-09-21 — Fase 7: Prova Social, Casos de Sucesso & Avaliações
 
 ### ✨ Adicionado

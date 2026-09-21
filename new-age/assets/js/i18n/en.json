@@ -264,6 +264,25 @@
     "t4_role": "Hosting, Domains & WHM Reseller",
     "t4_tag": "Hosting + Domain + WHM"
   },
+  "faq": {
+    "tag": "FREQUENTLY ASKED QUESTIONS",
+    "title": "Clear Answers to Common Questions",
+    "subtitle": "Everything you need to know about payments in Mozambique, instant provisioning, zero-downtime migration, and expert technical support.",
+    "q1": "What payment methods are available in Mozambique?",
+    "a1": "We accept local payments in Mozambican Meticais (MZN) via M-Pesa, E-Mola, direct bank transfers (BCI, BIM, Standard Bank, Moza Banco), as well as online Visa and Mastercard payments.",
+    "q2": "How long does it take for my hosting or domain to be activated?",
+    "a2": "Provisioning is 100% instant and automated for online card and automated mobile payments. For manual bank deposits and transfers, accounts are activated in under 15 to 30 minutes upon receipt of proof of payment.",
+    "q3": "Does ZEDECK issue official tax invoices with NUIT for businesses?",
+    "a3": "Yes! Zedeck's IT is a fully registered and compliant entity in Mozambique. All orders generate formal invoices with official NUIT, proforma quotes, and fiscal receipts suitable for corporate tax deduction.",
+    "q4": "How does free zero-downtime website migration work?",
+    "a4": "Upon ordering any ZEDECK plan, our engineering team connects to your existing provider, performs a complete backup of files, MySQL databases, and email mailboxes, verifies everything in staging, and seamlessly switches DNS with zero downtime.",
+    "q5": "Can I upgrade my hosting plan as my website traffic grows?",
+    "a5": "Absolutely. Upgrades across Web Hosting, WordPress Turbo, WHM Reseller, and Cloud VPS plans are completed in 1 click through your client dashboard, paying only the prorated cost difference.",
+    "q6": "How does technical support work and what are the response times?",
+    "a6": "Our systems engineers are on duty 24/7/365. Our dedicated WhatsApp channel has an average response time of under 15 minutes, accompanied by ticketing and phone support for enterprise accounts.",
+    "need_more": "Still have a specific question?",
+    "contact_support": "Chat with an Engineer on WhatsApp"
+  },
   "footer": {
     "desc": "Global web hosting infrastructure, dedicated servers, and domain management with worldwide reach and connectivity.",
     "col_ecosystem": "Zedecks Ecosystem",

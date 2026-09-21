@@ -1,0 +1,54 @@
+/**
+ * FAQ Accordion Component
+ * Zedeck's IT — host.zedecks.com
+ * Accessible, animated accordion with ARIA support
+ */
+
+export function initFAQ() {
+  const faqAccordion = document.getElementById('faqAccordion');
+  if (!faqAccordion) return;
+
+  const items = faqAccordion.querySelectorAll('.faq-item');
+
+  items.forEach(item => {
+    const trigger = item.querySelector('.faq-trigger');
+    const content = item.querySelector('.faq-content');
+
+    if (!trigger || !content) return;
+
+    trigger.addEventListener('click', () => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+      // Close other items (exclusive accordion behavior)
+      items.forEach(otherItem => {
+        if (otherItem !== item) {
+          const otherTrigger = otherItem.querySelector('.faq-trigger');
+          const otherContent = otherItem.querySelector('.faq-content');
+          if (otherTrigger && otherContent) {
+            otherTrigger.setAttribute('aria-expanded', 'false');
+            otherItem.classList.remove('active');
+            otherContent.style.maxHeight = null;
+          }
+        }
+      });
+
+      // Toggle current item
+      if (isExpanded) {
+        trigger.setAttribute('aria-expanded', 'false');
+        item.classList.remove('active');
+        content.style.maxHeight = null;
+      } else {
+        trigger.setAttribute('aria-expanded', 'true');
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+
+    // Keyboard support for space and enter is native on <button>, but recalculate height on window resize
+    window.addEventListener('resize', () => {
+      if (trigger.getAttribute('aria-expanded') === 'true') {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+}

@@ -264,6 +264,25 @@
     "t4_role": "Hosting, Domínios & Revenda WHM",
     "t4_tag": "Hosting + Domínio + WHM"
   },
+  "faq": {
+    "tag": "DÚVIDAS FREQUENTES",
+    "title": "Perguntas Frequentes & Respostas Diretas",
+    "subtitle": "Tudo o que você precisa saber sobre pagamentos em Moçambique, ativação imediata, migração sem downtime e suporte técnico.",
+    "q1": "Quais são as formas de pagamento disponíveis em Moçambique?",
+    "a1": "Aceitamos pagamentos locais em Meticais (MZN) através de M-Pesa, E-Mola, Transferência Bancária direta (BCI, BIM, Standard Bank, Moza Banco) e cartões de débito/crédito Visa e Mastercard.",
+    "q2": "Quanto tempo demora para a minha hospedagem ou domínio ser ativado?",
+    "a2": "A ativação é 100% imediata e automatizada para pagamentos via cartão ou referências automáticas. Para depósitos bancários e transferências manuais, a conta é ativada em menos de 15 a 30 minutos após o envio do comprovativo via WhatsApp ou ticket.",
+    "q3": "A ZEDECK emite faturas formais com NUIT para empresas?",
+    "a3": "Sim! A Zedeck's IT é uma entidade legalizada em Moçambique. Todas as ordens geram faturas com NUIT oficial, cotações proforma e recibos fiscais válidos para dedução de despesas empresariais.",
+    "q4": "Como funciona a migração gratuita e sem tirar meu site do ar?",
+    "a4": "Após assinar qualquer plano da ZEDECK, a nossa equipe de engenharia conecta-se ao seu provedor anterior, faz cópia integral de ficheiros, bancos MySQL e contas de e-mail, testa em ambiente isolado e só depois atualiza os DNS, garantindo Zero Downtime.",
+    "q5": "Posso fazer upgrade de plano quando o tráfego do meu site crescer?",
+    "a5": "Com certeza. O upgrade de planos de Hospedagem Web, WordPress Turbo, Revenda WHM e Servidores VPS pode ser feito a qualquer momento com apenas 1 clique no painel, pagando apenas a diferença pró-rata.",
+    "q6": "Como funciona o suporte técnico e em quanto tempo respondem?",
+    "a6": "Dispomos de engenheiros de plantão 24/7/365. O nosso canal preferencial via WhatsApp possui tempo de resposta médio inferior a 15 minutos, além de suporte por ticket e telefone dedicado para planos corporativos.",
+    "need_more": "Ainda tem alguma dúvida específica?",
+    "contact_support": "Falar com Engenheiro no WhatsApp"
+  },
   "footer": {
     "desc": "Infraestrutura global de alojamento web, servidores dedicados e gestão de domínios com presença e conectividade mundial.",
     "col_ecosystem": "Ecossistema Zedecks",

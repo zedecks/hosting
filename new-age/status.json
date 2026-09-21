@@ -1,6 +1,6 @@
 {
   "project": "ZEDECK Hosting (New Age)",
-  "version": "v0.4.0",
+  "version": "v0.4.5",
   "last_updated": "2026-09-21",
   "phases": [
     {
@@ -117,7 +117,7 @@
       "id": 8,
       "phase": "Fase 8",
       "title": "FAQ Interativo (Perguntas Frequentes)",
-      "status": "pending",
+      "status": "completed",
       "anchor": "#faq",
       "version": "v0.4.5",
       "description": "Accordion acessível com dúvidas comerciais e técnicas mais comuns para eliminar objeções de compra.",
