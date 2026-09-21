@@ -2,20 +2,25 @@
 
 Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
-## 🚀 [v0.5.1] - 2026-09-21 — Refinamento de Design: CTA Cardless, Avatares 1:1 nos Testemunhos & Divisores de Onda Alternados
+## 🚀 [v0.5.1] - 2026-09-21 — Refinamento de Design: Padronização Uniforme de Ondas, Espaçamentos entre Seções & Avatares 1:1
 
 ### ✨ Adicionado
-- **Fórmula de Divisores de Onda de Rádio / Sea Wave (`.section-cloud-divider`)**:
-  - Implementada a representação pura em onda vetorial suave (senoidal com cristas e vales harmoniosos) conectando com precisão todas as 9 fases da landing page.
-  - Alternância harmônica contínua (*Wave Up* / *Wave Down*) eliminando qualquer descontinuidade visual.
+- **Fórmula Uniforme de Divisores de Onda de Rádio / Sea Wave (`.section-cloud-divider`)**:
+  - Implementada a representação pura em onda vetorial suave de 3 camadas sobrepostas com cristas e vales harmoniosos conectando com precisão todas as 9 fases da landing page.
+  - Alternância de fase e amplitude orgânica (*Wave Up* / *Wave Down*) replicando rigorosamente a lógica uniforme estabelecida na transição do Hero para a Fase 2.
 
 ### 🔄 Alterado
+- **Espaçamento e Ritmo Vertical Uniforme entre Todas as Seções**:
+  - Padronização de `padding-bottom: 0` em todas as seções com divisores, eliminando lacunas residuais e garantindo que cada divisor toque o piso da seção exatamente como no Hero.
+  - Espaçamento superior do divisor (`margin-top: var(--space-12)` a `var(--space-20)`) e padding superior uniforme (`padding-top: var(--space-16)`), conferindo respiro equilibrado e consistente.
 - **Estrutura do CTA de Conversão Final (`#cta-final`)**:
   - Layout horizontal orgânico diretamente contido no container fluído, com feixe superior de iluminação e tipografia de alto impacto.
 - **Formato dos Avatares de Testemunhos (`#depoimentos`)**:
   - Proporção exata **1:1 (`124px × 124px`)** com monograma/iniciais centralizados em destaque translúcido e borda em ciano neon.
 
 ### 🗑️ Removido
+- **Separador de Onda entre FAQ e CTA Final**:
+  - Removido o divisor de onda entre as seções `#faq` e `#cta-final`, unificando as duas áreas num fluxo contínuo e integrado que culmina na chamada de conversão antes do rodapé.
 - **Invólucro de Card Fechado no CTA Final**:
   - Removida a caixa retangular delimitada (`.final-cta-card`), permitindo que a seção respire livremente sobre a ondulação de fundo.
 
