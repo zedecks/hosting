@@ -7,19 +7,25 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 ### ✨ Adicionado
 - **Seção "Prova Social & Casos de Sucesso" (`#depoimentos`)**:
   - **Barra de Métricas de Confiança**:
-    - `1 200+ Clientes Ativos`: Empresas, agências e profissionais atendidos.
+    - `15+ Clientes Ativos`: Empresas, agências e profissionais atendidos com infraestrutura dedicada.
     - `99.99% Uptime Real Registado`: SLA verificado em monitoramento contínuo.
     - `3x+ Ganho de Performance`: Aceleração aferida com NVMe PCIe Gen4 e LiteSpeed.
     - `< 15min Tempo Médio de Resposta`: Atendimento técnico ágil via engenheiros dedicados.
-  - **Grid com 4 Cartões de Depoimentos Reais & Verificados (5 Estrelas)**:
-    1. *Sabores da Terra Moçambique* (Badge: `Hospedagem + Dev Web`): Desenvolvimento de plataforma web e hospedagem ultra-rápida com NVMe Gen4.
-    2. *Spicy House Media* (Badge: `Hosting + Dev + Domínio`): Registo de domínios, desenvolvimento web e hospedagem de alta performance com cPanel oficial e CageFS.
-    3. *Zaizah Fragrances* (Badge: `Hosting + Dev Web`): Desenvolvimento sob medida, e-mails corporativos e infraestrutura segura para catálogo digital.
-    4. *FJ OnThis* (Badge: `Hosting + Domínio + WHM`): Gestão de domínios, contas cPanel de clientes com Revenda WHM Sharon e hospedagem dedicada.
+  - **Widget Interativo Scroll Reel Testimonials (`#scrollReelWidget`)**:
+    - **Engine de Carretel Rotativo Contra-Rotacional (3 Colunas)**: Coluna central com tiles dos clientes e colunas laterais em contra-rotação suave (`800ms` com aceleração `cubic-bezier`).
+    - **Tipografia com Efeito Per-Character Rise**: Texto das citações e autores renderizado com stagger dinâmico caractere a caractere (`Chars`) e animação de saída suave (`scroll-reel-exit`).
+    - **Navegação & Acessibilidade**: Botões de navegação circular anterior/próximo, contador em tempo real de clientes destacados e suporte a teclas de setas do teclado (`ArrowLeft` / `ArrowRight`).
+    - **4 Casos Reais Verificados**:
+      1. *Sabores da Terra Moçambique* (Badge: `Hospedagem & Performance`): Hospedagem web ultra-rápida, estabilidade exemplar com discos NVMe Gen4 e suporte dedicado.
+      2. *Spicy House* (Badge: `Hospedagem & Domínios`): Registo ágil de domínios, caixas postais e hospedagem de alta performance com cPanel oficial e isolamento CageFS.
+      3. *Zaizah Fragrances* (Badge: `Hospedagem & E-mails`): Hospedagem estável, e-mails corporativos com alta entregabilidade e catálogo digital seguro.
+      4. *FJ OnThis* (Badge: `Hosting + Domínio + WHM`): Gestão de domínios, contas cPanel de clientes com Revenda WHM Sharon e servidores dedicados.
+  - **Componente Reutilizável React / shadcn**:
+    - Disponibilizado em `components/ui/scroll-reel-testimonials.tsx` e `components/ui/demo.tsx`.
   - **Cloud Wave Divider Orgânico SVG**:
     - Transição de ondas conectando a Seção de Tecnologias (`#tecnologias`) à Seção de Depoimentos (`#depoimentos`).
   - **100% de Cobertura i18n Bilíngue (PT/EN)**:
-    - Mapeamento completo e dinâmico no namespace `testimonials` em `pt.json` e `en.json`.
+    - Mapeamento dinâmico e reativo a mudanças de idioma via `languageChanged` event.
 
 ### 🔄 Alterado
 - **Sincronização de Roadmap no `status.json`, `status.html` e `status.py`**:

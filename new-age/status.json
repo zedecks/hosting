@@ -107,9 +107,9 @@
       "version": "v0.4.0",
       "description": "Depoimentos de agências, desenvolvedores e empresas de Moçambique/internacional, avaliações e selos de confiança.",
       "deliverables": [
-        "Barra de métricas de prova social: 1 200+ clientes, 99.99% uptime, 3x+ performance, <15min resposta",
-        "Cards com depoimentos reais e verificados com 5 estrelas (Sabores da Terra, Spicy House, Zaizah Fragrance, Nicol Store)",
-        "Badges de categorias por card: E-Commerce, Revenda WHM, Migração e VPS Cloud",
+        "Barra de métricas de prova social: 15+ clientes, 99.99% uptime, 3x+ performance, <15min resposta",
+        "Cards com depoimentos reais e verificados com 5 estrelas (Sabores da Terra Moçambique, Spicy House Media, Zaizah Fragrances, FJ OnThis)",
+        "Badges de serviços prestados: Hospedagem + Dev Web, Hosting + Dev + Domínio, Hosting + Dev Web e Hosting + Domínio + WHM",
         "Divisor Cloud Wave orgânico e 100% de cobertura i18n bilíngue (PT/EN)"
       ]
     },

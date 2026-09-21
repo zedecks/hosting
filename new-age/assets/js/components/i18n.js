@@ -82,6 +82,16 @@ export class I18nManager {
         el.setAttribute('placeholder', val);
       }
     });
+
+    window.i18nManager = this;
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+  }
+
+  t(key) {
+    const dict = this.translations[this.currentLang];
+    if (!dict) return key;
+    const val = this.getNestedValue(dict, key);
+    return val !== undefined ? val : key;
   }
 
   getNestedValue(obj, path) {
