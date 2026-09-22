@@ -102,10 +102,10 @@ export function initDomainSearch() {
         
         if (registerBtn) {
           registerBtn.addEventListener('click', () => {
-            const msg = currentIsEn 
-              ? `Registration flow for domain ${domain} coming soon.`
-              : `Excelente! Em breve o fluxo de checkout e registo do domínio ${domain} estará disponível.`;
-            alert(msg);
+            const sld = removeDomainExtension(domain);
+            const tld = domain.replace(sld, '');
+            const whmcsCartUrl = `https://clientes.zedecks.com/cart.php?a=add&domain=register&query=${encodeURIComponent(domain)}&sld=${encodeURIComponent(sld)}&tld=${encodeURIComponent(tld)}`;
+            window.open(whmcsCartUrl, '_blank', 'noopener');
           });
         }
         if (closeBtn) {
@@ -142,10 +142,10 @@ export function initDomainSearch() {
 
         if (transferBtn) {
           transferBtn.addEventListener('click', () => {
-            const msg = currentIsEn
-              ? `Domain transfer flow for ${domain} coming soon.`
-              : `Excelente! Em breve a transferência guiada do domínio ${domain} estará disponível.`;
-            alert(msg);
+            const sld = removeDomainExtension(domain);
+            const tld = domain.replace(sld, '');
+            const whmcsTransferUrl = `https://clientes.zedecks.com/cart.php?a=add&domain=transfer&query=${encodeURIComponent(domain)}&sld=${encodeURIComponent(sld)}&tld=${encodeURIComponent(tld)}`;
+            window.open(whmcsTransferUrl, '_blank', 'noopener');
           });
         }
         if (closeBtn) {
