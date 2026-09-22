@@ -1,0 +1,4 @@
+[submodule "mobile-app"]
+	path = mobile-app
+	url = https://github.com/zedecks/mobile-app.git
+	branch = main
