@@ -19,6 +19,12 @@ Seguindo o padrão de licenciamento misto estabelecido no projeto **Nhonguista**
 
 ---
 
+## 📱 Repositórios & Submódulos
+
+* **`mobile-app/` (`zedecks-hosting-app`):** Aplicativo Mobile oficial em Flutter (`v0.0.1`, package `com.zedecks.host`) gerenciado como um repositório independente / submódulo Git (port de teste `1808`).
+
+---
+
 ## 🔒 Segurança de Faturamento & Dados Sensíveis
 
 * **Regra R7 (AGENTS.md):** Nunca commitar lógica de billing, chaves de pagamento ou rotinas de provisionamento nas pastas destinadas a abertura pública futura.
