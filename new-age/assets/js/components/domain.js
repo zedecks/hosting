@@ -102,10 +102,35 @@ export function initDomainSearch() {
         
         if (registerBtn) {
           registerBtn.addEventListener('click', () => {
-            const sld = removeDomainExtension(domain);
-            const tld = domain.replace(sld, '');
-            const whmcsCartUrl = `https://clientes.zedecks.com/cart.php?a=add&domain=register&query=${encodeURIComponent(domain)}&sld=${encodeURIComponent(sld)}&tld=${encodeURIComponent(tld)}`;
-            window.open(whmcsCartUrl, '_blank', 'noopener');
+            const { sld, tld } = parseDomainParts(domain);
+            
+            // Dynamic Form POST/GET to WHMCS (compatible with all WHMCS themes: Standard, Lagom, Twenty-One)
+            const form = document.createElement('form');
+            form.method = 'GET';
+            form.action = 'https://clientes.zedecks.com/cart.php';
+            form.target = '_blank';
+            form.rel = 'noopener';
+
+            const params = {
+              a: 'add',
+              domain: 'register',
+              query: domain,
+              domainname: domain,
+              sld: sld,
+              tld: tld.startsWith('.') ? tld : `.${tld}`
+            };
+
+            for (const [key, val] of Object.entries(params)) {
+              const input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = key;
+              input.value = val;
+              form.appendChild(input);
+            }
+
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
           });
         }
         if (closeBtn) {
@@ -142,10 +167,34 @@ export function initDomainSearch() {
 
         if (transferBtn) {
           transferBtn.addEventListener('click', () => {
-            const sld = removeDomainExtension(domain);
-            const tld = domain.replace(sld, '');
-            const whmcsTransferUrl = `https://clientes.zedecks.com/cart.php?a=add&domain=transfer&query=${encodeURIComponent(domain)}&sld=${encodeURIComponent(sld)}&tld=${encodeURIComponent(tld)}`;
-            window.open(whmcsTransferUrl, '_blank', 'noopener');
+            const { sld, tld } = parseDomainParts(domain);
+
+            const form = document.createElement('form');
+            form.method = 'GET';
+            form.action = 'https://clientes.zedecks.com/cart.php';
+            form.target = '_blank';
+            form.rel = 'noopener';
+
+            const params = {
+              a: 'add',
+              domain: 'transfer',
+              query: domain,
+              domainname: domain,
+              sld: sld,
+              tld: tld.startsWith('.') ? tld : `.${tld}`
+            };
+
+            for (const [key, val] of Object.entries(params)) {
+              const input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = key;
+              input.value = val;
+              form.appendChild(input);
+            }
+
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
           });
         }
         if (closeBtn) {
@@ -181,6 +230,41 @@ function removeDomainExtension(domainString) {
   }
 
   return clean;
+}
+
+/**
+ * Extrai de forma precisa o SLD e o TLD para integração WHMCS
+ */
+function parseDomainParts(domainString) {
+  let clean = domainString
+    .toLowerCase()
+    .replace(/^https?:\/\//, '')
+    .replace(/^www\./, '')
+    .replace(/\/.*$/, '')
+    .trim();
+
+  // Caso Moçambique (.co.mz, .org.mz, .net.mz, .edu.mz, .gov.mz, .mz)
+  const mzMatch = clean.match(/^(.*?)\.((?:[a-z0-9-]+\.)?mz)$/i);
+  if (mzMatch) {
+    return {
+      sld: mzMatch[1],
+      tld: `.${mzMatch[2]}`
+    };
+  }
+
+  // Extensões normais (.com, .net, .org, .info, .biz, etc.)
+  const dotIndex = clean.indexOf('.');
+  if (dotIndex !== -1) {
+    return {
+      sld: clean.slice(0, dotIndex),
+      tld: clean.slice(dotIndex)
+    };
+  }
+
+  return {
+    sld: clean,
+    tld: '.com'
+  };
 }
 
 function escapeHtml(str) {
