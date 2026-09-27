@@ -105,14 +105,11 @@ export function initDomainSearch() {
             ev.preventDefault();
             ev.stopPropagation();
             
-            // Direct WHMCS registration submission via URL with encoded query & parameters
-            const { sld, tld } = parseDomainParts(domain);
-            const whmcsRegisterUrl = `https://clientes.zedecks.com/cart.php?a=add&domain=register&query=${encodeURIComponent(domain)}&domainname=${encodeURIComponent(domain)}&sld=${encodeURIComponent(sld)}&tld=${encodeURIComponent(tld)}`;
+            // Standard WHMCS direct cart register URL
+            const whmcsRegisterUrl = `https://clientes.zedecks.com/cart.php?a=add&domain=register&query=${encodeURIComponent(domain)}`;
             
-            // Open window directly in click context (avoids browser popup blocker)
             const newWindow = window.open(whmcsRegisterUrl, '_blank');
             if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-              // Fallback if popup blocked
               window.location.href = whmcsRegisterUrl;
             }
           });
@@ -154,8 +151,7 @@ export function initDomainSearch() {
             ev.preventDefault();
             ev.stopPropagation();
 
-            const { sld, tld } = parseDomainParts(domain);
-            const whmcsTransferUrl = `https://clientes.zedecks.com/cart.php?a=add&domain=transfer&query=${encodeURIComponent(domain)}&domainname=${encodeURIComponent(domain)}&sld=${encodeURIComponent(sld)}&tld=${encodeURIComponent(tld)}`;
+            const whmcsTransferUrl = `https://clientes.zedecks.com/cart.php?a=add&domain=transfer&query=${encodeURIComponent(domain)}`;
 
             const newWindow = window.open(whmcsTransferUrl, '_blank');
             if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
