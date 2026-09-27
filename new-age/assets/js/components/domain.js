@@ -102,31 +102,18 @@ export function initDomainSearch() {
         
         if (registerBtn) {
           registerBtn.addEventListener('click', () => {
-            const { sld, tld } = parseDomainParts(domain);
-            
-            // Dynamic Form POST/GET to WHMCS (compatible with all WHMCS themes: Standard, Lagom, Twenty-One)
+            // Official WHMCS Domain Register POST submission
             const form = document.createElement('form');
-            form.method = 'GET';
-            form.action = 'https://clientes.zedecks.com/cart.php';
+            form.method = 'POST';
+            form.action = 'https://clientes.zedecks.com/cart.php?a=add&domain=register';
             form.target = '_blank';
             form.rel = 'noopener';
 
-            const params = {
-              a: 'add',
-              domain: 'register',
-              query: domain,
-              domainname: domain,
-              sld: sld,
-              tld: tld.startsWith('.') ? tld : `.${tld}`
-            };
-
-            for (const [key, val] of Object.entries(params)) {
-              const input = document.createElement('input');
-              input.type = 'hidden';
-              input.name = key;
-              input.value = val;
-              form.appendChild(input);
-            }
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'query';
+            input.value = domain;
+            form.appendChild(input);
 
             document.body.appendChild(form);
             form.submit();
@@ -167,30 +154,18 @@ export function initDomainSearch() {
 
         if (transferBtn) {
           transferBtn.addEventListener('click', () => {
-            const { sld, tld } = parseDomainParts(domain);
-
+            // Official WHMCS Domain Transfer POST submission
             const form = document.createElement('form');
-            form.method = 'GET';
-            form.action = 'https://clientes.zedecks.com/cart.php';
+            form.method = 'POST';
+            form.action = 'https://clientes.zedecks.com/cart.php?a=add&domain=transfer';
             form.target = '_blank';
             form.rel = 'noopener';
 
-            const params = {
-              a: 'add',
-              domain: 'transfer',
-              query: domain,
-              domainname: domain,
-              sld: sld,
-              tld: tld.startsWith('.') ? tld : `.${tld}`
-            };
-
-            for (const [key, val] of Object.entries(params)) {
-              const input = document.createElement('input');
-              input.type = 'hidden';
-              input.name = key;
-              input.value = val;
-              form.appendChild(input);
-            }
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'query';
+            input.value = domain;
+            form.appendChild(input);
 
             document.body.appendChild(form);
             form.submit();
