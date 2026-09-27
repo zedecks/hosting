@@ -25,7 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Initialize Interactive FAQ Accordion & Category Tabs
   initFAQ();
 
-  // 6. Smooth Scroll & Intelligent Anchor Routing
+  // 6. Dynamic Copyright Year
+  const yearEl = document.getElementById('currentYear');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // 7. Smooth Scroll & Intelligent Anchor Routing
   function scrollToTarget(targetId) {
     if (!targetId || targetId === '#') return;
 

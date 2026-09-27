@@ -563,7 +563,7 @@
   }
 
   .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: var(--space-8);
   }
 

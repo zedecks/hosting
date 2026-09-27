@@ -305,9 +305,29 @@
   },
   "footer": {
     "desc": "Global web hosting infrastructure, dedicated servers, and domain management with worldwide reach and connectivity.",
-    "col_ecosystem": "Zedecks Ecosystem",
-    "col_contact": "Contact & Location",
+    "col_hosting": "Hosting",
+    "col_domain": "Domains",
+    "col_solutions": "Solutions",
+    "col_company": "Our Company",
+    "wp_solutions": "WordPress Solutions",
+    "web_hosting": "Web Hosting",
+    "vps_dedicated": "VPS cPanel® Dedicated",
+    "reseller_hosting": "Reseller Hosting",
+    "domain_register": "Domain Registration",
+    "domain_transfer": "Domain Transfer",
+    "whois": "Whois Lookup",
+    "domain_details": "Domain Details",
+    "whmcs_solutions": "WHMCS Solutions",
+    "site_creation": "Custom Web Development",
+    "site_migration": "Website Migration",
+    "about_us": "About Us",
+    "knowledge_base": "Knowledge Base",
+    "system_status": "System Status",
+    "blog": "Blog",
+    "soon_badge": "Soon",
     "rights": "All rights reserved.",
-    "signature": "Made by Zedeck's IT."
+    "signature": "Made by Zedeck's IT.",
+    "terms": "Terms",
+    "privacy": "Privacy"
   }
 }

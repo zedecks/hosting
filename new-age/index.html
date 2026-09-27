@@ -2065,58 +2065,107 @@
   <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer">
     <div class="container">
+      <!-- 4 Categorized Columns Grid -->
       <div class="footer-grid">
-        <!-- Brand Info -->
-        <div class="footer-brand">
-          <a href="/" class="brand-logo-wrap" style="margin-bottom: var(--space-3);" aria-label="Zedecks IT Hosting Home">
+        
+        <!-- Coluna 1: Hospedagem -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.col_hosting">Hospedagem</h4>
+          <div class="footer-links">
+            <a href="#pricing-wordpress" data-i18n="footer.wp_solutions">Soluções WordPress</a>
+            <a href="#pricing-web" data-i18n="footer.web_hosting">Hospedagem Web</a>
+            <a href="#pricing-vps" class="footer-link-soon">
+              <span data-i18n="footer.vps_dedicated">VPS cPanel® Dedicado</span>
+              <span class="footer-badge-soon" data-i18n="footer.soon_badge">Breve</span>
+            </a>
+            <a href="#pricing-reseller" data-i18n="footer.reseller_hosting">Revenda de Hospedagem</a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Domínio -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.col_domain">Domínio</h4>
+          <div class="footer-links">
+            <a href="#hero" data-i18n="footer.domain_register">Registro de Domínio</a>
+            <a href="#migracao" data-i18n="footer.domain_transfer">Transferência de Domínio</a>
+            <a href="#hero" data-i18n="footer.whois">Whois</a>
+            <a href="#pricing" data-i18n="footer.domain_details">Detalhes de Domínio</a>
+          </div>
+        </div>
+
+        <!-- Coluna 3: Soluções -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.col_solutions">Soluções</h4>
+          <div class="footer-links">
+            <a href="#tecnologias" data-i18n="footer.whmcs_solutions">Soluções WHMCS</a>
+            <a href="#solucoes-desenvolvimento" data-i18n="footer.site_creation">Criação de Sites</a>
+            <a href="#migracao" data-i18n="footer.site_migration">Migração de Site</a>
+          </div>
+        </div>
+
+        <!-- Coluna 4: A Nossa Empresa -->
+        <div class="footer-col">
+          <h4 data-i18n="footer.col_company">A Nossa Empresa</h4>
+          <div class="footer-links">
+            <a href="#infraestrutura" data-i18n="footer.about_us">Quem somos</a>
+            <a href="#faq" data-i18n="footer.knowledge_base">Base de Conhecimento</a>
+            <a href="./status.html" data-i18n="footer.system_status">Status do Sistema</a>
+            <a href="#solucoes-desenvolvimento" data-i18n="footer.blog">Blog</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Esquerda Logo, Centro Copyright, Direita Social/Legal/Lang -->
+      <div class="footer-bar">
+        <!-- Esquerda: Logo como no Header - Made by Zedeck's IT -->
+        <div class="footer-left">
+          <a href="/" class="brand-logo-wrap" aria-label="Zedecks IT Hosting Home">
             <img src="./assets/img/icone.png" alt="Zedeck's IT Icon" class="brand-emblem-img">
             <div class="brand-text-group">
               <span class="brand-name">ZEDECK<span>'S</span> HOSTING</span>
               <span class="brand-subline">Cloud & Servers</span>
             </div>
           </a>
-          <p data-i18n="footer.desc">
-            Infraestrutura global de alojamento web, servidores dedicados e gestão de domínios com presença e conectividade mundial.
-          </p>
+          <span class="footer-separator" aria-hidden="true">&bull;</span>
+          <span class="footer-signature" data-i18n="footer.signature">Made by Zedeck's IT.</span>
         </div>
 
-        <!-- Ecosystem Links -->
-        <div class="footer-col">
-          <h4 data-i18n="footer.col_ecosystem">Ecossistema Zedecks</h4>
-          <div class="footer-links">
-            <a href="https://zedecks.com" target="_blank" rel="noopener">zedecks.com</a>
-            <a href="https://training.zedecks.com" target="_blank" rel="noopener">training.zedecks.com</a>
-            <a href="https://zncreative.zedecks.com" target="_blank" rel="noopener">zncreative.zedecks.com</a>
-            <a href="https://zstocky.com" target="_blank" rel="noopener">zstocky.com</a>
+        <!-- Centro: Copyright ano dinâmico (Ano Início 2025 - Ano Atual) -->
+        <div class="footer-center">
+          &copy; <span id="startYear">2025</span>&ndash;<span id="currentYear">2026</span> Zedeck's Hosting. <span data-i18n="footer.rights">Todos os direitos reservados.</span>
+        </div>
+
+        <!-- Direita: Ícone do Iradoweck, Zedecks | Termos | Políticas. Troca de Idioma -->
+        <div class="footer-right">
+          <!-- Social / Brand Icons -->
+          <div class="footer-brand-icons">
+            <a href="https://github.com/iradoweck" target="_blank" rel="noopener" class="footer-icon-link" title="Iradoweck (GitHub)" aria-label="Iradoweck GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://zedecks.com" target="_blank" rel="noopener" class="footer-icon-link" title="Zedeck's IT Solutions" aria-label="Zedecks IT Solutions">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </a>
           </div>
-        </div>
 
-        <!-- Contact Info -->
-        <div class="footer-col">
-          <h4 data-i18n="footer.col_contact">Contacto & Localização</h4>
-          <div class="footer-links">
-            <a href="tel:+258877703308">📞 +258 87 770 3308</a>
-            <a href="mailto:info@zedecks.com">✉️ info@zedecks.com</a>
-            <span>📍 Av. do Trabalho, Cidade de Nampula, Moçambique</span>
+          <span class="footer-divider-pipe" aria-hidden="true">|</span>
+
+          <!-- Legal Links -->
+          <div class="footer-legal-links">
+            <a href="#" class="footer-legal-link" data-i18n="footer.terms">Termos</a>
+            <span class="footer-divider-pipe" aria-hidden="true">|</span>
+            <a href="#" class="footer-legal-link" data-i18n="footer.privacy">Políticas</a>
           </div>
-        </div>
-      </div>
 
-      <div class="footer-bottom">
-        <div>
-          &copy; 2026 Zedeck's IT. <span data-i18n="footer.rights">Todos os direitos reservados.</span>
-        </div>
-        <div class="footer-bottom-actions">
-          <!-- Single Circular Flag Toggle Button (Flaticon Style SVGs) -->
+          <span class="footer-divider-pipe" aria-hidden="true">|</span>
+
+          <!-- Troca de Idioma (Flag Toggle) -->
           <button type="button" class="lang-circle-btn footer-lang-btn" id="langToggleBtn" title="Switch to English" aria-label="Switch to English">
             <!-- UK Flag (Visível em Português) -->
             <img src="./assets/img/flags/united-kingdom.svg" alt="English" class="lang-flag-img flag-uk">
             <!-- Moçambique Flag (Visível em Inglês) -->
             <img src="./assets/img/flags/mozambique.svg" alt="Português" class="lang-flag-img flag-moz" style="display: none;">
           </button>
-          <div class="footer-signature" data-i18n="footer.signature">
-            Made by Zedeck's IT.
-          </div>
         </div>
       </div>
     </div>

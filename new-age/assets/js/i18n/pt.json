@@ -305,9 +305,29 @@
   },
   "footer": {
     "desc": "Infraestrutura global de alojamento web, servidores dedicados e gestão de domínios com presença e conectividade mundial.",
-    "col_ecosystem": "Ecossistema Zedecks",
-    "col_contact": "Contacto & Localização",
+    "col_hosting": "Hospedagem",
+    "col_domain": "Domínio",
+    "col_solutions": "Soluções",
+    "col_company": "A Nossa Empresa",
+    "wp_solutions": "Soluções WordPress",
+    "web_hosting": "Hospedagem Web",
+    "vps_dedicated": "VPS cPanel® Dedicado",
+    "reseller_hosting": "Revenda de Hospedagem",
+    "domain_register": "Registro de Domínio",
+    "domain_transfer": "Transferência de Domínio",
+    "whois": "Whois",
+    "domain_details": "Detalhes de Domínio",
+    "whmcs_solutions": "Soluções WHMCS",
+    "site_creation": "Criação de Sites",
+    "site_migration": "Migração de Site",
+    "about_us": "Quem somos",
+    "knowledge_base": "Base de Conhecimento",
+    "system_status": "Status do Sistema",
+    "blog": "Blog",
+    "soon_badge": "Breve",
     "rights": "Todos os direitos reservados.",
-    "signature": "Made by Zedeck's IT."
+    "signature": "Made by Zedeck's IT.",
+    "terms": "Termos",
+    "privacy": "Políticas"
   }
 }
