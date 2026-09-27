@@ -101,23 +101,20 @@ export function initDomainSearch() {
         const closeBtn = resultContainer.querySelector('#btnDomainCloseAction');
         
         if (registerBtn) {
-          registerBtn.addEventListener('click', () => {
-            // Official WHMCS Domain Register POST submission
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = 'https://clientes.zedecks.com/cart.php?a=add&domain=register';
-            form.target = '_blank';
-            form.rel = 'noopener';
-
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = 'query';
-            input.value = domain;
-            form.appendChild(input);
-
-            document.body.appendChild(form);
-            form.submit();
-            document.body.removeChild(form);
+          registerBtn.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            ev.stopPropagation();
+            
+            // Direct WHMCS registration submission via URL with encoded query & parameters
+            const { sld, tld } = parseDomainParts(domain);
+            const whmcsRegisterUrl = `https://clientes.zedecks.com/cart.php?a=add&domain=register&query=${encodeURIComponent(domain)}&domainname=${encodeURIComponent(domain)}&sld=${encodeURIComponent(sld)}&tld=${encodeURIComponent(tld)}`;
+            
+            // Open window directly in click context (avoids browser popup blocker)
+            const newWindow = window.open(whmcsRegisterUrl, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+              // Fallback if popup blocked
+              window.location.href = whmcsRegisterUrl;
+            }
           });
         }
         if (closeBtn) {
@@ -153,23 +150,17 @@ export function initDomainSearch() {
         const closeBtn = resultContainer.querySelector('#btnDomainCloseAction');
 
         if (transferBtn) {
-          transferBtn.addEventListener('click', () => {
-            // Official WHMCS Domain Transfer POST submission
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = 'https://clientes.zedecks.com/cart.php?a=add&domain=transfer';
-            form.target = '_blank';
-            form.rel = 'noopener';
+          transferBtn.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            ev.stopPropagation();
 
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = 'query';
-            input.value = domain;
-            form.appendChild(input);
+            const { sld, tld } = parseDomainParts(domain);
+            const whmcsTransferUrl = `https://clientes.zedecks.com/cart.php?a=add&domain=transfer&query=${encodeURIComponent(domain)}&domainname=${encodeURIComponent(domain)}&sld=${encodeURIComponent(sld)}&tld=${encodeURIComponent(tld)}`;
 
-            document.body.appendChild(form);
-            form.submit();
-            document.body.removeChild(form);
+            const newWindow = window.open(whmcsTransferUrl, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+              window.location.href = whmcsTransferUrl;
+            }
           });
         }
         if (closeBtn) {
