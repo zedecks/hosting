@@ -70,7 +70,13 @@ export class I18nManager {
       const key = el.getAttribute('data-i18n');
       const val = this.getNestedValue(dict, key);
       if (val !== undefined) {
-        el.textContent = val;
+        // If element has a child span for text, update only the span
+        const textSpan = el.querySelector(':scope > span[data-i18n-text]') || el.querySelector(':scope > .tag-text');
+        if (textSpan) {
+          textSpan.textContent = val;
+        } else {
+          el.textContent = val;
+        }
       }
     });
 

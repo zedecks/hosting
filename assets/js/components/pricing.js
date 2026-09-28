@@ -50,3 +50,5 @@ export function initPricingTabs() {
     switchPricingTab(tabName);
   }
 }
+
+
