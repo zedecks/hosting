@@ -177,7 +177,7 @@ export function initDomainSearch() {
  * Consulta em tempo real bases de dados autoritativas de DNS (Cloudflare DoH / Google DoH / RDAP ICANN)
  * Retorna true se o domínio já estiver registrado (com registros NS/SOA/A/AAAA ativos) ou false se estiver livre.
  */
-async function checkDomainAvailabilityLive(domain) {
+export async function checkDomainAvailabilityLive(domain) {
   try {
     // 1. Consulta DoH (DNS over HTTPS) Cloudflare para checar NS (Authoritative Name Servers)
     const cfUrl = `https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domain)}&type=NS`;
@@ -231,7 +231,7 @@ async function checkDomainAvailabilityLive(domain) {
 /**
  * Remove qualquer extensão do domínio (ex: 'zedecks.co.mz' vira 'zedecks', 'empresa.com' vira 'empresa')
  */
-function removeDomainExtension(domainString) {
+export function removeDomainExtension(domainString) {
   // Limpa protocolos, www e barras
   let clean = domainString
     .toLowerCase()

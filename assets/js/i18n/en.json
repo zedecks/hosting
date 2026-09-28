@@ -153,6 +153,17 @@
     "web_business_desc": "The most balanced tier for thriving businesses.",
     "web_enterprise_name": "ENTERPRISE",
     "web_enterprise_desc": "Expanded power with 50GB NVMe and multiple domains.",
+    "tab_email": "Business Email",
+    "email_individual_name": "Individual",
+    "email_individual_desc": "Empower your personal professional identity with 5GB NVMe and custom @yourdomain.com address.",
+    "email_pme_starter_name": "SME Starter",
+    "email_pme_starter_desc": "Perfect for agile teams with 5 mailboxes and 25GB high-speed NVMe storage.",
+    "email_pme_pro_name": "SME Pro",
+    "email_pme_pro_desc": "Robust corporate productivity with 20 business mailboxes and ample NVMe storage.",
+    "email_enterprise_name": "Enterprise Custom",
+    "email_enterprise_desc": "100GB NVMe storage with tailor-made mailboxes and flexible per-seat pricing.",
+    "btn_quote_custom": "Request Proposal",
+    "pricing_per_mailbox": "Custom Quote",
     "reseller_1_name": "Sharon Pro",
     "reseller_1_desc": "Launch your hosting agency with 40GB NVMe storage.",
     "reseller_2_name": "Sharon Business",
@@ -167,6 +178,16 @@
     "vps_c_desc": "200GB NVMe Gen4 for demanding enterprise platforms.",
     "vps_d_name": "Sharon cPD",
     "vps_d_desc": "250GB NVMe Gen4 flagship tier with maximum I/O performance."
+  },
+  "email_modal": {
+    "title": "Email Domain Configuration",
+    "subtitle": "Choose how you want to associate your domain with your corporate mailboxes:",
+    "opt_register_title": "Register New Domain",
+    "opt_register_desc": "I don't have a domain yet. I want to check and register a new one (.co.mz, .com, etc.).",
+    "opt_transfer_title": "Transfer Domain",
+    "opt_transfer_desc": "I already own a domain elsewhere and want to transfer management to ZEDECK.",
+    "opt_own_title": "Use Existing Domain",
+    "opt_own_desc": "Keep the domain where it is and only point MX/DNS records to the mailboxes."
   },
   "migration": {
     "tag": "ZERO DOWNTIME MIGRATION",
@@ -330,5 +351,12 @@
     "signature": "Made by Zedeck's IT.",
     "terms": "Terms",
     "privacy": "Privacy"
+  },
+  "email_modal": {
+    "title": "Domain Configuration",
+    "subtitle": "Choose how you want to link your domain to business email:",
+    "opt_register_title": "Register New",
+    "opt_transfer_title": "Transfer",
+    "opt_own_title": "Use Existing"
   }
 }

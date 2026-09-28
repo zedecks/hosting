@@ -153,6 +153,17 @@
     "web_business_desc": "O plano mais equilibrado para empresas em crescimento.",
     "web_enterprise_name": "ENTERPRISE",
     "web_enterprise_desc": "Poder ampliado com 50GB NVMe e múltiplos domínios.",
+    "tab_email": "E-mail Corporativo",
+    "email_individual_name": "Individual",
+    "email_individual_desc": "Profissionalize a sua comunicação pessoal com 5GB NVMe e endereço @seudominio.com.",
+    "email_pme_starter_name": "PME Starter",
+    "email_pme_starter_desc": "Ideal para pequenos escritórios com 5 caixas e 25GB NVMe de alto desempenho.",
+    "email_pme_pro_name": "PME Pro",
+    "email_pme_pro_desc": "Produtividade corporativa robusta com 20 contas e amplo armazenamento NVMe.",
+    "email_enterprise_name": "Enterprise Custom",
+    "email_enterprise_desc": "100GB NVMe com caixas sob medida e precificação personalizada por conta.",
+    "btn_quote_custom": "Solicitar Orçamento",
+    "pricing_per_mailbox": "Sob Consulta",
     "reseller_1_name": "Sharon Pro",
     "reseller_1_desc": "Inicie a sua agência de hospedagem com 40GB NVMe.",
     "reseller_2_name": "Sharon Business",
@@ -167,6 +178,16 @@
     "vps_c_desc": "200GB NVMe Gen4 para plataformas corporativas robustas.",
     "vps_d_name": "Sharon cPD",
     "vps_d_desc": "250GB NVMe Gen4 topo de linha com máxima vazão de I/O."
+  },
+  "email_modal": {
+    "title": "Configuração de Domínio para E-mail",
+    "subtitle": "Escolha como deseja associar o seu domínio às suas caixas de e-mail corporativo:",
+    "opt_register_title": "Registrar Novo Domínio",
+    "opt_register_desc": "Ainda não possuo domínio. Quero verificar e registrar um novo (.co.mz, .com, etc.).",
+    "opt_transfer_title": "Transferir Domínio",
+    "opt_transfer_desc": "Já possuo domínio em outro registrador e desejo transferir a gestão para a ZEDECK.",
+    "opt_own_title": "Usar Meu Domínio Atual",
+    "opt_own_desc": "Manter o domínio onde está e apenas apontar as entradas MX/DNS para as caixas de e-mail."
   },
   "migration": {
     "tag": "MIGRAÇÃO ZERO DOWNTIME",
@@ -330,5 +351,12 @@
     "signature": "Made by Zedeck's IT.",
     "terms": "Termos",
     "privacy": "Políticas"
+  },
+  "email_modal": {
+    "title": "Configuração de Domínio",
+    "subtitle": "Escolha como deseja associar o seu domínio ao e-mail corporativo:",
+    "opt_register_title": "Registrar Novo",
+    "opt_transfer_title": "Transferir",
+    "opt_own_title": "Usar Existente"
   }
 }

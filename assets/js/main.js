@@ -6,6 +6,7 @@
 import { I18nManager } from './components/i18n.js';
 import { initDomainSearch } from './components/domain.js';
 import { initPricingTabs, switchPricingTab } from './components/pricing.js';
+import { initEmailDomainModal } from './components/email-modal.js';
 import { initScrollReel } from './components/scroll-reel.js';
 import { initFAQ } from './components/faq.js';
 
@@ -18,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. Initialize Official Pricing Plans & Segmented Control
   initPricingTabs();
+
+  // 4. Initialize Email Domain Verification Modal & WhatsApp Flow
+  initEmailDomainModal();
 
   // 4. Initialize Scroll Reel Social Proof Widget
   initScrollReel();

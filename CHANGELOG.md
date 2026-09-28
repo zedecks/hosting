@@ -16,6 +16,18 @@ Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
   - Botão WhatsApp com animação de pulso verde (`.btn-whatsapp-pulse`).
   - Botão "Ver Planos" com ícone SVG isométrico 3D de serviços em cubo.
   - Botões circulares exclusivos para contato direto por E-mail (`mailto:suporte@zedecks.com`) e Telefone (`tel:+258877703308`).
+- **Catálogo de Planos de E-mail Corporativo Profissional em MZN & Modal Interativo de Domínio**:
+  - Implementada a nova aba **"E-mail Corporativo"** no Segmented Control de Preços com 4 pacotes escaláveis:
+    - **Individual**: 200,00 MT/mês (1 Conta @seudominio.com, 5 GB NVMe, Webmail & App Mobile, IMAP/SMTP).
+    - **PME Starter**: 500,00 MT/mês (5 Contas, 25 GB NVMe, Aliases, Autoresponder, Assinatura HTML).
+    - **PME Pro (Mais Popular)**: 2.000,00 MT/mês (20 Contas, 75 GB NVMe, Calendário & Contatos sync, Painel Admin).
+    - **Enterprise Custom**: Sob Consulta (Volume sob medida com X caixas e Y valor por conta, 100 GB NVMe Gen4, DKIM/SPF/DMARC, Backup Diário e Suporte Prioritário 24/7).
+  - **Pop-up Modal Interativo de Domínio para E-mails**:
+    - Ao clicar em "Contratar Agora", abre-se um modal moderno com 3 opções claras de domínio:
+      1. *Registrar Novo Domínio* (com verificação ao vivo ICANN/DoH e botão direto de pedido no WhatsApp).
+      2. *Transferir Domínio Existente* (com captura do domínio e encaminhamento para o WhatsApp).
+      3. *Usar Meu Domínio Atual* (para configuração de registros MX/DNS com encaminhamento para o WhatsApp).
+  - Conectado o card de soluções **"E-mail Corporativo Profissional"** diretamente para a âncora `#pricing-email`.
 - **Glassmorphism com Brilho e Efeito Neon em Todas as Badges**:
   - Atualização de `.section-tag`, `.badge-tag` e `.tech-subgrid-tag` com gradientes translúcidos, bordas com brilho e ícones SVG temáticos em todas as seções.
 
