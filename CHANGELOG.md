@@ -2,40 +2,29 @@
 
 Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
-## 🚀 [v0.6.0] - 2026-09-28 — Promoção para Raiz do Repositório, Verificação Autorizada ICANN/DNS e Otimização da Landing Page
+## 🚀 [v0.6.1] - 2026-09-29 — Soluções WHMCS & Formatação MZN
 
 ### ✨ Adicionado
-- **Migração e Promoção do Site para a Raiz (`/`)**:
-  - A nova versão moderna (anteriormente em `new-age/`) foi promovida a versão principal e oficial na raiz do repositório (`hosting/`).
-  - O antigo site legado multipágina foi isolado na pasta dedicada `hosting/legacy/` para servir como laboratório de referência e histórico.
-- **Verificação de Domínios em Tempo Real com ICANN / DNS-over-HTTPS (DoH)**:
-  - Mecanismo de busca no Hero conectado diretamente às APIs autoritativas do Cloudflare DoH (`cloudflare-dns.com`) e Google Public DoH (`dns.google`), com fallback para RDAP.
-  - Eliminação de falsos positivos em todas as extensões suportadas, incluindo TLDs compostos (`.co.mz`, `.com.br`, etc.).
-- **CTA e Seção de Suporte Renovados com Ilustração do Legado**:
-  - Adicionado o gráfico vetorial `call-center-support2.svg` com feixe de luz traseiro (`.final-cta-img-glow`).
-  - Botão WhatsApp com animação de pulso verde (`.btn-whatsapp-pulse`).
-  - Botão "Ver Planos" com ícone SVG isométrico 3D de serviços em cubo.
-  - Botões circulares exclusivos para contato direto por E-mail (`mailto:suporte@zedecks.com`) e Telefone (`tel:+258877703308`).
-- **Catálogo de Planos de E-mail Corporativo Profissional em MZN & Modal Interativo de Domínio**:
-  - Implementada a nova aba **"E-mail Corporativo"** no Segmented Control de Preços com 4 pacotes escaláveis:
-    - **Individual**: 200,00 MT/mês (1 Conta @seudominio.com, 5 GB NVMe, Webmail & App Mobile, IMAP/SMTP).
-    - **PME Starter**: 500,00 MT/mês (5 Contas, 25 GB NVMe, Aliases, Autoresponder, Assinatura HTML).
-    - **PME Pro (Mais Popular)**: 2.000,00 MT/mês (20 Contas, 75 GB NVMe, Calendário & Contatos sync, Painel Admin).
-    - **Enterprise Custom**: Sob Consulta (Volume sob medida com X caixas e Y valor por conta, 100 GB NVMe Gen4, DKIM/SPF/DMARC, Backup Diário e Suporte Prioritário 24/7).
-  - **Pop-up Modal Interativo de Domínio para E-mails**:
-    - Ao clicar em "Contratar Agora", abre-se um modal moderno com 3 opções claras de domínio:
-      1. *Registrar Novo Domínio* (com verificação ao vivo ICANN/DoH e botão direto de pedido no WhatsApp).
-      2. *Transferir Domínio Existente* (com captura do domínio e encaminhamento para o WhatsApp).
-      3. *Usar Meu Domínio Atual* (para configuração de registros MX/DNS com encaminhamento para o WhatsApp).
-  - Conectado o card de soluções **"E-mail Corporativo Profissional"** diretamente para a âncora `#pricing-email`.
-- **Glassmorphism com Brilho e Efeito Neon em Todas as Badges**:
-  - Atualização de `.section-tag`, `.badge-tag` e `.tech-subgrid-tag` com gradientes translúcidos, bordas com brilho e ícones SVG temáticos em todas as seções.
+- **Página de Serviços WHMCS (`whmcs-services.html`)**: Catálogo com 6 serviços profissionais em grade 3x3 no mesmo padrão visual do site.
+- **Seletor de Opções Interativo**: Alternância entre combo e serviços individuais com atualização de preço e lista de recursos.
+- **Integração com WhatsApp**: Atendimento direto com mensagem pré-formatada em Meticais (MT).
+- **Internacionalização (PT / EN)**: Suporte completo a múltiplos idiomas.
 
 ### 🔄 Alterado
-- **Header Flutuante com Fundo Desfocado (Backdrop Blur)**:
-  - Fundo do cabeçalho estendido para 100% da largura (`width: 100%; top: 0; left: 0`) com `background: rgba(6, 9, 17, 0.72)` e `backdrop-filter: blur(20px)`, ocultando com desfoque total qualquer conteúdo que passe por trás ao rolar a página.
-- **Roteamento Inteligente de Transferência de Domínio**:
-  - Todos os botões e links de "Transferir Domínio" no header e rodapé agora direcionam suavemente para o mecanismo de busca e verificação no `#hero`.
+- **Padronização de Preços**: Todos os valores exibidos no formato oficial `X XXX,XX MT`.
+
+---
+
+## 🚀 [v0.6.0] - 2026-09-28 — Lançamento Oficial na Raiz & E-mail Corporativo
+
+### ✨ Adicionado
+- **Migração para a Raiz (`/`)**: Estrutura promovida a versão principal e legado arquivado em `legacy/`.
+- **Verificação de Domínios em Tempo Real**: Consulta autoritativa via DNS-over-HTTPS (Cloudflare / Google DoH).
+- **Planos de E-mail Corporativo**: Nova aba com 4 pacotes escaláveis e modal de domínio integrado ao WhatsApp.
+- **Novo Bloco de Suporte & CTA**: Ilustrações vetoriais e canais diretos de atendimento.
+
+### 🔄 Alterado
+- **Navegação & Header**: Fundo com desfoque de 20px (backdrop blur) e roteamento suave para todas as âncoras.
 - **Integração Direta com WHMCS para Tabela de Domínios**:
   - Links de "Preços de Domínios" no menu e no rodapé apontando diretamente para o portal oficial de clientes do WHMCS.
 - **Correção Tipográfica em Seções**:

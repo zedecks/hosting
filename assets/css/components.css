@@ -3666,6 +3666,729 @@
   }
 }
 
+/* ==========================================================================
+   WHMCS SERVICES PAGE STYLES (Dogma v0.3.0)
+   ========================================================================== */
+.whmcs-hero-section {
+  padding-top: calc(var(--header-height) + var(--space-12));
+  padding-bottom: var(--space-12);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.whmcs-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.35rem 1rem;
+  background: rgba(0, 194, 255, 0.08);
+  border: 1px solid rgba(0, 194, 255, 0.25);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+}
+
+.whmcs-hero-title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  max-width: 860px;
+  margin: 0 auto var(--space-4);
+}
+
+.whmcs-hero-subtitle {
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  color: var(--color-text-secondary);
+  max-width: 680px;
+  margin: 0 auto var(--space-8);
+  line-height: 1.6;
+}
+
+.whmcs-hero-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-8);
+  background: rgba(14, 20, 36, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  backdrop-filter: var(--backdrop-blur);
+  margin-top: var(--space-2);
+}
+
+.whmcs-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.whmcs-stat-number {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.whmcs-stat-label {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.whmcs-stat-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* WHMCS Services Grid System: 3 Top + 3 Bottom (Equal Size & Height) */
+.whmcs-services-section {
+  padding: var(--space-12) 0;
+  background: radial-gradient(circle at 50% 10%, rgba(0, 194, 255, 0.05) 0%, transparent 60%);
+}
+
+.pricing-grid.whmcs-grid-3x3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .pricing-grid.whmcs-grid-3x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: var(--space-8) var(--space-6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-name {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
+  min-height: 2.8rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.3;
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-desc {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  min-height: 3.6rem;
+  margin-bottom: var(--space-4);
+}
+
+.pricing-grid.whmcs-grid-3x3 .whmcs-combo-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: var(--space-4);
+}
+
+.pricing-grid.whmcs-grid-3x3 .whmcs-combo-opt {
+  padding: 0.35rem 0.2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.pricing-grid.whmcs-grid-3x3 .whmcs-combo-opt:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pricing-grid.whmcs-grid-3x3 .whmcs-combo-opt.active {
+  background: var(--color-primary);
+  color: #050b14;
+  font-weight: 700;
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: var(--space-2);
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  min-height: 2.4rem;
+}
+
+.pricing-grid.whmcs-grid-3x3 .price-currency {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.pricing-grid.whmcs-grid-3x3 .price-val {
+  font-family: var(--font-family-heading);
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.pricing-grid.whmcs-grid-3x3 .price-period {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex-grow: 1;
+  margin-bottom: var(--space-8);
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-feature-item strong {
+  color: #ffffff;
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-feature-item svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-footer {
+  margin-top: auto;
+}
+
+.pricing-grid.whmcs-grid-3x3 .btn-whmcs-hire {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.pricing-grid.whmcs-grid-3x3 .btn-whmcs-hire:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-card.popular .btn-whmcs-hire {
+  background: var(--color-primary);
+  color: #050b14;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0, 194, 255, 0.35);
+}
+
+.pricing-grid.whmcs-grid-3x3 .plan-card.popular .btn-whmcs-hire:hover {
+  background: #38bdf8;
+  box-shadow: 0 6px 20px rgba(0, 194, 255, 0.5);
+}
+
+.whmcs-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(13, 18, 32, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: var(--space-7);
+  backdrop-filter: var(--backdrop-blur);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.whmcs-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 194, 255, 0.3);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.7), 0 0 24px rgba(0, 194, 255, 0.1);
+  background: rgba(16, 23, 42, 0.9);
+}
+
+.whmcs-card.featured {
+  border-color: rgba(0, 194, 255, 0.35);
+  background: linear-gradient(180deg, rgba(14, 22, 42, 0.9) 0%, rgba(10, 16, 32, 0.8) 100%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 194, 255, 0.12);
+}
+
+.whmcs-card-header {
+  margin-bottom: var(--space-5);
+}
+
+.whmcs-card-badge {
+  display: inline-block;
+  font-family: var(--font-family-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: var(--space-3);
+}
+
+.whmcs-card-badge.primary {
+  background: rgba(0, 194, 255, 0.15);
+  color: #38BDF8;
+  border-color: rgba(0, 194, 255, 0.35);
+}
+
+.whmcs-card-badge.special {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.whmcs-card-title {
+  font-family: var(--font-family-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.whmcs-card-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0 0 var(--space-4) 0;
+  min-height: 48px;
+}
+
+.whmcs-pricing-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+.whmcs-price-primary {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.whmcs-currency {
+  font-family: var(--font-family-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.whmcs-amount {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.whmcs-cents {
+  font-family: var(--font-family-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.whmcs-tag-usd {
+  font-size: 0.72rem;
+  color: #64748b;
+  margin-left: 4px;
+}
+
+.whmcs-fee-type {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+/* WHMCS Interactive Sub-Service Selector */
+.whmcs-combo-selector {
+  display: flex;
+  background: rgba(10, 16, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+  margin-bottom: var(--space-4);
+}
+
+.whmcs-combo-opt {
+  flex: 1;
+  padding: 0.45rem 0.35rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-family-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.whmcs-combo-opt:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.whmcs-combo-opt.active {
+  background: rgba(0, 194, 255, 0.2);
+  color: #38BDF8;
+  border: 1px solid rgba(0, 194, 255, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 194, 255, 0.15);
+}
+
+/* Sub-Services Inside Card */
+.whmcs-sub-services {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.whmcs-sub-item {
+  background: rgba(0, 194, 255, 0.04);
+  border: 1px dashed rgba(0, 194, 255, 0.2);
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+}
+
+.whmcs-sub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.whmcs-sub-title {
+  font-family: var(--font-family-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.whmcs-sub-price {
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #38BDF8;
+}
+
+.whmcs-sub-price small {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.whmcs-sub-desc {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Feature List */
+.whmcs-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-6) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex-grow: 1;
+}
+
+.whmcs-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.whmcs-feature-list svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Hire Button */
+.btn-whmcs-hire {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 194, 255, 0.12);
+  border: 1px solid rgba(0, 194, 255, 0.35);
+  color: #ffffff;
+  border-radius: 12px;
+  font-family: var(--font-family-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-whmcs-hire:hover {
+  background: var(--color-primary);
+  color: #050b14;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 16px rgba(0, 194, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+.whmcs-card.featured .btn-whmcs-hire {
+  background: var(--color-primary);
+  color: #050b14;
+  border: none;
+}
+
+.whmcs-card.featured .btn-whmcs-hire:hover {
+  background: #38BDF8;
+}
+
+/* Workflow Section */
+.whmcs-workflow-section {
+  padding: var(--space-12) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.whmcs-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .whmcs-workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .whmcs-workflow-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.whmcs-step-card {
+  background: rgba(13, 18, 32, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: var(--space-5);
+  position: relative;
+}
+
+.whmcs-step-num {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: rgba(0, 194, 255, 0.4);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.whmcs-step-card h4 {
+  font-family: var(--font-family-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.whmcs-step-card p {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* FAQ & Banner */
+.whmcs-faq-section {
+  padding: var(--space-12) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.whmcs-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  max-width: 880px;
+  margin: 0 auto var(--space-10);
+}
+
+@media (min-width: 768px) {
+  .whmcs-faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.whmcs-faq-item {
+  background: rgba(13, 18, 32, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: var(--space-5);
+}
+
+.whmcs-faq-item h4 {
+  font-family: var(--font-family-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.whmcs-faq-item p {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.whmcs-cta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-8);
+  background: linear-gradient(135deg, rgba(0, 194, 255, 0.12) 0%, rgba(13, 20, 38, 0.85) 100%);
+  border: 1px solid rgba(0, 194, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  flex-wrap: wrap;
+}
+
+.whmcs-cta-content h3 {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.whmcs-cta-content p {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 540px;
+}
+
+.btn-whmcs-cta-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1.4rem;
+  background: #25D366;
+  color: #050b14;
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-heading);
+  font-size: 0.875rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-whmcs-cta-banner:hover {
+  background: #1eb956;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .whmcs-hero-stats {
+    flex-direction: column;
+    gap: var(--space-3);
+    border-radius: 16px;
+    padding: var(--space-4);
+  }
+  .whmcs-stat-divider {
+    display: none;
+  }
+  .whmcs-cta-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .btn-whmcs-cta-banner {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 
 
 
