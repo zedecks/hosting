@@ -180,36 +180,55 @@
     <!-- ==================== HERO SECTION WHMCS ==================== -->
     <section class="whmcs-hero-section">
       <div class="container">
-        <div class="whmcs-hero-badge">
-          <span class="pulse-dot"></span>
-          <span data-i18n="whmcs.hero_badge">Engenharia Oficial & Especializada WHMCS</span>
-        </div>
+        <div class="whmcs-hero-inner">
 
-        <h1 class="whmcs-hero-title" data-i18n="whmcs.hero_title">
-          Soluções e Serviços Profissionais para <span class="highlight-cyan">WHMCS</span>
-        </h1>
+          <!-- LEFT: Text Column -->
+          <div class="whmcs-hero-content">
+            <div class="whmcs-hero-badge">
+              <span class="pulse-dot"></span>
+              <span data-i18n="whmcs.hero_badge">Engenharia Oficial & Especializada WHMCS</span>
+            </div>
 
-        <p class="whmcs-hero-subtitle" data-i18n="whmcs.hero_subtitle">
-          Implementação, atualizações seguras, migração sem interrupções e personalização completa da plataforma líder
-          mundial de automação de hospedagem.
-        </p>
+            <h1 class="whmcs-hero-title" data-i18n="whmcs.hero_title">
+              Soluções e Serviços Profissionais para <span class="highlight-cyan">WHMCS</span>
+            </h1>
 
-        <!-- Metrics pill bar -->
-        <div class="whmcs-hero-stats">
-          <div class="whmcs-stat-item">
-            <span class="whmcs-stat-number">100%</span>
-            <span class="whmcs-stat-label" data-i18n="whmcs.stat_uptime">Zero Downtime em Migrações</span>
+            <p class="whmcs-hero-subtitle" data-i18n="whmcs.hero_subtitle">
+              Implementação, atualizações seguras, migração sem interrupções e personalização completa da plataforma
+              líder mundial de automação de hospedagem.
+            </p>
+
+            <!-- Metrics pill bar -->
+            <div class="whmcs-hero-stats">
+              <div class="whmcs-stat-item">
+                <span class="whmcs-stat-number">100%</span>
+                <span class="whmcs-stat-label" data-i18n="whmcs.stat_uptime">Zero Downtime</span>
+              </div>
+              <div class="whmcs-stat-divider"></div>
+              <div class="whmcs-stat-item">
+                <span class="whmcs-stat-number">&lt; 24h</span>
+                <span class="whmcs-stat-label" data-i18n="whmcs.stat_sla">Ativação Média</span>
+              </div>
+              <div class="whmcs-stat-divider"></div>
+              <div class="whmcs-stat-item">
+                <span class="whmcs-stat-number">MZN</span>
+                <span class="whmcs-stat-label" data-i18n="whmcs.stat_currency">Pagamento Local</span>
+              </div>
+            </div>
           </div>
-          <div class="whmcs-stat-divider"></div>
-          <div class="whmcs-stat-item">
-            <span class="whmcs-stat-number">&lt; 24h</span>
-            <span class="whmcs-stat-label" data-i18n="whmcs.stat_sla">Tempo Médio de Ativação</span>
+
+          <!-- RIGHT: Visual Column -->
+          <div class="whmcs-hero-visual">
+            <!-- WHMCS Logo badge -->
+            <div class="whmcs-logo-badge">
+              <img src="./assets/img/whmcs-logo.png" alt="WHMCS Logo" class="whmcs-logo-img">
+            </div>
+            <!-- Dashboard mockup -->
+            <div class="whmcs-dashboard-wrap">
+              <img src="./assets/img/whmcs-dashboard.png" alt="WHMCS Dashboard" class="whmcs-dashboard-img">
+            </div>
           </div>
-          <div class="whmcs-stat-divider"></div>
-          <div class="whmcs-stat-item">
-            <span class="whmcs-stat-number">MZN</span>
-            <span class="whmcs-stat-label" data-i18n="whmcs.stat_currency">Pagamento Local Facilitado</span>
-          </div>
+
         </div>
       </div>
     </section>
@@ -233,10 +252,8 @@
           <div class="plan-card popular" id="whmcsComboCard">
             <div class="plan-badge" id="whmcsComboBadge" data-i18n="whmcs.badge_bundle">Combo Completo</div>
             <div class="plan-header">
-              <span class="plan-name" id="whmcsComboTitle" data-i18n="whmcs.combo_title">Installation &amp;
-                Configuration</span>
-              <p class="plan-desc" id="whmcsComboDesc" data-i18n="whmcs.combo_desc">Instalação e configuração completa
-                para seu WHMCS entrar em produção imediatamente.</p>
+              <span class="plan-name" id="whmcsComboTitle" data-i18n="whmcs.combo_title">Installation &amp; Configuration</span>
+              <p class="plan-desc" id="whmcsComboDesc" data-i18n="whmcs.combo_desc">Instalação e configuração completa para seu WHMCS entrar em produção imediatamente.</p>
 
               <!-- Interactive Sub-service Option Selector -->
               <div class="whmcs-combo-selector" role="group" aria-label="Opções de Instalação e Configuração">
@@ -263,40 +280,26 @@
                 </svg>
                 <span data-i18n="whmcs.card_install_f1">Instalação do Core WHMCS &amp; Validação de Requisitos</span>
               </div>
-              <div class="plan-feature-item feat-install">
+              <div class="plan-feature-item feat-install feat-config">
                 <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 <span data-i18n="whmcs.card_install_f2">Configuração das Tarefas Crons Diárias &amp; Automação</span>
               </div>
-              <div class="plan-feature-item feat-config">
+              <div class="plan-feature-item feat-install feat-config">
                 <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 <span data-i18n="whmcs.card_install_f3">Conexão com Servidores cPanel / WHM</span>
               </div>
-              <div class="plan-feature-item feat-config">
+              <div class="plan-feature-item feat-install feat-config">
                 <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span data-i18n="whmcs.card_install_f4">Parametrização de até 6 Produtos de Hospedagem</span>
-              </div>
-              <div class="plan-feature-item feat-config">
-                <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span data-i18n="whmcs.card_install_f5">Configuração de TLDs de Domínio (.mz, .com, .co.mz)</span>
-              </div>
-              <div class="plan-feature-item feat-config">
-                <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span data-i18n="whmcs.card_install_f6">Departamentos de Suporte, Email Piping &amp; Gateways</span>
+                <span data-i18n="whmcs.card_install_f4">Departamentos de Suporte, Email Piping &amp; Gateways</span>
               </div>
             </div>
 
@@ -520,16 +523,15 @@
             </div>
           </div>
 
-          <!-- Card 6: Módulos de Pagamento Locais (MZ) -->
+          <!-- Card 6: Branding Customization (Sub-consulta) -->
           <div class="plan-card">
             <div class="plan-header">
-              <span class="plan-name" data-i18n="whmcs.modules_title">Módulos de Pagamento</span>
-              <p class="plan-desc" data-i18n="whmcs.modules_desc">Integração do WHMCS com carteiras móveis e bancos
-                moçambicanos para recebimentos e baixas automáticas.</p>
+              <span class="plan-name" data-i18n="whmcs.branding_title">Branding Customization</span>
+              <p class="plan-desc" data-i18n="whmcs.branding_desc">Personalização visual completa do WHMCS — logótipo, cores, tipografia e tema alinhados à sua marca.</p>
 
               <div class="plan-price">
-                <span class="price-val" data-i18n="whmcs.custom_quote">Sob Medida</span>
-                <span class="price-period" data-i18n="whmcs.custom_quote">Sob Consulta / Proposta</span>
+                <span class="price-val" data-i18n="whmcs.custom_quote">Sob Consulta</span>
+                <span class="price-period" data-i18n="whmcs.custom_period">Proposta Personalizada</span>
               </div>
             </div>
 
@@ -539,35 +541,35 @@
                   stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span data-i18n="whmcs.card_modules_f1">Integração Oficial M-Pesa API (Vodacom)</span>
+                <span data-i18n="whmcs.card_branding_f1">Logótipo, Paleta de Cores &amp; Tipografia Customizada</span>
               </div>
               <div class="plan-feature-item">
                 <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span data-i18n="whmcs.card_modules_f2">Integração Oficial E-Mola API (Movitel)</span>
+                <span data-i18n="whmcs.card_branding_f2">Tema da Área do Cliente Personalizado</span>
               </div>
               <div class="plan-feature-item">
                 <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span data-i18n="whmcs.card_modules_f3">Baixa Automática de Faturas &amp; Ativação</span>
+                <span data-i18n="whmcs.card_branding_f3">Identidade Visual Consistente em Emails &amp; Faturas</span>
               </div>
               <div class="plan-feature-item">
                 <svg class="feat-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span data-i18n="whmcs.card_modules_f4">Suporte &amp; Atualizações Contínuas de Segurança</span>
+                <span data-i18n="whmcs.card_branding_f4">Entrega com Ficheiros Fonte &amp; Guia de Estilo</span>
               </div>
             </div>
 
             <div class="plan-footer">
               <button type="button" class="btn-plan-hire btn-whmcs-hire"
-                data-service="Módulos de Pagamento Locais Moçambique (Sob Medida)" data-i18n="whmcs.btn_hire_modules">
-                Consultar Módulos Locais
+                data-service="Branding Customization WHMCS (Sob Consulta)" data-i18n="whmcs.btn_hire_branding">
+                Solicitar Proposta de Branding
               </button>
             </div>
           </div>
