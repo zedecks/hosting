@@ -2,6 +2,23 @@
 
 Todas as alterações notáveis deste projeto são documentadas neste ficheiro.
 
+## 🚀 [v0.6.2] - 2026-09-30 — Padronização Visual & Uniformidade dos Cards WHMCS com o Index
+
+### 🔄 Alterado
+- **Unificação Estética dos Cards de Planos (`whmcs-services.html`)**:
+  - Reutilização estrita da estrutura e tokens do componente nativo `.plan-card` do `index.html`.
+  - Remoção de classes e overrides CSS conflitantes (`.btn-whmcs-hire` substituído por `.btn-plan-hire` e `.btn-plan-hire.primary`).
+  - Alinhamento da tipografia e do container de preço do card *Branding Customization* ao modelo corporativo do plano *Enterprise Custom* ("Sob Consulta").
+- **Posicionamento do Seletor Interativo de Combo (Card 1)**:
+  - Movido para fora do `.plan-header` e posicionado entre o cabeçalho e a lista de recursos, preservando alinhamento simétrico da grid.
+
+### 🧹 Limpeza & Otimização (Clean Code)
+- **Eliminação de CSS Redundante (`components.css`)**:
+  - Removidos mais de 100 linhas de estilos e seletores duplicados que sobrepunham o sistema de cards base.
+  - Grade 3x3 com comportamento `align-items: stretch` herdando naturalmente a altura e ritmo vertical padrão.
+
+---
+
 ## 🚀 [v0.6.1] - 2026-09-29 — Soluções WHMCS & Formatação MZN
 
 ### ✨ Adicionado

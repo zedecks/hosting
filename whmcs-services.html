@@ -255,21 +255,21 @@
               <span class="plan-name" id="whmcsComboTitle" data-i18n="whmcs.combo_title">Installation &amp; Configuration</span>
               <p class="plan-desc" id="whmcsComboDesc" data-i18n="whmcs.combo_desc">Instalação e configuração completa para seu WHMCS entrar em produção imediatamente.</p>
 
-              <!-- Interactive Sub-service Option Selector -->
-              <div class="whmcs-combo-selector" role="group" aria-label="Opções de Instalação e Configuração">
-                <button type="button" class="whmcs-combo-opt active" data-combo-type="both"
-                  data-i18n="whmcs.combo_opt_both">Instalação &amp; Configuração</button>
-                <button type="button" class="whmcs-combo-opt" data-combo-type="install"
-                  data-i18n="whmcs.combo_opt_install">Apenas Instalação</button>
-                <button type="button" class="whmcs-combo-opt" data-combo-type="config"
-                  data-i18n="whmcs.combo_opt_config">Apenas Configuração</button>
-              </div>
-
               <div class="plan-price">
                 <span class="price-currency" data-i18n="pricing.currency">MT</span>
                 <span class="price-val" id="whmcsComboPriceVal">3 800,00</span>
                 <span class="price-period" id="whmcsComboPricePeriod" data-i18n="whmcs.one_time">Pagamento Único</span>
               </div>
+            </div>
+
+            <!-- Interactive Sub-service Option Selector (outside header) -->
+            <div class="whmcs-combo-selector" role="group" aria-label="Opções de Instalação e Configuração">
+              <button type="button" class="whmcs-combo-opt active" data-combo-type="both"
+                data-i18n="whmcs.combo_opt_both">Instalação &amp; Configuração</button>
+              <button type="button" class="whmcs-combo-opt" data-combo-type="install"
+                data-i18n="whmcs.combo_opt_install">Apenas Instalação</button>
+              <button type="button" class="whmcs-combo-opt" data-combo-type="config"
+                data-i18n="whmcs.combo_opt_config">Apenas Configuração</button>
             </div>
 
             <div class="plan-features" id="whmcsComboFeatures">
@@ -304,7 +304,7 @@
             </div>
 
             <div class="plan-footer">
-              <button type="button" class="btn-plan-hire btn-whmcs-hire" id="whmcsComboBtn"
+              <button type="button" class="btn-plan-hire primary" id="whmcsComboBtn"
                 data-service="Installation and Configuration Combo (MT 3 800,00)" data-i18n="whmcs.btn_hire_combo">
                 Contratar Instalação &amp; Configuração
               </button>
@@ -357,7 +357,7 @@
             </div>
 
             <div class="plan-footer">
-              <button type="button" class="btn-plan-hire btn-whmcs-hire" data-service="Upgrade Service (MT 3 200,00)"
+              <button type="button" class="btn-plan-hire" data-service="Upgrade Service (MT 3 200,00)"
                 data-i18n="whmcs.btn_hire_upgrade">
                 Contratar Upgrade
               </button>
@@ -410,7 +410,7 @@
             </div>
 
             <div class="plan-footer">
-              <button type="button" class="btn-plan-hire btn-whmcs-hire"
+              <button type="button" class="btn-plan-hire"
                 data-service="Integration Service (MT 2 200,00)" data-i18n="whmcs.btn_hire_integration">
                 Contratar Integração
               </button>
@@ -463,7 +463,7 @@
             </div>
 
             <div class="plan-footer">
-              <button type="button" class="btn-plan-hire btn-whmcs-hire" data-service="Transfer Service (MT 2 500,00)"
+              <button type="button" class="btn-plan-hire" data-service="Transfer Service (MT 2 500,00)"
                 data-i18n="whmcs.btn_hire_transfer">
                 Contratar Transferência
               </button>
@@ -516,7 +516,7 @@
             </div>
 
             <div class="plan-footer">
-              <button type="button" class="btn-plan-hire btn-whmcs-hire"
+              <button type="button" class="btn-plan-hire"
                 data-service="Migration Service (A partir de MT 25 600,00)" data-i18n="whmcs.btn_hire_migration">
                 Solicitar Migração
               </button>
@@ -530,8 +530,7 @@
               <p class="plan-desc" data-i18n="whmcs.branding_desc">Personalização visual completa do WHMCS — logótipo, cores, tipografia e tema alinhados à sua marca.</p>
 
               <div class="plan-price">
-                <span class="price-val" data-i18n="whmcs.custom_quote">Sob Consulta</span>
-                <span class="price-period" data-i18n="whmcs.custom_period">Proposta Personalizada</span>
+                <span class="price-val" style="font-size: 1.6rem;" data-i18n="whmcs.custom_quote">Sob Consulta</span>
               </div>
             </div>
 
@@ -567,7 +566,7 @@
             </div>
 
             <div class="plan-footer">
-              <button type="button" class="btn-plan-hire btn-whmcs-hire"
+              <button type="button" class="btn-plan-hire"
                 data-service="Branding Customization WHMCS (Sob Consulta)" data-i18n="whmcs.btn_hire_branding">
                 Solicitar Proposta de Branding
               </button>
