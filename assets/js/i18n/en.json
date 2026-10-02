@@ -116,9 +116,9 @@
     "stat_tier_val": "Tier-III+"
   },
   "pricing": {
-    "tag": "Transparent Pricing in MZN",
+    "tag": "Transparent Pricing",
     "title": "Invest in the right infrastructure to scale your digital presence",
-    "subtitle": "Transparent pricing in Mozambican Meticais (MT) with instant provisioning, official cPanel®, and zero hidden fees.",
+    "subtitle": "Transparent pricing with instant provisioning, official cPanel®, and zero hidden fees.",
     "tab_web": "Web Hosting",
     "tab_wp": "WordPress Turbo",
     "tab_reseller": "WHM Reseller",
@@ -359,7 +359,7 @@
     "stat_currency": "Seamless Local MZN Payments",
     "tag_catalog": "SERVICES CATALOG",
     "services_title": "Select the ideal service for your operation",
-    "services_subtitle": "Official prices in Meticais (MT) with senior cloud engineering support and delivery guarantee.",
+    "services_subtitle": "Official pricing with senior cloud engineering support and guaranteed delivery.",
     "badge_bundle": "Complete Bundle",
     "combo_title": "Installation and Configuration",
     "combo_desc": "End-to-end full installation and expert configuration to get your WHMCS production-ready immediately.",

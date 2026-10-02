@@ -452,6 +452,56 @@
   font-size: 0.65rem;
 }
 
+/* --- Pricing Controls Mobile (Tabs & Currency Switcher) --- */
+.pricing-tabs-wrapper {
+  margin: var(--space-6) 0 var(--space-4) 0;
+  padding: 0 var(--space-2);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-tabs {
+  gap: 4px;
+  padding: 5px;
+  max-width: 100%;
+  display: inline-flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-radius: var(--radius-full);
+}
+
+.pricing-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.pricing-tab-btn {
+  padding: 0.55rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+}
+
+.pricing-currency-wrapper {
+  margin: 0 0 var(--space-8) 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.currency-switcher {
+  padding: 4px 6px;
+  border-radius: var(--radius-full);
+}
+
+.currency-toggle-btn {
+  font-size: 0.78rem;
+  padding: 0.4rem 0.85rem;
+}
+
 /* --- Footer Mobile --- */
 .footer-grid {
   grid-template-columns: 1fr;
@@ -662,24 +712,6 @@
 
   .infra-metric-val {
     font-size: 1.25rem;
-  }
-
-  /* Pricing Section Mobile Adjustments */
-  .pricing-tabs-wrapper {
-    margin: var(--space-6) 0 var(--space-8) 0;
-    padding: 0 var(--space-2);
-  }
-
-  .pricing-tabs {
-    width: 100%;
-    justify-content: flex-start;
-    padding: 4px;
-    gap: 4px;
-  }
-
-  .pricing-tab-btn {
-    padding: 0.55rem 0.95rem;
-    font-size: 0.78rem;
   }
 
   .plan-card {

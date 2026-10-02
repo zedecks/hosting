@@ -17,8 +17,6 @@
     "services_dev": "Desenvolvimento Web",
     "services_email": "E-mail Corporativo",
     "tools": "Tools",
-    "tools_tech": "Ecossistema & cPanel",
-    "tools_softaculous": "Softaculous (400+ Apps)",
     "tools_whois": "Whois",
     "tools_abuse": "Abuse / IP Checker",
     "pricing": "Preços",
@@ -116,9 +114,9 @@
     "stat_tier_val": "Tier-III+"
   },
   "pricing": {
-    "tag": "Planos Transparentes em MZN",
+    "tag": "Planos Transparentes",
     "title": "Invista na infraestrutura certa para acelerar o seu negócio",
-    "subtitle": "Valores claros em Meticais (MT) com ativação imediata, cPanel® oficial e sem custos ocultos.",
+    "subtitle": "Valores claros com ativação imediata, cPanel® oficial e sem custos ocultos.",
     "tab_web": "Hospedagem Web",
     "tab_wp": "WordPress Turbo",
     "tab_reseller": "Revenda WHM",
