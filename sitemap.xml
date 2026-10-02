@@ -3,10 +3,18 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://host.zedecks.com/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://host.zedecks.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://host.zedecks.com/" />
+  </url>
+  <url>
+    <loc>https://host.zedecks.com/whmcs-services.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://host.zedecks.com/whmcs-services.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://host.zedecks.com/whmcs-services.html" />
   </url>
 </urlset>
