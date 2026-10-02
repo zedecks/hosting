@@ -14,19 +14,23 @@
   
   <link rel="canonical" href="https://host.zedecks.com/">
   
-  <!-- Open Graph / Meta -->
+  <!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ZEDECK Hosting">
   <meta property="og:url" content="https://host.zedecks.com/">
-  <meta property="og:title" content="ZEDECK Hosting — Infraestrutura Web de Alto Desempenho">
-  <meta property="og:description" content="Hospedagem, VPS e Domínios com 99.9% Uptime e suporte especializado.">
-  <meta property="og:image" content="https://host.zedecks.com/assets/img/icone.png">
+  <meta property="og:title" content="ZEDECK Hosting — Domínios, Servidores & Soluções Web de Alto Desempenho">
+  <meta property="og:description" content="Hospedagem Web NVMe PCIe Gen4, Servidores VPS Dedicados, Revenda cPanel e Registo de Domínios com 99.99% Uptime e Anti-DDoS.">
+  <meta property="og:image" content="https://host.zedecks.com/assets/img/og-preview.png">
+  <meta property="og:image:secure_url" content="https://host.zedecks.com/assets/img/og-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="ZEDECK Hosting — Infraestrutura Web de Alta Performance">
 
   <!-- Twitter Meta Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://host.zedecks.com/">
-  <meta name="twitter:title" content="ZEDECK Hosting — Infraestrutura Web de Alto Desempenho">
-  <meta name="twitter:description" content="Hospedagem, Revenda WHM e Domínios com 99.9% Uptime e pagamento em MZN.">
-  <meta name="twitter:image" content="https://host.zedecks.com/assets/img/icone.png">
+  <meta name="twitter:title" content="ZEDECK Hosting — Domínios, Servidores & Soluções Web de Alto Desempenho">
+  <meta name="twitter:description" content="Hospedagem Web NVMe PCIe Gen4, Servidores VPS Dedicados, Revenda cPanel e Registo de Domínios com 99.99% Uptime e Anti-DDoS.">
+  <meta name="twitter:image" content="https://host.zedecks.com/assets/img/og-preview.png">
 
   <!-- Google Fonts: Space Grotesk & Inter (Dogma v0.3.0) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -226,8 +230,6 @@
             <span data-i18n="nav.tools">Tools</span>
           </button>
           <div class="dropdown-menu">
-            <a href="#tecnologias" class="dropdown-item" data-i18n="nav.tools_tech">Ecossistema & cPanel</a>
-            <a href="#tecnologias" class="dropdown-item" data-i18n="nav.tools_softaculous">Softaculous (400+ Apps)</a>
             <a href="#" class="dropdown-item" data-i18n="nav.tools_whois">Whois</a>
             <a href="#" class="dropdown-item" data-i18n="nav.tools_abuse">Abuse / IP Checker</a>
           </div>
@@ -350,8 +352,6 @@
               </span>
             </button>
             <div class="mobile-accordion-content">
-              <a href="#tecnologias" class="mobile-submenu-link" data-i18n="nav.tools_tech">Ecossistema & cPanel</a>
-              <a href="#tecnologias" class="mobile-submenu-link" data-i18n="nav.tools_softaculous">Softaculous (400+ Apps)</a>
               <a href="#" class="mobile-submenu-link" data-i18n="nav.tools_whois">Whois</a>
               <a href="#" class="mobile-submenu-link" data-i18n="nav.tools_abuse">Abuse / IP Checker</a>
             </div>
@@ -833,7 +833,7 @@
           <h2 data-i18n="pricing.title">Invista na infraestrutura certa para acelerar o seu negócio</h2>
         </div>
 
-        <!-- Segmented Control Tabs (1: WordPress Turbo, 2: Hospedagem Web, 3: Revenda WHM, 4: VPS Dedicado - Oculto) -->
+        <!-- Segmented Control Tabs (Plan Categories) -->
         <div class="pricing-tabs-wrapper">
           <div class="pricing-tabs" role="tablist" aria-label="Categorias de Planos">
             <button type="button" class="pricing-tab-btn active" role="tab" aria-selected="true" aria-controls="pricing-panel-wordpress" id="tab-wordpress" data-tab="wordpress" data-i18n="pricing.tab_wp">
@@ -854,6 +854,24 @@
           </div>
         </div>
 
+        <!-- Currency Selector Toggle (Between Plan Selector and Plan Cards) -->
+        <div class="pricing-currency-wrapper">
+          <div class="currency-switcher" role="group" aria-label="Seletor de Moeda">
+            <button type="button" class="currency-toggle-btn active" data-currency="MZN" title="Moeda: Metical Moçambicano (MZN)">
+              <svg class="currency-btn-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32" aria-hidden="true"><title>mzn</title><path fill="currentColor" fill-rule="evenodd" d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16s-7.163 16-16 16m6.5-12.846c0-2.523-1.576-3.948-5.263-4.836v-4.44c1.14.234 2.231.725 3.298 1.496l1.359-2.196a9.5 9.5 0 0 0-4.56-1.776V6h-2.11v1.355c-3.032.234-5.093 1.963-5.093 4.486c0 2.64 1.649 3.925 5.19 4.813v4.58c-1.577-.234-2.886-.935-4.269-2.01L9.5 21.35a11.5 11.5 0 0 0 5.724 2.314V26h2.11v-2.313c3.08-.257 5.166-1.963 5.166-4.533m-7.18-5.327c-1.867-.537-2.327-1.168-2.327-2.15c0-1.027.8-1.845 2.328-1.962zm4.318 5.49c0 1.122-.873 1.893-2.401 2.01v-4.229c1.892.538 2.401 1.168 2.401 2.22z"/></svg>
+              <span>MZN</span>
+            </button>
+            <button type="button" class="currency-toggle-btn" data-currency="USD" title="Currency: US Dollar (USD - PayPal Rate)">
+              <svg class="currency-btn-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32" aria-hidden="true"><title>usd</title><path fill="currentColor" fill-rule="evenodd" d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16s-7.163 16-16 16m6.5-12.846c0-2.523-1.576-3.948-5.263-4.836v-4.44c1.14.234 2.231.725 3.298 1.496l1.359-2.196a9.5 9.5 0 0 0-4.56-1.776V6h-2.11v1.355c-3.032.234-5.093 1.963-5.093 4.486c0 2.64 1.649 3.925 5.19 4.813v4.58c-1.577-.234-2.886-.935-4.269-2.01L9.5 21.35a11.5 11.5 0 0 0 5.724 2.314V26h2.11v-2.313c3.08-.257 5.166-1.963 5.166-4.533m-7.18-5.327c-1.867-.537-2.327-1.168-2.327-2.15c0-1.027.8-1.845 2.328-1.962zm4.318 5.49c0 1.122-.873 1.893-2.401 2.01v-4.229c1.892.538 2.401 1.168 2.401 2.22z"/></svg>
+              <span>USD</span>
+            </button>
+            <button type="button" class="currency-toggle-btn" data-currency="BRL" title="Moeda: Real Brasileiro (BRL)">
+              <svg class="currency-btn-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><title>real</title><path fill="currentColor" d="M7.41 7.2a1.7 1.7 0 0 0-1.7-1.7H2.62v5h1.25V8.9h.84a1.59 1.59 0 0 1 1.55 1.6h1.25a2.82 2.82 0 0 0-.77-1.95a1.71 1.71 0 0 0 .67-1.35m-1.7-.45a.45.45 0 0 1 0 .9H3.87v-.9z"/><path fill="currentColor" d="M8 .5A7.77 7.77 0 0 0 0 8a7.77 7.77 0 0 0 8 7.5A7.77 7.77 0 0 0 16 8A7.77 7.77 0 0 0 8 .5m0 13.75A6.52 6.52 0 0 1 1.25 8A6.52 6.52 0 0 1 8 1.75A6.52 6.52 0 0 1 14.75 8A6.52 6.52 0 0 1 8 14.25"/><path fill="currentColor" d="M13.22 8A1.59 1.59 0 0 0 12 7.38h-2A.34.34 0 0 1 9.69 7h.01a.34.34 0 0 1 .3-.3h1.91a.34.34 0 0 1 .33.28h1.25a1.59 1.59 0 0 0-1.58-1.53h-.32V4.2h-1.22v1.25H10A1.6 1.6 0 0 0 8.44 7a1.55 1.55 0 0 0 .35 1a1.59 1.59 0 0 0 1.21.62h2a.34.34 0 0 1 .34.34V9a.33.33 0 0 1-.33.29h-1.93A.33.33 0 0 1 9.75 9H8.49a1.58 1.58 0 0 0 1.58 1.54h.3v1.26h1.25v-1.26H12A1.58 1.58 0 0 0 13.56 9a1.5 1.5 0 0 0-.34-1"/></svg>
+              <span>BRL</span>
+            </button>
+          </div>
+        </div>
+
         <!-- Tab Panels Container -->
         <div class="pricing-panels">
 
@@ -868,7 +886,7 @@
                   <p class="plan-desc" data-i18n="pricing.wp_starter_desc">Ideal para blogs pessoais e pequenos sites institucionais.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">200,00</span>
+                    <span class="price-val" data-price-mzn="200">200,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -907,7 +925,7 @@
                   <p class="plan-desc" data-i18n="pricing.wp_standard_desc">Perfeito para negócios locais e criadores de conteúdo.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">450,00</span>
+                    <span class="price-val" data-price-mzn="450">450,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -949,7 +967,7 @@
                   <p class="plan-desc" data-i18n="pricing.wp_plus_desc">Máxima potência para e-commerces e portais dinâmicos.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">650,00</span>
+                    <span class="price-val" data-price-mzn="650">650,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -998,7 +1016,7 @@
                   <p class="plan-desc" data-i18n="pricing.web_premium_desc">Entrada profissional com cPanel oficial e recursos dedicados.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">500,00</span>
+                    <span class="price-val" data-price-mzn="500">500,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1037,7 +1055,7 @@
                   <p class="plan-desc" data-i18n="pricing.web_business_desc">O plano mais equilibrado para empresas em crescimento.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">750,00</span>
+                    <span class="price-val" data-price-mzn="750">750,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1075,7 +1093,7 @@
                   <p class="plan-desc" data-i18n="pricing.web_enterprise_desc">Poder ampliado com 50GB NVMe e múltiplos domínios.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">1&nbsp;200,00</span>
+                    <span class="price-val" data-price-mzn="1200">1 200,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1120,7 +1138,7 @@
                   <p class="plan-desc" data-i18n="pricing.reseller_1_desc">Inicie a sua agência de hospedagem com 50GB NVMe.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">800,00</span>
+                    <span class="price-val" data-price-mzn="800">800,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1159,7 +1177,7 @@
                   <p class="plan-desc" data-i18n="pricing.reseller_2_desc">Capacidade expandida com 80GB NVMe para múltiplos clientes.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">1&nbsp;500,00</span>
+                    <span class="price-val" data-price-mzn="1500">1 500,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1197,7 +1215,7 @@
                   <p class="plan-desc" data-i18n="pricing.reseller_3_desc">Alto volume com 100GB NVMe e gestão white-label total.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">3&nbsp;100,00</span>
+                    <span class="price-val" data-price-mzn="3100">3 100,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1242,7 +1260,7 @@
                   <p class="plan-desc" data-i18n="pricing.email_individual_desc">Profissionalize a sua comunicação pessoal com 5GB NVMe e endereço @seudominio.com.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">200,00</span>
+                    <span class="price-val" data-price-mzn="200">200,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1280,7 +1298,7 @@
                   <p class="plan-desc" data-i18n="pricing.email_pme_starter_desc">Ideal para pequenos escritórios com 5 caixas e 25GB NVMe de alto desempenho.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">500,00</span>
+                    <span class="price-val" data-price-mzn="500">500,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1319,7 +1337,7 @@
                   <p class="plan-desc" data-i18n="pricing.email_pme_pro_desc">Produtividade corporativa robusta com 20 contas e amplo armazenamento NVMe.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">2&nbsp;000,00</span>
+                    <span class="price-val" data-price-mzn="2000">2 000,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1400,7 +1418,7 @@
                   <p class="plan-desc" data-i18n="pricing.vps_a_desc">100GB NVMe Gen4, CPU dedicada e controle KVM total.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">2&nbsp;500,00</span>
+                    <span class="price-val" data-price-mzn="2500">2 500,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1439,7 +1457,7 @@
                   <p class="plan-desc" data-i18n="pricing.vps_b_desc">150GB NVMe Gen4 para aplicações de tráfego intenso.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">4&nbsp;500,00</span>
+                    <span class="price-val" data-price-mzn="4500">4 500,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1477,7 +1495,7 @@
                   <p class="plan-desc" data-i18n="pricing.vps_c_desc">200GB NVMe Gen4 para plataformas corporativas robustas.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">8&nbsp;000,00</span>
+                    <span class="price-val" data-price-mzn="8000">8 000,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>
@@ -1515,7 +1533,7 @@
                   <p class="plan-desc" data-i18n="pricing.vps_d_desc">250GB NVMe Gen4 topo de linha com máxima vazão de I/O.</p>
                   <div class="plan-price">
                     <span class="price-currency" data-i18n="pricing.currency">MT</span>
-                    <span class="price-val">10&nbsp;000,00</span>
+                    <span class="price-val" data-price-mzn="10000">10 000,00</span>
                     <span class="price-period" data-i18n="pricing.per_month">/mês</span>
                   </div>
                 </div>

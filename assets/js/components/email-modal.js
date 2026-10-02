@@ -8,7 +8,7 @@
  * Redirects to WhatsApp with pre-formatted quote and domain context.
  */
 
-import { checkDomainAvailabilityLive, removeDomainExtension } from './domain.js';
+import { checkDomainAvailabilityLive, removeDomainExtension, escapeHtml } from './domain.js';
 
 let activePlanName = 'Individual';
 let activePlanPrice = '200,00 MT/mês';
@@ -184,7 +184,7 @@ export function initEmailDomainModal() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                   </div>
                   <div>
-                    <div class="domain-result-name">${domain}</div>
+                    <div class="domain-result-name">${escapeHtml(domain)}</div>
                     <div class="domain-result-status" style="color: #34D399;">${isEn ? '✓ Domain available for registration!' : '✓ Domínio disponível para registo!'}</div>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ export function initEmailDomainModal() {
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                   </div>
                   <div>
-                    <div class="domain-result-name">${domain}</div>
+                    <div class="domain-result-name">${escapeHtml(domain)}</div>
                     <div class="domain-result-status" style="color: #FBBF24;">${isEn ? 'Domain already registered.' : 'Dominio ja registado.'}</div>
                   </div>
                 </div>

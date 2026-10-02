@@ -4,6 +4,7 @@
  * Clean Code Standard: Header, Mobile Modal Drawer, i18n
  */
 import { I18nManager } from './components/i18n.js';
+import { CurrencyManager } from './components/currency.js';
 import { initDomainSearch } from './components/domain.js';
 import { initPricingTabs, switchPricingTab } from './components/pricing.js';
 import { initEmailDomainModal } from './components/email-modal.js';
@@ -11,8 +12,9 @@ import { initScrollReel } from './components/scroll-reel.js';
 import { initFAQ } from './components/faq.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Internationalization (i18n)
+  // 1. Initialize Internationalization (i18n) & Currency Manager (PayPal/MZN Engine)
   const i18n = new I18nManager();
+  const currencyManager = new CurrencyManager();
 
   // 2. Initialize Domain Search & Verification
   initDomainSearch();
