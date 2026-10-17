@@ -1,6 +1,6 @@
 # ZEDECK Hosting (host.zedecks.com) — New Age
 
-> Landing page institucional e catálogo de serviços de hospedagem e infraestrutura da **Zedeck's IT** (Nampula, Moçambique).
+> Este repositório é parte da organização técnica da Zedeck's IT — consulte o **[Dossiê-Mestre do Ecossistema](../DOSSIE_ECOSSISTEMA_ZEDECKS.md)** e as regras em **[AGENTS.md](../AGENTS.md)** antes de iniciar qualquer trabalho. Ver também visão geral em [zedecks/opensource](https://github.com/zedecks/opensource) e identidade em [zedecks/design-system](https://github.com/zedecks/design-system).
 
 ---
 
@@ -59,20 +59,20 @@ new-age/
 - **Segurança de Cabeçalhos:** Content-Security-Policy (CSP), X-Frame-Options, X-Content-Type-Options, Referrer-Policy.
 - **Canal de Leads Seguro:** Não há persistência de dados sensíveis desprotegidos no cliente.
 
-Consulte [SECURITY.md](file:///d:/ZEDECKLAB/ZedecksProjects/zedecks/hosting/new-age/SECURITY.md) para diretrizes completas de reporte de vulnerabilidades.
+Consulte [SECURITY.md](file:///d:/ZEDECKLAB/ZedecksProjects/zedecks/hosting/SECURITY.md) para diretrizes completas de reporte de vulnerabilidades.
 
 ---
 
 ## 6. 🚀 Setup & Execução Local
 
 ```bash
-# Executar servidor local de desenvolvimento (Porta padrão 1807):
-python -m http.server 1807
+# Executar servidor local de desenvolvimento (Porta padrão 5001 — Faixa Produtos ZedecksProjects):
+python -m http.server 5001
 # ou via npx serve
-npx serve -l 1807 .
+npx serve -l 5001 .
 ```
 
-Aceder em: `http://localhost:1807`
+Aceder em: `http://localhost:5001`
 
 ---
 

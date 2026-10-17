@@ -62,7 +62,7 @@ def print_header(data: dict):
     print(f"{CYAN}{BOLD}         ZEDECK HOSTING — PAINEL DE CONTROLE DE ROADMAP                 {RESET}")
     print(f"{CYAN}{BOLD}========================================================================{RESET}")
     print(f"  {WHITE}{BOLD}Projeto:{RESET} {data.get('project', 'ZEDECK Hosting')}  |  {WHITE}{BOLD}Versão Atual:{RESET} {CYAN}{BOLD}{data.get('version', 'v0.2.5')}{RESET}")
-    print(f"  {WHITE}{BOLD}Localhost:{RESET} {CYAN}http://localhost:1807/{RESET}  |  {WHITE}{BOLD}Dashboard:{RESET} {CYAN}http://localhost:1807/status.html{RESET}")
+    print(f"  {WHITE}{BOLD}Localhost:{RESET} {CYAN}http://localhost:5001/{RESET}  |  {WHITE}{BOLD}Dashboard:{RESET} {CYAN}http://localhost:5001/status.html{RESET}")
     print(f"{GRAY}  " + "-" * 68 + f"{RESET}")
 
 
@@ -155,7 +155,7 @@ def main():
     data = load_status_data()
 
     if args.web:
-        url = "http://localhost:1807/status.html"
+        url = "http://localhost:5001/status.html"
         print(f"{CYAN}[*] Abrindo {url} no navegador...{RESET}")
         webbrowser.open(url)
         return
