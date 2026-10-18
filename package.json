@@ -1,0 +1,26 @@
+{
+  "name": "@zedecks/hosting",
+  "version": "0.6.2",
+  "private": true,
+  "description": "ZEDECK Hosting Platform — High-Performance Web & Cloud Hosting (host.zedecks.com)",
+  "scripts": {
+    "dev": "npx -y serve . -l 5001",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@zedecks/design-tokens": "file:../design-system/packages/design-tokens",
+    "@zedecks/ui": "file:../design-system/packages/ui",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.59.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
