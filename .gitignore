@@ -8,3 +8,6 @@ Thumbs.db
 .gemini/
 .agent/
 .agents/
+
+# AI Agents & Context Directories
+.system_generated/
